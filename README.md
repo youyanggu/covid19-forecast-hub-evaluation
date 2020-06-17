@@ -6,6 +6,20 @@ While a model's future projections can be useful, it is also important to take i
 
 You can view the outputs of the evaluations in the [evaluations](/evaluations) directory.
 
+**Table of Contents**
+* [Dependencies](#dependencies)
+* [Getting Started](#getting-started)
+* [Usage](#usage)
+  * [Evaluation](#evaluation)
+  * [Summary](#summary)
+* [Details](#details)
+  * [Overview](#overview)
+  * [Models and Teams](#models-and-teams)
+  * [Methods](#methods)
+  * [US Evaluation](#us-evaluation)
+  * [State-by-state Evaluation](#state-by-state-evaluation)
+  * [Baseline Model](#baseline-model)
+
 ## Dependencies
 
 ### Python
@@ -112,7 +126,7 @@ Models in the COVID-19 Forecast Hub submit their forecasts every Monday to be se
 
 To summarize, due to the reason above, we standardize all projection dates to be on Mondays and all evaluation dates to be on Saturdays.
 
-### Models / Teams
+### Models and Teams
 
 An entire list of [models and teams](https://github.com/reichlab/covid19-forecast-hub/#teams-and-models) is presented on the COVID-19 Forecast Hub page. For more details on an individual team's model, you can look for the metadata file in the `data-processed` directory of the Forecast Hub (example: [COVIDhub Ensemble metadata](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/COVIDhub-ensemble/metadata-COVIDhub-ensemble.txt)).
 
@@ -122,7 +136,7 @@ The [COVIDhub ensemble model](https://github.com/reichlab/covid19-forecast-hub/#
 
 As described in the [COVID-19 Forecast Hub README](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#ground-truth-data), all forecasts are compared to the [Johns Hopkins University CSSE Time Series Summary](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) as the gold standard reference data for deaths in the US. This truth data can be found in the [Forecast Hub data-truth directory](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-truth).
 
-### Method
+### Methods
 
 For simplicity purposes we will be comparing the [point forecast](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#type) to the truth data described above. The point forecast is almost always the mean or median estimate of the model.
 
@@ -164,7 +178,7 @@ We then compute the mean absolute error and mean squared error for all states fo
 
 In any evaluation, it is important to include a baseline as a control, similar to how scientfic trials include a placebo. We define a simple baseline model that takes the mean of the previous week's daily deaths to make all future forecasts. For example, for Monday, May 25 projections, we use the average daily deaths from May 18 to May 24 to make forecasts. For US country-wide projections, this would amount to a constant 1,164 deaths per day for each forecast day.
 
-We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for future projections. This is in general a much more accurate model.
+We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for all future projections. This is in general a much more accurate model, but may be subject to selection bias.
 
 ## Questions? Bugs? Feature Request?
 
