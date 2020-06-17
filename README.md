@@ -68,7 +68,7 @@ This is the command that generated all of the files in the `evaluations` directo
 . evaluation_cmds.txt
 ```
 
-## Methods
+## Details
 
 ### Overview
 
@@ -76,9 +76,19 @@ Models in the COVID-19 Forecast Hub submit their forecasts every Monday to be se
 
 To summarize, due to the reason above, we standardize all projection dates to be on Mondays and all evaluation dates to be on Saturdays.
 
+### Models / Teams
+
+An entire list of [models and teams](https://github.com/reichlab/covid19-forecast-hub/#teams-and-models) is presented on the COVDI-19 Forecast Hub page. For more details on an individual team's model, you can look for the metadata file in the `data-processed` directory (example: [COVIDhub Ensemble metadata](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/COVIDhub-ensemble/metadata-COVIDhub-ensemble.txt)).
+
 ### Truth Data
 
 As described in the [COVID-19 Forecast Hub README](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#ground-truth-data), all forecasts are compared to the [Johns Hopkins University CSSE Time Series Summary](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) as the gold standard reference data for deaths in the US. This truth data can be found in the [Forecast Hub data-truth directory](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-truth).
+
+### Method
+
+While all models provide forecasts in [quantiles](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#quantile), for simplicity purposes we will simply be comparing the [point forecast](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#type) to the truth data described above. The point forecast is almost always the mean or median estimate of the model.
+
+There are [more advanced](https://viterbi-web.usc.edu/~shaddin/cs699fa17/docs/GR07.pdf) ways of scoring forecasts that take advantage of quantile estimates, but we will leave that as a future extension.
 
 ### US Evaluation
 
