@@ -32,6 +32,8 @@ git clone https://github.com/reichlab/covid19-forecast-hub.git
 5. Pick a Monday to choose the projections, and pick a Saturday to evaluate those Monday projections (e.g. Mon May 4 and Sat June 13). We explain the reasoning for this [below](#methods).
 6. Run the evaluation: `python evaluate_models.py 2020-05-04 2020-06-13`
 
+You can view a list of sample commands [here](evaluation_cmds.txt).
+
 ## Usage
 
 ### Evaluate Mon May 4 projections on Sat June 13 data:
