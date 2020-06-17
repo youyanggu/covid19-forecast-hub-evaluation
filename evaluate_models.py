@@ -352,21 +352,20 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         df_abs_errs_states_summary.to_csv(abs_errs_fname, float_format='%.1f')
         print('Saved to:', abs_errs_fname)
 
+    # Print the average rank for state-by-state projections (1=most accurate)
+    # We ignore baseline for ranks
+    df_ranks = df_errors_states[~df_errors_states.index.str.startswith('Baseline')]
+    df_ranks = df_ranks.abs().rank()
+    print('----------------------\nMean/median ranks:')
+    df_ranks_summary = df_ranks.mean(axis=1).sort_values()
+    df_ranks_summary.name = 'mean_rank'
+    print(df_ranks_summary)
+    if out_dir:
+        mean_ranks_fname = f'{out_dir}/{proj_date}_{eval_date}_mean_ranks.csv'
+        df_ranks_summary.to_csv(mean_ranks_fname, float_format='%.1f')
+        print('Saved to:', mean_ranks_fname)
+
     if print_additional_stats:
-        # Print the average rank for state-by-state projections (1=most accurate)
-        # We ignore baseline for ranks
-        df_ranks = df_errors_states[~df_errors_states.index.str.startswith('Baseline')]
-        df_ranks = df_ranks.abs().rank()
-        print('----------------------\nMean/median ranks:')
-        df_ranks_summary = df_ranks.mean(axis=1).sort_values()
-        df_ranks_summary.name = 'mean_rank'
-        print(df_ranks_summary)
-
-        if out_dir:
-            mean_ranks_fname = f'{out_dir}/{proj_date}_{eval_date}_mean_ranks.csv'
-            df_ranks_summary.to_csv(mean_ranks_fname, float_format='%.1f')
-            print('Saved to:', mean_ranks_fname)
-
         print('=================================================')
         print('R^2 Correlation of errors:')
         print('=================================================')
@@ -410,7 +409,7 @@ if __name__ == '__main__':
     if args.forecast_hub_dir:
         forecast_hub_dir = Path(args.forecast_hub_dir)
     else:
-        forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent.parent / 'covid19-forecast-hub'
+        forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent / 'covid19-forecast-hub'
 
     main(forecast_hub_dir, proj_date, eval_date, args.out_dir,
         use_point=(not args.use_median), print_additional_stats=args.print_additional_stats)
