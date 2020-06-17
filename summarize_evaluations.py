@@ -108,22 +108,32 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     print('State-by-state evaluations')
     print('==============================')
     if eval_date:
-        states_errs_fnames = sorted(glob.glob(
+        states_abs_errs_fnames = sorted(glob.glob(
             f'{evaluations_dir}/{eval_date}/*_{eval_date}_states_abs_errs.csv'))
+        states_sq_errs_fnames = sorted(glob.glob(
+            f'{evaluations_dir}/{eval_date}/*_{eval_date}_states_sq_errs.csv'))
     else:
-        states_errs_fnames = sorted(glob.glob(
+        states_abs_errs_fnames = sorted(glob.glob(
             f'{evaluations_dir}/*/*_states_abs_errs.csv'))
-        states_errs_fnames = filter_fnames_by_weeks_ahead(states_errs_fnames, weeks_ahead)
+        states_abs_errs_fnames = filter_fnames_by_weeks_ahead(states_abs_errs_fnames, weeks_ahead)
+        states_sq_errs_fnames = sorted(glob.glob(
+            f'{evaluations_dir}/*/*_states_sq_errs.csv'))
+        states_sq_errs_fnames = filter_fnames_by_weeks_ahead(states_sq_errs_fnames, weeks_ahead)
 
-    assert len(states_errs_fnames) > 0, 'Need state-by-state evaluation files'
+    assert len(states_abs_errs_fnames) > 0, 'Need state-by-state evaluation files'
+    assert len(states_sq_errs_fnames) > 0, 'Need state-by-state evaluation files'
 
     col_to_data_states = {}
-    for states_errs_fname in states_errs_fnames:
-        proj_date_, eval_date_ = get_dates_from_fname(states_errs_fname)
-        df_states = pd.read_csv(states_errs_fname, index_col=0)
 
+    for states_abs_errs_fname in states_abs_errs_fnames:
+        proj_date_, eval_date_ = get_dates_from_fname(states_abs_errs_fname)
+        df_states = pd.read_csv(states_abs_errs_fname, index_col=0)
         col_to_data_states[f'mean_abs_error_{proj_date_}_{eval_date_}'] = df_states['mean']
-        col_to_data_states[f'median_abs_error_{proj_date_}_{eval_date_}'] = df_states['median']
+
+    for states_sq_errs_fname in states_sq_errs_fnames:
+        proj_date_, eval_date_ = get_dates_from_fname(states_sq_errs_fname)
+        df_states = pd.read_csv(states_sq_errs_fname, index_col=0)
+        col_to_data_states[f'mean_sq_abs_error_{proj_date_}_{eval_date_}'] = df_states['mean']
 
     df_all_states = pd.DataFrame(col_to_data_states)
     df_all_states = df_all_states.dropna(how='all')
