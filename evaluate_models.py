@@ -309,7 +309,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print(df_errs_us_summary)
 
     if out_dir:
-        us_errs_fname = f'{out_dir}/{proj_date}_{eval_date}_us_errs.csv'
+        us_errs_fname = f'{out_dir}/{eval_date}/{proj_date}_{eval_date}_us_errs.csv'
         df_errs_us_summary.to_csv(us_errs_fname, float_format='%.1f')
         print('Saved to:', us_errs_fname)
 
@@ -335,7 +335,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_sq_errs_states_summary = df_sq_errs_states_summary[cols]
     print(df_sq_errs_states_summary)
     if out_dir:
-        sq_errs_fname = f'{out_dir}/{proj_date}_{eval_date}_sq_errs.csv'
+        sq_errs_fname = f'{out_dir}/{eval_date}/{proj_date}_{eval_date}_states_sq_errs.csv'
         df_sq_errs_states_summary.to_csv(sq_errs_fname, float_format='%.1f')
         print('Saved to:', sq_errs_fname)
 
@@ -348,7 +348,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_abs_errs_states_summary = df_abs_errs_states_summary[cols]
     print(df_abs_errs_states_summary)
     if out_dir:
-        abs_errs_fname = f'{out_dir}/{proj_date}_{eval_date}_abs_errs.csv'
+        abs_errs_fname = f'{out_dir}/{eval_date}/{proj_date}_{eval_date}_states_abs_errs.csv'
         df_abs_errs_states_summary.to_csv(abs_errs_fname, float_format='%.1f')
         print('Saved to:', abs_errs_fname)
 
@@ -361,7 +361,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_ranks_summary.name = 'mean_rank'
     print(df_ranks_summary)
     if out_dir:
-        mean_ranks_fname = f'{out_dir}/{proj_date}_{eval_date}_mean_ranks.csv'
+        mean_ranks_fname = f'{out_dir}/{eval_date}/{proj_date}_{eval_date}_states_mean_ranks.csv'
         df_ranks_summary.to_csv(mean_ranks_fname, float_format='%.1f')
         print('Saved to:', mean_ranks_fname)
 
