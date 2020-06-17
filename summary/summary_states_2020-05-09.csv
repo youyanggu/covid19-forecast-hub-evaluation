@@ -1,0 +1,16 @@
+,mean_abs_error_2020-04-20_2020-05-09,mean_abs_error_2020-04-27_2020-05-09,mean_abs_error_2020-05-04_2020-05-09,median_abs_error_2020-04-20_2020-05-09,median_abs_error_2020-04-27_2020-05-09,median_abs_error_2020-05-04_2020-05-09
+YYG-ParamSearch,193.4,115.4,42.8,70.2,38.3,16.7
+Baseline_0.98,225.2,129.6,39.5,70.9,27.8,12.6
+Baseline,255.1,142.6,41.2,46.7,29.7,11.4
+COVIDhub-ensemble,,124.2,44.3,,41.5,12.8
+LANL-GrowthRate,320.0,181.5,55.7,63.7,37.2,12.3
+MIT_CovidAnalytics-DELPHI,,109.9,139.0,,49.0,32.0
+MOBS_NEU-GLEAM_COVID,472.6,217.5,74.7,119.7,67.5,28.5
+CU-select,350.1,227.6,82.8,118.0,76.0,35.0
+IHME-CurveFit,337.2,253.2,87.9,94.6,63.3,21.6
+IowaStateLW-STEM,,138.3,164.6,,55.0,30.0
+UMass-MechBayes,,311.8,81.2,,56.0,31.0
+Auquan-SEIR,,,99.1,,,33.0
+UT-Mobility,468.5,285.4,175.2,64.1,36.6,12.7
+UCLA-SuEIR,,,158.7,,,26.3
+GT-DeepCOVID,,,336.4,,,62.1

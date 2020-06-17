@@ -1,0 +1,9 @@
+,mean_abs_error_2020-04-20_2020-04-25,median_abs_error_2020-04-20_2020-04-25
+Baseline_0.98,52.5,14.4
+Baseline,55.7,12.7
+IHME-CurveFit,66.1,16.8
+YYG-ParamSearch,68.3,15.6
+LANL-GrowthRate,94.9,16.7
+CU-select,172.1,38.0
+UT-Mobility,176.6,17.7
+MOBS_NEU-GLEAM_COVID,211.7,49.4

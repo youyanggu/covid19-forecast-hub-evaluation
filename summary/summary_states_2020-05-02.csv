@@ -1,0 +1,13 @@
+,mean_abs_error_2020-04-20_2020-05-02,mean_abs_error_2020-04-27_2020-05-02,median_abs_error_2020-04-20_2020-05-02,median_abs_error_2020-04-27_2020-05-02
+Baseline_0.98,135.3,63.5,31.5,9.6
+YYG-ParamSearch,113.2,64.6,31.8,10.5
+Baseline,142.4,66.4,19.7,10.7
+IHME-CurveFit,161.0,99.5,41.5,19.9
+LANL-GrowthRate,208.4,99.1,39.2,13.9
+MIT_CovidAnalytics-DELPHI,,83.6,,29.0
+COVIDhub-ensemble,,87.3,,16.9
+CU-select,230.2,160.2,73.0,53.0
+MOBS_NEU-GLEAM_COVID,323.7,100.0,82.5,28.3
+IowaStateLW-STEM,,114.1,,33.0
+UT-Mobility,286.2,168.2,31.4,11.9
+UMass-MechBayes,,179.5,,46.0

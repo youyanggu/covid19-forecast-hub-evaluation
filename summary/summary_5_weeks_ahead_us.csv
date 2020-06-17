@@ -1,0 +1,11 @@
+,perc_error_2020-04-20_2020-05-23,perc_error_2020-04-27_2020-05-30,perc_error_2020-05-04_2020-06-06,perc_error_2020-05-11_2020-06-13
+Baseline_0.98,-0.061,0.018,0.083,0.190
+YYG-ParamSearch,-0.237,-0.028,0.022,0.239
+LANL-GrowthRate,,0.266,0.082,-0.264
+IHME-CurveFit,-0.584,-0.667,0.147,0.172
+CU-select,0.255,0.205,0.362,0.414
+UCLA-SuEIR,,,-0.173,0.001
+UT-Mobility,-0.699,-0.549,0.094,
+Baseline,0.297,0.403,0.493,0.641
+MIT_CovidAnalytics-DELPHI,,,0.218,0.356
+IowaStateLW-STEM,,,-0.395,
