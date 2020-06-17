@@ -36,23 +36,26 @@ You can view a list of sample commands [here](evaluation_cmds.txt).
 
 ## Usage
 
-#### Evaluate Mon May 4 projections on Sat June 13 data:
+### Evaluation
+
+#### Evaluate Mon May 4 projections on Sat June 13 data
 ```
 python evaluate_models.py 2020-05-04 2020-06-13
 ```
 
-### Custom COVID-19 Forecast Hub directory
+#### Custom COVID-19 Forecast Hub directory
+By default, it checks the local directory for `covid19-forecast-hub`.
 ```
 python evaluate_models.py 2020-05-04 2020-06-13 --forecast_hub_dir /PATH/TO/covid19-forecast-hub
 ```
 
-#### Save evaluation results to a directory:
+#### Save evaluation results to a directory
 ```
 python evaluate_models.py 2020-05-04 2020-06-13 --out_dir evaluations/
 ```
 
 #### Use median projections rather than point projections
-(For most models, this makes no difference)
+For most models, this makes no difference.
 ```
 python evaluate_models.py 2020-05-04 2020-06-13 --use_median
 ```
@@ -68,6 +71,37 @@ This is the command that generated all of the files in the `evaluations` directo
 . evaluation_cmds.txt
 ```
 
+### Summary
+
+We then run a separate script that summarizes all the evaluations from above.
+
+#### Summarize all projections with 4 weeks ahead forecasts
+```
+python summarize_evaluations.py --weeks_ahead 4
+```
+
+#### Summarize all projections ending on Sat June 13
+```
+python summarize_evaluations.py --eval_date 2020-06-13
+```
+
+#### Custom evaluations directory
+The evaluations directory is the output of the `evaluate_models.py` script (default is simply the `evaluations/` directory).
+```
+python summarize_evaluations.py --weeks_ahead 4 --evaluations_dir /PATH/TO/evaluations
+```
+
+#### Save evaluation results to a directory
+```
+python summarize_evaluations.py --weeks_ahead 4 --out_dir summary/
+```
+
+#### Summarize all weekly evaluations since April 20
+This is the command that generated all of the files in the `summary` directory.
+```
+. summary_cmds.txt
+```
+
 ## Details
 
 ### Overview
@@ -79,6 +113,8 @@ To summarize, due to the reason above, we standardize all projection dates to be
 ### Models / Teams
 
 An entire list of [models and teams](https://github.com/reichlab/covid19-forecast-hub/#teams-and-models) is presented on the COVDI-19 Forecast Hub page. For more details on an individual team's model, you can look for the metadata file in the `data-processed` directory (example: [COVIDhub Ensemble metadata](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/COVIDhub-ensemble/metadata-COVIDhub-ensemble.txt)).
+
+The [COVIDhub ensemble model](https://github.com/reichlab/covid19-forecast-hub/#ensemble-model) is a model created by the Reich Lab created that takes a combination of all eligible models that submit projections to the Forecast Hub. You can see which models are included and their corresponding weights [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/ensemble-metadata).
 
 ### Truth Data
 
@@ -127,10 +163,6 @@ We then compute the mean absolute error and mean squared error for all states fo
 In any evaluation, it is important to include a baseline as a control, similar to how scientfic trials include a placebo. We define a simple baseline model that takes the mean of the previous week's daily deaths to make all future forecasts. For example, for Monday, May 25 projections, we use the average daily deaths from May 18 to May 24 to make forecasts. For US country-wide projections, this would amount to a constant 1,164 deaths per day for each forecast day.
 
 We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for future projections. This is in general a much more accurate model.
-
-### COVIDHub Ensemble Model
-
-The [COVIDhub ensemble model](https://github.com/reichlab/covid19-forecast-hub/#ensemble-model) is created by taking a combination of all eligible models that submit projections. You can see which models are included and their corresponding weights [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/ensemble-metadata).
 
 ## Questions? Bugs? Feature Request?
 
