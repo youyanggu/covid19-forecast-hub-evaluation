@@ -31,12 +31,14 @@ def get_dates_from_fname(fname):
 
 
 def filter_fnames_by_weeks_ahead(fnames, weeks_ahead):
+    """Return evaluation files that match the provided weeks_ahead."""
     include_fnames = []
     for fname in fnames:
         proj_date, eval_date = get_dates_from_fname(fname)
 
         days_ahead = (eval_date - proj_date).days
-        if (abs(days_ahead - 7*weeks_ahead) < 4):
+        max_days_tolerance = 3
+        if abs(days_ahead - 7*weeks_ahead) <= max_days_tolerance:
             # this is a weeks_ahead forecast
             include_fnames.append(fname)
 
@@ -44,6 +46,11 @@ def filter_fnames_by_weeks_ahead(fnames, weeks_ahead):
 
 
 def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
+    """We combine various evaluations based on either evaluation date or weeks ahead.
+
+    For full description of methods, refer to:
+    https://github.com/youyanggu/covid19-forecast-hub-evaluation
+    """
     print('Evaluation date:', eval_date)
     print('Weeks ahead:', weeks_ahead)
     print('Evaluations dir:', evaluations_dir)
