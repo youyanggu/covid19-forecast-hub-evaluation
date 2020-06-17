@@ -29,7 +29,7 @@ git clone https://github.com/reichlab/covid19-forecast-hub.git
 2. Clone this repository: `git clone https://github.com/youyanggu/covid19-forecast-hub-evaluation.git`
 3. Clone the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) repository: `git clone https://github.com/reichlab/covid19-forecast-hub.git`
 4. *(Optional)* Make sure that the COVID-19 Forecast Hub and this repository share the same parent. Otherwise, you would need to pass in the Forecast Hub location via the `--forecast_hub_dir` flag.
-5. Pick a Monday for the projection date (when the forecasts were generated), and pick a Saturday to evaluate those projections (e.g. Monday May 4 and Saturday June 13). We explain the reasoning for this [below](#methods).
+5. Pick a Monday for the projection date (when the forecasts were generated), and pick a Saturday to evaluate those projections (e.g. Monday May 4 and Saturday June 13). We explain the reasoning for this [below](#details).
 6. Run the evaluation: `python evaluate_models.py 2020-05-04 2020-06-13`
 
 You can view a list of sample commands [here](evaluation_cmds.txt).
@@ -37,6 +37,8 @@ You can view a list of sample commands [here](evaluation_cmds.txt).
 ## Usage
 
 ### Evaluation
+
+We call `evaluate_models.py` to compute an evaluation based on a projection date-evaluation date pair. Note that the projection date must be a Monday and the evaluation date must be a Saturday due to reasons [explained below](#details).
 
 #### Evaluate Mon May 4 projections on Sat June 13 data
 ```
@@ -73,7 +75,7 @@ This is the command that generated all of the files in the `evaluations` directo
 
 ### Summary
 
-We then run a separate script that summarizes all the evaluations from above.
+We call `summarize_evaluations.py` to summarizes the individual evaluations generated from above.
 
 #### Summarize all projections with 4 weeks ahead forecasts
 ```
