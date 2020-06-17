@@ -1,4 +1,4 @@
-# Historical Evaluations
+## Historical Evaluations
 
 Here is where we save all the outputs of our evaluations. The files are located in the directory based on the evaluation date (e.g. all projections evaluated on Saturday, June 13 are located in the `2020-06-13` directory). The file format is the following:
 
@@ -13,3 +13,5 @@ where
   * `abs_errs` : State-by-state mean absolute errors
   * `sq_errs` : State-by-state mean squared errors
   * `mean_ranks` : State-by-state mean rankings. For each state, we rank all the models and take their mean ranks (1=highest ranking).
+
+These evaluations are subsequently summarized in the [summary](/summary) directory.
