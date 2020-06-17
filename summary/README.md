@@ -1,6 +1,6 @@
 ## Summary of Evaluations
 
-Here is where we summarize the outputs from the [evaluations](/evaluations) directory. Here, we present summaries for two types of evaluations:
+Here is where we summarize the outputs from the [evaluations](/evaluations) directory. You can see a full list of team/model names [here](https://github.com/reichlab/covid19-forecast-hub#teams-and-models). We present summaries for two types of evaluations:
 
 - N weeks ahead: we evaluate historical forecasts based on their forecasts N weeks ahead
 - Evaluation date: we evaluate all historical forecasts based on their forecasts for the specified evaluation date
