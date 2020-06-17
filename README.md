@@ -10,7 +10,7 @@ You can view the outputs of the evaluations in the [evaluations](/evaluations) d
 
 ### Python
 
-You need Python 3.7+ with the [NumPy](https://numpy.org/install/) and [pandas](https://pandas.pydata.org/getting_started.html) packages.
+You need Python 3 with the [NumPy](https://numpy.org/install/) and [pandas](https://pandas.pydata.org/getting_started.html) packages.
 
 Once you have Python 3, you can simply install the NumPy and pandas packages by running the following command:
 ```
@@ -19,7 +19,7 @@ pip install numpy pandas
 
 ### Data
 
-You also need to download the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) data. We recommend cloning the repository:
+You also need to download the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) data, which contains the raw forecasts from each model. We recommend cloning the repository:
 ```
 git clone https://github.com/reichlab/covid19-forecast-hub.git
 ```
@@ -28,8 +28,8 @@ git clone https://github.com/reichlab/covid19-forecast-hub.git
 1. Make sure the dependencies (NumPy/pandas) are installed: `pip install numpy pandas`
 2. Clone this repository: `git clone https://github.com/youyanggu/covid19-forecast-hub-evaluation.git`
 3. Clone the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) repository: `git clone https://github.com/reichlab/covid19-forecast-hub.git`
-4. (Optional) Make sure that the COVID-19 Forecast Hub and this repository share the same parent. Otherwise, you would need to pass in the Forecast Hub location via the `--forecast_hub_dir` flag.
-5. Pick a Monday to choose the projections, and pick a Saturday to evaluate those Monday projections (e.g. Mon May 4 and Sat June 13). We explain the reasoning for this [below](#methods).
+4. *(Optional)* Make sure that the COVID-19 Forecast Hub and this repository share the same parent. Otherwise, you would need to pass in the Forecast Hub location via the `--forecast_hub_dir` flag.
+5. Pick a Monday for the projection date (when the forecasts were generated), and pick a Saturday to evaluate those projections (e.g. Monday May 4 and Saturday June 13). We explain the reasoning for this [below](#methods).
 6. Run the evaluation: `python evaluate_models.py 2020-05-04 2020-06-13`
 
 You can view a list of sample commands [here](evaluation_cmds.txt).
