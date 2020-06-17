@@ -44,9 +44,8 @@ git clone https://github.com/reichlab/covid19-forecast-hub.git
 3. Clone the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) repository: `git clone https://github.com/reichlab/covid19-forecast-hub.git`
 4. *(Optional)* Make sure that the COVID-19 Forecast Hub and this repository share the same parent. Otherwise, you would need to pass in the Forecast Hub location via the `--forecast_hub_dir` flag.
 5. Pick a Monday for the projection date (when the forecasts were generated), and pick a Saturday to evaluate those projections (e.g. Monday May 4 and Saturday June 13). We explain the reasoning for this [below](#details).
-6. Run the evaluation: `python evaluate_models.py 2020-05-04 2020-06-13`
-
-You can view a list of sample commands [here](evaluation_cmds.txt).
+6. Run the evaluation: `python evaluate_models.py 2020-05-04 2020-06-13`. You can view a list of sample commands [here](evaluation_cmds.txt).
+7. *(Optional)* After you have generated several evaluations, you can summarize the evaluations: `python summarize_evaluations.py --weeks_ahead 4`. You can view a list of sample commands [here](summary_cmds.txt).
 
 ## Usage
 
