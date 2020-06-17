@@ -122,9 +122,9 @@ As described in the [COVID-19 Forecast Hub README](https://github.com/reichlab/c
 
 ### Method
 
-While all models provide forecasts in [quantiles](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#quantile), for simplicity purposes we will simply be comparing the [point forecast](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#type) to the truth data described above. The point forecast is almost always the mean or median estimate of the model.
+For simplicity purposes we will be comparing the [point forecast](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#type) to the truth data described above. The point forecast is almost always the mean or median estimate of the model.
 
-There are [more advanced](https://viterbi-web.usc.edu/~shaddin/cs699fa17/docs/GR07.pdf) ways of scoring forecasts that take advantage of quantile estimates, but we will leave that as a future extension.
+There are [more advanced](https://viterbi-web.usc.edu/~shaddin/cs699fa17/docs/GR07.pdf) ways of scoring forecasts that take advantage of [quantile estimates](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#quantile), but we will leave that as a future extension.
 
 ### US Evaluation
 
