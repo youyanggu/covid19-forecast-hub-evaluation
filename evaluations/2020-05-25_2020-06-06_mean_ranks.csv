@@ -1,0 +1,17 @@
+,mean_rank
+UMass-MechBayes,4.2
+YYG-ParamSearch,6.0
+COVIDhub-ensemble,6.2
+LANL-GrowthRate,6.3
+UCLA-SuEIR,6.8
+UT-Mobility,7.0
+MIT_CovidAnalytics-DELPHI,7.4
+MOBS_NEU-GLEAM_COVID,7.5
+USACE-ERDC_SEIR,8.4
+CU-select,9.2
+PSI-DRAFT,9.3
+IowaStateLW-STEM,9.4
+COVID19SimCons-COVID19Sim,9.9
+UA-EpiCovDA,11.1
+JHU_IDD-CovidSP,13.3
+Auquan-SEIR,14.0

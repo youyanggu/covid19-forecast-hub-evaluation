@@ -1,0 +1,13 @@
+,mean_rank
+YYG-ParamSearch,4.6
+COVIDhub-ensemble,4.8
+LANL-GrowthRate,5.4
+IHME-CurveFit,5.6
+CU-select,6.0
+UMass-MechBayes,6.3
+UCLA-SuEIR,6.4
+MIT_CovidAnalytics-DELPHI,6.8
+IowaStateLW-STEM,7.4
+UT-Mobility,7.4
+MOBS_NEU-GLEAM_COVID,8.1
+Auquan-SEIR,9.2

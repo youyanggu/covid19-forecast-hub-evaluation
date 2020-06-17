@@ -1,0 +1,8 @@
+,total_deaths_2020-04-20,predicted_deaths,actual_deaths,additional_deaths,error,perc_error
+Baseline_0.98,42918,94063.9,97406,54488,-3342.1,-6.1%
+YYG-ParamSearch,42918,84469.4,97406,54488,-12936.6,-23.7%
+CU-select,42918,111290.0,97406,54488,13884.0,25.5%
+Baseline,42918,113568.0,97406,54488,16162.0,29.7%
+IHME-CurveFit,42918,65569.0,97406,54488,-31837.0,-58.4%
+UT-Mobility,42918,59312.3,97406,54488,-38093.7,-69.9%
+LANL-GrowthRate,42918,,97406,54488,,

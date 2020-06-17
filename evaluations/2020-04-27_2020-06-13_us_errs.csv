@@ -1,0 +1,7 @@
+,total_deaths_2020-04-27,predicted_deaths,actual_deaths,additional_deaths,error,perc_error
+Baseline_0.98,56502,117305.5,115436,58934,1869.5,3.2%
+LANL-GrowthRate,56502,129208.6,115436,58934,13772.6,23.4%
+Baseline,56502,151258.0,115436,58934,35822.0,60.8%
+IHME-CurveFit,56502,72785.3,115436,58934,-42650.7,-72.4%
+IowaStateLW-STEM,56502,,115436,58934,,
+MIT_CovidAnalytics-DELPHI,56502,,115436,58934,,
