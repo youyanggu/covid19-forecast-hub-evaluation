@@ -60,6 +60,12 @@ python evaluate_models.py 2020-05-04 2020-06-13 --use_median
 python evaluate_models.py 2020-05-04 2020-06-13 --print_additional_stats
 ```
 
+### Run weekly evaluation for all models since April 20
+This is the command that generated all of the files in the `evaluations` directory.
+```
+. evaluation_cmds.txt
+```
+
 ## Methods
 
 ### Overview
