@@ -19,7 +19,7 @@ pip install numpy pandas
 
 ### Data
 
-You also need to download the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) data. We recommend cloning the repository the same way you clone this repository:
+You also need to download the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) data. We recommend cloning the repository:
 ```
 git clone https://github.com/reichlab/covid19-forecast-hub.git
 ```
@@ -68,6 +68,10 @@ Models in the COVID-19 Forecast Hub submit their forecasts every Monday to be se
 
 To summarize, due to the reason above, we standardize all projection dates to be on Mondays and all evaluation dates to be on Saturdays.
 
+### Truth Data
+
+As described in the [COVID-19 Forecast Hub README](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#ground-truth-data), all forecasts are compared to the [Johns Hopkins University CSSE Time Series Summary](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) as the gold standard reference data for deaths in the US. This truth data can be found in the [Forecast Hub data-truth directory](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-truth).
+
 ### US Evaluation
 
 For US country-wide forecasts, we compute the error for each model's point forecasts using the following formula:
@@ -110,7 +114,6 @@ We also include another baseline model that takes mean of the previous week's da
 
 The [COVIDhub ensemble model](https://github.com/reichlab/covid19-forecast-hub/#ensemble-model) is created by taking a combination of all eligible models that submit projections. You can see which models are included and their corresponding weights [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/ensemble-metadata).
 
-
 ## Questions? Bugs? Feature Request?
 
-Lastly, we encourage open collaboration. Please open an issue request if you have any questions/suggestions/bug reports.
+Lastly, we encourage open collaboration. Please open [an issue request](https://github.com/youyanggu/covid19-forecast-hub-evaluation/issues) if you have any questions/suggestions/bug reports.
