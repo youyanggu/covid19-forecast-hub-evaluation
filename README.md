@@ -36,7 +36,7 @@ You can view a list of sample commands [here](evaluation_cmds.txt).
 
 ## Usage
 
-### Evaluate Mon May 4 projections on Sat June 13 data:
+#### Evaluate Mon May 4 projections on Sat June 13 data:
 ```
 python evaluate_models.py 2020-05-04 2020-06-13
 ```
@@ -46,23 +46,23 @@ python evaluate_models.py 2020-05-04 2020-06-13
 python evaluate_models.py 2020-05-04 2020-06-13 --forecast_hub_dir /PATH/TO/covid19-forecast-hub
 ```
 
-### Save evaluation results to a directory:
+#### Save evaluation results to a directory:
 ```
 python evaluate_models.py 2020-05-04 2020-06-13 --out_dir evaluations/
 ```
 
-### Use median projections rather than point projections
+#### Use median projections rather than point projections
 (For most models, this makes no difference)
 ```
 python evaluate_models.py 2020-05-04 2020-06-13 --use_median
 ```
 
-### Print additional statistics such as mean rank and residual analysis
+#### Print additional statistics such as mean rank and residual analysis
 ```
 python evaluate_models.py 2020-05-04 2020-06-13 --print_additional_stats
 ```
 
-### Run weekly evaluation for all models since April 20
+#### Run weekly evaluation for all models since April 20
 This is the command that generated all of the files in the `evaluations` directory.
 ```
 . evaluation_cmds.txt
