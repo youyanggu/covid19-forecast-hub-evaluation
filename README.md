@@ -19,6 +19,7 @@ You can view the outputs of the individual evaluations in the [evaluations](/eva
   * [US Evaluation](#us-evaluation)
   * [State-by-state Evaluation](#state-by-state-evaluation)
   * [Baseline Model](#baseline-model)
+  * [Teams with Multiple Models](#teams-with-multiple-models)
 
 ## Dependencies
 
@@ -178,6 +179,10 @@ We then compute the mean absolute error and mean squared error for all states fo
 In any evaluation, it is important to include a baseline as a control, similar to how scientfic trials include a placebo. We define a simple baseline model that takes the mean of the previous week's daily deaths to make all future forecasts. For example, for Monday, May 25 projections, we use the average daily deaths from May 18 to May 24 to make forecasts. For US country-wide projections, this would amount to a constant 1,164 deaths per day for each forecast day.
 
 We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for all future projections. This is in general a much more accurate model, but may be subject to selection bias.
+
+### Teams with Multiple Models
+
+When doing evaluations I think it's important to consider only one model per team. If a team submits 10 different models each with a different forecasts, then they will undoubtedly have a higher chance of having a more accurate model compared to a team that only submits a single forecast. That's why the COVID-19 Forecast Hub asks every team to designate only a single model to include in forecasts sent to the CDC. And so we are only consider that particular model in the evaluation.
 
 ## Questions? Bugs? Feature Request?
 
