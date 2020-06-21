@@ -86,6 +86,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     assert eval_date > proj_date, 'evaluation date must be greater than the projection date'
     assert proj_date.weekday() == 0, 'proj_date must be a Monday'
     assert eval_date.weekday() == 5, 'eval date must be a Saturday'
+    if out_dir:
+        os.makedirs(f'{out_dir}/{eval_date}', exist_ok=True)
 
     model_ran_date = proj_date - datetime.timedelta(days=1)
     days_ahead = (eval_date - proj_date).days

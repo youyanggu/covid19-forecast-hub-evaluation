@@ -86,11 +86,14 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     df_all_us = df_all_us.dropna(how='all')
     df_all_us = df_all_us.reindex(sorted(df_all_us.columns), axis=1)
 
+    # we sort the models based on their mean rank
+    # models with a missing forecast for that week is assigned the max rank
     max_rank_us = df_all_us.abs().rank().max()+1
     cols_for_ranking_us = [c for c in df_all_us.columns if 'perc_error' in c]
     df_all_us = df_all_us.reindex(df_all_us.abs().rank().fillna(
         max_rank_us)[cols_for_ranking_us].mean(axis=1).sort_values().index)
 
+    print('------------------------')
     print('US errors:')
     print(df_all_us[cols_for_ranking_us])
     print('US rankings:')
@@ -139,11 +142,14 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     df_all_states = df_all_states.dropna(how='all')
     df_all_states = df_all_states.reindex(sorted(df_all_states.columns), axis=1)
 
+    # we sort the models based on their mean rank
+    # models with a missing forecast for that week is assigned the max rank
     max_ranks_states = df_all_states.abs().rank().max()+1
     cols_for_ranking_states = [c for c in df_all_states.columns if 'mean_abs_error' in c]
     df_all_states = df_all_states.reindex(df_all_states.abs().rank().fillna(
         max_ranks_states)[cols_for_ranking_states].mean(axis=1).sort_values().index)
 
+    print('------------------------')
     print('State-by-state errors:')
     print(df_all_states[cols_for_ranking_states])
     print('State-by-state rankings:')
