@@ -4,7 +4,7 @@ Here we present an evaluation of models from the [COVID-19 Forecast Hub](https:/
 
 While a model's future projections can be useful, it is also important to take into account the model's historical performance in a transparent, rigorous, and non-biased manner. This is the goal of this project.
 
-You can view the outputs of the individual evaluations in the [evaluations](/evaluations) directory. The individual evaluations are summarized in the [summary](/summary) directory.
+**Evaluations are summarized in the [summary](/summary) directory.** You can view the outputs of the individual evaluations in the [evaluations](/evaluations) directory.
 
 **Table of Contents**
 * [Dependencies](#dependencies)
