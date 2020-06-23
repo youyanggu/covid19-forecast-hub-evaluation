@@ -16,7 +16,7 @@ IHME-CurveFit,-0.626,-0.667,0.178,0.227,0.338,
 Imperial-combined,,,,,,0.111
 UA-EpiCovDA,,,,,0.261,0.271
 IowaStateLW-STEM,,,-0.381,,0.234,0.403
-Geneva-DeterministicGrowth,,,,,,-0.187
+Geneva-DetGrowth,,,,,,-0.187
 USACE-ERDC_SEIR,,,,,-0.337,-0.395
 JHU_IDD-CovidSP,,,,,1.288,0.321
 Covid19Sim-Simulator,,,,,,-0.594

@@ -4,7 +4,7 @@ Baseline,0.091,0.050
 YYG-ParamSearch,-0.213,-0.062
 Imperial-combined,,0.018
 CU-select,0.333,-0.301
-Geneva-DeterministicGrowth,,-0.203
+Geneva-DetGrowth,,-0.203
 IHME-CurveFit,-0.286,-0.418
 LANL-GrowthRate,,0.270
 MOBS_NEU-GLEAM_COVID,-0.382,-0.358
