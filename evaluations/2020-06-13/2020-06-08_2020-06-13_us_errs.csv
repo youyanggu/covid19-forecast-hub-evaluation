@@ -1,5 +1,5 @@
 ,total_deaths_2020-06-08,predicted_deaths,actual_deaths,additional_deaths,error,perc_error
-Geneva-DeterministicGrowth,111068,115412.0,115436,4368.0,-24.0,-0.5%
+Geneva-DetGrowth,111068,115412.0,115436,4368.0,-24.0,-0.5%
 Baseline_0.98,111068,115399.0,115436,4368.0,-37.0,-0.8%
 COVIDhub-ensemble,111068,115494.2,115436,4368.0,58.2,1.3%
 UMass-MechBayes,111068,115320.0,115436,4368.0,-116.0,-2.7%
