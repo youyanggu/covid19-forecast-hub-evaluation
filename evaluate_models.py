@@ -181,10 +181,10 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     model_to_us_projection[baseline_name] = df_baseline2_filt['US']
 
     date_to_cu_select = {
-        datetime.date(2020,4,13) : 'CU-70contact',
-        datetime.date(2020,4,20) : 'CU-70contact',
-        datetime.date(2020,4,27) : 'CU-70contact',
-        datetime.date(2020,5,4) : 'CU-80contact1x10p',
+        datetime.date(2020,4,13) : 'CU-scenario_mid',
+        datetime.date(2020,4,20) : 'CU-scenario_mid',
+        datetime.date(2020,4,27) : 'CU-scenario_mid',
+        datetime.date(2020,5,4) : 'CU-scenario_high',
     }
 
     for model_name in model_to_projections:
