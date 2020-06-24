@@ -137,9 +137,15 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_truth_filt = df_truth[df_truth.index.isin(fpis_to_evaluate)]
     us_truth = df_truth_filt['US']
 
-    proj_date_total_deaths = \
-        df_truth_raw[df_truth_raw['date'] == proj_date].set_index('location')['total_deaths']['US']
-    additional_deaths = us_truth - proj_date_total_deaths
+    """
+    We use the day before the projection date (the model ran date) as the starting point
+        to compute incident deaths. So if proj_date is 2020-06-15 and eval_date is 2020-06-20,
+        our incident deaths is the number of deaths between 2020-06-14 and 2020-06-20.
+        The % error then becomes: error / incident deaths.
+    """
+    model_ran_date_total_deaths = \
+        df_truth_raw[df_truth_raw['date'] == model_ran_date].set_index('location')['total_deaths']['US']
+    additional_deaths = us_truth - model_ran_date_total_deaths
 
     print('Incident US deaths:', additional_deaths)
 
@@ -269,8 +275,9 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print('Number of locations with projections')
     print(df_errors.notna().sum(axis=1))
 
+    total_deaths_col = f'total_deaths_{model_ran_date}'
     df_errors_us = pd.DataFrame({
-        f'total_deaths_{proj_date}' : proj_date_total_deaths,
+        total_deaths_col : model_ran_date_total_deaths,
         'predicted_deaths' : model_to_us_projection,
         'actual_deaths' : us_truth,
         'additional_deaths' : additional_deaths,
@@ -300,7 +307,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_errors_us['error'] = df_errors_us['predicted_deaths'] - df_errors_us['actual_deaths']
     df_errors_us['perc_error'] = (df_errors_us['error'] / df_errors_us['additional_deaths']).apply(
         lambda x: '' if pd.isnull(x) else f'{x:.1%}')
-    df_errors_us[f'total_deaths_{proj_date}'] = df_errors_us[f'total_deaths_{proj_date}'].astype(int)
+    df_errors_us[total_deaths_col] = df_errors_us[total_deaths_col].astype(int)
     df_errors_us['actual_deaths'] = df_errors_us['actual_deaths'].astype(int)
 
     print('=================================================')
