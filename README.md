@@ -146,16 +146,17 @@ There are [more advanced](https://arxiv.org/pdf/2005.12881.pdf) techniques for s
 
 For US country-wide forecasts, we compute the error for each model's point forecasts using the following formula:
 ```
-additional_deaths = true_deaths_eval_date - true_deaths_proj_date
-error_us = projected_deaths_eval_date - true_deaths_eval_date
+additional_deaths = true_deaths_eval_date - true_deaths_day_before_proj_date
+error_us = predicted_deaths_eval_date - true_deaths_eval_date
 perc_error_us = error_us / additional_deaths
 ```
+where `true_deaths` is the actual cumulative deaths, `predicted_deaths` are the forecasted cumulative deaths, `eval_date` is the date when the forecasts of total deaths are being evaluated against, and `proj_date` is the date the projection was generated.
 
-So for example, if our projection date is Mon June 1 and our evaluation date is Sat June 13, below is a sample of how we compute the error.
+So for example, if our projection date is Monday, June 1 and our evaluation date is Saturday, June 13, below is a sample of how we compute the error.
 
 | Example | |
 | --- | --- |
-| June 1 US true deaths | 105,430 |
+| May 31 US true deaths | 104,659 |
 | June 13 US true deaths | 115,436 |
 | Additional deaths | 10,006 (115,436 - 105,430) |
 | Sample model forecast for June 13 | 115,581 |
