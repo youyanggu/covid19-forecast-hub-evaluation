@@ -4,7 +4,7 @@ Here we present an evaluation of models from the [COVID-19 Forecast Hub](https:/
 
 While a model's future projections can be useful, it is also important to take into account the model's historical performance in a transparent, rigorous, and non-biased manner. This is the goal of this project.
 
-**Evaluations are summarized in the [summary](/summary) directory.** You can view the outputs of the individual evaluations in the [evaluations](/evaluations) directory.
+**Evaluations are done weekly and summarized in the [summary](/summary) directory.** You can view the outputs of the individual evaluations in the [evaluations](/evaluations) directory.
 
 **Table of Contents**
 * [Dependencies](#dependencies)
@@ -150,7 +150,7 @@ additional_deaths = true_deaths_eval_date - true_deaths_day_before_proj_date
 error_us = predicted_deaths_eval_date - true_deaths_eval_date
 perc_error_us = error_us / additional_deaths
 ```
-where `true_deaths` is the actual cumulative deaths, `predicted_deaths` are the forecasted cumulative deaths, `eval_date` is the date when the forecasts of total deaths are being evaluated against, and `proj_date` is the date the projection was generated.
+where `true_deaths` is the actual cumulative deaths, `predicted_deaths` is the forecasted cumulative deaths, `eval_date` is the date when the forecasts of total deaths are being evaluated against, and `proj_date` is the date the projection was generated.
 
 So for example, if our projection date is Monday, June 1 and our evaluation date is Saturday, June 13, below is a sample of how we compute the error.
 
