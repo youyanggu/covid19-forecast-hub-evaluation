@@ -1,8 +1,8 @@
-,total_deaths_2020-04-19,predicted_deaths,actual_deaths,additional_deaths,error,perc_error
-Baseline_0.98,41148,94063.9,97406,56258,-3342.1,-5.9%
-YYG-ParamSearch,41148,84469.4,97406,56258,-12936.6,-23.0%
-CU-select,41148,111290.0,97406,56258,13884.0,24.7%
-Baseline,41148,113568.0,97406,56258,16162.0,28.7%
-IHME-CurveFit,41148,65569.0,97406,56258,-31837.0,-56.6%
-UT-Mobility,41148,59312.3,97406,56258,-38093.7,-67.7%
-LANL-GrowthRate,41148,,97406,56258,,
+,total_deaths_2020-04-19,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline_0.98,41148,94063.9,97406,52915.9,56258,-3342.1,-5.9%
+YYG-ParamSearch,41148,84469.4,97406,43321.4,56258,-12936.6,-23.0%
+CU-select,41148,111290.0,97406,70142.0,56258,13884.0,24.7%
+Baseline,41148,113568.0,97406,72420.0,56258,16162.0,28.7%
+IHME-CurveFit,41148,65569.0,97406,24421.0,56258,-31837.0,-56.6%
+UT-Mobility,41148,59312.3,97406,18164.3,56258,-38093.7,-67.7%
+LANL-GrowthRate,41148,,97406,,56258,,

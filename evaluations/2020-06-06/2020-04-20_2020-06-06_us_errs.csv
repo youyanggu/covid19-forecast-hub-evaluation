@@ -1,5 +1,5 @@
-,total_deaths_2020-04-19,predicted_deaths,actual_deaths,additional_deaths,error,perc_error
-Baseline_0.98,41148,107264.8,110124,68976,-2859.2,-4.1%
-Baseline,41148,143388.0,110124,68976,33264.0,48.2%
-IHME-CurveFit,41148,65914.1,110124,68976,-44209.9,-64.1%
-LANL-GrowthRate,41148,,110124,68976,,
+,total_deaths_2020-04-19,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline_0.98,41148,107264.8,110124,66116.8,68976,-2859.2,-4.1%
+Baseline,41148,143388.0,110124,102240.0,68976,33264.0,48.2%
+IHME-CurveFit,41148,65914.1,110124,24766.1,68976,-44209.9,-64.1%
+LANL-GrowthRate,41148,,110124,,68976,,

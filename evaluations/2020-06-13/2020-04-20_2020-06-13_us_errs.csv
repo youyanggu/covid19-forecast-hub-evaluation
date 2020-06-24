@@ -1,4 +1,4 @@
-,total_deaths_2020-04-19,predicted_deaths,actual_deaths,additional_deaths,error,perc_error
-Baseline_0.98,41148,112590.3,115436,74288,-2845.7,-3.8%
-Baseline,41148,158298.0,115436,74288,42862.0,57.7%
-IHME-CurveFit,41148,65954.9,115436,74288,-49481.1,-66.6%
+,total_deaths_2020-04-19,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline_0.98,41148,112590.3,115436,71442.3,74288,-2845.7,-3.8%
+Baseline,41148,158298.0,115436,117150.0,74288,42862.0,57.7%
+IHME-CurveFit,41148,65954.9,115436,24806.9,74288,-49481.1,-66.6%

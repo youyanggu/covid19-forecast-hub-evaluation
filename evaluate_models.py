@@ -145,9 +145,9 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     """
     model_ran_date_total_deaths = \
         df_truth_raw[df_truth_raw['date'] == model_ran_date].set_index('location')['total_deaths']['US']
-    additional_deaths = us_truth - model_ran_date_total_deaths
+    actual_addl_deaths = us_truth - model_ran_date_total_deaths
 
-    print('Incident US deaths:', additional_deaths)
+    print('Incident US deaths:', actual_addl_deaths)
 
     df_truth_past = df_truth_raw[df_truth_raw['date'] == model_ran_date]
     df_truth_past = df_truth_past.set_index('location')['total_deaths']
@@ -275,13 +275,16 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print('Number of locations with projections')
     print(df_errors.notna().sum(axis=1))
 
+    # compute the error: predicted - actual
     total_deaths_col = f'total_deaths_{model_ran_date}'
     df_errors_us = pd.DataFrame({
         total_deaths_col : model_ran_date_total_deaths,
         'predicted_deaths' : model_to_us_projection,
         'actual_deaths' : us_truth,
-        'additional_deaths' : additional_deaths,
     })
+    df_errors_us['predicted_addl_deaths'] = \
+        df_errors_us['predicted_deaths'] - model_ran_date_total_deaths
+    df_errors_us['actual_addl_deaths'] = actual_addl_deaths
     df_errors_us['error'] = df_errors_us['predicted_deaths'] - df_errors_us['actual_deaths']
     assert ((df_errors_us['error'] == df_errors['US']) | \
         (np.isnan(df_errors_us['error']) & np.isnan(df_errors['US']))).all()
@@ -305,7 +308,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
                 df_errors_us.loc[f'{merge_models_prefix}-combined'] = df_us_avg
 
     df_errors_us['error'] = df_errors_us['predicted_deaths'] - df_errors_us['actual_deaths']
-    df_errors_us['perc_error'] = (df_errors_us['error'] / df_errors_us['additional_deaths']).apply(
+    df_errors_us['perc_error'] = (df_errors_us['error'] / df_errors_us['actual_addl_deaths']).apply(
         lambda x: '' if pd.isnull(x) else f'{x:.1%}')
     df_errors_us[total_deaths_col] = df_errors_us[total_deaths_col].astype(int)
     df_errors_us['actual_deaths'] = df_errors_us['actual_deaths'].astype(int)
