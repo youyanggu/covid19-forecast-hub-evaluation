@@ -95,9 +95,9 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     update_pandas_settings()
 
-    df_states = pd.read_csv(f'{forecast_hub_dir}/data-locations/locations.csv', dtype=str)
-    abbr_to_location_name =  df_states.set_index('abbreviation')['location_name'].to_dict()
-    abbr_to_fips = df_states.set_index('abbreviation')['location'].to_dict()
+    df_loc = pd.read_csv(f'{forecast_hub_dir}/data-locations/locations.csv', dtype=str)
+    abbr_to_location_name =  df_loc.set_index('abbreviation')['location_name'].to_dict()
+    abbr_to_fips = df_loc.set_index('abbreviation')['location'].to_dict()
     US_TERRITORIES = ['AS', 'GU', 'MP', 'PR', 'VI', 'UM'] # we do not evaluate US territories
 
     fips_to_us_state = {v : abbr_to_location_name[k] for k,v in abbr_to_fips.items()}
@@ -171,20 +171,23 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     model_to_errors = {}
     model_to_df = {}
     model_to_us_projection = {}
+    model_to_all_projections = {}
 
     # add baseline models
     model_to_num_locations['Baseline'] = len(df_baseline_filt)
     df_model_diffs = df_baseline_filt - df_truth_filt
     model_to_errors['Baseline'] = df_model_diffs.to_dict()
-    model_to_df['Baseline'] = df_baseline_filt
     model_to_us_projection['Baseline'] = df_baseline_filt['US']
+    model_to_all_projections['Baseline'] = df_baseline_filt
 
     baseline_name = f'Baseline_{baseline2_daily_decay}'
     model_to_num_locations[baseline_name] = len(df_baseline2_filt)
     df_model_diffs2 = df_baseline2_filt - df_truth_filt
     model_to_errors[baseline_name] = df_model_diffs2.to_dict()
-    model_to_df[baseline_name] = df_baseline2_filt
     model_to_us_projection[baseline_name] = df_baseline2_filt['US']
+    model_to_all_projections[baseline_name] = df_baseline2_filt
+
+    model_to_all_projections['Truth'] = df_truth_filt
 
     date_to_cu_select = {
         datetime.date(2020,4,13) : 'CU-scenario_mid',
@@ -262,6 +265,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         diffs_dict = df_model_diffs.to_dict()
         model_to_errors[model_name] = diffs_dict
         model_to_us_projection[model_name] = df_model_filt_values.get('US', np.nan)
+        model_to_all_projections[model_name] = df_model_filt_values
 
     print('=================================================')
     print('Begin Evaluation')
@@ -333,6 +337,17 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_errors_states = df_errors_states.loc[df_errors_states.notna().sum(axis=1) > 40]
     print('Number of states with valid projections:')
     print(df_errors_states.notna().sum(axis=1))
+
+    df_all = pd.DataFrame(model_to_all_projections).T.rename(
+        columns=fips_to_us_state).sort_index()
+    for model_name in [baseline_name, 'Baseline', 'Truth']:
+        # move to first rows
+        name_idx = np.where(df_all.index == model_name)[0][0]
+        df_all = df_all.iloc[[name_idx] + [i for i in range(len(df_all)) if i != name_idx]]
+    if out_dir:
+        error_states_fname = f'{out_dir}/{eval_date}/projections_{proj_date}_{eval_date}.csv'
+        df_all.T.to_csv(error_states_fname, float_format='%.1f')
+        print('Saved to:', error_states_fname)
 
     # we fill na with avg abs error for that state
     df_errors_states = df_errors_states.fillna(df_errors_states.abs().mean())
