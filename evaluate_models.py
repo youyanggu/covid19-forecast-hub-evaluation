@@ -189,13 +189,6 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     model_to_all_projections['Truth'] = df_truth_filt
 
-    date_to_cu_select = {
-        datetime.date(2020,4,13) : 'CU-scenario_mid',
-        datetime.date(2020,4,20) : 'CU-scenario_mid',
-        datetime.date(2020,4,27) : 'CU-scenario_mid',
-        datetime.date(2020,5,4) : 'CU-scenario_high',
-    }
-
     for model_name in model_to_projections:
         # Load projections from each model
         print('-----------------------------')
@@ -203,16 +196,9 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
         projections_dict = model_to_projections[model_name]
         if model_name.startswith('CU-'):
-            # handle multiple models by CU
-            if proj_date in date_to_cu_select:
-                if model_name == date_to_cu_select[proj_date]:
-                    model_name = 'CU-select'
-                else:
-                    continue
-            elif proj_date >= datetime.date(2020,5,11) and model_name != 'CU-select':
+            # only use the CU-select model from Columbia
+            if model_name != 'CU-select':
                 continue
-            else:
-                assert model_name == 'CU-select'
 
         df_model_raw = pd.read_csv(projections_dict['last_valid_fname'],
             dtype={'location' : str})
