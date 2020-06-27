@@ -96,9 +96,9 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
 
     if out_dir:
         if eval_date:
-            out_fname = f'{out_dir}/baseline_comparison_{eval_date}.csv'
+            out_fname = f'{out_dir}/baseline_comparison_global_{eval_date}.csv'
         else:
-            out_fname = f'{out_dir}/baseline_comparison_{weeks_ahead}_weeks_ahead.csv'
+            out_fname = f'{out_dir}/baseline_comparison_{weeks_ahead}_weeks_ahead_global.csv'
         df_all.to_csv(out_fname, float_format='%.10g')
         print('Saved global summary to:', out_fname)
 
