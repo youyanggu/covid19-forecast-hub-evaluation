@@ -24,4 +24,4 @@ In each file, the models are ranked according to their mean weekly rank. If a mo
 
 ### Baseline Comparison
 
-You can find a comparison with the [baseline metric](/#baseline-model) in the [baseline_comparison](baseline_comparison) folder.
+You can find a comparison with the [baseline metric](https://github.com/youyanggu/covid19-forecast-hub-evaluation#baseline-model) in the [baseline_comparison](baseline_comparison) folder.
