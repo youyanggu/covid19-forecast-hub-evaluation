@@ -1,6 +1,6 @@
 # Evaluation of COVID-19 Models
 
-**June 27 Update:** We have added [global](/global) evaluations comparing the *YYG / covid19-projections.com* and *IHME* models with the baseline. See more details [below](#global-evaluation).
+**June 27 Update:** We have added [global](/global) evaluations comparing the *YYG / covid19-projections.com* and *IHME* models with the baseline.
 
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
