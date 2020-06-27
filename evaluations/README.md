@@ -17,7 +17,7 @@ where
 For the `projections-{proj-date}_{eval-date}.csv` files, you will find the following columns:
 
 * `actual_deaths`: The actual number of cumulative deaths on the evaluation date
-* `Baseline`: The number of deaths if we use the [baseline metric](/#baseline-model) of using the previous week's average daily deaths to make all future forecasts (this is a costant number)
+* `Baseline`: The number of deaths if we use the [baseline metric](https://github.com/youyanggu/covid19-forecast-hub-evaluation#baseline-model) of using the previous week's average daily deaths to make all future forecasts (this is a costant number)
 * `{MODEL_NAME}`: Each model's cumulative deaths projections for the evaluation date
 * `error`: The error from each team's projection subtracted by the actual deaths
 * `beat_baseline`: Whether the team's projection is closer to the actual deaths than the baseline metric (`abs(error-TEAM) < abs(error-Baseline)`)
