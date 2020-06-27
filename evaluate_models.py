@@ -187,7 +187,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     model_to_us_projection[baseline_name] = df_baseline2_filt['US']
     model_to_all_projections[baseline_name] = df_baseline2_filt
 
-    model_to_all_projections['Truth'] = df_truth_filt
+    model_to_all_projections['actual_deaths'] = df_truth_filt
 
     for model_name in model_to_projections:
         # Load projections from each model
@@ -326,13 +326,26 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     df_all = pd.DataFrame(model_to_all_projections).T.rename(
         columns=fips_to_us_state).sort_index()
-    for model_name in [baseline_name, 'Baseline', 'Truth']:
+    for model_name in [baseline_name, 'Baseline', 'actual_deaths']:
         # move to first rows
         name_idx = np.where(df_all.index == model_name)[0][0]
         df_all = df_all.iloc[[name_idx] + [i for i in range(len(df_all)) if i != name_idx]]
+    df_all = df_all.T
+
+    team_to_model_names = {c.split('-')[0] : c for c in df_all.columns if '-' in c}
+    print(df_all)
+    df_all[f'error-Baseline'] = df_all['Baseline'] - df_all['actual_deaths']
+    for team_name, model_name in team_to_model_names.items():
+        df_all[f'error-{team_name}'] = df_all[model_name] - df_all['actual_deaths']
+    for team_name, model_name in team_to_model_names.items():
+        df_all[f'beat_baseline-{team_name}'] = \
+            df_all[f'error-{team_name}'].abs() < df_all[f'error-Baseline'].abs()
+
+    df_all['actual_deaths'] = df_all['actual_deaths'].astype(int)
+
     if out_dir:
         error_states_fname = f'{out_dir}/{eval_date}/projections_{proj_date}_{eval_date}.csv'
-        df_all.T.to_csv(error_states_fname, float_format='%.1f')
+        df_all.to_csv(error_states_fname, float_format='%.1f')
         print('Saved to:', error_states_fname)
 
     # we fill na with avg abs error for that state

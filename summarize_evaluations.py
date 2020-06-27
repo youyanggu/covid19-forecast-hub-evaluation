@@ -22,9 +22,15 @@ def str_to_date(date_str, fmt='%Y-%m-%d'):
 
 def get_dates_from_fname(fname):
     """Returns the projection and eval date given a file name."""
-    basename = os.path.basename(fname)
-    proj_date = str_to_date(basename.split('_')[0])
-    eval_date = str_to_date(basename.split('_')[1])
+    basename = os.path.basename(fname).replace('.csv', '')
+    try:
+        # proj-date_eval-date_eval-type.csv
+        proj_date = str_to_date(basename.split('_')[0])
+        eval_date = str_to_date(basename.split('_')[1])
+    except ValueError:
+        # projections_proj-date_eval-date.csv
+        proj_date = str_to_date(basename.split('_')[1])
+        eval_date = str_to_date(basename.split('_')[2])
     assert eval_date > proj_date
 
     return proj_date, eval_date
@@ -55,6 +61,8 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     print('Weeks ahead:', weeks_ahead)
     print('Evaluations dir:', evaluations_dir)
     print('Output dir:', out_dir)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
 
     assert eval_date or weeks_ahead, \
         'must provide either an --eval_date or --weeks_ahead'
@@ -105,7 +113,7 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
         else:
             out_fname_us = f'{out_dir}/summary_{weeks_ahead}_weeks_ahead_us.csv'
         df_all_us.to_csv(out_fname_us, float_format='%.3f')
-        print('Saved states summary to:', out_fname_us)
+        print('Saved US summary to:', out_fname_us)
 
     print('==============================')
     print('State-by-state evaluations')
@@ -162,6 +170,60 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
             out_fname_states = f'{out_dir}/summary_{weeks_ahead}_weeks_ahead_states.csv'
         df_all_states.to_csv(out_fname_states, float_format='%.1f')
         print('Saved states summary to:', out_fname_states)
+
+    print('==============================')
+    print('Baseline evaluations')
+    print('==============================')
+    if eval_date:
+        projections_fnames = sorted(glob.glob(
+            f'{evaluations_dir}/{eval_date}/projections_*_{eval_date}.csv'))
+    else:
+        projections_fnames = sorted(glob.glob(
+            f'{evaluations_dir}/*/projections_*.csv'))
+        projections_fnames = filter_fnames_by_weeks_ahead(projections_fnames, weeks_ahead)
+
+    assert len(projections_fnames) > 0, 'Need state-by-state projection files'
+
+    col_to_data = {}
+    for projections_fname in projections_fnames:
+        proj_date_, eval_date_ = get_dates_from_fname(projections_fname)
+        df_states = pd.read_csv(projections_fname, index_col=0)
+
+        df_states = df_states[df_states.index != 'US']
+
+        team_to_model_names = {c.split('-')[0] : c for c in df_states.columns if \
+            ('-' in c and 'error-' not in c and 'beat_baseline-' not in c)}
+        team_to_model_names['Baseline'] = 'Baseline'
+
+        num_states = len(df_states)
+        col_data = {
+            'num_states' : num_states,
+        }
+        df_states_sum = df_states.abs().sum()
+        for team_name, model_name in team_to_model_names.items():
+            if team_name != 'Baseline':
+                num_beat_baseline = df_states_sum.loc[f'beat_baseline-{team_name}']
+                col_data[f'num_states_beat_baseline-{team_name}'] = int(num_beat_baseline)
+                col_data[f'perc_beat_baseline-{team_name}'] = num_beat_baseline / num_states
+            col_data[f'mean_abs_error-{team_name}'] = df_states_sum.loc[f'error-{team_name}']
+
+        col_to_data[f'{proj_date_}_{eval_date_}'] = col_data
+
+    df_all = pd.DataFrame(col_to_data)
+    row_ordering = ['num_states'] + \
+        sorted([c for c in df_all.index if 'num_states_beat_baseline' in c]) + \
+        sorted([c for c in df_all.index if 'perc_beat_baseline' in c]) + \
+        sorted([c for c in df_all.index if 'mean_abs_error' in c])
+    df_all = df_all.loc[row_ordering]
+
+    if out_dir:
+        os.makedirs(f'{out_dir}/baseline_comparison', exist_ok=True)
+        if eval_date:
+            out_fname = f'{out_dir}/baseline_comparison/baseline_comparison_states_{eval_date}.csv'
+        else:
+            out_fname = f'{out_dir}/baseline_comparison/baseline_comparison_{weeks_ahead}_weeks_ahead_states.csv'
+        df_all.to_csv(out_fname, float_format='%.10g')
+        print('Saved global summary to:', out_fname)
 
 
 if __name__ == '__main__':
