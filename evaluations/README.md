@@ -2,7 +2,7 @@
 
 Here is where we save all the outputs of our evaluations. You can see a full list of team/model names [here](https://github.com/reichlab/covid19-forecast-hub#teams-and-models). The files are located in the directory based on the evaluation date (e.g. all projections evaluated on Saturday, June 13 are located in the `2020-06-13` directory). The file format is the following:
 
-```proj-date_eval-date_eval-type.csv```
+```{proj-date}_{eval-date}_{eval-type}.csv```
 
 where
 
