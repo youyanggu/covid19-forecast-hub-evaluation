@@ -9,7 +9,7 @@ We present summaries for two types of evaluations:
 
 The individual column names in each file are in the format:
 
-`eval-type_proj-date_eval-date`
+`{eval-type}_{proj-date}_{eval-date}`
 
 where
 
@@ -21,3 +21,7 @@ where
   * `mean_sq_errs` : State-by-state mean squared errors
 
 In each file, the models are ranked according to their mean weekly rank. If a model does not have a projection for a certain week, we assign its rank to be equal to the number of teams from that week.
+
+### Baseline Comparison
+
+You can find a comparison with the [baseline metric](/#baseline-model) in the [baseline_comparison](baseline_comparison) folder.
