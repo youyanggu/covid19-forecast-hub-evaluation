@@ -183,11 +183,11 @@ We then compute the mean absolute error and mean squared error for all states fo
 
 In any evaluation, it is important to include a baseline as a control, similar to how scientfic trials include a placebo. We define a simple baseline model that takes the mean of the previous week's daily deaths to make all future forecasts. For example, for Monday, May 25 projections, we use the average daily deaths from May 18 to May 24 to make forecasts. For US country-wide projections, this would amount to a constant 1,164 deaths per day for each forecast day.
 
-We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for all future projections. This is in general a much more accurate model, but may be subject to selection bias.
+We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for all future projections (called `Baseline_0.98`). This is in general a much more accurate model, but may be subject to selection bias.
 
 ### Global Evaluation
 
-We also include evaluations of country-by-country forecasts by [covid19-projections.com](https://covid19-projections.com) and [IHME](https://covid19.healthdata.org/). Because global forecasts are not standardized, each team's forecasts must be downloaded and processed separately. We compare the models with the baseline model (explained above). You can view the results in the [`global`](/global) directory.
+In addition to US forecast evaluations, we also include evaluations of country-by-country forecasts by [covid19-projections.com](https://covid19-projections.com) and [IHME](https://covid19.healthdata.org/). Because global forecasts are not standardized, each team's forecasts must be downloaded and processed separately. We compare the models with the baseline model (explained above). You can view the results in the [`global`](/global) directory.
 
 ## Questions? Bugs? Feature Request?
 
