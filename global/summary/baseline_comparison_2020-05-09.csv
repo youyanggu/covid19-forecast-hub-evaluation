@@ -1,0 +1,9 @@
+,2020-04-20_2020-05-09,2020-04-27_2020-05-09,2020-05-04_2020-05-09
+num_countries,30,30,30
+num_countries_beat_baseline-YYG,21,22,14
+num_countries_beat_baseline-IHME,12,8,11
+perc_beat_baseline-YYG,0.7,0.7333333333,0.4666666667
+perc_beat_baseline-IHME,0.4,0.2666666667,0.3666666667
+mean_abs_error-Baseline,22432,11527,3910
+mean_abs_error-YYG,12412,9003,1705
+mean_abs_error-IHME,14917,10875,3993

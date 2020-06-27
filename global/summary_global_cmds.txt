@@ -1,0 +1,16 @@
+python summarize_global_evaluations.py --weeks_ahead 1 --out_dir summary
+python summarize_global_evaluations.py --weeks_ahead 2 --out_dir summary
+python summarize_global_evaluations.py --weeks_ahead 3 --out_dir summary
+python summarize_global_evaluations.py --weeks_ahead 4 --out_dir summary
+python summarize_global_evaluations.py --weeks_ahead 5 --out_dir summary
+python summarize_global_evaluations.py --weeks_ahead 6 --out_dir summary
+
+python summarize_global_evaluations.py --eval_date 2020-04-25 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-05-02 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-05-09 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-05-16 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-05-23 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-05-30 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-06-06 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-06-13 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-06-20 --out_dir summary
