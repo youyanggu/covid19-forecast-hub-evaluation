@@ -1,16 +1,16 @@
-,actual_deaths,Baseline,Baseline_0.98,CU-select,IHME-CurveFit,IowaStateLW-STEM,LANL-GrowthRate,MIT_CovidAnalytics-DELPHI,UT-Mobility,YYG-ParamSearch,error-Baseline,error-CU,error-IHME,error-IowaStateLW,error-LANL,error-MIT_CovidAnalytics,error-UT,error-YYG,beat_baseline-CU,beat_baseline-IHME,beat_baseline-IowaStateLW,beat_baseline-LANL,beat_baseline-MIT_CovidAnalytics,beat_baseline-UT,beat_baseline-YYG
+,actual_deaths,Baseline,Baseline_0.98,CU-select,IHME-CurveFit,IowaStateLW-STEM,LANL-GrowthRate,MIT_CovidAnalytics-DELPHI,UT-Mobility,YYG-ParamSearch,error-Baseline,error-CU-select,error-IHME-CurveFit,error-IowaStateLW-STEM,error-LANL-GrowthRate,error-MIT_CovidAnalytics-DELPHI,error-UT-Mobility,error-YYG-ParamSearch,beat_baseline-CU-select,beat_baseline-IHME-CurveFit,beat_baseline-IowaStateLW-STEM,beat_baseline-LANL-GrowthRate,beat_baseline-MIT_CovidAnalytics-DELPHI,beat_baseline-UT-Mobility,beat_baseline-YYG-ParamSearch
 Alabama,689,582.1,468.4,803.0,309.1,327.0,446.8,478.0,443.3,521.7,-106.9,114.0,-379.9,-362.0,-242.2,-211.0,-245.7,-167.3,False,False,False,False,False,False,False
-Alaska,10,9.0,9.0,15.0,,,10.5,12.0,127.7,24.5,-1.0,5.0,,,0.5,2.0,117.7,14.5,False,False,False,True,False,False,False
+Alaska,10,9.0,9.0,15.0,,,10.5,12.0,127.7,24.5,-1.0,5.0,,,0.5,2.0,117.7,14.5,False,,,True,False,False,False
 Arizona,1043,808.0,641.1,982.0,735.9,581.0,682.1,624.0,594.3,788.3,-235.0,-61.0,-307.1,-462.0,-360.9,-419.0,-448.7,-254.7,True,False,False,False,False,False,False
 Arkansas,154,121.3,99.3,132.0,158.8,154.0,103.1,230.0,113.9,121.8,-32.7,-22.0,4.8,0.0,-50.9,76.0,-40.1,-32.2,True,True,True,False,False,False,True
 California,4607,4934.7,3929.6,6289.0,2035.4,3413.0,4051.6,4014.0,3021.5,4200.0,327.7,1682.0,-2571.6,-1194.0,-555.4,-593.0,-1585.5,-407.0,False,False,False,False,False,False,False
 Colorado,1527,2257.7,1766.2,1482.0,1052.3,1326.0,2326.6,1641.0,1337.4,1752.0,730.7,-45.0,-474.7,-201.0,799.6,114.0,-189.6,225.0,True,True,True,False,True,True,True
 Connecticut,4055,6592.1,5130.3,4558.0,3364.3,3344.0,3753.2,6493.0,3085.7,4514.6,2537.1,503.0,-690.7,-711.0,-301.8,2438.0,-969.3,459.6,True,True,True,True,True,True,True
 Delaware,390,430.4,333.2,752.0,156.6,430.0,260.8,479.0,281.0,346.8,40.4,362.0,-233.4,40.0,-129.2,89.0,-109.0,-43.2,False,False,True,False,False,False,False
-District of Columbia,483,658.3,507.9,,255.2,438.0,473.9,533.0,572.6,462.1,175.3,,-227.8,-45.0,-9.1,50.0,89.6,-20.9,False,False,True,True,True,True,True
+District of Columbia,483,658.3,507.9,,255.2,438.0,473.9,533.0,572.6,462.1,175.3,,-227.8,-45.0,-9.1,50.0,89.6,-20.9,,False,True,True,True,True,True
 Florida,2688,2838.0,2285.9,2104.0,1913.9,2059.0,1894.5,2205.0,1569.5,2304.9,150.0,-584.0,-774.1,-629.0,-793.5,-483.0,-1118.5,-383.1,False,False,False,False,False,False,False
 Georgia,2178,2257.3,1837.3,1579.0,2236.1,1472.0,1556.7,1385.0,1220.3,1896.2,79.3,-599.0,58.1,-706.0,-621.3,-793.0,-957.7,-281.8,False,True,False,False,False,False,False
-Hawaii,17,37.4,30.1,14.0,22.7,,17.2,21.0,96.3,38.6,20.4,-3.0,5.7,,0.2,4.0,79.3,21.6,True,True,False,True,True,False,False
+Hawaii,17,37.4,30.1,14.0,22.7,,17.2,21.0,96.3,38.6,20.4,-3.0,5.7,,0.2,4.0,79.3,21.6,True,True,,True,True,False,False
 Idaho,83,126.3,104.3,97.0,66.0,101.0,72.2,94.0,220.1,124.7,43.3,14.0,-17.0,18.0,-10.8,11.0,137.1,41.7,True,True,True,True,True,False,True
 Illinois,5864,5699.1,4519.8,5695.0,2292.2,4394.0,5579.4,6536.0,3075.0,4715.4,-164.9,-169.0,-3571.8,-1470.0,-284.6,672.0,-2789.0,-1148.6,False,False,False,False,False,False,False
 Indiana,2292,2283.1,1822.8,1365.0,1017.9,1415.0,2019.1,1998.0,1438.0,1814.6,-8.9,-927.0,-1274.1,-877.0,-272.9,-294.0,-854.0,-477.4,False,False,False,False,False,False,False
@@ -35,7 +35,7 @@ New York,30280,43864.3,37101.6,31925.0,24087.6,30110.0,35266.6,34412.0,19288.4,3
 North Carolina,1028,1050.3,822.8,475.0,375.4,514.0,908.6,961.0,919.7,878.0,22.3,-553.0,-652.6,-514.0,-119.4,-67.0,-108.3,-150.0,False,False,False,False,False,False,False
 North Dakota,72,63.9,49.2,13.0,214.1,47.0,36.6,110.0,140.8,42.5,-8.1,-59.0,142.1,-25.0,-35.4,38.0,68.8,-29.5,False,False,False,False,False,False,False
 Ohio,2372,2233.3,1761.9,2190.0,835.5,1484.0,1176.7,3241.0,1358.1,1849.9,-138.7,-182.0,-1536.5,-888.0,-1195.3,869.0,-1013.9,-522.1,False,False,False,False,False,False,False
-Oklahoma,347,517.1,416.3,298.0,,298.0,341.6,391.0,323.1,460.3,170.1,-49.0,,-49.0,-5.4,44.0,-23.9,113.3,True,False,True,True,True,True,True
+Oklahoma,347,517.1,416.3,298.0,,298.0,341.6,391.0,323.1,460.3,170.1,-49.0,,-49.0,-5.4,44.0,-23.9,113.3,True,,True,True,True,True,True
 Oregon,161,197.4,164.4,175.0,124.8,147.0,169.7,180.0,189.1,191.7,36.4,14.0,-36.2,-14.0,8.7,19.0,28.1,30.7,True,True,True,True,True,True,True
 Pennsylvania,5931,4978.9,3988.4,5849.0,2318.2,3830.0,4045.9,5002.0,3377.6,4197.9,-952.1,-82.0,-3612.8,-2101.0,-1885.1,-929.0,-2553.4,-1733.1,True,False,False,False,True,False,False
 Rhode Island,772,671.1,531.7,1714.0,594.1,736.0,625.8,874.0,451.9,620.7,-100.9,942.0,-177.9,-36.0,-146.2,102.0,-320.1,-151.3,False,False,True,False,False,False,False
@@ -50,4 +50,4 @@ Washington,1153,1410.9,1203.6,1354.0,859.8,1251.0,1178.5,866.0,991.6,1130.9,257.
 West Virginia,84,127.7,98.4,35.0,38.4,135.0,51.5,59.0,170.7,123.8,43.7,-49.0,-45.6,51.0,-32.5,-25.0,86.7,39.8,False,False,False,True,True,False,True
 Wisconsin,645,576.6,481.2,1329.0,331.1,455.0,590.8,726.0,474.0,480.4,-68.4,684.0,-313.9,-190.0,-54.2,81.0,-171.0,-164.6,False,False,False,True,False,False,False
 Wyoming,17,36.3,27.1,1.0,64.2,13.0,7.9,6.0,49.3,40.4,19.3,-16.0,47.2,-4.0,-9.1,-11.0,32.3,23.4,True,False,True,True,True,False,False
-US,110124,137244.0,111539.7,121829.0,72655.9,,123675.6,,86060.7,109070.3,27120.0,11705.0,-37468.1,,13551.6,,-24063.3,-1053.7,True,False,False,True,False,True,True
+US,110124,137244.0,111539.7,121829.0,72655.9,,123675.6,,86060.7,109070.3,27120.0,11705.0,-37468.1,,13551.6,,-24063.3,-1053.7,True,False,,True,,True,True

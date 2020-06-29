@@ -1,4 +1,4 @@
-,actual_deaths,Baseline,Baseline_0.98,IHME-CurveFit,error-Baseline,error-IHME,beat_baseline-IHME
+,actual_deaths,Baseline,Baseline_0.98,IHME-CurveFit,error-Baseline,error-IHME-CurveFit,beat_baseline-IHME-CurveFit
 Alabama,773,659.9,463.7,290.0,-113.1,-483.0,False
 Alaska,12,16.9,13.8,16.5,4.9,4.5,True
 Arizona,1189,647.6,466.7,479.2,-541.4,-709.8,False

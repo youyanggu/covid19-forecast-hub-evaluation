@@ -84,7 +84,7 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
                 num_beat_baseline = df_global_sum.loc[f'beat_baseline-{team_name}']
                 col_data[f'num_countries_beat_baseline-{team_name}'] = int(num_beat_baseline)
                 col_data[f'perc_beat_baseline-{team_name}'] = num_beat_baseline / num_countries
-            col_data[f'mean_abs_error-{team_name}'] = df_global_sum.loc[f'error-{team_name}']
+            col_data[f'mean_abs_error-{team_name}'] = df_global_sum.loc[f'error-{team_name}'] / num_countries
 
         col_to_data[f'{proj_date_}_{eval_date_}'] = col_data
 

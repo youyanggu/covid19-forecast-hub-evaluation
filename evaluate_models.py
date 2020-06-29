@@ -332,14 +332,19 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         df_all = df_all.iloc[[name_idx] + [i for i in range(len(df_all)) if i != name_idx]]
     df_all = df_all.T
 
-    team_to_model_names = {c.split('-')[0] : c for c in df_all.columns if '-' in c}
+    model_names = [c for c in df_all.columns if '-' in c]
     print(df_all)
     df_all[f'error-Baseline'] = df_all['Baseline'] - df_all['actual_deaths']
-    for team_name, model_name in team_to_model_names.items():
-        df_all[f'error-{team_name}'] = df_all[model_name] - df_all['actual_deaths']
-    for team_name, model_name in team_to_model_names.items():
-        df_all[f'beat_baseline-{team_name}'] = \
-            df_all[f'error-{team_name}'].abs() < df_all[f'error-Baseline'].abs()
+    for model_name in model_names:
+        df_all[f'error-{model_name}'] = df_all[model_name] - df_all['actual_deaths']
+    for model_name in model_names:
+        # Beat baseline if absolute error is less than baseline or error is 0
+        df_all[f'beat_baseline-{model_name}'] = \
+            ((df_all[f'error-{model_name}'].abs() < df_all[f'error-Baseline'].abs()) | \
+                (df_all[f'error-{model_name}'].abs() < 1e-3))
+        # convert to boolean type, only in pandas 1.0+
+        df_all[f'beat_baseline-{model_name}'] = df_all[f'beat_baseline-{model_name}'].convert_dtypes()
+        df_all.loc[pd.isnull(df_all[f'error-{model_name}']), f'beat_baseline-{model_name}'] = np.nan
 
     df_all['actual_deaths'] = df_all['actual_deaths'].astype(int)
 

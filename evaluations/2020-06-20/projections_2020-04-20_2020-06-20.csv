@@ -1,4 +1,4 @@
-,actual_deaths,Baseline,Baseline_0.98,IHME-CurveFit,error-Baseline,error-IHME,beat_baseline-IHME
+,actual_deaths,Baseline,Baseline_0.98,IHME-CurveFit,error-Baseline,error-IHME-CurveFit,beat_baseline-IHME-CurveFit
 Alabama,838,723.9,483.5,290.0,-114.1,-548.0,False
 Alaska,12,17.9,14.1,16.5,5.9,4.5,True
 Arizona,1346,706.6,485.0,479.6,-639.4,-866.4,False
@@ -36,7 +36,7 @@ North Carolina,1215,1183.1,766.3,309.8,-31.9,-905.2,False
 North Dakota,76,26.7,19.2,271.8,-49.3,195.8,False
 Ohio,2697,2401.9,1583.2,770.6,-295.1,-1926.4,False
 Oklahoma,368,529.7,364.5,306.2,161.7,-61.8,True
-Oregon,188,268.9,186.2,120.3,80.9,-67.7,True
+Oregon,189,268.9,186.2,120.3,79.9,-68.7,True
 Pennsylvania,6419,7644.3,4944.1,2323.2,1225.3,-4095.8,False
 Rhode Island,894,920.6,593.8,577.8,26.6,-316.2,False
 South Carolina,644,456.6,313.9,261.3,-187.4,-382.7,False
@@ -50,4 +50,4 @@ Washington,1265,1787.4,1299.2,779.2,522.4,-485.8,True
 West Virginia,88,124.3,79.2,34.5,36.3,-53.5,False
 Wisconsin,744,893.1,607.7,340.3,149.1,-403.7,False
 Wyoming,20,19.7,12.2,243.4,-0.3,223.4,False
-US,119719,173208.0,117213.5,65969.4,53489.0,-53749.6,False
+US,119720,173208.0,117213.5,65969.4,53488.0,-53750.6,False

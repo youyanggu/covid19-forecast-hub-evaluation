@@ -4,6 +4,6 @@ num_countries_beat_baseline-YYG,20
 num_countries_beat_baseline-IHME,8
 perc_beat_baseline-YYG,0.6666666667
 perc_beat_baseline-IHME,0.2666666667
-mean_abs_error-Baseline,3054
-mean_abs_error-YYG,2727
-mean_abs_error-IHME,5597
+mean_abs_error-Baseline,101
+mean_abs_error-YYG,90
+mean_abs_error-IHME,186

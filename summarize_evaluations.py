@@ -12,6 +12,7 @@ import glob
 import os
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 
@@ -191,26 +192,39 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
 
         df_states = df_states[df_states.index != 'US']
 
-        team_to_model_names = {c.split('-')[0] : c for c in df_states.columns if \
-            ('-' in c and 'error-' not in c and 'beat_baseline-' not in c)}
-        team_to_model_names['Baseline'] = 'Baseline'
+        model_names = ['Baseline'] + [c for c in df_states.columns if \
+            ('-' in c and 'error-' not in c and 'beat_baseline-' not in c)]
 
         num_states = len(df_states)
         col_data = {
             'num_states' : num_states,
         }
-        df_states_sum = df_states.abs().sum()
-        for team_name, model_name in team_to_model_names.items():
-            if team_name != 'Baseline':
-                num_beat_baseline = df_states_sum.loc[f'beat_baseline-{team_name}']
-                col_data[f'num_states_beat_baseline-{team_name}'] = int(num_beat_baseline)
-                col_data[f'perc_beat_baseline-{team_name}'] = num_beat_baseline / num_states
-            col_data[f'mean_abs_error-{team_name}'] = df_states_sum.loc[f'error-{team_name}']
+        df_states_num_projections = (~pd.isnull(df_states)).sum()
+        df_states_sum = df_states.abs().sum(min_count=1)
+        for model_name in model_names:
+            num_with_projections = df_states_num_projections.loc[model_name]
+            if model_name != 'Baseline':
+                num_beat_baseline = df_states_sum.loc[f'beat_baseline-{model_name}']
+
+                col_data[f'num_states_with_projections-{model_name}'] = num_with_projections
+                if pd.isnull(num_beat_baseline):
+                    col_data[f'num_states_beat_baseline-{model_name}'] = np.nan
+                    col_data[f'perc_beat_baseline-{model_name}'] = np.nan
+                else:
+                    col_data[f'num_states_beat_baseline-{model_name}'] = int(num_beat_baseline)
+                    col_data[f'perc_beat_baseline-{model_name}'] = num_beat_baseline / num_with_projections
+
+            if num_with_projections == num_states:
+                # Only calculate mean abs error if there are projections for every state
+                col_data[f'mean_abs_error-{model_name}'] = df_states_sum.loc[f'error-{model_name}'] / num_states
+            else:
+                col_data[f'mean_abs_error-{model_name}'] = np.nan
 
         col_to_data[f'{proj_date_}_{eval_date_}'] = col_data
 
     df_all = pd.DataFrame(col_to_data)
     row_ordering = ['num_states'] + \
+        sorted([c for c in df_all.index if 'num_states_with_projections' in c]) + \
         sorted([c for c in df_all.index if 'num_states_beat_baseline' in c]) + \
         sorted([c for c in df_all.index if 'perc_beat_baseline' in c]) + \
         sorted([c for c in df_all.index if 'mean_abs_error' in c])
