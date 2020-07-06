@@ -1,0 +1,66 @@
+,actual_deaths,Baseline,YYG-ParamSearch,IHME-CurveFIt,error-Baseline,error-YYG,error-IHME,beat_baseline-YYG,beat_baseline-IHME
+Algeria,946,942.9,942.0,958.7,-3.1,-4.0,12.7,False,False
+Argentina,1481,1449.3,1441.0,1546.3,-31.7,-40.0,65.3,False,False
+Australia,104,105.4,105.0,102.3,1.4,1.0,-1.7,True,False
+Austria,705,712.3,706.0,706.9,7.3,1.0,1.9,True,True
+Bangladesh,1997,1983.7,2011.0,2136.4,-13.3,14.0,139.4,False,False
+Belarus,418,412.7,412.0,414.2,-5.3,-6.0,-3.8,False,True
+Belgium,9771,9757.7,9758.0,9659.9,-13.3,-13.0,-111.1,True,False
+Bolivia,1378,1250.3,1267.0,1146.5,-127.7,-111.0,-231.5,True,False
+Brazil,64265,63344.7,63248.0,64835.5,-920.3,-1017.0,570.5,False,True
+Bulgaria,241,234.4,238.0,256.1,-6.6,-3.0,15.1,True,False
+Canada,8732,8723.7,8744.0,8756.4,-8.3,12.0,24.4,False,False
+Chile,6192,6341.4,6311.0,7570.9,149.4,119.0,1378.9,True,False
+Colombia,4001,3848.9,3827.0,4012.7,-152.1,-174.0,11.7,False,True
+Croatia,113,107.0,108.0,142.3,-6.0,-5.0,29.3,True,False
+Cuba,86,86.7,87.0,90.9,0.7,1.0,4.9,False,False
+Cyprus,19,19.0,19.0,17.1,0.0,0.0,-1.9,True,False
+Czechia,351,356.6,350.0,348.8,5.6,-1.0,-2.2,True,True
+Denmark,606,607.1,609.0,627.2,1.1,3.0,21.2,False,False
+Dominican Republic,786,778.7,780.0,805.9,-7.3,-6.0,19.9,True,False
+Ecuador,4769,4701.3,4661.0,11577.8,-67.7,-108.0,6808.8,False,False
+Egypt,3280,3296.3,3276.0,3572.5,16.3,-4.0,292.5,True,False
+Estonia,69,69.0,70.0,71.8,0.0,1.0,2.8,False,False
+Finland,329,328.7,330.0,317.0,-0.3,1.0,-12.0,False,False
+France,29896,29923.1,29906.0,29999.1,27.1,10.0,103.1,True,False
+Germany,9020,9031.0,9046.0,9164.7,11.0,26.0,144.7,False,False
+Greece,192,191.7,192.0,199.7,-0.3,0.0,7.7,True,False
+Honduras,629,549.3,557.0,516.0,-79.7,-72.0,-113.0,True,False
+Hungary,589,594.3,593.0,584.4,5.3,4.0,-4.6,True,True
+Iceland,10,10.0,10.0,11.7,0.0,0.0,1.7,True,False
+Iran,11408,11332.9,11311.0,11154.3,-75.1,-97.0,-253.7,False,False
+Ireland,1741,1747.9,1741.0,1744.3,6.9,0.0,3.3,True,True
+Israel,330,327.6,324.0,312.6,-2.4,-6.0,-17.4,False,False
+Italy,34854,34806.1,34926.0,35092.5,-47.9,72.0,238.5,False,False
+Japan,977,984.1,981.0,1023.7,7.1,4.0,46.7,True,False
+Kuwait,365,364.3,367.0,376.3,-0.7,2.0,11.3,False,False
+Latvia,30,30.0,31.0,30.5,0.0,1.0,0.5,False,False
+Lithuania,79,79.4,79.0,82.5,0.4,0.0,3.5,True,False
+Luxembourg,110,110.0,110.0,115.9,0.0,0.0,5.9,True,False
+Malaysia,121,121.0,124.0,122.1,0.0,3.0,1.1,False,False
+Malta,9,9.0,9.0,8.5,0.0,0.0,-0.5,True,False
+Mexico,30366,30361.7,30504.0,28641.9,-4.3,138.0,-1724.1,False,False
+Moldova,580,576.0,583.0,649.2,-4.0,3.0,69.2,True,False
+Morocco,232,232.9,227.0,226.2,0.9,-5.0,-5.8,False,False
+Netherlands,6132,6138.1,6153.0,6115.1,6.1,21.0,-16.9,False,False
+Norway,251,249.7,250.0,243.8,-1.3,-1.0,-7.2,True,False
+Pakistan,4619,4739.0,4817.0,5181.8,120.0,198.0,562.8,False,False
+Panama,720,690.7,689.0,632.9,-29.3,-31.0,-87.1,False,False
+Peru,10412,10419.0,10427.0,17896.6,7.0,15.0,7484.6,False,False
+Philippines,1290,1310.7,1302.0,1251.7,20.7,12.0,-38.3,True,False
+Poland,1512,1504.7,1502.0,1525.3,-7.3,-10.0,13.3,False,False
+Portugal,1605,1592.3,1585.0,1559.7,-12.7,-20.0,-45.3,False,False
+Romania,1731,1713.3,1694.0,1736.8,-17.7,-37.0,5.8,False,True
+Russia,10011,9834.9,9835.0,10061.6,-176.1,-176.0,50.6,True,True
+Saudi Arabia,1858,1807.6,1777.0,2791.4,-50.4,-81.0,933.4,False,False
+Serbia,306,282.6,278.0,269.0,-23.4,-28.0,-37.0,False,False
+Slovakia,28,28.0,28.0,28.9,0.0,0.0,0.9,True,False
+Slovenia,111,112.4,111.0,111.6,1.4,0.0,0.6,True,True
+South Korea,283,282.7,285.0,286.9,-0.3,2.0,3.9,False,False
+Spain,28385,28361.7,28424.0,27780.9,-23.3,39.0,-604.1,False,False
+Sweden,5420,5444.3,5433.0,5323.5,24.3,13.0,-96.5,True,False
+Switzerland,1965,1966.3,1967.0,1996.1,1.3,2.0,31.1,False,False
+Turkey,5206,5215.7,5226.0,5306.1,9.7,20.0,100.1,False,False
+Ukraine,1243,1260.3,1254.0,1286.8,17.3,11.0,43.8,True,False
+United Arab Emirates,321,321.9,321.0,319.2,0.9,0.0,-1.8,True,False
+United Kingdom,44283,44321.9,44085.0,43981.5,38.9,-198.0,-301.5,False,False
