@@ -2,15 +2,15 @@
 YYG-ParamSearch,6.2
 COVIDhub-ensemble,6.5
 UMass-MechBayes,6.9
-OliverWyman-Navigator,7.6
-LANL-GrowthRate,7.8
-UCLA-SuEIR,8.0
+OliverWyman-Navigator,7.7
+LANL-GrowthRate,7.9
+UCLA-SuEIR,8.1
 UT-Mobility,8.1
 MIT_CovidAnalytics-DELPHI,8.5
 MOBS_NEU-GLEAM_COVID,9.0
 Geneva-DetGrowth,10.2
-IHME-CurveFit,10.4
-IowaStateLW-STEM,11.3
+IHME-CurveFit,10.3
+IowaStateLW-STEM,11.0
 CU-select,11.4
 SWC-TerminusCM,12.0
 JHU_IDD-CovidSP,13.5
@@ -19,4 +19,4 @@ CovidActNow-SEIR_CAN,13.8
 UA-EpiCovDA,14.1
 USACE-ERDC_SEIR,14.2
 PSI-DRAFT,17.5
-Auquan-SEIR,20.4
+Auquan-SEIR,20.3

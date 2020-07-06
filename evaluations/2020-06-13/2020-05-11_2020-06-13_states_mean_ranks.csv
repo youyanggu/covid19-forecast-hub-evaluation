@@ -1,7 +1,7 @@
 ,mean_rank
+YYG-ParamSearch,3.1
 LANL-GrowthRate,3.2
-YYG-ParamSearch,3.2
 UCLA-SuEIR,3.3
-IHME-CurveFit,3.5
-MIT_CovidAnalytics-DELPHI,3.7
+IHME-CurveFit,3.4
+MIT_CovidAnalytics-DELPHI,3.8
 CU-select,4.2
