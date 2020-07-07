@@ -140,6 +140,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
             'last_valid_date' : last_valid_date,
         }
 
+    # We retrieve the latest truth data to compute actual incident deaths
     truth_file_name = forecast_hub_dir / 'data-truth' / 'truth-Cumulative Deaths.csv'
     df_truth_raw = pd.read_csv(truth_file_name)
     df_truth_raw['date'] = pd.to_datetime(df_truth_raw['date']).dt.date
@@ -151,6 +152,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_truth_filt = df_truth[df_truth.index.isin(fpis_to_evaluate)]
     us_truth = df_truth_filt['US']
 
+    # model ran date is the day before the projection date, the date the models were run
     df_truth_model_ran_date = df_truth_raw[df_truth_raw['date'] == model_ran_date]
     df_truth_model_ran_date = df_truth_model_ran_date.set_index('location')['total_deaths']
     df_truth_model_ran_date_filt = df_truth_model_ran_date[df_truth_model_ran_date.index.isin(fpis_to_evaluate)]
@@ -160,6 +162,15 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         to compute incident deaths. So if proj_date is 2020-06-15 and eval_date is 2020-06-20,
         our incident deaths is the number of deaths between 2020-06-14 and 2020-06-20.
         The % error then becomes: error / incident deaths.
+
+    To compute predicted incident deaths, we take the predicted cumulative deaths and
+        subtract the true cumulative deaths *on the projection date*. Because the truth
+        data is constantly being updated, we must use past truth data to avoid look-ahead
+        bias.
+
+    We also need the past truth data to compute the baseline by taking the previous week's daily deaths
+        *at the time of the projection is made*, rather than at the time of the evaluation.
+        This is done to avoid using future data to generate the baseline forecasts.
     """
     past_truth_fname = find_truth_file(proj_date)
     if not past_truth_fname:
@@ -172,10 +183,10 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_truth_raw_past = df_truth_raw_past.rename(columns={'value' : 'total_deaths'})
     df_truth_raw_past = df_truth_raw_past[['date', 'location', 'total_deaths']]
 
-    df_truth_past = df_truth_raw_past[df_truth_raw_past['date'] == model_ran_date]
-    df_truth_past = df_truth_past.set_index('location')['total_deaths']
-    df_truth_past_filt = df_truth_past[df_truth_past.index.isin(fpis_to_evaluate)]
-    us_truth_past = df_truth_past_filt['US']
+    df_truth_past_model_ran_date = df_truth_raw_past[df_truth_raw_past['date'] == model_ran_date]
+    df_truth_past_model_ran_date = df_truth_past_model_ran_date.set_index('location')['total_deaths']
+    df_truth_past_model_ran_date_filt = df_truth_past_model_ran_date[df_truth_past_model_ran_date.index.isin(fpis_to_evaluate)]
+    us_truth_past = df_truth_past_model_ran_date_filt['US']
 
     model_ran_date_total_deaths = \
         df_truth_raw[df_truth_raw['date'] == model_ran_date].set_index('location')['total_deaths']['US']
@@ -191,18 +202,18 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_truth_past_minus_7_days = \
         df_truth_raw_past[df_truth_raw_past['date'] == model_ran_date-datetime.timedelta(days=7)]
     df_truth_past_minus_7_days = df_truth_past_minus_7_days.set_index('location')['total_deaths']
-    df_truth_per_day = (df_truth_past - df_truth_past_minus_7_days) / 7
+    df_truth_per_day = (df_truth_past_model_ran_date - df_truth_past_minus_7_days) / 7
 
     # Baseline #1 uses the avg daily deaths from previous week to make all future projections
     baseline_daily_decay = 1
     weighted_days = sum([baseline_daily_decay**i for i in range(days_ahead+1)])
-    df_baseline = df_truth_past + df_truth_per_day * weighted_days
+    df_baseline = df_truth_past_model_ran_date + df_truth_per_day * weighted_days
     df_baseline_filt = df_baseline[(df_baseline.index.isin(fpis_to_evaluate)) & (~pd.isnull(df_baseline))]
 
     # Baseline #2 uses the avg daily deaths from previous week and make a 2% daily decrease
     baseline2_daily_decay = 0.98
     weighted_days2 = sum([baseline2_daily_decay**i for i in range(days_ahead+1)])
-    df_baseline2 = df_truth_past + df_truth_per_day * weighted_days2
+    df_baseline2 = df_truth_past_model_ran_date + df_truth_per_day * weighted_days2
     df_baseline2_filt = df_baseline2[(df_baseline2.index.isin(fpis_to_evaluate)) & (~pd.isnull(df_baseline2))]
 
     model_to_num_locations = {}
@@ -217,10 +228,10 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     else:
         df_model_act_addl_deaths = df_truth_filt - df_truth_model_ran_date_filt
 
-        df_model_pred_addl_deaths = df_baseline_filt - df_truth_past_filt
+        df_model_pred_addl_deaths = df_baseline_filt - df_truth_past_model_ran_date_filt
         df_model_diffs = df_model_pred_addl_deaths - df_model_act_addl_deaths
 
-        df_model_pred_addl_deaths2 = df_baseline2_filt - df_truth_past_filt
+        df_model_pred_addl_deaths2 = df_baseline2_filt - df_truth_past_model_ran_date_filt
         df_model_diffs2 = df_model_pred_addl_deaths2 - df_model_act_addl_deaths
 
     model_to_num_locations['Baseline'] = len(df_baseline_filt)
@@ -298,7 +309,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         if use_cumulative_deaths:
             df_model_diffs = df_model_filt_values - df_truth_filt
         else:
-            df_model_pred_addl_deaths = df_model_filt_values - df_truth_past_filt
+            df_model_pred_addl_deaths = df_model_filt_values - df_truth_past_model_ran_date_filt
             df_model_act_addl_deaths = df_truth_filt - df_truth_model_ran_date_filt
             df_model_diffs = df_model_pred_addl_deaths - df_model_act_addl_deaths
 
