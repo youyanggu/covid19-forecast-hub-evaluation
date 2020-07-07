@@ -83,6 +83,12 @@ python evaluate_models.py 2020-05-04 2020-06-13 --use_median
 python evaluate_models.py 2020-05-04 2020-06-13 --print_additional_stats
 ```
 
+#### Use cumulative deaths for evaluation rather than incident deaths
+Compute errors by using the cumulative deaths on the evaluation date rather than incident deaths. The difference is explained in greater detail [below](#details).
+```
+python evaluate_models.py 2020-05-04 2020-06-13 --use_cumulative_deaths
+```
+
 #### Run weekly evaluation for all models since April 20
 This is the command that generated all of the files in the `evaluations` directory.
 ```
@@ -140,6 +146,8 @@ When doing evaluations I think it's important to consider only one model per tea
 
 As described in the [COVID-19 Forecast Hub README](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#ground-truth-data), all forecasts are compared to the [Johns Hopkins University CSSE Time Series Summary](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) as the gold standard reference data for deaths in the US. This truth data can be found in the [Forecast Hub data-truth directory](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-truth).
 
+Because the truth data can be retroactively updated, we keep copies of past truth files in the [`truth`](/truth) directory. We use those copies to compute the baseline and incident deaths to avoid look-ahead bias.
+
 ### Methods
 
 For simplicity purposes we will be comparing the [point forecast](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#type) to the truth data described above. The point forecast is almost always the mean or median estimate of the model.
@@ -150,40 +158,53 @@ There are [more advanced](https://arxiv.org/pdf/2005.12881.pdf) techniques for s
 
 For US country-wide forecasts, we compute the error for each model's point forecasts using the following formula:
 ```
-additional_deaths = true_deaths_eval_date - true_deaths_day_before_proj_date
-error_us = predicted_deaths_eval_date - true_deaths_eval_date
-perc_error_us = error_us / additional_deaths
+true_incident_deaths = true_deaths_eval_date - true_deaths_day_before_proj_date
+predicted_incident_deaths = predicted_deaths_eval_date - past_true_deaths_day_before_proj_date
+error = predicted_incident_deaths - true_incident_deaths
+perc_error = error / true_incident_deaths
 ```
-where `true_deaths` is the actual cumulative deaths, `predicted_deaths` is the forecasted cumulative deaths, `eval_date` is the date when the forecasts of total deaths are being evaluated against, and `proj_date` is the date the projection was generated.
+where
+* `true_deaths_eval_date` = the actual cumulative deaths on the evaluation date, based on the latest truth data
+* `true_deaths_day_before_proj_date` = the actual cumulative deaths on the day before projection date, based on the latest truth data
+* `predicted_deaths_eval_date` = the forecasted cumulative deaths on the evaluate date
+* `past_true_deaths_day_before_proj_date` = the actual cumulative deaths on the day before projection date, based on the truth data from the projection date
 
 So for example, if our projection date is Monday, June 1 and our evaluation date is Saturday, June 13, below is a sample of how we compute the error.
 
 | Example | |
 | --- | --- |
-| May 31 US true deaths | 104,659 |
 | June 13 US true deaths | 115,436 |
-| Additional deaths | 10,006 (115,436 - 105,430) |
-| Sample model forecast for June 13 | 115,581 |
-| Error | 145 (115,581 - 115,436) |
-| % Error | 1.4% (145 / 10,006) |
+| May 31 US true deaths | 104,659 |
+| True incident deaths | 10,777 (115,436 - 104,659) |
+| Model cumulative deaths forecast for June 13 | 115,581 |
+| May 31 US true deaths (as of June 1) | 104,381 |
+| Predicted incident deaths | 11,200 (115,581 - 104,381) |
+| Error | 423 (11,200 - 10,777) |
+| % Error | 3.9% (423 / 10,777) |
 
 ### State-by-state Evaluation
 
-In addition to US country-wide forecasts, we also evaluate state-by-state forecasts for all 50 states plus DC. In this section, we only evaluate models that have 1-4 week ahead forecasts for more than 40 states.
+In addition to US country-wide forecasts, we also evaluate state-by-state forecasts for all 50 states plus DC. In this section, we only evaluate models that have >1 week ahead forecasts for more than 40 states.
 
-Using the point forecast for every model, we compute the error for each state by the following:
+Using the point forecast for every model, we compute the error for each state using the same formula as the US nationwide evaluations above:
 
-```error_state = projected_deaths_eval_date - true_deaths_eval_date```
-
-For example, if a state reports 2,462 deaths on June 13 and the model's forecasted total for June 13 is 2,420, then our error for that state is -42.
+```
+true_incident_deaths = true_deaths_eval_date - true_deaths_day_before_proj_date
+predicted_incident_deaths = predicted_deaths_eval_date - past_true_deaths_day_before_proj_date
+error = predicted_incident_deaths - true_incident_deaths
+```
 
 We then compute the mean absolute error and mean squared error for all states for every model. For models with missing state projections, we substitute the error with the mean absolute error for that state (among all the models).
+
+We use mean absolute error rather than mean absolute percentage error because percentages are not the best way to measure error across states. For a small state such as North Dakota, predicting 2 deaths when the true value is 1 death would lead to a 100% error, but an absolute error of just 1. Conversely, predicting 1000 deaths for New York when the actual value is 2000 would lead to a 50% error, but an absolute error of 1000. Intuively, the North Dakota forecast should be considered more accurate than the New York forecast, despite it having twice the percentage error.
 
 ### Baseline Model
 
 In any evaluation, it is important to include a baseline as a control, similar to how scientfic trials include a placebo. We define a simple baseline model that takes the mean of the previous week's daily deaths to make all future forecasts. For example, for Monday, May 25 projections, we use the average daily deaths from May 18 to May 24 to make forecasts. For US country-wide projections, this would amount to a constant 1,164 deaths per day for each forecast day.
 
 We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for all future projections (called `Baseline_0.98`). This is in general a much more accurate model, but may be subject to selection bias.
+
+Note that to avoid look-ahead bias, we use the previous week's daily deaths *at the time of the projection is made*, rather than at the time of the evaluation. Because truth data can be retroactively updated, we want to avoid using future data to generate the baseline forecasts.
 
 ### Global Evaluation
 
