@@ -1,7 +1,6 @@
 ,mean_rank
-YYG-ParamSearch,2.6
-LANL-GrowthRate,3.0
-UCLA-SuEIR,3.1
-IHME-CurveFit,3.2
-IowaStateLW-STEM,4.0
-Auquan-SEIR,5.1
+YYG-ParamSearch,2.5
+LANL-GrowthRate,2.9
+UCLA-SuEIR,2.9
+IHME-CurveFit,3.0
+IowaStateLW-STEM,3.7

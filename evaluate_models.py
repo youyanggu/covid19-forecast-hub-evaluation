@@ -59,6 +59,18 @@ def find_last_projections(fnames, proj_date):
     return last_valid_fname, last_valid_date
 
 
+def find_truth_file(date):
+    """Finds the first truth file created on or after the date."""
+    truth_fname = None
+    while date <= datetime.date.today():
+        fname = Path(os.path.abspath(__file__)).parent / 'truth' / f'truth-cumulative-deaths-{date}.csv'
+        if os.path.isfile(fname):
+            truth_fname = fname
+            break
+        date += datetime.timedelta(days=1)
+    return truth_fname
+
+
 def validate_projections(df_model):
     """Verify all columns are in dataframe and convert dates to datetime."""
     for col in ['forecast_date', 'target', 'target_end_date', 'location', 'type', 'quantile', 'value']:
@@ -69,7 +81,8 @@ def validate_projections(df_model):
 
 
 def main(forecast_hub_dir, proj_date, eval_date, out_dir,
-        use_point=True, print_additional_stats=False, merge_models=True):
+        use_point=True, use_cumulative_deaths=False, print_additional_stats=False,
+        merge_models=True):
     """For full description of methods, refer to:
 
     https://github.com/youyanggu/covid19-forecast-hub-evaluation
@@ -79,6 +92,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print('eval_date:', eval_date)
     print('out_dir   :', out_dir)
     print('use_point:', use_point)
+    print('use_cumulative_deaths:', use_cumulative_deaths)
 
     assert os.path.isdir(forecast_hub_dir), \
         (f'Could not find COVID-19 Forecast Hub repo at: {forecast_hub_dir}.'
@@ -105,7 +119,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     fpis_to_evaluate = ['US' if x == 'US' else abbr_to_fips[x] for x in regions_to_evaluate]
 
     print('=================================================')
-    print('Loading data from COVID-19 Forecast Hub')
+    print('Fetching file names from COVID-19 Forecast Hub')
     print('=================================================')
     model_to_projections = {}
     all_models_dirs = sorted(glob.glob(f'{forecast_hub_dir}/data-processed/*'))
@@ -137,21 +151,45 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_truth_filt = df_truth[df_truth.index.isin(fpis_to_evaluate)]
     us_truth = df_truth_filt['US']
 
+    df_truth_model_ran_date = df_truth_raw[df_truth_raw['date'] == model_ran_date]
+    df_truth_model_ran_date = df_truth_model_ran_date.set_index('location')['total_deaths']
+    df_truth_model_ran_date_filt = df_truth_model_ran_date[df_truth_model_ran_date.index.isin(fpis_to_evaluate)]
+
     """
     We use the day before the projection date (the model ran date) as the starting point
         to compute incident deaths. So if proj_date is 2020-06-15 and eval_date is 2020-06-20,
         our incident deaths is the number of deaths between 2020-06-14 and 2020-06-20.
         The % error then becomes: error / incident deaths.
     """
+    past_truth_fname = find_truth_file(proj_date)
+    if not past_truth_fname:
+        print('Cannot find past truth file, using latest truth')
+        past_truth_fname = truth_file_name
+    print('----------------------------------')
+    print('Past truth file:', past_truth_fname)
+    df_truth_raw_past = pd.read_csv(past_truth_fname)
+    df_truth_raw_past['date'] = pd.to_datetime(df_truth_raw_past['date']).dt.date
+    df_truth_raw_past = df_truth_raw_past.rename(columns={'value' : 'total_deaths'})
+    df_truth_raw_past = df_truth_raw_past[['date', 'location', 'total_deaths']]
+
+    df_truth_past = df_truth_raw_past[df_truth_raw_past['date'] == model_ran_date]
+    df_truth_past = df_truth_past.set_index('location')['total_deaths']
+    df_truth_past_filt = df_truth_past[df_truth_past.index.isin(fpis_to_evaluate)]
+    us_truth_past = df_truth_past_filt['US']
+
     model_ran_date_total_deaths = \
         df_truth_raw[df_truth_raw['date'] == model_ran_date].set_index('location')['total_deaths']['US']
+    assert us_truth_past == \
+        df_truth_raw_past[df_truth_raw_past['date'] == model_ran_date].set_index('location')['total_deaths']['US']
     actual_addl_deaths = us_truth - model_ran_date_total_deaths
 
     print('Incident US deaths:', actual_addl_deaths)
 
-    df_truth_past = df_truth_raw[df_truth_raw['date'] == model_ran_date]
-    df_truth_past = df_truth_past.set_index('location')['total_deaths']
-    df_truth_past_minus_7_days = df_truth_raw[df_truth_raw['date'] == model_ran_date-datetime.timedelta(days=7)]
+    ##########################################################
+    # Computing Baseline
+    ##########################################################
+    df_truth_past_minus_7_days = \
+        df_truth_raw_past[df_truth_raw_past['date'] == model_ran_date-datetime.timedelta(days=7)]
     df_truth_past_minus_7_days = df_truth_past_minus_7_days.set_index('location')['total_deaths']
     df_truth_per_day = (df_truth_past - df_truth_past_minus_7_days) / 7
 
@@ -173,22 +211,33 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     model_to_us_projection = {}
     model_to_all_projections = {}
 
-    # add baseline models
+    if use_cumulative_deaths:
+        df_model_diffs = df_baseline_filt - df_truth_filt
+        df_model_diffs2 = df_baseline2_filt - df_truth_filt
+    else:
+        df_model_act_addl_deaths = df_truth_filt - df_truth_model_ran_date_filt
+
+        df_model_pred_addl_deaths = df_baseline_filt - df_truth_past_filt
+        df_model_diffs = df_model_pred_addl_deaths - df_model_act_addl_deaths
+
+        df_model_pred_addl_deaths2 = df_baseline2_filt - df_truth_past_filt
+        df_model_diffs2 = df_model_pred_addl_deaths2 - df_model_act_addl_deaths
+
     model_to_num_locations['Baseline'] = len(df_baseline_filt)
-    df_model_diffs = df_baseline_filt - df_truth_filt
     model_to_errors['Baseline'] = df_model_diffs.to_dict()
     model_to_us_projection['Baseline'] = df_baseline_filt['US']
     model_to_all_projections['Baseline'] = df_baseline_filt
 
     baseline_name = f'Baseline_{baseline2_daily_decay}'
     model_to_num_locations[baseline_name] = len(df_baseline2_filt)
-    df_model_diffs2 = df_baseline2_filt - df_truth_filt
     model_to_errors[baseline_name] = df_model_diffs2.to_dict()
     model_to_us_projection[baseline_name] = df_baseline2_filt['US']
     model_to_all_projections[baseline_name] = df_baseline2_filt
 
+    print('=================================================')
+    print('Loading model projections')
+    print('=================================================')
     model_to_all_projections['actual_deaths'] = df_truth_filt
-
     for model_name in model_to_projections:
         # Load projections from each model
         print('-----------------------------')
@@ -246,8 +295,13 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         model_to_num_locations[model_name] = num_locations
 
         df_model_filt_values = df_model_filt.set_index('location')['value']
+        if use_cumulative_deaths:
+            df_model_diffs = df_model_filt_values - df_truth_filt
+        else:
+            df_model_pred_addl_deaths = df_model_filt_values - df_truth_past_filt
+            df_model_act_addl_deaths = df_truth_filt - df_truth_model_ran_date_filt
+            df_model_diffs = df_model_pred_addl_deaths - df_model_act_addl_deaths
 
-        df_model_diffs = df_model_filt_values - df_truth_filt
         diffs_dict = df_model_diffs.to_dict()
         model_to_errors[model_name] = diffs_dict
         model_to_us_projection[model_name] = df_model_filt_values.get('US', np.nan)
@@ -256,13 +310,13 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print('=================================================')
     print('Begin Evaluation')
     print('=================================================')
-
-    df_errors = pd.DataFrame(model_to_errors).T
-    assert model_to_num_locations == df_errors.notna().sum(axis=1).to_dict(), \
+    df_errors_raw = pd.DataFrame(model_to_errors).T
+    assert model_to_num_locations == df_errors_raw.notna().sum(axis=1).to_dict(), \
         'Certain locations not parsed'
 
-    df_errors = df_errors.rename(columns=fips_to_us_state).sort_index()
-    print('Number of locations with projections')
+    df_errors_raw = df_errors_raw.rename(columns=fips_to_us_state).sort_index()
+    df_errors = df_errors_raw.copy()
+    print('Number of locations with projections:')
     print(df_errors.notna().sum(axis=1))
 
     # compute the error: predicted - actual
@@ -273,11 +327,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         'actual_deaths' : us_truth,
     })
     df_errors_us['predicted_addl_deaths'] = \
-        df_errors_us['predicted_deaths'] - model_ran_date_total_deaths
+        df_errors_us['predicted_deaths'] - us_truth_past
     df_errors_us['actual_addl_deaths'] = actual_addl_deaths
-    df_errors_us['error'] = df_errors_us['predicted_deaths'] - df_errors_us['actual_deaths']
-    assert ((df_errors_us['error'] == df_errors['US']) | \
-        (np.isnan(df_errors_us['error']) & np.isnan(df_errors['US']))).all()
 
     if merge_models:
         # For fairness, we average the projections if there are multiple submissions
@@ -297,7 +348,12 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
                 df_errors_us = df_errors_us.loc[~df_errors_us.index.str.contains(merge_models_prefix)]
                 df_errors_us.loc[f'{merge_models_prefix}-combined'] = df_us_avg
 
-    df_errors_us['error'] = df_errors_us['predicted_deaths'] - df_errors_us['actual_deaths']
+    if use_cumulative_deaths:
+        df_errors_us['error'] = df_errors_us['predicted_deaths'] - df_errors_us['actual_deaths']
+    else:
+        df_errors_us['error'] = df_errors_us['predicted_addl_deaths'] - df_errors_us['actual_addl_deaths']
+    assert ((df_errors_us['error'] == df_errors['US']) | \
+        (np.isnan(df_errors_us['error']) & np.isnan(df_errors['US']))).all()
     df_errors_us['perc_error'] = (df_errors_us['error'] / df_errors_us['actual_addl_deaths']).apply(
         lambda x: '' if pd.isnull(x) else f'{x:.1%}')
     df_errors_us[total_deaths_col] = df_errors_us[total_deaths_col].astype(int)
@@ -333,10 +389,13 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_all = df_all.T
 
     model_names = [c for c in df_all.columns if '-' in c]
+    print('------------------------')
+    print(f'Cumulative death forecasts for {eval_date}:')
     print(df_all)
-    df_all[f'error-Baseline'] = df_all['Baseline'] - df_all['actual_deaths']
+    df_all[f'error-Baseline'] = df_errors_raw.loc['Baseline']
+    df_all[f'error-{baseline_name}'] = df_errors_raw.loc[baseline_name]
     for model_name in model_names:
-        df_all[f'error-{model_name}'] = df_all[model_name] - df_all['actual_deaths']
+        df_all[f'error-{model_name}'] = df_errors_raw.loc[model_name]
     for model_name in model_names:
         # Beat baseline if absolute error is less than baseline or error is 0
         df_all[f'beat_baseline-{model_name}'] = \
@@ -355,6 +414,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     # we fill na with avg abs error for that state
     df_errors_states = df_errors_states.fillna(df_errors_states.abs().mean())
+    print('------------------------')
+    print(f'State-by-state mean absolute errors:')
     print(df_errors_states)
 
     df_sq_errs_states = df_errors_states**2
@@ -428,6 +489,8 @@ if __name__ == '__main__':
     parser.add_argument('--forecast_hub_dir', help=('Local location of the covid19-forecast-hub repo:'
         'https://github.com/reichlab/covid19-forecast-hub. By default, check in the parent directory.'))
     parser.add_argument('--out_dir', help='Directory to save outputs (if provided)')
+    parser.add_argument('--use_cumulative_deaths', action='store_true',
+        help='Compute error by comparing cumulative deaths rather than incident deaths')
     parser.add_argument('--use_median', action='store_true',
         help='Use median estimate instead of point estimate')
     parser.add_argument('--print_additional_stats', action='store_true',
@@ -443,7 +506,9 @@ if __name__ == '__main__':
         forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent / 'covid19-forecast-hub'
 
     main(forecast_hub_dir, proj_date, eval_date, args.out_dir,
-        use_point=(not args.use_median), print_additional_stats=args.print_additional_stats)
+        use_point=(not args.use_median),
+        use_cumulative_deaths=args.use_cumulative_deaths,
+        print_additional_stats=args.print_additional_stats)
 
     print('=================================================')
     print('Done', datetime.datetime.now())

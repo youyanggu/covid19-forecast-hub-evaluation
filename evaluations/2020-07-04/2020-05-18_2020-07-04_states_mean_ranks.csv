@@ -1,9 +1,7 @@
 ,mean_rank
-UCLA-SuEIR,3.5
-LANL-GrowthRate,4.1
-IHME-CurveFit,4.4
-Auquan-SEIR,4.5
-MIT_CovidAnalytics-DELPHI,4.9
-IowaStateLW-STEM,4.9
-YYG-ParamSearch,4.9
-USACE-ERDC_SEIR,4.9
+UCLA-SuEIR,2.8
+LANL-GrowthRate,3.2
+IHME-CurveFit,3.4
+YYG-ParamSearch,3.8
+IowaStateLW-STEM,3.8
+USACE-ERDC_SEIR,3.9

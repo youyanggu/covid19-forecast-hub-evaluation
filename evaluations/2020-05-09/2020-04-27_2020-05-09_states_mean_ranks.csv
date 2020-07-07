@@ -1,10 +1,10 @@
 ,mean_rank
 COVIDhub-ensemble,4.1
 MIT_CovidAnalytics-DELPHI,4.8
-LANL-GrowthRate,5.0
+LANL-GrowthRate,5.1
 YYG-ParamSearch,5.1
-IowaStateLW-STEM,5.3
-UT-Mobility,5.6
+IowaStateLW-STEM,5.2
+UT-Mobility,5.5
 MOBS_NEU-GLEAM_COVID,5.9
 CU-select,6.2
 IHME-CurveFit,6.4

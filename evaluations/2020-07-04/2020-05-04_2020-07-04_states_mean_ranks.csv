@@ -1,6 +1,5 @@
 ,mean_rank
 YYG-ParamSearch,2.1
-IHME-CurveFit,2.5
-UCLA-SuEIR,2.7
-IowaStateLW-STEM,3.4
-Auquan-SEIR,4.3
+IHME-CurveFit,2.4
+UCLA-SuEIR,2.5
+IowaStateLW-STEM,3.1
