@@ -169,18 +169,18 @@ where
 * `predicted_deaths_eval_date` = the forecasted cumulative deaths on the evaluate date
 * `past_true_deaths_day_before_proj_date` = the actual cumulative deaths on the day before projection date, based on the truth data from the projection date
 
-So for example, if our projection date is Monday, June 1 and our evaluation date is Saturday, June 13, below is a sample of how we compute the error.
+So for example, if our projection date is Monday, June 1 and our evaluation date is Saturday, June 13, below is a sample of how we compute the error for a sample forecast. Note that we use the cumulative deaths from the day before the projection date, May 31, to compute the incident deaths.
 
 | Example | |
 | --- | --- |
-| June 13 US true deaths | 115,436 |
-| May 31 US true deaths | 104,659 |
-| True incident deaths | 10,777 (115,436 - 104,659) |
-| Model cumulative deaths forecast for June 13 | 115,581 |
-| May 31 US true deaths (as of June 1) | 104,381 |
-| Predicted incident deaths | 11,200 (115,581 - 104,381) |
-| Error | 423 (11,200 - 10,777) |
-| % Error | 3.9% (423 / 10,777) |
+| June 13 US true deaths (latest truth) | [116,084](https://github.com/youyanggu/covid19-forecast-hub-evaluation/blob/master/truth/truth-cumulative-deaths-2020-07-06.csv#L16849) |
+| May 31 US true deaths (latest truth) | [105,364](https://github.com/youyanggu/covid19-forecast-hub-evaluation/blob/master/truth/truth-cumulative-deaths-2020-07-06.csv#L16849) |
+| True incident deaths | 10,720 (116,084 - 105,364) |
+| Model cumulative deaths forecast for June 13 | [115,966](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/COVIDhub-ensemble/2020-06-01-COVIDhub-ensemble.csv#L5188) |
+| May 31 US true deaths (as of June 1) | [104,381](https://github.com/youyanggu/covid19-forecast-hub-evaluation/blob/master/truth/truth-cumulative-deaths-2020-06-01.csv#L7468) |
+| Predicted incident deaths | 11,585 (115,966 - 104,381) |
+| Error | 865 (11,585 - 10,720) |
+| % Error | 8.1% (865 / 10,720) |
 
 ### State-by-state Evaluation
 
