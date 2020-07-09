@@ -1,12 +1,12 @@
 # Evaluation of COVID-19 Models
 
-**June 27 Update:** We have added [global](/global) evaluations comparing the *YYG / covid19-projections.com* and *IHME* models with the baseline.
-
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
 While a model's future projections can be useful, it is also important to take into account the model's historical performance in a transparent, rigorous, and non-biased manner. This is the goal of this project.
 
 **Evaluations are done weekly and summarized in the [summary](/summary) directory.** You can view the outputs of the individual evaluations in the [evaluations](/evaluations) directory.
+
+*Full disclosure: This evaluation was developed by Youyang Gu, whose model 'YYG / covid19-projections.com' is one of the models in the COVID-19 Forecast Hub.*
 
 **Table of Contents**
 * [Dependencies](#dependencies)
