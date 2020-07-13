@@ -110,13 +110,21 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     update_pandas_settings()
 
     df_loc = pd.read_csv(f'{forecast_hub_dir}/data-locations/locations.csv', dtype=str)
+    df_loc = df_loc[~pd.isnull(df_loc['abbreviation'])] # remove county locations
     abbr_to_location_name =  df_loc.set_index('abbreviation')['location_name'].to_dict()
     abbr_to_fips = df_loc.set_index('abbreviation')['location'].to_dict()
     US_TERRITORIES = ['AS', 'GU', 'MP', 'PR', 'VI', 'UM'] # we do not evaluate US territories
 
+    assert 'US' in abbr_to_location_name, 'Missing US location name'
+    assert len(df_loc) == 58, 'Missing locations'
+    for k, v in abbr_to_fips.items():
+        if len(v) == 1:
+            # Add leading 0 to FIPS if missing
+            abbr_to_fips[k] = '0'+v
+
     fips_to_us_state = {v : abbr_to_location_name[k] for k,v in abbr_to_fips.items()}
-    regions_to_evaluate = ['US'] + [s for s in abbr_to_location_name if s not in US_TERRITORIES]
-    fpis_to_evaluate = ['US' if x == 'US' else abbr_to_fips[x] for x in regions_to_evaluate]
+    regions_to_evaluate = [s for s in abbr_to_location_name if s not in US_TERRITORIES]
+    fips_to_evaluate = ['US' if x == 'US' else abbr_to_fips[x] for x in regions_to_evaluate]
 
     print('=================================================')
     print('Fetching file names from COVID-19 Forecast Hub')
@@ -149,13 +157,14 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     df_truth = df_truth_raw[df_truth_raw['date'] == eval_date]
     df_truth = df_truth.set_index('location')['total_deaths']
-    df_truth_filt = df_truth[df_truth.index.isin(fpis_to_evaluate)]
+    df_truth_filt = df_truth[df_truth.index.isin(fips_to_evaluate)]
+    assert len(df_truth_filt) == len(fips_to_evaluate), 'Missing FIPS in truth'
     us_truth = df_truth_filt['US']
 
     # model ran date is the day before the projection date, the date the models were run
     df_truth_model_ran_date = df_truth_raw[df_truth_raw['date'] == model_ran_date]
     df_truth_model_ran_date = df_truth_model_ran_date.set_index('location')['total_deaths']
-    df_truth_model_ran_date_filt = df_truth_model_ran_date[df_truth_model_ran_date.index.isin(fpis_to_evaluate)]
+    df_truth_model_ran_date_filt = df_truth_model_ran_date[df_truth_model_ran_date.index.isin(fips_to_evaluate)]
 
     """
     We use the day before the projection date (the model ran date) as the starting point
@@ -185,7 +194,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     df_truth_past_model_ran_date = df_truth_raw_past[df_truth_raw_past['date'] == model_ran_date]
     df_truth_past_model_ran_date = df_truth_past_model_ran_date.set_index('location')['total_deaths']
-    df_truth_past_model_ran_date_filt = df_truth_past_model_ran_date[df_truth_past_model_ran_date.index.isin(fpis_to_evaluate)]
+    df_truth_past_model_ran_date_filt = df_truth_past_model_ran_date[df_truth_past_model_ran_date.index.isin(fips_to_evaluate)]
     us_truth_past = df_truth_past_model_ran_date_filt['US']
 
     model_ran_date_total_deaths = \
@@ -208,13 +217,13 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     baseline_daily_decay = 1
     weighted_days = sum([baseline_daily_decay**i for i in range(days_ahead+1)])
     df_baseline = df_truth_past_model_ran_date + df_truth_per_day * weighted_days
-    df_baseline_filt = df_baseline[(df_baseline.index.isin(fpis_to_evaluate)) & (~pd.isnull(df_baseline))]
+    df_baseline_filt = df_baseline[(df_baseline.index.isin(fips_to_evaluate)) & (~pd.isnull(df_baseline))]
 
     # Baseline #2 uses the avg daily deaths from previous week and make a 2% daily decrease
     baseline2_daily_decay = 0.98
     weighted_days2 = sum([baseline2_daily_decay**i for i in range(days_ahead+1)])
     df_baseline2 = df_truth_past_model_ran_date + df_truth_per_day * weighted_days2
-    df_baseline2_filt = df_baseline2[(df_baseline2.index.isin(fpis_to_evaluate)) & (~pd.isnull(df_baseline2))]
+    df_baseline2_filt = df_baseline2[(df_baseline2.index.isin(fips_to_evaluate)) & (~pd.isnull(df_baseline2))]
 
     model_to_num_locations = {}
     model_to_errors = {}
@@ -288,12 +297,12 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
             df_model_filt = df_model[
                 (df_model['target'].str.contains(target_str)) & \
                 (df_model['type'] == 'point') & \
-                (df_model['location'].isin(fpis_to_evaluate))]
+                (df_model['location'].isin(fips_to_evaluate))]
         else:
             df_model_filt = df_model[
                 (df_model['target'].str.contains(target_str)) & \
                 (df_model['quantile'] == 0.5) & \
-                (df_model['location'].isin(fpis_to_evaluate))]
+                (df_model['location'].isin(fips_to_evaluate))]
 
         print('Num unique locations (pre-filt) :', len(df_model['location'].unique()))
         num_locations = len(df_model_filt['location'].unique())
