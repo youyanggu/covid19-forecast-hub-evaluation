@@ -14,9 +14,10 @@ PSI-DRAFT,,,,,0.236,-0.111,-0.097
 Baseline,0.474,0.484,0.479,0.525,0.421,0.256,0.047
 IHME-CurveFit,-0.639,-0.677,0.153,0.213,0.330,,-0.114
 IowaStateLW-STEM,,,-0.374,,0.075,0.212,0.477
+COVIDhub-baseline,,,,0.635,0.441,0.329,0.116
 USACE-ERDC_SEIR,,,,,-0.299,-0.287,-1.156
-JHU_IDD-CovidSP,,,,,1.580,0.587,0.156
 Geneva-DetGrowth,,,,,,,-0.124
+JHU_IDD-CovidSP,,,,,1.580,0.587,0.156
 Imperial-combined,,,,,,,0.136
 UA-EpiCovDA,,,,,,0.395,0.722
 SWC-TerminusCM,,,,,,,-0.393

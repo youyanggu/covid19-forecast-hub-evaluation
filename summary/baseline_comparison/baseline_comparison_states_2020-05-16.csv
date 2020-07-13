@@ -1,5 +1,6 @@
 ,2020-04-20_2020-05-16,2020-04-27_2020-05-16,2020-05-04_2020-05-16,2020-05-11_2020-05-16
 num_states,51,51,51,51
+num_states_with_projections-COVIDhub-baseline,51,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,51,51,51
 num_states_with_projections-CU-select,50,50,50,50
 num_states_with_projections-GT-DeepCOVID,,,47,21
@@ -22,6 +23,7 @@ num_states_with_projections-UChicago-CovidIL_80,,,,1
 num_states_with_projections-UMass-MechBayes,,51,51,51
 num_states_with_projections-UT-Mobility,51,51,51,51
 num_states_with_projections-YYG-ParamSearch,51,51,51,51
+num_states_beat_baseline-COVIDhub-baseline,23,20,21,12
 num_states_beat_baseline-COVIDhub-ensemble,,25,26,21
 num_states_beat_baseline-CU-select,17,23,21,15
 num_states_beat_baseline-GT-DeepCOVID,,,5,5
@@ -44,6 +46,7 @@ num_states_beat_baseline-UChicago-CovidIL_80,,,,0
 num_states_beat_baseline-UMass-MechBayes,,15,17,19
 num_states_beat_baseline-UT-Mobility,13,12,16,20
 num_states_beat_baseline-YYG-ParamSearch,19,15,20,33
+perc_beat_baseline-COVIDhub-baseline,0.4509803922,0.3921568627,0.4117647059,0.2352941176
 perc_beat_baseline-COVIDhub-ensemble,,0.4901960784,0.5098039216,0.4117647059
 perc_beat_baseline-CU-select,0.34,0.46,0.42,0.3
 perc_beat_baseline-GT-DeepCOVID,,,0.1063829787,0.2380952381
@@ -67,6 +70,7 @@ perc_beat_baseline-UMass-MechBayes,,0.2941176471,0.3333333333,0.3725490196
 perc_beat_baseline-UT-Mobility,0.2549019608,0.2352941176,0.3137254902,0.3921568627
 perc_beat_baseline-YYG-ParamSearch,0.3725490196,0.2941176471,0.3921568627,0.6470588235
 mean_abs_error-Baseline,370.6470588,229.4,93.23333333,37.61372549
+mean_abs_error-COVIDhub-baseline,705.8843137,226.4784314,91.17843137,61.94117647
 mean_abs_error-COVIDhub-ensemble,,145.4960784,50.43137255,39.03137255
 mean_abs_error-CU-select,,,,
 mean_abs_error-GT-DeepCOVID,,,,

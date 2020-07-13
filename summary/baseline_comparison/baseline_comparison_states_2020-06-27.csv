@@ -1,6 +1,7 @@
 ,2020-04-20_2020-06-27,2020-04-27_2020-06-27,2020-05-04_2020-06-27,2020-05-11_2020-06-27,2020-05-18_2020-06-27,2020-05-25_2020-06-27,2020-06-01_2020-06-27,2020-06-08_2020-06-27,2020-06-15_2020-06-27,2020-06-22_2020-06-27
 num_states,51,51,51,51,51,51,51,51,51,51
 num_states_with_projections-Auquan-SEIR,,,,,,,51,51,51,51
+num_states_with_projections-COVIDhub-baseline,,,,,,,51,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,,,,,,51,51,51,51
 num_states_with_projections-CU-select,,,,,,,50,51,51,51
 num_states_with_projections-Covid19Sim-Simulator,,,,,,51,51,51,51,51
@@ -28,6 +29,7 @@ num_states_with_projections-UT-Mobility,,,,,,,51,51,51,51
 num_states_with_projections-YYG-ParamSearch,,,51,51,51,51,51,51,51,51
 num_states_with_projections-epiforecasts-ensemble1,,,,,,,,,15,14
 num_states_beat_baseline-Auquan-SEIR,,,,,,,14,1,1,18
+num_states_beat_baseline-COVIDhub-baseline,,,,,,,20,23,17,20
 num_states_beat_baseline-COVIDhub-ensemble,,,,,,,25,32,23,26
 num_states_beat_baseline-CU-select,,,,,,,14,20,19,13
 num_states_beat_baseline-Covid19Sim-Simulator,,,,,,32,24,19,16,18
@@ -55,6 +57,7 @@ num_states_beat_baseline-UT-Mobility,,,,,,,27,25,21,23
 num_states_beat_baseline-YYG-ParamSearch,,,36,26,20,19,29,26,31,35
 num_states_beat_baseline-epiforecasts-ensemble1,,,,,,,,,4,3
 perc_beat_baseline-Auquan-SEIR,,,,,,,0.2745098039,0.01960784314,0.01960784314,0.3529411765
+perc_beat_baseline-COVIDhub-baseline,,,,,,,0.3921568627,0.4509803922,0.3333333333,0.3921568627
 perc_beat_baseline-COVIDhub-ensemble,,,,,,,0.4901960784,0.6274509804,0.4509803922,0.5098039216
 perc_beat_baseline-CU-select,,,,,,,0.28,0.3921568627,0.3725490196,0.2549019608
 perc_beat_baseline-Covid19Sim-Simulator,,,,,,0.6274509804,0.4705882353,0.3725490196,0.3137254902,0.3529411765
@@ -83,6 +86,7 @@ perc_beat_baseline-YYG-ParamSearch,,,0.7058823529,0.5098039216,0.3921568627,0.37
 perc_beat_baseline-epiforecasts-ensemble1,,,,,,,,,0.2666666667,0.2142857143
 mean_abs_error-Auquan-SEIR,,,,,,,342.8823529,638.4509804,551.5490196,72.09803922
 mean_abs_error-Baseline,1375.25098,1112.415686,890.0254902,715.6803922,466.9568627,263.7529412,173.9588235,138.2686275,74.19803922,52.2
+mean_abs_error-COVIDhub-baseline,,,,,,,187.627451,131.1333333,80.56470588,53.43137255
 mean_abs_error-COVIDhub-ensemble,,,,,,,157.0784314,100.2784314,73.01568627,53.44313725
 mean_abs_error-CU-select,,,,,,,,219.3333333,138.5098039,87.74509804
 mean_abs_error-Covid19Sim-Simulator,,,,,,233.1627451,227.545098,183.4215686,104.3686275,74.41568627

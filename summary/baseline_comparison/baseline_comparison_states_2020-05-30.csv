@@ -1,6 +1,7 @@
 ,2020-04-20_2020-05-30,2020-04-27_2020-05-30,2020-05-04_2020-05-30,2020-05-11_2020-05-30,2020-05-18_2020-05-30,2020-05-25_2020-05-30
 num_states,51,51,51,51,51,51
 num_states_with_projections-Auquan-SEIR,,,,,51,51
+num_states_with_projections-COVIDhub-baseline,,,51,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,,51,51,51,51
 num_states_with_projections-CU-select,50,50,50,50,50,50
 num_states_with_projections-Covid19Sim-Simulator,,,,,,51
@@ -31,6 +32,7 @@ num_states_with_projections-USACE-ERDC_SEIR,,,,,51,51
 num_states_with_projections-UT-Mobility,51,51,51,51,51,51
 num_states_with_projections-YYG-ParamSearch,51,51,51,51,51,51
 num_states_beat_baseline-Auquan-SEIR,,,,,6,1
+num_states_beat_baseline-COVIDhub-baseline,,,22,14,16,22
 num_states_beat_baseline-COVIDhub-ensemble,,,25,28,24,26
 num_states_beat_baseline-CU-select,16,23,19,23,19,17
 num_states_beat_baseline-Covid19Sim-Simulator,,,,,,9
@@ -61,6 +63,7 @@ num_states_beat_baseline-USACE-ERDC_SEIR,,,,,18,16
 num_states_beat_baseline-UT-Mobility,13,13,17,22,27,18
 num_states_beat_baseline-YYG-ParamSearch,16,20,27,34,29,28
 perc_beat_baseline-Auquan-SEIR,,,,,0.1176470588,0.01960784314
+perc_beat_baseline-COVIDhub-baseline,,,0.431372549,0.2745098039,0.3137254902,0.431372549
 perc_beat_baseline-COVIDhub-ensemble,,,0.4901960784,0.5490196078,0.4705882353,0.5098039216
 perc_beat_baseline-CU-select,0.32,0.46,0.38,0.46,0.38,0.34
 perc_beat_baseline-Covid19Sim-Simulator,,,,,,0.1764705882
@@ -92,6 +95,7 @@ perc_beat_baseline-UT-Mobility,0.2549019608,0.2549019608,0.3333333333,0.43137254
 perc_beat_baseline-YYG-ParamSearch,0.3137254902,0.3921568627,0.5294117647,0.6666666667,0.568627451,0.5490196078
 mean_abs_error-Auquan-SEIR,,,,,267.0392157,266.0980392
 mean_abs_error-Baseline,672,489.1843137,297.3666667,205.8882353,102.4509804,30.05098039
+mean_abs_error-COVIDhub-baseline,,,296.6705882,255.9666667,109.1196078,42.2745098
 mean_abs_error-COVIDhub-ensemble,,,108.3470588,106.1372549,75.15294118,25.38039216
 mean_abs_error-CU-select,,,,,,
 mean_abs_error-Covid19Sim-Simulator,,,,,,67.85490196

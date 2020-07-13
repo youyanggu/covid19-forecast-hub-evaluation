@@ -1,6 +1,7 @@
 ,perc_error_2020-04-20_2020-05-09,perc_error_2020-04-27_2020-05-09,perc_error_2020-05-04_2020-05-09
 Baseline,0.108,0.071,-0.020
 Baseline_0.98,-0.079,-0.049,-0.068
+COVIDhub-baseline,0.366,0.112,0.009
 YYG-ParamSearch,-0.228,-0.071,-0.121
 CU-select,0.267,-0.039,-0.212
 LANL-GrowthRate,,0.240,-0.011

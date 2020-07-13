@@ -1,6 +1,7 @@
 ,2020-04-20_2020-06-13,2020-04-27_2020-06-13,2020-05-04_2020-06-13,2020-05-11_2020-06-13,2020-05-18_2020-06-13,2020-05-25_2020-06-13,2020-06-01_2020-06-13,2020-06-08_2020-06-13
 num_states,51,51,51,51,51,51,51,51
 num_states_with_projections-Auquan-SEIR,,,,,51,51,51,51
+num_states_with_projections-COVIDhub-baseline,,,,,51,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,,,,51,51,51,51
 num_states_with_projections-CU-select,,,50,50,50,50,50,51
 num_states_with_projections-Covid19Sim-Simulator,,,,,,51,51,51
@@ -34,6 +35,7 @@ num_states_with_projections-USACE-ERDC_SEIR,,,,,51,51,51,51
 num_states_with_projections-UT-Mobility,,,51,,51,51,51,51
 num_states_with_projections-YYG-ParamSearch,,,51,51,51,51,51,51
 num_states_beat_baseline-Auquan-SEIR,,,,,13,7,1,0
+num_states_beat_baseline-COVIDhub-baseline,,,,,17,17,18,22
 num_states_beat_baseline-COVIDhub-ensemble,,,,,26,26,26,27
 num_states_beat_baseline-CU-select,,,20,19,22,22,21,17
 num_states_beat_baseline-Covid19Sim-Simulator,,,,,,23,17,11
@@ -67,6 +69,7 @@ num_states_beat_baseline-USACE-ERDC_SEIR,,,,,24,17,18,7
 num_states_beat_baseline-UT-Mobility,,,17,,21,23,26,22
 num_states_beat_baseline-YYG-ParamSearch,,,32,28,25,26,35,29
 perc_beat_baseline-Auquan-SEIR,,,,,0.2549019608,0.137254902,0.01960784314,0
+perc_beat_baseline-COVIDhub-baseline,,,,,0.3333333333,0.3333333333,0.3529411765,0.431372549
 perc_beat_baseline-COVIDhub-ensemble,,,,,0.5098039216,0.5098039216,0.5098039216,0.5294117647
 perc_beat_baseline-CU-select,,,0.4,0.38,0.44,0.44,0.42,0.3333333333
 perc_beat_baseline-Covid19Sim-Simulator,,,,,,0.4509803922,0.3333333333,0.2156862745
@@ -101,6 +104,7 @@ perc_beat_baseline-UT-Mobility,,,0.3333333333,,0.4117647059,0.4509803922,0.50980
 perc_beat_baseline-YYG-ParamSearch,,,0.6274509804,0.5490196078,0.4901960784,0.5098039216,0.6862745098,0.568627451
 mean_abs_error-Auquan-SEIR,,,,,353.3333333,352.3921569,337.4901961,286.1372549
 mean_abs_error-Baseline,1022.580392,784.3176471,578.4960784,443.5196078,270.5686275,127.9215686,52.04509804,25.11568627
+mean_abs_error-COVIDhub-baseline,,,,,280.7764706,150.1117647,59.19411765,27.8627451
 mean_abs_error-COVIDhub-ensemble,,,,,122.9823529,76.24313725,48.02745098,18.17843137
 mean_abs_error-CU-select,,,,,,,,49.25490196
 mean_abs_error-Covid19Sim-Simulator,,,,,,142.6235294,127.045098,85.91372549

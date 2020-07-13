@@ -4,6 +4,7 @@ Baseline_0.98,-0.057
 CU-select,0.111
 IHME-CurveFit,-0.193
 YYG-ParamSearch,-0.222
+COVIDhub-baseline,0.239
 MOBS_NEU-GLEAM_COVID,-0.312
 Geneva-DetGrowth,-0.313
 UT-Mobility,-0.592

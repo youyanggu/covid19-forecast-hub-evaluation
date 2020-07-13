@@ -10,9 +10,10 @@ UCLA-SuEIR,,,-0.131,0.031,0.151
 UT-Mobility,-0.675,-0.553,-0.422,-0.034,-0.125
 Baseline,0.278,0.270,0.245,0.272,0.147
 PSI-DRAFT,,,,,-0.016
+COVIDhub-baseline,,0.296,0.244,0.395,0.220
 IHME-CurveFit,-0.564,-0.603,0.205,0.263,0.349
-UMass-MechBayes,,,,,0.091
 MIT_CovidAnalytics-DELPHI,,,0.157,0.329,0.314
+UMass-MechBayes,,,,,0.091
 Imperial-combined,,,,,0.133
 Geneva-DetGrowth,,,,,-0.327
 USACE-ERDC_SEIR,,,,,-0.339
