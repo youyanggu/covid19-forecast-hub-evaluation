@@ -1,0 +1,53 @@
+,actual_deaths,Baseline,IHME-CurveFit,error-Baseline,error-IHME-CurveFit,beat_baseline-IHME-CurveFit
+Alabama,1286,979.9,290.0,-306.1,-996.0,False
+Alaska,18,21.9,16.5,3.9,-1.5,True
+Arizona,2730,942.6,479.7,-1787.4,-2250.3,False
+Arkansas,357,193.3,130.9,-163.7,-226.1,False
+California,7702,8081.3,1743.4,379.3,-5958.6,False
+Colorado,1752,2104.3,648.7,352.3,-1103.3,False
+Connecticut,4396,8494.1,2884.0,4098.1,-1512.0,True
+Delaware,523,478.4,135.9,-44.6,-387.1,False
+District of Columbia,578,687.4,213.1,109.4,-364.9,False
+Florida,4895,4798.3,1536.6,-96.7,-3358.4,False
+Georgia,3169,3952.7,1981.0,783.7,-1188.0,False
+Hawaii,24,22.9,26.1,-1.1,2.1,False
+Idaho,119,262.6,61.2,143.6,-57.8,True
+Illinois,7483,8618.6,2093.0,1135.6,-5390.0,False
+Indiana,2820,3377.7,930.5,557.7,-1889.5,False
+Iowa,789,512.1,442.0,-276.9,-347.0,False
+Kansas,308,568.7,272.7,260.7,-35.3,True
+Kentucky,667,776.0,466.2,109.0,-200.8,False
+Louisiana,3509,7158.9,1703.8,3649.9,-1805.2,True
+Maine,117,226.9,53.3,109.9,-63.7,True
+Maryland,3368,3353.9,1111.5,-14.1,-2256.5,False
+Massachusetts,8419,13920.3,3897.9,5501.3,-4521.1,True
+Michigan,6364,14116.7,3361.2,7912.7,-2842.8,True
+Minnesota,1578,956.9,301.3,-621.1,-1276.7,False
+Mississippi,1346,969.0,398.5,-377.0,-947.5,False
+Missouri,1136,1240.4,385.5,147.4,-707.5,False
+Montana,37,61.4,14.2,24.4,-22.8,True
+Nebraska,301,169.4,245.4,-131.6,-55.6,True
+Nevada,646,749.4,240.0,103.4,-406.0,False
+New Hampshire,396,230.9,70.3,-165.1,-325.7,False
+New Jersey,15699,30230.6,7116.0,14531.6,-8583.0,True
+New Mexico,569,427.9,104.7,-141.1,-464.3,False
+New York,32478,84667.7,23741.0,52712.7,-8214.0,True
+North Carolina,1648,1627.1,309.8,-20.9,-1338.2,False
+North Dakota,90,34.7,277.3,-55.3,187.3,False
+Ohio,3132,3273.9,770.6,141.9,-2361.4,False
+Oklahoma,451,705.7,306.2,254.7,-144.8,True
+Oregon,257,356.9,120.3,99.9,-136.7,False
+Pennsylvania,7015,10520.3,2323.2,3505.3,-4691.8,False
+Rhode Island,990,1268.6,577.8,278.6,-412.2,False
+South Carolina,1135,608.6,261.3,-526.4,-873.7,False
+South Dakota,116,19.9,98.3,-96.1,-17.7,True
+Tennessee,838,688.0,234.7,-150.0,-603.3,False
+Texas,3939,3151.4,1165.7,-787.6,-2773.3,False
+Utah,243,142.7,222.9,-100.3,-20.1,True
+Vermont,56,179.4,42.8,123.4,-13.2,True
+Virginia,2025,2025.6,771.3,0.6,-1253.7,False
+Washington,1444,2307.4,779.2,863.4,-664.8,True
+West Virginia,100,172.3,34.5,72.3,-65.5,True
+Wisconsin,843,1197.1,340.3,354.1,-502.7,False
+Wyoming,24,27.7,243.4,3.7,219.4,False
+US,140119,231989.3,65975.8,92596.3,-73417.2,True
