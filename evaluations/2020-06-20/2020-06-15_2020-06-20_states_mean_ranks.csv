@@ -3,14 +3,14 @@ UMass-MechBayes,6.2
 YYG-ParamSearch,7.1
 OliverWyman-Navigator,7.7
 UCLA-SuEIR,8.2
-COVIDhub-ensemble,8.9
+COVIDhub-ensemble,8.8
 UT-Mobility,9.1
-MOBS_NEU-GLEAM_COVID,9.8
+MOBS-GLEAM_COVID,9.8
 COVIDhub-baseline,9.8
 PSI-DRAFT,10.1
 UA-EpiCovDA,10.1
 LANL-GrowthRate,10.2
-MIT_CovidAnalytics-DELPHI,10.8
+CovidAnalytics-DELPHI,10.8
 SWC-TerminusCM,11.0
 CU-select,11.4
 IHME-CurveFit,11.6

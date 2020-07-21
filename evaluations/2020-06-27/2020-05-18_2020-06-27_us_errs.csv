@@ -1,6 +1,5 @@
 ,total_deaths_2020-05-17,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
 UCLA-SuEIR,90644,127039.2,126120,37477.2,35476,2001.2,5.6%
-Baseline_0.98,90644,129936.4,126120,40374.4,35476,4898.4,13.8%
 LANL-GrowthRate,90644,118406.8,126120,28844.8,35476,-6631.2,-18.7%
 IHME-CurveFit,90644,132106.4,126120,42544.4,35476,7068.4,19.9%
 IowaStateLW-STEM,90644,117284.5,126120,27722.5,35476,-7753.5,-21.9%

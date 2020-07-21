@@ -7,8 +7,8 @@ UT-Mobility,8.2
 LANL-GrowthRate,8.3
 UCLA-SuEIR,8.5
 COVIDhub-baseline,8.9
-MOBS_NEU-GLEAM_COVID,9.7
-MIT_CovidAnalytics-DELPHI,10.2
+MOBS-GLEAM_COVID,9.7
+CovidAnalytics-DELPHI,10.2
 IHME-CurveFit,10.4
 IowaStateLW-STEM,11.1
 CU-select,11.8

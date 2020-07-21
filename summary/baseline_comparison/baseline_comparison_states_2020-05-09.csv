@@ -3,6 +3,7 @@ num_states,51,51,51
 num_states_with_projections-COVIDhub-baseline,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,51,51
 num_states_with_projections-CU-select,50,50,50
+num_states_with_projections-CovidAnalytics-DELPHI,,51,51
 num_states_with_projections-GT-DeepCOVID,,,47
 num_states_with_projections-Geneva-DetGrowth,,,0
 num_states_with_projections-IHME-CurveFit,51,49,51
@@ -11,8 +12,7 @@ num_states_with_projections-Imperial-ensemble2,,,0
 num_states_with_projections-IowaStateLW-STEM,,49,49
 num_states_with_projections-JHU_IDD-CovidSP,,0,
 num_states_with_projections-LANL-GrowthRate,51,51,51
-num_states_with_projections-MIT_CovidAnalytics-DELPHI,,51,51
-num_states_with_projections-MOBS_NEU-GLEAM_COVID,44,48,50
+num_states_with_projections-MOBS-GLEAM_COVID,44,48,50
 num_states_with_projections-NotreDame-FRED,,,7
 num_states_with_projections-UCLA-SuEIR,,,51
 num_states_with_projections-UMass-ExpertCrowd,0,,
@@ -22,6 +22,7 @@ num_states_with_projections-YYG-ParamSearch,51,51,51
 num_states_beat_baseline-COVIDhub-baseline,25,19,25
 num_states_beat_baseline-COVIDhub-ensemble,,27,25
 num_states_beat_baseline-CU-select,15,22,17
+num_states_beat_baseline-CovidAnalytics-DELPHI,,24,13
 num_states_beat_baseline-GT-DeepCOVID,,,6
 num_states_beat_baseline-Geneva-DetGrowth,,,
 num_states_beat_baseline-IHME-CurveFit,14,15,15
@@ -30,8 +31,7 @@ num_states_beat_baseline-Imperial-ensemble2,,,
 num_states_beat_baseline-IowaStateLW-STEM,,22,16
 num_states_beat_baseline-JHU_IDD-CovidSP,,,
 num_states_beat_baseline-LANL-GrowthRate,23,23,24
-num_states_beat_baseline-MIT_CovidAnalytics-DELPHI,,24,13
-num_states_beat_baseline-MOBS_NEU-GLEAM_COVID,11,18,19
+num_states_beat_baseline-MOBS-GLEAM_COVID,11,18,19
 num_states_beat_baseline-NotreDame-FRED,,,2
 num_states_beat_baseline-UCLA-SuEIR,,,9
 num_states_beat_baseline-UMass-ExpertCrowd,,,
@@ -41,6 +41,7 @@ num_states_beat_baseline-YYG-ParamSearch,24,16,12
 perc_beat_baseline-COVIDhub-baseline,0.4901960784,0.3725490196,0.4901960784
 perc_beat_baseline-COVIDhub-ensemble,,0.5294117647,0.4901960784
 perc_beat_baseline-CU-select,0.3,0.44,0.34
+perc_beat_baseline-CovidAnalytics-DELPHI,,0.4705882353,0.2549019608
 perc_beat_baseline-GT-DeepCOVID,,,0.1276595745
 perc_beat_baseline-Geneva-DetGrowth,,,
 perc_beat_baseline-IHME-CurveFit,0.2745098039,0.306122449,0.2941176471
@@ -49,8 +50,7 @@ perc_beat_baseline-Imperial-ensemble2,,,
 perc_beat_baseline-IowaStateLW-STEM,,0.4489795918,0.3265306122
 perc_beat_baseline-JHU_IDD-CovidSP,,,
 perc_beat_baseline-LANL-GrowthRate,0.4509803922,0.4509803922,0.4705882353
-perc_beat_baseline-MIT_CovidAnalytics-DELPHI,,0.4705882353,0.2549019608
-perc_beat_baseline-MOBS_NEU-GLEAM_COVID,0.25,0.375,0.38
+perc_beat_baseline-MOBS-GLEAM_COVID,0.25,0.375,0.38
 perc_beat_baseline-NotreDame-FRED,,,0.2857142857
 perc_beat_baseline-UCLA-SuEIR,,,0.1764705882
 perc_beat_baseline-UMass-ExpertCrowd,,,
@@ -61,6 +61,7 @@ mean_abs_error-Baseline,246.2117647,138.2627451,39.78627451
 mean_abs_error-COVIDhub-baseline,494.754902,128.6627451,45.21568627
 mean_abs_error-COVIDhub-ensemble,,122.6980392,40.36470588
 mean_abs_error-CU-select,,,
+mean_abs_error-CovidAnalytics-DELPHI,,115.9215686,142.3137255
 mean_abs_error-GT-DeepCOVID,,,
 mean_abs_error-Geneva-DetGrowth,,,
 mean_abs_error-IHME-CurveFit,339.6862745,,88.59215686
@@ -69,8 +70,7 @@ mean_abs_error-Imperial-ensemble2,,,
 mean_abs_error-IowaStateLW-STEM,,,
 mean_abs_error-JHU_IDD-CovidSP,,,
 mean_abs_error-LANL-GrowthRate,309.5470588,171.9764706,51.01372549
-mean_abs_error-MIT_CovidAnalytics-DELPHI,,115.9215686,142.3137255
-mean_abs_error-MOBS_NEU-GLEAM_COVID,,,
+mean_abs_error-MOBS-GLEAM_COVID,,,
 mean_abs_error-NotreDame-FRED,,,
 mean_abs_error-UCLA-SuEIR,,,153.9607843
 mean_abs_error-UMass-ExpertCrowd,,,

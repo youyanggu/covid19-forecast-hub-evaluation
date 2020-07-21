@@ -1,11 +1,10 @@
 ,perc_error_2020-04-20_2020-04-25
 Baseline,-0.009
-Baseline_0.98,-0.057
 CU-select,0.111
 IHME-CurveFit,-0.193
 YYG-ParamSearch,-0.222
 COVIDhub-baseline,0.239
-MOBS_NEU-GLEAM_COVID,-0.312
+MOBS-GLEAM_COVID,-0.312
 Geneva-DetGrowth,-0.313
 UT-Mobility,-0.592
 Imperial-combined,1.006

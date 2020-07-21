@@ -1,5 +1,4 @@
 ,total_deaths_2020-04-19,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
-Baseline_0.98,41671,93679.9,98146,52734.9,56475,-3740.1,-6.6%
 YYG-ParamSearch,41671,84469.4,98146,43524.4,56475,-12950.6,-22.9%
 CU-select,41671,111290.0,98146,70345.0,56475,13870.0,24.6%
 Baseline,41671,113117.3,98146,72172.3,56475,15697.3,27.8%

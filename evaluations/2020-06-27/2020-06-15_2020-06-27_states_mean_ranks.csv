@@ -7,12 +7,12 @@ COVIDhub-baseline,9.0
 OliverWyman-Navigator,9.4
 UT-Mobility,9.4
 LANL-GrowthRate,10.0
-MOBS_NEU-GLEAM_COVID,10.3
+MOBS-GLEAM_COVID,10.3
 SWC-TerminusCM,10.4
 UA-EpiCovDA,10.7
 PSI-DRAFT,11.0
 IHME-CurveFit,11.1
-MIT_CovidAnalytics-DELPHI,11.9
+CovidAnalytics-DELPHI,11.9
 Covid19Sim-Simulator,11.9
 IowaStateLW-STEM,12.0
 CU-select,12.4

@@ -6,11 +6,11 @@ UT-Mobility,6.5
 COVIDhub-baseline,6.6
 UCLA-SuEIR,6.7
 COVIDhub-ensemble,7.4
-MOBS_NEU-GLEAM_COVID,7.9
+MOBS-GLEAM_COVID,7.9
 USACE-ERDC_SEIR,8.4
 PSI-DRAFT,8.7
 IHME-CurveFit,8.9
-MIT_CovidAnalytics-DELPHI,9.1
+CovidAnalytics-DELPHI,9.1
 CU-select,9.4
 IowaStateLW-STEM,10.7
 Auquan-SEIR,13.2

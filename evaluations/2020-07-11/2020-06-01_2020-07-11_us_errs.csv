@@ -1,6 +1,5 @@
 ,total_deaths_2020-05-31,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
 PSI-DRAFT,105364,134396.0,134777,30015.0,29413,602.0,2.0%
-Baseline_0.98,105364,131181.9,134777,26800.9,29413,-2612.1,-8.9%
 LANL-GrowthRate,105364,129243.5,134777,24862.5,29413,-4550.5,-15.5%
 IowaStateLW-STEM,105364,128684.0,134777,24303.0,29413,-5110.0,-17.4%
 IHME-CurveFit,105364,128590.2,134777,24209.2,29413,-5203.8,-17.7%

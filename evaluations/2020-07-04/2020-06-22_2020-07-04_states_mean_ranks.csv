@@ -8,13 +8,13 @@ NotreDame-mobility,9.4
 UT-Mobility,9.8
 COVIDhub-baseline,10.1
 Covid19Sim-Simulator,10.3
-MIT_CovidAnalytics-DELPHI,10.6
+CovidAnalytics-DELPHI,10.6
 Auquan-SEIR,10.8
 IHME-CurveFit,10.9
 LANL-GrowthRate,11.1
 IowaStateLW-STEM,11.2
 OliverWyman-Navigator,11.4
-MOBS_NEU-GLEAM_COVID,11.5
+MOBS-GLEAM_COVID,11.5
 PSI-DRAFT,11.6
 CU-select,13.2
 USACE-ERDC_SEIR,14.5

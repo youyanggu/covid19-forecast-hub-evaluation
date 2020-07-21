@@ -5,7 +5,7 @@ LANL-GrowthRate,4.8
 UMass-MechBayes,5.0
 UCLA-SuEIR,5.3
 IHME-CurveFit,5.5
-MIT_CovidAnalytics-DELPHI,5.9
+CovidAnalytics-DELPHI,5.9
 COVIDhub-baseline,6.1
 CU-select,6.5
-MOBS_NEU-GLEAM_COVID,6.8
+MOBS-GLEAM_COVID,6.8

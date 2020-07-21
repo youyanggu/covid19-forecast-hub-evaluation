@@ -2,11 +2,11 @@
 LANL-GrowthRate,7.5
 UCLA-SuEIR,7.6
 UT-Mobility,8.1
-MIT_CovidAnalytics-DELPHI,8.4
 YYG-ParamSearch,8.4
+CovidAnalytics-DELPHI,8.4
 PSI-DRAFT,8.6
 COVIDhub-ensemble,9.0
-MOBS_NEU-GLEAM_COVID,9.3
+MOBS-GLEAM_COVID,9.3
 UMass-MechBayes,9.5
 COVIDhub-baseline,9.8
 IowaStateLW-STEM,10.4

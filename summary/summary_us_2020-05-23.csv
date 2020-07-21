@@ -1,9 +1,8 @@
 ,perc_error_2020-04-20_2020-05-23,perc_error_2020-04-27_2020-05-23,perc_error_2020-05-04_2020-05-23,perc_error_2020-05-11_2020-05-23,perc_error_2020-05-18_2020-05-23
 YYG-ParamSearch,-0.229,-0.042,-0.021,0.090,0.075
-Baseline_0.98,-0.066,-0.011,0.035,0.130,0.091
 CU-select,0.246,0.148,0.016,0.053,-0.157
 COVIDhub-ensemble,,-0.154,-0.069,0.056,0.068
-MOBS_NEU-GLEAM_COVID,,-0.419,-0.145,0.040,0.025
+MOBS-GLEAM_COVID,,-0.419,-0.145,0.040,0.025
 LANL-GrowthRate,,0.252,0.086,-0.163,-0.064
 GT-DeepCOVID,,,,0.026,-0.009
 UCLA-SuEIR,,,-0.131,0.031,0.151
@@ -12,7 +11,7 @@ Baseline,0.278,0.270,0.245,0.272,0.147
 PSI-DRAFT,,,,,-0.016
 COVIDhub-baseline,,0.296,0.244,0.395,0.220
 IHME-CurveFit,-0.564,-0.603,0.205,0.263,0.349
-MIT_CovidAnalytics-DELPHI,,,0.157,0.329,0.314
+CovidAnalytics-DELPHI,,,0.157,0.329,0.314
 UMass-MechBayes,,,,,0.091
 Imperial-combined,,,,,0.133
 Geneva-DetGrowth,,,,,-0.327

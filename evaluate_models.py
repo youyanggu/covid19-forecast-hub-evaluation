@@ -82,7 +82,7 @@ def validate_projections(df_model):
 
 def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         use_point=True, use_cumulative_deaths=False, print_additional_stats=False,
-        merge_models=True):
+        merge_models=True, use_baseline2=False):
     """For full description of methods, refer to:
 
     https://github.com/youyanggu/covid19-forecast-hub-evaluation
@@ -156,6 +156,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_truth_raw = df_truth_raw[['date', 'location', 'total_deaths']]
 
     df_truth = df_truth_raw[df_truth_raw['date'] == eval_date]
+    assert len(df_truth) > 0, f'No truth data available for eval date: {eval_date}'
     df_truth = df_truth.set_index('location')['total_deaths']
     df_truth_filt = df_truth[df_truth.index.isin(fips_to_evaluate)]
     assert len(df_truth_filt) == len(fips_to_evaluate), 'Missing FIPS in truth'
@@ -219,11 +220,12 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_baseline = df_truth_past_model_ran_date + df_truth_per_day * weighted_days
     df_baseline_filt = df_baseline[(df_baseline.index.isin(fips_to_evaluate)) & (~pd.isnull(df_baseline))]
 
-    # Baseline #2 uses the avg daily deaths from previous week and make a 2% daily decrease
-    baseline2_daily_decay = 0.98
-    weighted_days2 = sum([baseline2_daily_decay**i for i in range(days_ahead+1)])
-    df_baseline2 = df_truth_past_model_ran_date + df_truth_per_day * weighted_days2
-    df_baseline2_filt = df_baseline2[(df_baseline2.index.isin(fips_to_evaluate)) & (~pd.isnull(df_baseline2))]
+    if use_cumulative_deaths:
+        df_model_diffs = df_baseline_filt - df_truth_filt
+    else:
+        df_model_act_addl_deaths = df_truth_filt - df_truth_model_ran_date_filt
+        df_model_pred_addl_deaths = df_baseline_filt - df_truth_past_model_ran_date_filt
+        df_model_diffs = df_model_pred_addl_deaths - df_model_act_addl_deaths
 
     model_to_num_locations = {}
     model_to_errors = {}
@@ -231,28 +233,33 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     model_to_us_projection = {}
     model_to_all_projections = {}
 
-    if use_cumulative_deaths:
-        df_model_diffs = df_baseline_filt - df_truth_filt
-        df_model_diffs2 = df_baseline2_filt - df_truth_filt
-    else:
-        df_model_act_addl_deaths = df_truth_filt - df_truth_model_ran_date_filt
-
-        df_model_pred_addl_deaths = df_baseline_filt - df_truth_past_model_ran_date_filt
-        df_model_diffs = df_model_pred_addl_deaths - df_model_act_addl_deaths
-
-        df_model_pred_addl_deaths2 = df_baseline2_filt - df_truth_past_model_ran_date_filt
-        df_model_diffs2 = df_model_pred_addl_deaths2 - df_model_act_addl_deaths
-
     model_to_num_locations['Baseline'] = len(df_baseline_filt)
     model_to_errors['Baseline'] = df_model_diffs.to_dict()
     model_to_us_projection['Baseline'] = df_baseline_filt['US']
     model_to_all_projections['Baseline'] = df_baseline_filt
 
-    baseline_name = f'Baseline_{baseline2_daily_decay}'
-    model_to_num_locations[baseline_name] = len(df_baseline2_filt)
-    model_to_errors[baseline_name] = df_model_diffs2.to_dict()
-    model_to_us_projection[baseline_name] = df_baseline2_filt['US']
-    model_to_all_projections[baseline_name] = df_baseline2_filt
+    baseline_names = ['Baseline']
+    if use_baseline2:
+        # Baseline #2 uses the avg daily deaths from previous week and make a 2% daily decrease
+        baseline2_daily_decay = 0.98
+        baseline_names.append(f'Baseline_{baseline2_daily_decay}')
+
+        weighted_days2 = sum([baseline2_daily_decay**i for i in range(days_ahead+1)])
+        df_baseline2 = df_truth_past_model_ran_date + df_truth_per_day * weighted_days2
+        df_baseline2_filt = df_baseline2[(df_baseline2.index.isin(fips_to_evaluate)) & (~pd.isnull(df_baseline2))]
+
+        if use_cumulative_deaths:
+            df_model_diffs2 = df_baseline2_filt - df_truth_filt
+        else:
+            df_model_act_addl_deaths = df_truth_filt - df_truth_model_ran_date_filt
+            df_model_pred_addl_deaths2 = df_baseline2_filt - df_truth_past_model_ran_date_filt
+            df_model_diffs2 = df_model_pred_addl_deaths2 - df_model_act_addl_deaths
+
+        baseline2_name = f'Baseline_{baseline2_daily_decay}'
+        model_to_num_locations[baseline2_name] = len(df_baseline2_filt)
+        model_to_errors[baseline2_name] = df_model_diffs2.to_dict()
+        model_to_us_projection[baseline2_name] = df_baseline2_filt['US']
+        model_to_all_projections[baseline2_name] = df_baseline2_filt
 
     print('=================================================')
     print('Loading model projections')
@@ -402,7 +409,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     df_all = pd.DataFrame(model_to_all_projections).T.rename(
         columns=fips_to_us_state).sort_index()
-    for model_name in [baseline_name, 'Baseline', 'actual_deaths']:
+    for model_name in baseline_names[::-1] + ['actual_deaths']:
         # move to first rows
         name_idx = np.where(df_all.index == model_name)[0][0]
         df_all = df_all.iloc[[name_idx] + [i for i in range(len(df_all)) if i != name_idx]]
@@ -412,8 +419,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print('------------------------')
     print(f'Cumulative death forecasts for {eval_date}:')
     print(df_all)
-    df_all[f'error-Baseline'] = df_errors_raw.loc['Baseline']
-    df_all[f'error-{baseline_name}'] = df_errors_raw.loc[baseline_name]
+    for baseline_name in baseline_names:
+        df_all[f'error-{baseline_name}'] = df_errors_raw.loc[baseline_name]
     for model_name in model_names:
         df_all[f'error-{model_name}'] = df_errors_raw.loc[model_name]
     for model_name in model_names:

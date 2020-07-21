@@ -6,9 +6,9 @@ YYG-ParamSearch,6.0
 UT-Mobility,6.0
 CU-select,7.0
 UMass-MechBayes,7.1
-MOBS_NEU-GLEAM_COVID,7.3
+MOBS-GLEAM_COVID,7.3
 IHME-CurveFit,7.6
 UCLA-SuEIR,7.8
 IowaStateLW-STEM,7.8
-MIT_CovidAnalytics-DELPHI,8.0
+CovidAnalytics-DELPHI,8.0
 GT-DeepCOVID,10.8

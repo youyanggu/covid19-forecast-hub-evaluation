@@ -1,6 +1,5 @@
 ,total_deaths_2020-05-03,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
 IHME-CurveFit,68777,127540.9,126120,59858.9,57343,2515.9,4.4%
-Baseline_0.98,68777,129018.9,126120,61336.9,57343,3993.9,7.0%
 YYG-ParamSearch,68777,129528.5,126120,61846.5,57343,4503.5,7.9%
 UCLA-SuEIR,68777,110703.6,126120,43021.6,57343,-14321.4,-25.0%
 IowaStateLW-STEM,68777,101032.0,126120,33350.0,57343,-23993.0,-41.8%

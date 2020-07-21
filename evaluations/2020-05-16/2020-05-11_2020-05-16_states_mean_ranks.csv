@@ -1,12 +1,12 @@
 ,mean_rank
 YYG-ParamSearch,4.4
 LANL-GrowthRate,4.8
-COVIDhub-ensemble,5.1
+COVIDhub-ensemble,5.0
 UMass-MechBayes,5.4
 UT-Mobility,5.7
 COVIDhub-baseline,6.0
 IHME-CurveFit,6.3
 CU-select,6.5
 UCLA-SuEIR,6.6
-MOBS_NEU-GLEAM_COVID,7.0
-MIT_CovidAnalytics-DELPHI,8.3
+MOBS-GLEAM_COVID,7.0
+CovidAnalytics-DELPHI,8.3

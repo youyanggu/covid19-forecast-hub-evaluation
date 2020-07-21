@@ -3,10 +3,10 @@ UMass-MechBayes,7.1
 YYG-ParamSearch,7.1
 COVIDhub-ensemble,7.3
 UCLA-SuEIR,7.5
-MIT_CovidAnalytics-DELPHI,7.8
+CovidAnalytics-DELPHI,7.8
 UT-Mobility,7.8
 LANL-GrowthRate,7.8
-MOBS_NEU-GLEAM_COVID,7.9
+MOBS-GLEAM_COVID,7.9
 COVIDhub-baseline,8.2
 PSI-DRAFT,10.5
 SWC-TerminusCM,10.7

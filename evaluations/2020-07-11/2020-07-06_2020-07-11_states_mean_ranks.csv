@@ -6,11 +6,11 @@ LANL-GrowthRate,9.4
 USC-SI_kJalpha,9.5
 COVIDhub-baseline,10.1
 YYG-ParamSearch,10.6
-UT-Mobility,11.3
+UT-Mobility,11.2
 NotreDame-mobility,11.3
 UCLA-SuEIR,11.5
 USACE-ERDC_SEIR,11.6
-MOBS_NEU-GLEAM_COVID,12.6
+MOBS-GLEAM_COVID,12.6
 UA-EpiCovDA,12.7
 JHU_IDD-CovidSP,13.5
 IHME-CurveFit,13.7
@@ -18,9 +18,9 @@ Auquan-SEIR,14.0
 RobertWalraven-ESG,14.3
 PSI-DRAFT,14.4
 IowaStateLW-STEM,14.9
-MIT_CovidAnalytics-DELPHI,15.0
+CovidAnalytics-DELPHI,15.0
 CU-select,15.5
 Covid19Sim-Simulator,16.1
 CovidActNow-SEIR_CAN,16.7
-MIT_CovAlliance-SIR,19.5
+MITCovAlliance-SIR,19.5
 GT-DeepCOVID,21.6
