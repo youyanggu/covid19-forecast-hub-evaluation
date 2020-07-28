@@ -150,7 +150,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     # We retrieve the latest truth data to compute actual incident deaths
     truth_file_name = forecast_hub_dir / 'data-truth' / 'truth-Cumulative Deaths.csv'
-    df_truth_raw = pd.read_csv(truth_file_name)
+    df_truth_raw = pd.read_csv(truth_file_name, dtype={'location' : str})
     df_truth_raw['date'] = pd.to_datetime(df_truth_raw['date']).dt.date
     df_truth_raw = df_truth_raw.rename(columns={'value' : 'total_deaths'})
     df_truth_raw = df_truth_raw[['date', 'location', 'total_deaths']]
@@ -184,7 +184,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     """
     past_truth_fname = find_truth_file(proj_date)
     if not past_truth_fname:
-        print('Cannot find past truth file, using latest truth')
+        raise IOError('Cannot find past truth file. Uncomment error to use latest truth file instead.')
         past_truth_fname = truth_file_name
     print('----------------------------------')
     print('Past truth file:', past_truth_fname)

@@ -104,14 +104,17 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     else:
         # only consider projections from past 6 weeks for ranking by eval_date
         cols_for_ranking_us_ = cols_for_ranking_us[-6:]
-    df_all_us = df_all_us.reindex(df_all_us.abs().rank().fillna(
-        max_rank_us)[cols_for_ranking_us_].mean(axis=1).sort_values().index)
+    mean_rankings_us = df_all_us.abs().rank().fillna(
+        max_rank_us)[cols_for_ranking_us_].mean(axis=1).sort_values()
+    df_all_us = df_all_us.reindex(mean_rankings_us.index)
 
     print('------------------------')
     print('US errors:')
     print(df_all_us[cols_for_ranking_us])
     print('US rankings:')
     print(df_all_us[cols_for_ranking_us].abs().rank())
+    print('Mean rankings:')
+    print(mean_rankings_us)
 
     if out_dir:
         if eval_date:
@@ -165,14 +168,17 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     else:
         # only consider projections from past 6 weeks for ranking by eval_date
         cols_for_ranking_states_ = cols_for_ranking_states[-6:]
-    df_all_states = df_all_states.reindex(df_all_states.abs().rank().fillna(
-        max_ranks_states)[cols_for_ranking_states_].mean(axis=1).sort_values().index)
+    mean_rankings_states = df_all_states.abs().rank().fillna(
+        max_ranks_states)[cols_for_ranking_states_].mean(axis=1).sort_values()
+    df_all_states = df_all_states.reindex(mean_rankings_states.index)
 
     print('------------------------')
     print('State-by-state errors:')
     print(df_all_states[cols_for_ranking_states])
     print('State-by-state rankings:')
     print(df_all_states[cols_for_ranking_states].abs().rank())
+    print('Mean rankings:')
+    print(mean_rankings_states)
 
     if out_dir:
         if eval_date:

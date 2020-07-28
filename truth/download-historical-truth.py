@@ -49,9 +49,9 @@ def main():
 
             if (not r.ok) or (r.text == '[]'):
                 break
-            
+
             all_commits += json.loads(r.text or r.content)
-      
+
         # date of each commit
         commit_dates = [
             str_to_date(commit['commit']['author']['date'][0:10]) for commit in all_commits
@@ -74,7 +74,7 @@ def main():
             url = requests.utils.requote_uri(
                 'https://raw.githubusercontent.com/reichlab/covid19-forecast-hub/'
                 f'{commit_sha}/data-truth/{base_file}')
-            df = pd.read_csv(url)
+            df = pd.read_csv(url, dtype={'location' : str})
 
             print('Saving to:', result_path)
             df.to_csv(result_path, index=False)
