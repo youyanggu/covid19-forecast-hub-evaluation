@@ -63,7 +63,11 @@ def find_truth_file(date):
     """Finds the first truth file created on or after the date."""
     truth_fname = None
     while date <= datetime.date.today():
-        fname = Path(os.path.abspath(__file__)).parent / 'truth' / f'truth-cumulative-deaths-{date}.csv'
+        try:
+            fname = Path(os.path.abspath(__file__)).parent / 'truth' / f'truth-cumulative-deaths-{date}.csv'
+        except NameError:
+            # If run on console
+            fname = Path(os.getcwd()) / 'truth' / f'truth-cumulative-deaths-{date}.csv'
         if os.path.isfile(fname):
             truth_fname = fname
             break
@@ -401,9 +405,10 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print('=================================================')
     print('State-by-state Evaluation:')
     print('=================================================')
+    min_states_with_projections = 40
     df_errors_states = df_errors.drop(columns=['US'])
     # filter out models without most state projections
-    df_errors_states = df_errors_states.loc[df_errors_states.notna().sum(axis=1) > 40]
+    df_errors_states = df_errors_states.loc[df_errors_states.notna().sum(axis=1) > min_states_with_projections]
     print('Number of states with valid projections:')
     print(df_errors_states.notna().sum(axis=1))
 
@@ -485,6 +490,26 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         print('Saved to:', mean_ranks_fname)
 
     if print_additional_stats:
+        print('=================================================')
+        print('US projection vs sum of states projection:')
+        print('- The closer to 0 it is, the better the calibration')
+        print('- It will not be exactly 0 because the states projections do not include US territories')
+        print('=================================================')
+        model_name_to_us_projection, model_name_to_states_sum_projection = {}, {}
+        for model_name, all_projections_df in model_to_all_projections.items():
+            if len(all_projections_df) > min_states_with_projections:
+                model_name_to_us_projection[model_name] = all_projections_df['US']
+                model_name_to_states_sum_projection[model_name] = \
+                    all_projections_df[all_projections_df.index != 'US'].sum()
+        df_sum = pd.DataFrame([model_name_to_us_projection, model_name_to_states_sum_projection],
+            index=['US', 'SumStates']).T
+        deaths_us_territories = df_sum.loc['actual_deaths', 'US'] - df_sum.loc['actual_deaths', 'SumStates']
+        print('US territory deaths:', deaths_us_territories)
+        df_sum['diff'] = df_sum['US'] - df_sum['SumStates'] - deaths_us_territories
+        df_sum['diff_abs'] = df_sum['diff'].abs()
+        df_sum = df_sum.sort_values('diff_abs')
+        print(df_sum)
+
         print('=================================================')
         print('R^2 Correlation of errors:')
         print('=================================================')
