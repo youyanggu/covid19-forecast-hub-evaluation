@@ -10,13 +10,13 @@ YYG-ParamSearch,9.5
 UMass-MechBayes,9.7
 CovidAnalytics-DELPHI,9.8
 OliverWyman-Navigator,10.9
-IowaStateLW-STEM,11.0
+IowaStateLW-STEM,10.9
 UCLA-SuEIR,11.0
 USACE-ERDC_SEIR,11.2
 UT-Mobility,11.7
-COVIDhub-baseline,12.4
+COVIDhub-baseline,12.6
 MOBS-GLEAM_COVID,13.2
 PSI-DRAFT,13.6
 CovidActNow-SEIR_CAN,14.2
 CU-select,14.2
-JHU_IDD-CovidSP,16.5
+JHU_IDD-CovidSP,16.6

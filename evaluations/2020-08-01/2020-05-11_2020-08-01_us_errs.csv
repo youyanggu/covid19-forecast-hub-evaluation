@@ -1,0 +1,4 @@
+,total_deaths_2020-05-10,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+IHME-CurveFit,82561,137183.7,154447,57657.7,71886,-14228.3,-19.8%
+UCLA-SuEIR,82561,130082.3,154447,50556.3,71886,-21329.7,-29.7%
+Baseline,82561,219962.0,154447,140436.0,71886,68550.0,95.4%

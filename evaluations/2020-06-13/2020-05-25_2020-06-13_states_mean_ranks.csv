@@ -1,5 +1,5 @@
 ,mean_rank
-UMass-MechBayes,5.4
+UMass-MechBayes,5.5
 YYG-ParamSearch,6.7
 UCLA-SuEIR,6.7
 LANL-GrowthRate,6.9
@@ -15,4 +15,4 @@ CU-select,9.4
 Covid19Sim-Simulator,9.5
 UA-EpiCovDA,11.8
 Auquan-SEIR,13.4
-JHU_IDD-CovidSP,15.0
+JHU_IDD-CovidSP,15.1
