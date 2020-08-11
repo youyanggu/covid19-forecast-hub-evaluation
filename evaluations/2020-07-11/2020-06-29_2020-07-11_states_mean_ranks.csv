@@ -4,11 +4,11 @@ UMass-MechBayes,8.4
 YYG-ParamSearch,8.5
 USC-SI_kJalpha,9.4
 COVIDhub-baseline,9.9
-IHME-CurveFit,10.2
+IHME-CurveFit,10.3
 UA-EpiCovDA,10.3
 OliverWyman-Navigator,10.3
-UT-Mobility,11.0
 CovidAnalytics-DELPHI,11.0
+UT-Mobility,11.0
 NotreDame-mobility,11.2
 LANL-GrowthRate,11.3
 Covid19Sim-Simulator,12.0
@@ -20,5 +20,5 @@ MOBS-GLEAM_COVID,13.4
 IowaStateLW-STEM,14.1
 MITCovAlliance-SIR,15.7
 CU-select,16.2
-JHU_IDD-CovidSP,17.4
+JHU_IDD-CovidSP,17.3
 USACE-ERDC_SEIR,17.8

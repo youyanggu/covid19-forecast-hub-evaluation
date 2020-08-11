@@ -1,0 +1,53 @@
+location,actual_deaths,Baseline,error-Baseline
+Alabama,1755,1171.9,-583.1
+Alaska,26,24.9,-1.1
+Arizona,4137,1119.6,-3017.4
+Arkansas,535,229.3,-305.7
+California,10307,9692.3,-614.7
+Colorado,1857,2497.3,640.3
+Connecticut,4441,10213.1,5772.1
+Delaware,590,574.4,-15.6
+District of Columbia,590,825.4,235.4
+Florida,8109,5737.3,-2371.7
+Georgia,4186,4714.7,528.7
+Hawaii,31,25.9,-5.1
+Idaho,235,313.6,78.6
+Illinois,7840,10328.6,2488.6
+Indiana,3036,4034.7,998.7
+Iowa,927,614.1,-312.9
+Kansas,380,679.7,299.7
+Kentucky,772,923.0,151.0
+Louisiana,4207,8526.9,4319.9
+Maine,125,271.9,146.9
+Maryland,3577,4028.9,451.9
+Massachusetts,8721,16770.3,8049.3
+Michigan,6520,16852.7,10492.7
+Minnesota,1689,1148.9,-540.1
+Mississippi,1874,1158.0,-716.0
+Missouri,1327,1483.4,199.4
+Montana,75,73.4,-1.6
+Nebraska,345,202.4,-142.6
+Nevada,949,887.4,-61.6
+New Hampshire,419,275.9,-143.1
+New Jersey,15869,36266.6,21540.6
+New Mexico,681,514.9,-166.1
+New York,32768,100087.7,67842.7
+North Carolina,2184,1960.1,-223.9
+North Dakota,112,40.7,-71.3
+Ohio,3668,3927.9,259.9
+Oklahoma,603,837.7,234.7
+Oregon,355,422.9,67.9
+Pennsylvania,7310,12677.3,5367.3
+Rhode Island,1014,1529.6,515.6
+South Carolina,2007,722.6,-1284.4
+South Dakota,146,22.9,-123.1
+Tennessee,1215,814.0,-401.0
+Texas,9058,3772.4,-5229.6
+Utah,335,169.7,-165.3
+Vermont,58,212.4,154.4
+Virginia,2322,2433.6,111.6
+Washington,1688,2697.4,1009.4
+West Virginia,131,208.3,77.3
+Wisconsin,996,1425.1,429.1
+Wyoming,28,33.7,5.7
+US,162423,276566.3,116068.3

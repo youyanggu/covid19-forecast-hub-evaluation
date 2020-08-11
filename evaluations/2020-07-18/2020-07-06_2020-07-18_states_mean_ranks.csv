@@ -4,10 +4,10 @@ OliverWyman-Navigator,8.7
 UMass-MechBayes,9.2
 YYG-ParamSearch,10.4
 USC-SI_kJalpha,10.6
-LANL-GrowthRate,10.7
+LANL-GrowthRate,10.8
 COVIDhub-baseline,11.3
 NotreDame-mobility,11.4
-UCLA-SuEIR,11.4
+UCLA-SuEIR,11.5
 UT-Mobility,11.8
 USACE-ERDC_SEIR,12.0
 Auquan-SEIR,12.5
@@ -17,10 +17,10 @@ MOBS-GLEAM_COVID,13.3
 Covid19Sim-Simulator,13.5
 IowaStateLW-STEM,13.6
 CovidAnalytics-DELPHI,14.1
-RobertWalraven-ESG,15.0
+RobertWalraven-ESG,15.1
 PSI-DRAFT,15.1
 CU-select,15.1
 JHU_IDD-CovidSP,16.2
-CovidActNow-SEIR_CAN,17.6
+CovidActNow-SEIR_CAN,17.4
 GT-DeepCOVID,18.6
 MITCovAlliance-SIR,18.7

@@ -1,8 +1,8 @@
 ,mean_rank
-UCLA-SuEIR,3.0
+UCLA-SuEIR,3.1
 LANL-GrowthRate,3.8
-Covid19Sim-Simulator,4.0
-YYG-ParamSearch,4.3
+Covid19Sim-Simulator,4.1
+YYG-ParamSearch,4.2
+IowaStateLW-STEM,4.3
 PSI-DRAFT,4.3
 USACE-ERDC_SEIR,4.3
-IowaStateLW-STEM,4.3

@@ -1,0 +1,5 @@
+,total_deaths_2020-05-03,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+IHME-CurveFit,70546,134475.2,162423,66793.2,91877,-25083.8,-27.3%
+UCLA-SuEIR,70546,115276.5,162423,47594.5,91877,-44282.5,-48.2%
+IowaStateLW-STEM,70546,111173.0,162423,43491.0,91877,-48386.0,-52.7%
+Baseline,70546,245067.3,162423,177385.3,91877,85508.3,93.1%

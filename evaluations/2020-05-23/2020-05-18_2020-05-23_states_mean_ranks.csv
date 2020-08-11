@@ -1,6 +1,6 @@
 ,mean_rank
-UMass-MechBayes,5.8
 LANL-GrowthRate,5.8
+UMass-MechBayes,5.8
 YYG-ParamSearch,6.1
 UT-Mobility,6.5
 COVIDhub-baseline,6.6
@@ -12,6 +12,6 @@ PSI-DRAFT,8.7
 IHME-CurveFit,8.9
 CovidAnalytics-DELPHI,9.1
 CU-select,9.5
-IowaStateLW-STEM,10.7
+IowaStateLW-STEM,10.8
 Auquan-SEIR,13.2
-JHU_IDD-CovidSP,14.8
+JHU_IDD-CovidSP,14.7

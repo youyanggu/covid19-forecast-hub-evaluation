@@ -1,0 +1,5 @@
+,total_deaths_2020-05-17,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+UCLA-SuEIR,92467,137153.5,162423,47591.5,69956,-22364.5,-32.0%
+IowaStateLW-STEM,92467,124489.5,162423,34927.5,69956,-35028.5,-50.1%
+USACE-ERDC_SEIR,92467,119024.7,162423,29462.7,69956,-40493.3,-57.9%
+Baseline,92467,208560.3,162423,118998.3,69956,49042.3,70.1%
