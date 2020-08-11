@@ -41,6 +41,7 @@ def find_last_projections(fnames, proj_date):
     fnames - list of possible file names (file format: YYYY-MM-DD-team-model.csv)
     proj_date - the date of the projection (must be a Monday)
     """
+    assert sorted(fnames) == fnames, f'Files not sorted: {fnames}'
     last_valid_fname = None
     last_valid_date = None
     for fname in fnames:
@@ -51,7 +52,11 @@ def find_last_projections(fnames, proj_date):
             continue
         # Consider latest projections from within last 3 days for Monday's projections (Fri-Mon)
         # Note: from 2020-05-18, only projections from Sun or Mon are used for ensembles
-        days_tolerance = 3
+        # Note #2: from 2020-07-20, projections from Tue-Mon are used for visualization + ensemble
+        if proj_date >= datetime.date(2020,7,20):
+            days_tolerance = 6
+        else:
+            days_tolerance = 3
         if file_date <= proj_date and (proj_date - file_date).days <= days_tolerance:
             if last_valid_date is None or file_date > last_valid_date:
                 last_valid_fname = fname
@@ -410,7 +415,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     # filter out models without most state projections
     df_errors_states = df_errors_states.loc[df_errors_states.notna().sum(axis=1) > min_states_with_projections]
     print('Number of states with valid projections:')
-    print(df_errors_states.notna().sum(axis=1))
+    model_to_num_valid_projections = df_errors_states.notna().sum(axis=1)
+    print(model_to_num_valid_projections)
 
     df_all = pd.DataFrame(model_to_all_projections).T.rename(
         columns=fips_to_us_state).sort_index()
@@ -453,6 +459,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_sq_errs_states = df_errors_states**2
     print('----------------------\nStates - mean squared errors:')
     df_sq_errs_states_summary = df_sq_errs_states.T.describe().T.sort_values('mean')
+    df_sq_errs_states_summary['count'] = \
+        df_sq_errs_states_summary.index.map(model_to_num_valid_projections.get)
     df_sq_errs_states_summary = df_sq_errs_states_summary.rename(columns={'50%' : 'median'})
     cols = ['count', 'mean', 'median'] + \
         [c for c in df_sq_errs_states_summary.columns if c not in ['count', 'mean', 'median']]
@@ -466,6 +474,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     df_abs_errs_states = df_errors_states.abs()
     print('----------------------\nStates - mean absolute errors:')
     df_abs_errs_states_summary = df_abs_errs_states.T.describe().T.sort_values('mean')
+    df_abs_errs_states_summary['count'] = \
+        df_abs_errs_states_summary.index.map(model_to_num_valid_projections.get)
     df_abs_errs_states_summary = df_abs_errs_states_summary.rename(columns={'50%' : 'median'})
     cols = ['count', 'mean', 'median'] + \
         [c for c in df_abs_errs_states_summary.columns if c not in ['count', 'mean', 'median']]
@@ -563,5 +573,5 @@ if __name__ == '__main__':
         print_additional_stats=args.print_additional_stats)
 
     print('=================================================')
-    print('Done', datetime.datetime.now())
+    print('Done:', datetime.datetime.now())
 
