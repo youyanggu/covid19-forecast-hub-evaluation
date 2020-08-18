@@ -2,6 +2,8 @@
 
 In this section, we present evaluations of country-by-country forecasts by [covid19-projections.com](https://covid19-projections.com) and [IHME](https://covid19.healthdata.org/). Because global forecasts are not standardized, each team's forecasts must be downloaded and processed separately. We compare the models with the [baseline metric](https://github.com/youyanggu/covid19-forecast-hub-evaluation#baseline-model). More teams will be added to the evaluation in the future.
 
+*Note: In the global evaluation, the baseline metric has look-ahead bias in the sense that it uses the latest data to compute the baseline. This data may not have been available at the time that the forecasts were generated. The model forecasts do not have this look-ahead bias.*
+
 The files are located in the directory based on the evaluation date (e.g. all projections evaluated on Saturday, June 13 cumulative deaths are located in the `2020-06-13` directory). The file format is the following:
 
 ```projections_{proj-date}_{eval-date}.csv```
