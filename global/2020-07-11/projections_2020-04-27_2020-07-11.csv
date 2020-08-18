@@ -1,31 +1,22 @@
 ,actual_deaths,Baseline,YYG-ParamSearch,IHME-CurveFIt,error-Baseline,error-YYG,error-IHME,beat_baseline-YYG,beat_baseline-IHME
-Austria,706,1395.4,984.0,,689.4,278.0,,True,False
-Belgium,9782,21982.0,11901.0,,12200.0,2119.0,,True,False
 Bulgaria,267,218.7,196.0,58.3,-48.3,-71.0,-208.7,False,False
-Canada,8818,14776.7,9241.0,5098.5,5958.7,423.0,-3719.5,True,True
+Canada,8818,14787.4,9241.0,5098.5,5969.4,423.0,-3719.5,True,True
 Croatia,118,187.6,220.0,60.4,69.6,102.0,-57.6,False,True
 Cyprus,19,47.1,32.0,19.5,28.1,13.0,0.5,True,True
-Czechia,352,533.7,442.0,,181.7,90.0,,True,False
-Denmark,609,1102.0,728.0,,493.0,119.0,,True,False
 Estonia,69,157.1,113.0,92.9,88.1,44.0,23.9,True,True
 Finland,329,1210.9,759.0,433.4,881.9,430.0,104.4,True,True
-France,30007,55749.6,36621.0,24917.7,25742.6,6614.0,-5089.3,True,True
+France,30007,55844.9,36621.0,24917.7,25837.9,6614.0,-5089.3,True,True
 Germany,9070,19668.9,15797.0,6945.8,10598.9,6727.0,-2124.2,True,True
 Greece,193,350.3,242.0,140.2,157.3,49.0,-52.8,True,True
 Hungary,595,1147.9,838.0,306.4,552.9,243.0,-288.6,True,True
 Ireland,1746,5548.4,2720.0,1404.0,3802.4,974.0,-342.0,True,True
 Italy,34945,57652.0,40926.0,27544.2,22707.0,5981.0,-7400.8,True,True
 Latvia,30,98.7,57.0,451.7,68.7,27.0,421.7,True,False
-Lithuania,79,83.9,93.0,,4.9,14.0,,False,False
 Luxembourg,110,227.3,146.0,138.7,117.3,36.0,28.7,True,True
-Netherlands,6156,12784.0,9172.0,,6628.0,3016.0,,True,False
-Norway,252,462.1,386.0,,210.1,134.0,,True,False
-Poland,1568,2512.0,1907.0,,944.0,339.0,,True,False
 Portugal,1654,2995.9,2525.0,1021.0,1341.9,871.0,-633.0,True,True
 Romania,1871,2387.4,2151.0,663.2,516.4,280.0,-1207.8,True,False
 Slovakia,28,71.6,40.0,24.7,43.6,12.0,-3.3,True,True
 Slovenia,111,147.3,138.0,91.8,36.3,27.0,-19.2,True,True
 Spain,28403,52117.4,31552.0,25329.3,23714.4,3149.0,-3073.7,True,True
 Sweden,5526,9709.7,6736.0,15530.3,4183.7,1210.0,10004.3,True,False
-Switzerland,1968,4193.6,2584.0,,2225.6,616.0,,True,False
-United Kingdom,44883,81950.9,40810.0,31476.2,37067.9,-4073.0,-13406.8,True,True
+United Kingdom,44883,70517.7,40810.0,31476.2,25634.7,-4073.0,-13406.8,True,True

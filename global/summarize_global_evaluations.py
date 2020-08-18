@@ -4,6 +4,7 @@ import glob
 import os
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 
@@ -80,18 +81,22 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
         }
         df_global_sum = df_global.abs().sum()
         for team_name in team_names:
+            num_countries_with_proj = df_global[f'error-{team_name}'].count()
+            if df_global_sum.loc[f'error-{team_name}'] == 0:
+                # No projections
+                col_data[f'num_countries_beat_baseline-{team_name}'] = np.nan
+                col_data[f'perc_beat_baseline-{team_name}'] = np.nan
+                col_data[f'mean_abs_error-{team_name}'] = np.nan
+                continue
             if team_name != 'Baseline':
                 num_beat_baseline = df_global_sum.loc[f'beat_baseline-{team_name}']
                 col_data[f'num_countries_beat_baseline-{team_name}'] = int(num_beat_baseline)
-                col_data[f'perc_beat_baseline-{team_name}'] = num_beat_baseline / num_countries
-            col_data[f'mean_abs_error-{team_name}'] = df_global_sum.loc[f'error-{team_name}'] / num_countries
+                col_data[f'perc_beat_baseline-{team_name}'] = num_beat_baseline / num_countries_with_proj
+            col_data[f'mean_abs_error-{team_name}'] = df_global_sum.loc[f'error-{team_name}'] / num_countries_with_proj
 
         col_to_data[f'{proj_date_}_{eval_date_}'] = col_data
 
     df_all = pd.DataFrame(col_to_data).T
-    for c in df_all.columns:
-        if 'num_countries' in c or 'mean_abs_error' in c:
-            df_all[c] = df_all[c].astype(int)
     df_all = df_all[row_ordering].T
 
     if out_dir:

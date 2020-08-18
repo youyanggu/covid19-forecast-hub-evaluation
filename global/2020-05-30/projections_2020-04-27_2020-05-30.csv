@@ -1,12 +1,8 @@
 ,actual_deaths,Baseline,YYG-ParamSearch,IHME-CurveFIt,error-Baseline,error-YYG,error-IHME,beat_baseline-YYG,beat_baseline-IHME
-Austria,668,921.4,811.0,,253.4,143.0,,True,False
-Belgium,9453,13708.0,10567.0,,4255.0,1114.0,,True,False
 Bulgaria,139,128.7,126.0,58.3,-10.3,-13.0,-80.7,False,False
 Canada,7159,8097.4,6313.0,4919.6,938.4,-846.0,-2239.4,True,False
 Croatia,103,115.6,136.0,60.4,12.6,33.0,-42.6,False,False
 Cyprus,17,29.1,25.0,19.5,12.1,8.0,2.5,True,True
-Czechia,319,359.7,357.0,,40.7,38.0,,True,False
-Denmark,571,724.0,614.0,,153.0,43.0,,True,False
 Estonia,67,97.1,88.0,90.1,30.1,21.0,23.1,True,True
 Finland,316,640.9,449.0,430.0,324.9,133.0,114.0,True,True
 France,28774,37634.9,32314.0,24917.7,8860.9,3540.0,-3856.3,True,True
@@ -16,16 +12,11 @@ Hungary,524,661.9,565.0,306.4,137.9,41.0,-217.6,True,False
 Ireland,1651,3058.4,2097.0,1404.0,1407.4,446.0,-247.0,True,True
 Italy,33340,40474.0,35769.0,27544.2,7134.0,2429.0,-5795.8,True,True
 Latvia,24,50.7,36.0,360.8,26.7,12.0,336.8,True,False
-Lithuania,70,59.9,72.0,,-10.1,2.0,,True,False
 Luxembourg,110,149.3,125.0,137.3,39.3,15.0,27.3,True,True
-Netherlands,5970,8164.0,7119.0,,2194.0,1149.0,,True,False
-Norway,236,318.1,315.0,,82.1,79.0,,True,False
-Poland,1061,1420.0,1167.0,,359.0,106.0,,True,False
 Portugal,1396,1837.9,1741.0,1021.0,441.9,345.0,-375.0,True,True
 Romania,1259,1409.4,1368.0,663.2,150.4,109.0,-595.8,True,False
 Slovakia,28,41.6,33.0,24.7,13.6,5.0,-3.3,True,True
 Slovenia,108,111.3,119.0,91.8,3.3,11.0,-16.2,False,False
 Spain,27125,36103.4,29361.0,25329.3,8978.4,2236.0,-1795.7,True,True
 Sweden,4395,5545.7,4702.0,10226.0,1150.7,307.0,5831.0,True,False
-Switzerland,1919,2777.6,2271.0,,858.6,352.0,,True,False
 United Kingdom,38458,42875.7,33579.0,31463.7,4417.7,-4879.0,-6994.3,False,False

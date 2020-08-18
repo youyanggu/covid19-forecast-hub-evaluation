@@ -197,7 +197,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         past_truth_fname = truth_file_name
     print('----------------------------------')
     print('Past truth file:', past_truth_fname)
-    df_truth_raw_past = pd.read_csv(past_truth_fname)
+    df_truth_raw_past = pd.read_csv(past_truth_fname, dtype={'location' : str})
     df_truth_raw_past['date'] = pd.to_datetime(df_truth_raw_past['date']).dt.date
     df_truth_raw_past = df_truth_raw_past.rename(columns={'value' : 'total_deaths'})
     df_truth_raw_past = df_truth_raw_past[['date', 'location', 'total_deaths']]

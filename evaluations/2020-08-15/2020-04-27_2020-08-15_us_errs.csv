@@ -1,0 +1,3 @@
+,total_deaths_2020-04-26,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline,57289,275866.1,169481,220985.1,112192,108793.1,97.0%
+IowaStateLW-STEM,57289,,169481,,112192,,

@@ -1,9 +1,9 @@
 ,2020-04-20_2020-05-09,2020-04-27_2020-05-09,2020-05-04_2020-05-09
-num_countries,30,30,30
-num_countries_beat_baseline-YYG,21,22,14
+num_countries,30,21,30
+num_countries_beat_baseline-YYG,21,17,14
 num_countries_beat_baseline-IHME,12,8,11
-perc_beat_baseline-YYG,0.7,0.7333333333,0.4666666667
-perc_beat_baseline-IHME,0.4,0.2666666667,0.3666666667
-mean_abs_error-Baseline,747,384,130
-mean_abs_error-YYG,413,300,56
-mean_abs_error-IHME,497,362,133
+perc_beat_baseline-YYG,0.7,0.8095238095,0.4666666667
+perc_beat_baseline-IHME,0.4,0.380952381,0.3666666667
+mean_abs_error-Baseline,747.7566667,461.2380952,130.3533333
+mean_abs_error-YYG,413.7333333,391.4285714,56.83333333
+mean_abs_error-IHME,497.25,517.8952381,133.1233333
