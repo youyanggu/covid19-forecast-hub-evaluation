@@ -22,3 +22,4 @@ python summarize_global_evaluations.py --eval_date 2020-07-25 --out_dir summary
 python summarize_global_evaluations.py --eval_date 2020-08-01 --out_dir summary
 python summarize_global_evaluations.py --eval_date 2020-08-08 --out_dir summary
 python summarize_global_evaluations.py --eval_date 2020-08-15 --out_dir summary
+python summarize_global_evaluations.py --eval_date 2020-08-22 --out_dir summary

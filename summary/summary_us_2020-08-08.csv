@@ -29,7 +29,7 @@ RobertWalraven-ESG,,,,,,,,,,,,-0.981,-0.168,-0.430,-0.445
 DDS-NBDS,,,,,,,,,,,,,,0.266,0.114
 Auquan-SEIR,,,,,,,,,,,-0.516,,,,0.092
 epiforecasts-ensemble1,,,,,,,,,,,-0.621,-0.432,-0.466,-0.241,-1.023
-RPI-UW-Mob-Collision,,,,,,,,,,,,,,,-0.081
+RPI_UW-Mob_Collision,,,,,,,,,,,,,,,-0.081
 UMich-RidgeTfReg,,,,,,,,,,,,-0.511,-0.506,-0.364,-0.332
 CovidActNow-SEIR_CAN,,,,,,,,,,,-0.138,,,,
 MITCovAlliance-SIR,,,,,,,,,,,-0.520,-0.620,-0.687,-0.840,-1.007

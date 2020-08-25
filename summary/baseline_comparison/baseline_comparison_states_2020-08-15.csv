@@ -27,7 +27,7 @@ num_states_with_projections-NotreDame-mobility,,,,,,,,,,,,51,51,51,51,51,51
 num_states_with_projections-OliverWyman-Navigator,,,,,,,,,,,,,,51,51,51,51
 num_states_with_projections-PSI-DRAFT,,,,,,,,,,,,51,51,50,51,51,51
 num_states_with_projections-QJHong-Encounter,,,,,,,,,,,,,0,0,0,0,0
-num_states_with_projections-RPI-UW-Mob-Collision,,,,,,,,,,,,,,,,0,32
+num_states_with_projections-RPI_UW-Mob_Collision,,,,,,,,,,,,,,,,0,32
 num_states_with_projections-RobertWalraven-ESG,,,,,,,,,,,,,,49,49,49,50
 num_states_with_projections-STH-3PU,,,,,,,,,,,,,,1,1,1,1
 num_states_with_projections-SWC-TerminusCM,,,,,,,,,,,48,,,,,,
@@ -68,7 +68,7 @@ num_states_beat_baseline-NotreDame-mobility,,,,,,,,,,,,17,24,19,16,8,8
 num_states_beat_baseline-OliverWyman-Navigator,,,,,,,,,,,,,,34,31,21,25
 num_states_beat_baseline-PSI-DRAFT,,,,,,,,,,,,17,15,18,11,12,17
 num_states_beat_baseline-QJHong-Encounter,,,,,,,,,,,,,,,,,
-num_states_beat_baseline-RPI-UW-Mob-Collision,,,,,,,,,,,,,,,,,14
+num_states_beat_baseline-RPI_UW-Mob_Collision,,,,,,,,,,,,,,,,,14
 num_states_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,,,8,11,16,15
 num_states_beat_baseline-STH-3PU,,,,,,,,,,,,,,1,1,1,0
 num_states_beat_baseline-SWC-TerminusCM,,,,,,,,,,,15,,,,,,
@@ -109,7 +109,7 @@ perc_beat_baseline-NotreDame-mobility,,,,,,,,,,,,0.3333333333,0.4705882353,0.372
 perc_beat_baseline-OliverWyman-Navigator,,,,,,,,,,,,,,0.6666666667,0.6078431373,0.4117647059,0.4901960784
 perc_beat_baseline-PSI-DRAFT,,,,,,,,,,,,0.3333333333,0.2941176471,0.36,0.2156862745,0.2352941176,0.3333333333
 perc_beat_baseline-QJHong-Encounter,,,,,,,,,,,,,,,,,
-perc_beat_baseline-RPI-UW-Mob-Collision,,,,,,,,,,,,,,,,,0.4375
+perc_beat_baseline-RPI_UW-Mob_Collision,,,,,,,,,,,,,,,,,0.4375
 perc_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,,,0.1632653061,0.2244897959,0.3265306122,0.3
 perc_beat_baseline-STH-3PU,,,,,,,,,,,,,,1,1,1,0
 perc_beat_baseline-SWC-TerminusCM,,,,,,,,,,,0.3125,,,,,,
@@ -151,7 +151,7 @@ mean_abs_error-NotreDame-mobility,,,,,,,,,,,,493.7862745,316.4196078,237.4411765
 mean_abs_error-OliverWyman-Navigator,,,,,,,,,,,,,,133.5098039,92.60196078,38.75098039,25.2627451
 mean_abs_error-PSI-DRAFT,,,,,,,,,,,,607.2254902,460.7647059,,254,196.5686275,36.34313725
 mean_abs_error-QJHong-Encounter,,,,,,,,,,,,,,,,,
-mean_abs_error-RPI-UW-Mob-Collision,,,,,,,,,,,,,,,,,
+mean_abs_error-RPI_UW-Mob_Collision,,,,,,,,,,,,,,,,,
 mean_abs_error-RobertWalraven-ESG,,,,,,,,,,,,,,,,,
 mean_abs_error-STH-3PU,,,,,,,,,,,,,,,,,
 mean_abs_error-SWC-TerminusCM,,,,,,,,,,,,,,,,,
