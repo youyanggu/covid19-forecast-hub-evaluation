@@ -27,22 +27,23 @@ def main():
     eval_dates_only = True
 
     base_dir = Path(os.path.abspath(__file__)).parent
-    base_files = [
-        'truth-Cumulative Deaths.csv',
-    ]
+    base_file_to_out_fname = {
+        'truth-Cumulative Deaths.csv' : 'truth-cumulative-deaths',
+        #'truth-Incident Cases.csv'  : 'truth-incident-cases',
+    }
 
-    for base_file in base_files:
+    for base_file, out_fname in base_file_to_out_fname.items():
         # retrieve information about all commits that modified the file we want
         all_commits = []
 
         page = 0
         while True:
             page += 1
-            print(f'Fetching page {page}...')
+            print(f'{base_file} - Fetching page {page}...')
             r = requests.get(
                 'https://api.github.com/repos/reichlab/covid19-forecast-hub/commits',
                 params = {
-                    'path': 'data-truth/truth-Cumulative Deaths.csv',
+                    'path': f'data-truth/{base_file}',
                     'page': str(page)
                 }
             )
@@ -51,7 +52,6 @@ def main():
                 break
 
             all_commits += json.loads(r.text or r.content)
-
         # date of each commit
         commit_dates = [
             str_to_date(commit['commit']['author']['date'][0:10]) for commit in all_commits
@@ -60,7 +60,7 @@ def main():
         # sha for the last commit made each day
         commit_date_to_sha_and_fname = {}
         for i, commit_date in enumerate(commit_dates):
-            result_path =  f'{base_dir}/truth-cumulative-deaths-{commit_date}.csv'
+            result_path =  f'{base_dir}/{out_fname}-{commit_date}.csv'
             if commit_date not in commit_date_to_sha_and_fname:
                 commit_date_to_sha_and_fname[commit_date] = (all_commits[i]['sha'], result_path)
 
