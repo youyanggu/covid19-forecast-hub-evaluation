@@ -19,6 +19,7 @@ COVIDhub-baseline,,,,,,0.503,0.290,0.240,0.260
 JHU_IDD-CovidSP,,,,,,0.990,0.714,0.640,0.138
 USACE-ERDC_SEIR,,,,,-0.320,-0.304,-0.560,-0.698,-0.846
 UA-EpiCovDA,,,,,,0.442,0.562,0.673,1.391
+STH-3PU,,,,,,,,,0.222
 Imperial-combined,,,,,,,,,0.230
 SWC-TerminusCM,,,,,,,-0.208,,
 epiforecasts-ensemble1,,,,,,,,,0.407

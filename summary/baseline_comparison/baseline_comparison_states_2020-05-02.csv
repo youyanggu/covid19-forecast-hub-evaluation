@@ -1,5 +1,6 @@
 ,2020-04-20_2020-05-02,2020-04-27_2020-05-02
 num_states,51,51
+num_states_with_projections-Baseline,51,51
 num_states_with_projections-COVIDhub-baseline,51,51
 num_states_with_projections-COVIDhub-ensemble,,51
 num_states_with_projections-CU-select,50,50
@@ -15,7 +16,6 @@ num_states_with_projections-MOBS-GLEAM_COVID,44,48
 num_states_with_projections-UMass-MechBayes,,51
 num_states_with_projections-UT-Mobility,51,51
 num_states_with_projections-YYG-ParamSearch,51,51
-num_states_beat_baseline-COVIDhub-baseline,24,21
 num_states_beat_baseline-COVIDhub-ensemble,,26
 num_states_beat_baseline-CU-select,16,15
 num_states_beat_baseline-CovidAnalytics-DELPHI,,17
@@ -30,7 +30,6 @@ num_states_beat_baseline-MOBS-GLEAM_COVID,6,18
 num_states_beat_baseline-UMass-MechBayes,,11
 num_states_beat_baseline-UT-Mobility,20,18
 num_states_beat_baseline-YYG-ParamSearch,27,20
-perc_beat_baseline-COVIDhub-baseline,0.4705882353,0.4117647059
 perc_beat_baseline-COVIDhub-ensemble,,0.5098039216
 perc_beat_baseline-CU-select,0.32,0.3
 perc_beat_baseline-CovidAnalytics-DELPHI,,0.3333333333

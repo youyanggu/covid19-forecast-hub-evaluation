@@ -19,8 +19,9 @@ COVIDhub-ensemble,,,,,,,,0.194,0.295,0.361,0.379
 epiforecasts-ensemble1,,,,,,,,,0.337,0.242,-0.217
 COVIDhub-baseline,,,,,,,,0.393,0.346,0.131,0.618
 Imperial-combined,,,,,,,,,,,0.024
-SWC-TerminusCM,,,,,,,-0.159,,,,-0.191
 NotreDame-mobility,,,,,,,,,,-1.167,0.056
+SWC-TerminusCM,,,,,,,-0.159,,,,-0.191
+STH-3PU,,,,,,,,,-0.683,-0.642,-0.269
 JHU_IDD-CovidSP,,,,,,,,1.096,0.615,0.728,0.322
 Auquan-SEIR,,,,,,,,2.888,2.356,3.720,0.356
 CU-select,,,,,,,,0.784,0.599,0.873,1.017

@@ -1,5 +1,6 @@
 ,2020-04-20_2020-04-25
 num_states,51
+num_states_with_projections-Baseline,51
 num_states_with_projections-COVIDhub-baseline,51
 num_states_with_projections-CU-select,50
 num_states_with_projections-Geneva-DetGrowth,0
@@ -10,7 +11,6 @@ num_states_with_projections-LANL-GrowthRate,51
 num_states_with_projections-MOBS-GLEAM_COVID,44
 num_states_with_projections-UT-Mobility,51
 num_states_with_projections-YYG-ParamSearch,51
-num_states_beat_baseline-COVIDhub-baseline,22
 num_states_beat_baseline-CU-select,12
 num_states_beat_baseline-Geneva-DetGrowth,
 num_states_beat_baseline-IHME-CurveFit,21
@@ -20,7 +20,6 @@ num_states_beat_baseline-LANL-GrowthRate,18
 num_states_beat_baseline-MOBS-GLEAM_COVID,5
 num_states_beat_baseline-UT-Mobility,20
 num_states_beat_baseline-YYG-ParamSearch,22
-perc_beat_baseline-COVIDhub-baseline,0.431372549
 perc_beat_baseline-CU-select,0.24
 perc_beat_baseline-Geneva-DetGrowth,
 perc_beat_baseline-IHME-CurveFit,0.4117647059

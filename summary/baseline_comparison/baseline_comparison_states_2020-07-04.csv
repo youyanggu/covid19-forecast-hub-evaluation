@@ -1,6 +1,7 @@
 ,2020-04-20_2020-07-04,2020-04-27_2020-07-04,2020-05-04_2020-07-04,2020-05-11_2020-07-04,2020-05-18_2020-07-04,2020-05-25_2020-07-04,2020-06-01_2020-07-04,2020-06-08_2020-07-04,2020-06-15_2020-07-04,2020-06-22_2020-07-04,2020-06-29_2020-07-04
 num_states,51,51,51,51,51,51,51,51,51,51,51
 num_states_with_projections-Auquan-SEIR,,,,,,,,51,51,51,51
+num_states_with_projections-Baseline,51,51,51,51,51,51,51,51,51,51,51
 num_states_with_projections-COVIDhub-baseline,,,,,,,,51,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,,,,,,,51,51,51,51
 num_states_with_projections-CU-select,,,,,,,,51,51,51,51
@@ -21,6 +22,7 @@ num_states_with_projections-NotreDame-FRED,,,,,,7,7,7,7,7,7
 num_states_with_projections-NotreDame-mobility,,,,,,,,,,51,51
 num_states_with_projections-OliverWyman-Navigator,,,,,,,,47,51,51,51
 num_states_with_projections-PSI-DRAFT,,,,,,51,51,51,51,51,51
+num_states_with_projections-STH-3PU,,,,,,,,,1,1,1
 num_states_with_projections-SWC-TerminusCM,,,,,,40,48,49,51,,48
 num_states_with_projections-UA-EpiCovDA,,,,,,,,51,51,51,51
 num_states_with_projections-UCLA-SuEIR,,,51,51,51,51,51,51,51,51,51
@@ -31,7 +33,6 @@ num_states_with_projections-UT-Mobility,,,,,,,,51,51,51,51
 num_states_with_projections-YYG-ParamSearch,,,51,51,51,51,51,51,51,51,51
 num_states_with_projections-epiforecasts-ensemble1,,,,,,,,,15,14,14
 num_states_beat_baseline-Auquan-SEIR,,,,,,,,2,0,18,11
-num_states_beat_baseline-COVIDhub-baseline,,,,,,,,25,16,17,22
 num_states_beat_baseline-COVIDhub-ensemble,,,,,,,,31,30,32,21
 num_states_beat_baseline-CU-select,,,,,,,,19,20,22,14
 num_states_beat_baseline-Covid19Sim-Simulator,,,,,,32,28,25,21,24,14
@@ -51,6 +52,7 @@ num_states_beat_baseline-NotreDame-FRED,,,,,,1,3,2,0,0,0
 num_states_beat_baseline-NotreDame-mobility,,,,,,,,,,29,16
 num_states_beat_baseline-OliverWyman-Navigator,,,,,,,,29,26,25,20
 num_states_beat_baseline-PSI-DRAFT,,,,,,26,29,20,18,18,19
+num_states_beat_baseline-STH-3PU,,,,,,,,,1,0,1
 num_states_beat_baseline-SWC-TerminusCM,,,,,,13,21,18,22,,13
 num_states_beat_baseline-UA-EpiCovDA,,,,,,,,20,25,27,22
 num_states_beat_baseline-UCLA-SuEIR,,,28,30,29,33,35,26,27,25,21
@@ -61,7 +63,6 @@ num_states_beat_baseline-UT-Mobility,,,,,,,,28,20,25,22
 num_states_beat_baseline-YYG-ParamSearch,,,35,25,21,24,31,27,27,37,30
 num_states_beat_baseline-epiforecasts-ensemble1,,,,,,,,,3,3,7
 perc_beat_baseline-Auquan-SEIR,,,,,,,,0.03921568627,0,0.3529411765,0.2156862745
-perc_beat_baseline-COVIDhub-baseline,,,,,,,,0.4901960784,0.3137254902,0.3333333333,0.431372549
 perc_beat_baseline-COVIDhub-ensemble,,,,,,,,0.6078431373,0.5882352941,0.6274509804,0.4117647059
 perc_beat_baseline-CU-select,,,,,,,,0.3725490196,0.3921568627,0.431372549,0.2745098039
 perc_beat_baseline-Covid19Sim-Simulator,,,,,,0.6274509804,0.5490196078,0.4901960784,0.4117647059,0.4705882353,0.2745098039
@@ -81,6 +82,7 @@ perc_beat_baseline-NotreDame-FRED,,,,,,0.1428571429,0.4285714286,0.2857142857,0,
 perc_beat_baseline-NotreDame-mobility,,,,,,,,,,0.568627451,0.3137254902
 perc_beat_baseline-OliverWyman-Navigator,,,,,,,,0.6170212766,0.5098039216,0.4901960784,0.3921568627
 perc_beat_baseline-PSI-DRAFT,,,,,,0.5098039216,0.568627451,0.3921568627,0.3529411765,0.3529411765,0.3725490196
+perc_beat_baseline-STH-3PU,,,,,,,,,1,0,1
 perc_beat_baseline-SWC-TerminusCM,,,,,,0.325,0.4375,0.3673469388,0.431372549,,0.2708333333
 perc_beat_baseline-UA-EpiCovDA,,,,,,,,0.3921568627,0.4901960784,0.5294117647,0.431372549
 perc_beat_baseline-UCLA-SuEIR,,,0.5490196078,0.5882352941,0.568627451,0.6470588235,0.6862745098,0.5098039216,0.5294117647,0.4901960784,0.4117647059
@@ -112,6 +114,7 @@ mean_abs_error-NotreDame-FRED,,,,,,,,,,,
 mean_abs_error-NotreDame-mobility,,,,,,,,,,182.1666667,52.38235294
 mean_abs_error-OliverWyman-Navigator,,,,,,,,,69.55098039,52.29019608,20.82745098
 mean_abs_error-PSI-DRAFT,,,,,,305.3039216,191.9117647,370.4411765,132.9215686,86.54901961,38.66666667
+mean_abs_error-STH-3PU,,,,,,,,,,,
 mean_abs_error-SWC-TerminusCM,,,,,,,,,226.3921569,,
 mean_abs_error-UA-EpiCovDA,,,,,,,,266.0392157,82.84313725,42.25490196,44.64705882
 mean_abs_error-UCLA-SuEIR,,,449.6254902,365.3607843,205.7156863,156.2254902,140.1803922,122.0137255,62.46470588,38.43529412,25.39803922

@@ -1,6 +1,7 @@
 ,2020-04-20_2020-07-11,2020-04-27_2020-07-11,2020-05-04_2020-07-11,2020-05-11_2020-07-11,2020-05-18_2020-07-11,2020-05-25_2020-07-11,2020-06-01_2020-07-11,2020-06-08_2020-07-11,2020-06-15_2020-07-11,2020-06-22_2020-07-11,2020-06-29_2020-07-11,2020-07-06_2020-07-11
 num_states,51,51,51,51,51,51,51,51,51,51,51,51
 num_states_with_projections-Auquan-SEIR,,,,,,,,,51,51,51,51
+num_states_with_projections-Baseline,51,51,51,51,51,51,51,51,51,51,51,51
 num_states_with_projections-COVIDhub-baseline,,,,,,,,,51,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,,,,,,,,51,51,51,51
 num_states_with_projections-CU-select,,,,,,,,,51,51,51,51
@@ -10,6 +11,7 @@ num_states_with_projections-CovidActNow-SEIR_CAN,,,,,,,,,51,43,,51
 num_states_with_projections-CovidAnalytics-DELPHI,,,,,,,,51,51,51,51,51
 num_states_with_projections-GT-DeepCOVID,,,,,,,,,37,40,40,41
 num_states_with_projections-GT_CHHS-COVID19,,,,,,,,,2,2,2,2
+num_states_with_projections-Geneva-DetGrowth,,,,,,,,,,,,51
 num_states_with_projections-IHME-CurveFit,51,49,51,51,51,,51,51,51,51,51,51
 num_states_with_projections-IowaStateLW-STEM,,49,49,,49,49,49,49,49,49,49,49
 num_states_with_projections-JHU_IDD-CovidSP,,,,,,,,,51,51,51,51
@@ -22,6 +24,7 @@ num_states_with_projections-OliverWyman-Navigator,,,,,,,,,51,51,51,51
 num_states_with_projections-PSI-DRAFT,,,,,,,51,51,51,51,51,51
 num_states_with_projections-QJHong-Encounter,,,,,,,,,,,,0
 num_states_with_projections-RobertWalraven-ESG,,,,,,,,,,,,51
+num_states_with_projections-STH-3PU,,,,,,,,,1,1,1,1
 num_states_with_projections-SWC-TerminusCM,,,,,,40,47,48,51,,48,
 num_states_with_projections-UA-EpiCovDA,,,,,,,,,51,51,51,51
 num_states_with_projections-UCLA-SuEIR,,,51,51,51,51,51,51,51,51,51,51
@@ -33,7 +36,6 @@ num_states_with_projections-UT-Mobility,,,,,,,,,51,51,51,51
 num_states_with_projections-YYG-ParamSearch,,,51,51,51,51,51,51,51,51,51,51
 num_states_with_projections-epiforecasts-ensemble1,,,,,,,,,15,14,14,22
 num_states_beat_baseline-Auquan-SEIR,,,,,,,,,1,31,21,23
-num_states_beat_baseline-COVIDhub-baseline,,,,,,,,,21,20,25,32
 num_states_beat_baseline-COVIDhub-ensemble,,,,,,,,,34,35,30,37
 num_states_beat_baseline-CU-select,,,,,,,,,20,22,11,12
 num_states_beat_baseline-Columbia_UNC-SurvCon,,,,,,,,,,,,
@@ -42,6 +44,7 @@ num_states_beat_baseline-CovidActNow-SEIR_CAN,,,,,,,,,21,15,,13
 num_states_beat_baseline-CovidAnalytics-DELPHI,,,,,,,,26,26,28,25,17
 num_states_beat_baseline-GT-DeepCOVID,,,,,,,,,11,16,21,2
 num_states_beat_baseline-GT_CHHS-COVID19,,,,,,,,,1,0,0,0
+num_states_beat_baseline-Geneva-DetGrowth,,,,,,,,,,,,25
 num_states_beat_baseline-IHME-CurveFit,18,17,28,26,28,,29,27,28,34,25,22
 num_states_beat_baseline-IowaStateLW-STEM,,19,24,,23,24,25,26,23,26,18,17
 num_states_beat_baseline-JHU_IDD-CovidSP,,,,,,,,,20,12,10,22
@@ -54,6 +57,7 @@ num_states_beat_baseline-OliverWyman-Navigator,,,,,,,,,26,29,26,37
 num_states_beat_baseline-PSI-DRAFT,,,,,,,30,20,20,18,14,14
 num_states_beat_baseline-QJHong-Encounter,,,,,,,,,,,,
 num_states_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,19
+num_states_beat_baseline-STH-3PU,,,,,,,,,1,0,0,1
 num_states_beat_baseline-SWC-TerminusCM,,,,,,14,16,20,21,,13,
 num_states_beat_baseline-UA-EpiCovDA,,,,,,,,,22,28,25,19
 num_states_beat_baseline-UCLA-SuEIR,,,27,31,29,31,36,29,26,24,20,27
@@ -65,7 +69,6 @@ num_states_beat_baseline-UT-Mobility,,,,,,,,,20,28,24,30
 num_states_beat_baseline-YYG-ParamSearch,,,36,27,23,27,30,31,28,31,34,30
 num_states_beat_baseline-epiforecasts-ensemble1,,,,,,,,,5,4,8,15
 perc_beat_baseline-Auquan-SEIR,,,,,,,,,0.01960784314,0.6078431373,0.4117647059,0.4509803922
-perc_beat_baseline-COVIDhub-baseline,,,,,,,,,0.4117647059,0.3921568627,0.4901960784,0.6274509804
 perc_beat_baseline-COVIDhub-ensemble,,,,,,,,,0.6666666667,0.6862745098,0.5882352941,0.7254901961
 perc_beat_baseline-CU-select,,,,,,,,,0.3921568627,0.431372549,0.2156862745,0.2352941176
 perc_beat_baseline-Columbia_UNC-SurvCon,,,,,,,,,,,,
@@ -74,6 +77,7 @@ perc_beat_baseline-CovidActNow-SEIR_CAN,,,,,,,,,0.4117647059,0.3488372093,,0.254
 perc_beat_baseline-CovidAnalytics-DELPHI,,,,,,,,0.5098039216,0.5098039216,0.5490196078,0.4901960784,0.3333333333
 perc_beat_baseline-GT-DeepCOVID,,,,,,,,,0.2972972973,0.4,0.525,0.0487804878
 perc_beat_baseline-GT_CHHS-COVID19,,,,,,,,,0.5,0,0,0
+perc_beat_baseline-Geneva-DetGrowth,,,,,,,,,,,,0.4901960784
 perc_beat_baseline-IHME-CurveFit,0.3529411765,0.3469387755,0.5490196078,0.5098039216,0.5490196078,,0.568627451,0.5294117647,0.5490196078,0.6666666667,0.4901960784,0.431372549
 perc_beat_baseline-IowaStateLW-STEM,,0.387755102,0.4897959184,,0.4693877551,0.4897959184,0.5102040816,0.5306122449,0.4693877551,0.5306122449,0.3673469388,0.3469387755
 perc_beat_baseline-JHU_IDD-CovidSP,,,,,,,,,0.3921568627,0.2352941176,0.1960784314,0.431372549
@@ -86,6 +90,7 @@ perc_beat_baseline-OliverWyman-Navigator,,,,,,,,,0.5098039216,0.568627451,0.5098
 perc_beat_baseline-PSI-DRAFT,,,,,,,0.5882352941,0.3921568627,0.3921568627,0.3529411765,0.2745098039,0.2745098039
 perc_beat_baseline-QJHong-Encounter,,,,,,,,,,,,
 perc_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,0.3725490196
+perc_beat_baseline-STH-3PU,,,,,,,,,1,0,0,1
 perc_beat_baseline-SWC-TerminusCM,,,,,,0.35,0.3404255319,0.4166666667,0.4117647059,,0.2708333333,
 perc_beat_baseline-UA-EpiCovDA,,,,,,,,,0.431372549,0.5490196078,0.4901960784,0.3725490196
 perc_beat_baseline-UCLA-SuEIR,,,0.5294117647,0.6078431373,0.568627451,0.6078431373,0.7058823529,0.568627451,0.5098039216,0.4705882353,0.3921568627,0.5294117647
@@ -107,6 +112,7 @@ mean_abs_error-CovidActNow-SEIR_CAN,,,,,,,,,209.4078431,,,83.50588235
 mean_abs_error-CovidAnalytics-DELPHI,,,,,,,,231.7058824,172.0196078,108.5686275,86.54901961,70.45098039
 mean_abs_error-GT-DeepCOVID,,,,,,,,,,,,
 mean_abs_error-GT_CHHS-COVID19,,,,,,,,,,,,
+mean_abs_error-Geneva-DetGrowth,,,,,,,,,,,,40.2745098
 mean_abs_error-IHME-CurveFit,1334.405882,,498.6313725,329.0784314,291.3470588,,300.172549,154.3607843,123.3254902,67.3254902,47.81764706,59.74117647
 mean_abs_error-IowaStateLW-STEM,,,,,,,,,,,,
 mean_abs_error-JHU_IDD-CovidSP,,,,,,,,,225.7764706,175.5333333,90.66666667,45.95490196
@@ -119,6 +125,7 @@ mean_abs_error-OliverWyman-Navigator,,,,,,,,,96.50784314,84.45490196,53.56078431
 mean_abs_error-PSI-DRAFT,,,,,,,245.9215686,491.3039216,208.1078431,156.2647059,100.372549,59.42156863
 mean_abs_error-QJHong-Encounter,,,,,,,,,,,,
 mean_abs_error-RobertWalraven-ESG,,,,,,,,,,,,241.6333333
+mean_abs_error-STH-3PU,,,,,,,,,,,,
 mean_abs_error-SWC-TerminusCM,,,,,,,,,288.4509804,,,
 mean_abs_error-UA-EpiCovDA,,,,,,,,,153.6078431,74.92156863,106.8039216,45.94117647
 mean_abs_error-UCLA-SuEIR,,,531.2607843,437.1333333,261.1705882,205.0509804,166.6509804,169.7529412,111.4921569,81.39607843,73.33333333,37.66862745

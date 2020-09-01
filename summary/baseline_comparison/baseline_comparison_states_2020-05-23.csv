@@ -1,6 +1,7 @@
 ,2020-04-20_2020-05-23,2020-04-27_2020-05-23,2020-05-04_2020-05-23,2020-05-11_2020-05-23,2020-05-18_2020-05-23
 num_states,51,51,51,51,51
 num_states_with_projections-Auquan-SEIR,,,,,51
+num_states_with_projections-Baseline,51,51,51,51,51
 num_states_with_projections-COVIDhub-baseline,,51,51,51,51
 num_states_with_projections-COVIDhub-ensemble,,51,51,51,51
 num_states_with_projections-CU-select,50,50,50,50,50
@@ -16,6 +17,7 @@ num_states_with_projections-LANL-GrowthRate,51,51,51,51,51
 num_states_with_projections-MOBS-GLEAM_COVID,,48,50,50,50
 num_states_with_projections-NotreDame-FRED,,,7,7,7
 num_states_with_projections-PSI-DRAFT,,,,,51
+num_states_with_projections-Quantori-Multiagents,,,,1,
 num_states_with_projections-UCLA-SuEIR,,,51,51,51
 num_states_with_projections-UChicago-CovidIL,,,,1,1
 num_states_with_projections-UChicago-CovidIL_100,,,,1,1
@@ -29,7 +31,6 @@ num_states_with_projections-USACE-ERDC_SEIR,,,,,51
 num_states_with_projections-UT-Mobility,51,51,51,51,51
 num_states_with_projections-YYG-ParamSearch,51,51,51,51,51
 num_states_beat_baseline-Auquan-SEIR,,,,,5
-num_states_beat_baseline-COVIDhub-baseline,,21,20,14,22
 num_states_beat_baseline-COVIDhub-ensemble,,27,22,25,23
 num_states_beat_baseline-CU-select,16,24,19,22,14
 num_states_beat_baseline-CovidAnalytics-DELPHI,,20,18,19,15
@@ -44,6 +45,7 @@ num_states_beat_baseline-LANL-GrowthRate,21,23,24,22,26
 num_states_beat_baseline-MOBS-GLEAM_COVID,,17,12,16,20
 num_states_beat_baseline-NotreDame-FRED,,,2,1,0
 num_states_beat_baseline-PSI-DRAFT,,,,,17
+num_states_beat_baseline-Quantori-Multiagents,,,,0,
 num_states_beat_baseline-UCLA-SuEIR,,,19,23,26
 num_states_beat_baseline-UChicago-CovidIL,,,,0,0
 num_states_beat_baseline-UChicago-CovidIL_100,,,,0,0
@@ -57,7 +59,6 @@ num_states_beat_baseline-USACE-ERDC_SEIR,,,,,21
 num_states_beat_baseline-UT-Mobility,11,9,14,22,27
 num_states_beat_baseline-YYG-ParamSearch,18,15,24,36,26
 perc_beat_baseline-Auquan-SEIR,,,,,0.09803921569
-perc_beat_baseline-COVIDhub-baseline,,0.4117647059,0.3921568627,0.2745098039,0.431372549
 perc_beat_baseline-COVIDhub-ensemble,,0.5294117647,0.431372549,0.4901960784,0.4509803922
 perc_beat_baseline-CU-select,0.32,0.48,0.38,0.44,0.28
 perc_beat_baseline-CovidAnalytics-DELPHI,,0.3921568627,0.3529411765,0.3725490196,0.2941176471
@@ -72,6 +73,7 @@ perc_beat_baseline-LANL-GrowthRate,0.4117647059,0.4509803922,0.4705882353,0.4313
 perc_beat_baseline-MOBS-GLEAM_COVID,,0.3541666667,0.24,0.32,0.4
 perc_beat_baseline-NotreDame-FRED,,,0.2857142857,0.1428571429,0
 perc_beat_baseline-PSI-DRAFT,,,,,0.3333333333
+perc_beat_baseline-Quantori-Multiagents,,,,0,
 perc_beat_baseline-UCLA-SuEIR,,,0.3725490196,0.4509803922,0.5098039216
 perc_beat_baseline-UChicago-CovidIL,,,,0,0
 perc_beat_baseline-UChicago-CovidIL_100,,,,0,0
@@ -101,6 +103,7 @@ mean_abs_error-LANL-GrowthRate,490.9,322.7686275,131.4,62.29215686,37.88823529
 mean_abs_error-MOBS-GLEAM_COVID,,,,,
 mean_abs_error-NotreDame-FRED,,,,,
 mean_abs_error-PSI-DRAFT,,,,,84.91176471
+mean_abs_error-Quantori-Multiagents,,,,,
 mean_abs_error-UCLA-SuEIR,,,218.4039216,121.5176471,33.5254902
 mean_abs_error-UChicago-CovidIL,,,,,
 mean_abs_error-UChicago-CovidIL_100,,,,,
