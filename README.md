@@ -1,6 +1,6 @@
 # Evaluation of COVID-19 Models
 
-*August 31 Update:* We are now evaluating incident cases forecasts in the [`cases`](/cases) directory.
+*August 31 Update:* We are now evaluating incident case forecasts in the [`cases`](/cases) directory.
 
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
@@ -24,6 +24,7 @@ While a model's future projections can be useful, it is also important to take i
   * [State-by-state Evaluation](#state-by-state-evaluation)
   * [Baseline Model](#baseline-model)
   * [Global Evaluation](#global-evaluation)
+  * [Case Evaluation](#case-evaluation)
 
 ## Dependencies
 
