@@ -82,11 +82,36 @@ def find_truth_file(date):
 
 def validate_projections(df_model):
     """Verify all columns are in dataframe and convert dates to datetime."""
-    for col in ['forecast_date', 'target', 'target_end_date', 'location', 'type', 'quantile', 'value']:
-        assert col in df_model.columns, col
+    assert set(df_model.columns) == set(['location', 'forecast_date', 'quantile', 'value',
+        'target', 'target_end_date', 'type']), df_model.columns
 
     df_model['forecast_date'] = pd.to_datetime(df_model['forecast_date']).dt.date
     df_model['target_end_date'] = pd.to_datetime(df_model['target_end_date']).dt.date
+
+
+def add_cum_deaths(df_model, proj_date, df_truth_raw_past):
+    """Convert incident deaths to cumulative deaths for forecasts without 'cum death' targets.
+
+    We simply take the incident deaths and add it to the cumulative deaths count at the
+        end of the previous epiweek (before the projection date)."""
+    epiweek_end_date = proj_date - datetime.timedelta(days=2)
+    assert epiweek_end_date.weekday() == 5, epiweek_end_date
+
+    df_cum_deaths = df_truth_raw_past[
+        df_truth_raw_past['date'] == epiweek_end_date].set_index('location')['total_deaths']
+
+    cum_death_rows = []
+    for i, row in df_model.iterrows():
+        assert 'cum death' not in row['target'], row
+        if 'inc death' in row['target']:
+            new_row = row.copy()
+            new_row['target'] = row['target'].replace('inc death', 'cum death')
+            new_row['value'] = df_cum_deaths.loc[row['location']] + row['value']
+            cum_death_rows.append(new_row)
+    df_model_new = pd.DataFrame(cum_death_rows)
+
+    df_model = pd.concat([df_model, df_model_new])
+    return df_model
 
 
 def main(forecast_hub_dir, proj_date, eval_date, out_dir,
@@ -274,6 +299,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     print('Loading model projections')
     print('=================================================')
     model_to_all_projections['actual_deaths'] = df_truth_filt
+    models_converted_to_cum_deaths = []
     for model_name in model_to_projections:
         # Load projections from each model
         print('-----------------------------')
@@ -297,10 +323,14 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
             'All FIPS locations must be a string'
         model_to_df[model_name] = df_model
 
-        if df_model['target'].str.contains('wk ahead cum death').sum() > 0:
-            target_str = 'wk ahead cum death'
-        else:
-            target_str = 'day ahead cum death'
+        if df_model['target'].str.contains('wk ahead cum death').sum() == 0:
+            if df_model['target'].str.contains('wk ahead inc death').sum() == 0:
+                print('No death forecasts')
+                continue
+            # convert inc death to cum death
+            models_converted_to_cum_deaths.append(model_name)
+            df_model = add_cum_deaths(df_model, proj_date, df_truth_raw_past)
+        target_str = 'wk ahead cum death'
 
         has_point = (df_model['type'] == 'point').sum() > 0
         has_median = (df_model['quantile'] == 0.5).sum() > 0
@@ -342,6 +372,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         model_to_errors[model_name] = diffs_dict
         model_to_us_projection[model_name] = df_model_filt_values.get('US', np.nan)
         model_to_all_projections[model_name] = df_model_filt_values
+    print('\nModels converted to cumulative deaths:', models_converted_to_cum_deaths)
 
     print('=================================================')
     print('Begin Evaluation')
@@ -429,7 +460,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
     model_names = [c for c in df_all.columns if '-' in c]
     print('------------------------')
     print(f'Cumulative death forecasts for {eval_date}:')
-    print(df_all)
+    print(df_all.T)
     for baseline_name in baseline_names:
         df_all[f'error-{baseline_name}'] = df_errors_raw.loc[baseline_name]
     for model_name in model_names:
@@ -452,6 +483,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
 
     # we fill na with avg abs error for that state
     df_errors_states = df_errors_states.fillna(df_errors_states.abs().mean())
+    assert df_errors_states.isna().values.sum() == 0, 'NaN still in errors'
     print('------------------------')
     print(f'State-by-state mean absolute errors:')
     print(df_errors_states)
