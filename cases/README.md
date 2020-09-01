@@ -1,6 +1,6 @@
-## Evaluation of Incident Case Forecasts
+## Evaluation of US Incident Case Forecasts
 
-We present evaluations for weekly incident case forecasts for the US, state-by-state, and county-by-county.
+We present evaluations for US weekly incident case forecasts on a national, state-by-state, and county-by-county level.
 
 The methodology for computing errors for incident case is straightforward: we simply compute the incident weekly cases and compare them to the [latest truth data](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Incident%20Cases.csv).
 
