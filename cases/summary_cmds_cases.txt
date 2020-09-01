@@ -1,0 +1,15 @@
+python ../summarize_evaluations.py --weeks_ahead 1 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --weeks_ahead 2 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --weeks_ahead 3 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --weeks_ahead 4 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --weeks_ahead 5 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --weeks_ahead 6 --evaluations_dir evaluations --out_dir summary --summarize_counties
+
+python ../summarize_evaluations.py --eval_date 2020-07-11 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-07-18 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-07-25 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-08-01 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-08-08 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-08-15 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-08-22 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-08-29 --evaluations_dir evaluations --out_dir summary --summarize_counties

@@ -52,12 +52,13 @@ def filter_fnames_by_weeks_ahead(fnames, weeks_ahead):
     return include_fnames
 
 
-def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
+def main(eval_date, weeks_ahead, evaluations_dir, out_dir, summarize_counties=False):
     """We combine various evaluations based on either evaluation date or weeks ahead.
 
     For full description of methods, refer to:
     https://github.com/youyanggu/covid19-forecast-hub-evaluation
     """
+    print('==================================================')
     print('Evaluation date:', eval_date)
     print('Weeks ahead:', weeks_ahead)
     print('Evaluations dir:', evaluations_dir)
@@ -70,78 +71,85 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     assert not (eval_date and weeks_ahead), \
         'must provide only one of --eval_date or --weeks_ahead'
 
-    print('==============================')
-    print('US evaluations')
-    print('==============================')
-    if eval_date:
-        us_errs_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/{eval_date}/*_{eval_date}_us_errs.csv'))
-    else:
-        us_errs_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/*/*_us_errs.csv'))
-        us_errs_fnames = filter_fnames_by_weeks_ahead(us_errs_fnames, weeks_ahead)
-
-    assert len(us_errs_fnames) > 0, 'Need US evaluation files'
-
-    col_to_data_us = {}
-    for us_errs_fname in us_errs_fnames:
-        proj_date_, eval_date_ = get_dates_from_fname(us_errs_fname)
-        df_us = pd.read_csv(us_errs_fname, index_col=0)
-        df_us['perc_error'] = df_us['perc_error'].str.rstrip('%').astype('float') / 100
-
-        col_to_data_us[f'perc_error_{proj_date_}_{eval_date_}'] = df_us['perc_error']
-
-    df_all_us = pd.DataFrame(col_to_data_us)
-    df_all_us = df_all_us.dropna(how='all')
-    df_all_us = df_all_us.reindex(sorted(df_all_us.columns), axis=1)
-
-    # we sort the models based on their mean rank
-    # models with a missing forecast for that week is assigned the max rank
-    max_rank_us = df_all_us.abs().rank().max()+1
-    cols_for_ranking_us = [c for c in df_all_us.columns if 'perc_error' in c]
-    if weeks_ahead:
-        cols_for_ranking_us_ = cols_for_ranking_us[:]
-    else:
-        # only consider projections from past 6 weeks for ranking by eval_date
-        cols_for_ranking_us_ = cols_for_ranking_us[-6:]
-    mean_rankings_us = df_all_us.abs().rank().fillna(
-        max_rank_us)[cols_for_ranking_us_].mean(axis=1).sort_values()
-    df_all_us = df_all_us.reindex(mean_rankings_us.index)
-
-    print('------------------------')
-    print('US errors:')
-    print(df_all_us[cols_for_ranking_us])
-    print('US rankings:')
-    print(df_all_us[cols_for_ranking_us].abs().rank())
-    print('Mean rankings:')
-    print(mean_rankings_us)
-
-    if out_dir:
+    if not summarize_counties:
+        print('==============================')
+        print('US evaluations')
+        print('==============================')
         if eval_date:
-            out_fname_us = f'{out_dir}/summary_us_{eval_date}.csv'
+            us_errs_fnames = sorted(glob.glob(
+                f'{evaluations_dir}/{eval_date}/*_{eval_date}_us_errs.csv'))
         else:
-            out_fname_us = f'{out_dir}/summary_{weeks_ahead}_weeks_ahead_us.csv'
-        df_all_us.to_csv(out_fname_us, float_format='%.3f')
-        print('Saved US summary to:', out_fname_us)
+            us_errs_fnames = sorted(glob.glob(
+                f'{evaluations_dir}/*/*_us_errs.csv'))
+            us_errs_fnames = filter_fnames_by_weeks_ahead(us_errs_fnames, weeks_ahead)
+
+        assert len(us_errs_fnames) > 0, 'Need US evaluation files'
+
+        col_to_data_us = {}
+        for us_errs_fname in us_errs_fnames:
+            proj_date_, eval_date_ = get_dates_from_fname(us_errs_fname)
+            df_us = pd.read_csv(us_errs_fname, index_col=0)
+            df_us['perc_error'] = df_us['perc_error'].str.rstrip('%').astype('float') / 100
+
+            col_to_data_us[f'perc_error_{proj_date_}_{eval_date_}'] = df_us['perc_error']
+
+        df_all_us = pd.DataFrame(col_to_data_us)
+        df_all_us = df_all_us.dropna(how='all')
+        df_all_us = df_all_us.reindex(sorted(df_all_us.columns), axis=1)
+
+        # we sort the models based on their mean rank
+        # models with a missing forecast for that week is assigned the max rank
+        max_rank_us = df_all_us.abs().rank().max()+1
+        cols_for_ranking_us = [c for c in df_all_us.columns if 'perc_error' in c]
+        if weeks_ahead:
+            cols_for_ranking_us_ = cols_for_ranking_us[:]
+        else:
+            # only consider projections from past 6 weeks for ranking by eval_date
+            cols_for_ranking_us_ = cols_for_ranking_us[-6:]
+        mean_rankings_us = df_all_us.abs().rank().fillna(
+            max_rank_us)[cols_for_ranking_us_].mean(axis=1).sort_values()
+        df_all_us = df_all_us.reindex(mean_rankings_us.index)
+
+        print('------------------------')
+        print('US errors:')
+        print(df_all_us[cols_for_ranking_us])
+        print('US rankings:')
+        print(df_all_us[cols_for_ranking_us].abs().rank())
+        print('Mean rankings:')
+        print(mean_rankings_us)
+
+        if out_dir:
+            if eval_date:
+                out_fname_us = f'{out_dir}/summary_us_{eval_date}.csv'
+            else:
+                out_fname_us = f'{out_dir}/summary_{weeks_ahead}_weeks_ahead_us.csv'
+            df_all_us.to_csv(out_fname_us, float_format='%.3f')
+            print('Saved US summary to:', out_fname_us)
 
     print('==============================')
-    print('State-by-state evaluations')
+    if summarize_counties:
+        state_county_str = 'County-by-county'
+        eval_type = 'counties'
+    else:
+        state_county_str = 'State-by-state'
+        eval_type = 'states'
+    print(state_county_str)
     print('==============================')
     if eval_date:
         states_abs_errs_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/{eval_date}/*_{eval_date}_states_abs_errs.csv'))
+            f'{evaluations_dir}/{eval_date}/*_{eval_date}_{eval_type}_abs_errs.csv'))
         states_sq_errs_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/{eval_date}/*_{eval_date}_states_sq_errs.csv'))
+            f'{evaluations_dir}/{eval_date}/*_{eval_date}_{eval_type}_sq_errs.csv'))
     else:
         states_abs_errs_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/*/*_states_abs_errs.csv'))
+            f'{evaluations_dir}/*/*_{eval_type}_abs_errs.csv'))
         states_abs_errs_fnames = filter_fnames_by_weeks_ahead(states_abs_errs_fnames, weeks_ahead)
         states_sq_errs_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/*/*_states_sq_errs.csv'))
+            f'{evaluations_dir}/*/*_{eval_type}_sq_errs.csv'))
         states_sq_errs_fnames = filter_fnames_by_weeks_ahead(states_sq_errs_fnames, weeks_ahead)
 
-    assert len(states_abs_errs_fnames) > 0, 'Need state-by-state evaluation files'
-    assert len(states_sq_errs_fnames) > 0, 'Need state-by-state evaluation files'
+    assert len(states_abs_errs_fnames) > 0, f'Need {state_county_str} evaluation files'
+    assert len(states_sq_errs_fnames) > 0, f'Need {state_county_str} evaluation files'
 
     col_to_data_states = {}
 
@@ -173,18 +181,18 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     df_all_states = df_all_states.reindex(mean_rankings_states.index)
 
     print('------------------------')
-    print('State-by-state errors:')
+    print(f'{state_county_str} errors:')
     print(df_all_states[cols_for_ranking_states])
-    print('State-by-state rankings:')
+    print(f'{state_county_str} rankings:')
     print(df_all_states[cols_for_ranking_states].abs().rank())
     print('Mean rankings:')
     print(mean_rankings_states)
 
     if out_dir:
         if eval_date:
-            out_fname_states = f'{out_dir}/summary_states_{eval_date}.csv'
+            out_fname_states = f'{out_dir}/summary_{eval_type}_{eval_date}.csv'
         else:
-            out_fname_states = f'{out_dir}/summary_{weeks_ahead}_weeks_ahead_states.csv'
+            out_fname_states = f'{out_dir}/summary_{weeks_ahead}_weeks_ahead_{eval_type}.csv'
         df_all_states.to_csv(out_fname_states, float_format='%.1f')
         print('Saved states summary to:', out_fname_states)
 
@@ -193,13 +201,17 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     print('==============================')
     if eval_date:
         projections_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/{eval_date}/projections_*_{eval_date}.csv'))
+            f'{evaluations_dir}/{eval_date}/projections_*_{eval_date}*.csv'))
     else:
         projections_fnames = sorted(glob.glob(
             f'{evaluations_dir}/*/projections_*.csv'))
         projections_fnames = filter_fnames_by_weeks_ahead(projections_fnames, weeks_ahead)
+    if summarize_counties:
+        projections_fnames = [fname for fname in projections_fnames if 'counties' in fname]
+    else:
+        projections_fnames = [fname for fname in projections_fnames if 'counties' not in fname]
 
-    assert len(projections_fnames) > 0, 'Need state-by-state projection files'
+    assert len(projections_fnames) > 0, f'Need {state_county_str} projection files'
 
     col_to_data = {}
     for projections_fname in projections_fnames:
@@ -213,21 +225,26 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
 
         num_states = len(df_states)
         col_data = {
-            'num_states' : num_states,
+            f'num_{eval_type}' : num_states,
         }
         df_states_num_projections = (~pd.isnull(df_states)).sum()
         df_states_sum = df_states.abs().sum(min_count=1)
         for model_name in model_names:
-            num_with_projections = df_states_num_projections.loc[model_name]
-            if model_name != 'Baseline':
+            try:
+                num_with_projections = df_states_num_projections.loc[model_name]
+            except KeyError:
+                if model_name == 'Baseline':
+                    continue # cases evaluations do not have baseline
+                raise
+            col_data[f'num_{eval_type}_with_projections-{model_name}'] = num_with_projections
+            if model_name not in ['Baseline', 'COVIDhub-baseline']:
                 num_beat_baseline = df_states_sum.loc[f'beat_baseline-{model_name}']
 
-                col_data[f'num_states_with_projections-{model_name}'] = num_with_projections
                 if pd.isnull(num_beat_baseline):
-                    col_data[f'num_states_beat_baseline-{model_name}'] = np.nan
+                    col_data[f'num_{eval_type}_beat_baseline-{model_name}'] = np.nan
                     col_data[f'perc_beat_baseline-{model_name}'] = np.nan
                 else:
-                    col_data[f'num_states_beat_baseline-{model_name}'] = int(num_beat_baseline)
+                    col_data[f'num_{eval_type}_beat_baseline-{model_name}'] = int(num_beat_baseline)
                     col_data[f'perc_beat_baseline-{model_name}'] = num_beat_baseline / num_with_projections
 
             if num_with_projections == num_states:
@@ -239,9 +256,9 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
         col_to_data[f'{proj_date_}_{eval_date_}'] = col_data
 
     df_all = pd.DataFrame(col_to_data)
-    row_ordering = ['num_states'] + \
-        sorted([c for c in df_all.index if 'num_states_with_projections' in c]) + \
-        sorted([c for c in df_all.index if 'num_states_beat_baseline' in c]) + \
+    row_ordering = [f'num_{eval_type}'] + \
+        sorted([c for c in df_all.index if f'num_{eval_type}_with_projections' in c]) + \
+        sorted([c for c in df_all.index if f'num_{eval_type}_beat_baseline' in c]) + \
         sorted([c for c in df_all.index if 'perc_beat_baseline' in c]) + \
         sorted([c for c in df_all.index if 'mean_abs_error' in c])
     df_all = df_all.loc[row_ordering]
@@ -249,9 +266,9 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     if out_dir:
         os.makedirs(f'{out_dir}/baseline_comparison', exist_ok=True)
         if eval_date:
-            out_fname = f'{out_dir}/baseline_comparison/baseline_comparison_states_{eval_date}.csv'
+            out_fname = f'{out_dir}/baseline_comparison/baseline_comparison_{eval_type}_{eval_date}.csv'
         else:
-            out_fname = f'{out_dir}/baseline_comparison/baseline_comparison_{weeks_ahead}_weeks_ahead_states.csv'
+            out_fname = f'{out_dir}/baseline_comparison/baseline_comparison_{weeks_ahead}_weeks_ahead_{eval_type}.csv'
         df_all.to_csv(out_fname, float_format='%.10g')
         print('Saved global summary to:', out_fname)
 
@@ -268,6 +285,8 @@ if __name__ == '__main__':
         help='Directory containing the raw evaluations.')
     parser.add_argument('--out_dir',
         help='Directory to save output data.')
+    parser.add_argument('--summarize_counties', action='store_true',
+        help='Also summarize counties')
 
     args = parser.parse_args()
     eval_date = args.eval_date
@@ -281,5 +300,7 @@ if __name__ == '__main__':
         evaluations_dir = Path(__file__).parent / 'evaluations'
 
     main(eval_date, weeks_ahead, evaluations_dir, out_dir)
+    if args.summarize_counties:
+        main(eval_date, weeks_ahead, evaluations_dir, out_dir, summarize_counties=True)
     print('Done', datetime.datetime.now())
 

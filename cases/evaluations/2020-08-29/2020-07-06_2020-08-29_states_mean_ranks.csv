@@ -1,0 +1,14 @@
+,mean_rank
+COVIDhub-baseline,3.5
+UCLA-SuEIR,3.9
+Covid19Sim-Simulator,4.8
+IowaStateLW-STEM,5.7
+USC-SI_kJalpha,5.7
+CovidActNow-SEIR_CAN,5.9
+JHU_IDD-CovidSP,6.8
+OliverWyman-Navigator,7.4
+LANL-GrowthRate,7.5
+CovidAnalytics-DELPHI,8.0
+USACE-ERDC_SEIR,8.4
+Geneva-DetGrowth,11.0
+RobertWalraven-ESG,12.4

@@ -1,0 +1,8 @@
+,mean_abs_error_2020-07-06_2020-07-18,mean_abs_error_2020-07-13_2020-07-18,mean_sq_abs_error_2020-07-06_2020-07-18,mean_sq_abs_error_2020-07-13_2020-07-18
+COVIDhub-baseline,81.0,35.9,272127.4,36637.1
+LANL-GrowthRate,113.4,59.7,388430.5,113119.4
+USC-SI_kJalpha,125.8,52.8,413475.0,81967.8
+CU-select,180.3,50.0,1274458.0,66878.2
+OliverWyman-Navigator,84.8,,162162.3,
+IowaStateLW-STEM,117.7,87.6,236225.9,288431.9
+JHU_IDD-CovidSP,165.1,76.4,806185.6,216582.4

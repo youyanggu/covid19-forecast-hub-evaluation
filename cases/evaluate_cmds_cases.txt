@@ -1,0 +1,43 @@
+python evaluate_models_cases.py 2020-07-06 2020-07-11 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-07-06 2020-07-18 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-13 2020-07-18 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-07-06 2020-07-25 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-13 2020-07-25 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-20 2020-07-25 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-07-06 2020-08-01 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-13 2020-08-01 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-20 2020-08-01 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-27 2020-08-01 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-07-06 2020-08-08 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-13 2020-08-08 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-20 2020-08-08 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-27 2020-08-08 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-03 2020-08-08 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-07-06 2020-08-15 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-13 2020-08-15 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-20 2020-08-15 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-27 2020-08-15 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-03 2020-08-15 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-10 2020-08-15 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-07-06 2020-08-22 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-13 2020-08-22 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-20 2020-08-22 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-27 2020-08-22 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-03 2020-08-22 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-10 2020-08-22 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-17 2020-08-22 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-07-06 2020-08-29 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-13 2020-08-29 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-20 2020-08-29 --out_dir evaluations
+python evaluate_models_cases.py 2020-07-27 2020-08-29 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-03 2020-08-29 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-10 2020-08-29 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-17 2020-08-29 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-24 2020-08-29 --out_dir evaluations
