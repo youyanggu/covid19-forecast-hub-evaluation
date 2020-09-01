@@ -1,5 +1,7 @@
 # Evaluation of COVID-19 Models
 
+*August 31 Update:* We are now evaluating incident cases forecasts in the [`cases`](/cases) directory.
+
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
 While a model's future projections can be useful, it is also important to take into account the model's historical performance in a transparent, rigorous, and non-biased manner. This is the goal of this project.
@@ -202,13 +204,15 @@ We use mean absolute error rather than mean absolute percentage error because pe
 
 In any evaluation, it is important to include a baseline as a control, similar to how scientfic trials include a placebo. We define a simple baseline model that takes the mean of the previous week's daily deaths to make all future forecasts. For example, for Monday, May 25 projections, we use the average daily deaths from May 18 to May 24 to make forecasts. For US country-wide projections, this would amount to a constant 1,164 deaths per day for each forecast day.
 
-We also include another baseline model that takes mean of the previous week's daily deaths and decrease that by 2% each day for all future projections (called `Baseline_0.98`). This is in general a much more accurate model, but may be subject to selection bias.
-
 Note that to avoid look-ahead bias, we use the previous week's daily deaths *at the time of the projection is made*, rather than at the time of the evaluation. Because truth data can be retroactively updated, we want to avoid using future data to generate the baseline forecasts.
 
 ### Global Evaluation
 
 In addition to US forecast evaluations, we also include evaluations of country-by-country forecasts by [covid19-projections.com](https://covid19-projections.com) and [IHME](https://covid19.healthdata.org/). Because global forecasts are not standardized, each team's forecasts must be downloaded and processed separately. We compare the models with the baseline model (explained above). You can view the results in the [`global`](/global) directory.
+
+### Case Evaluation
+
+Starting in July, the COVID-19 Forecast Hub began accepting incident case forecasts. You can find our evaluation of these forecasts for the subset of teams that contributed cases forecasts in the [`cases`](/cases) directory. Cases forecasts are available for US nationwide, state-by-state, and county-by-county.
 
 ## Questions? Bugs? Feature Request?
 
