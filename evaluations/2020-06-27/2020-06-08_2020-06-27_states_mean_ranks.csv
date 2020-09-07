@@ -3,7 +3,7 @@ UMass-MechBayes,6.6
 COVIDhub-ensemble,7.5
 YYG-ParamSearch,7.7
 OliverWyman-Navigator,7.7
-LANL-GrowthRate,8.4
+LANL-GrowthRate,8.5
 UT-Mobility,8.9
 UCLA-SuEIR,8.9
 COVIDhub-baseline,9.5
@@ -17,6 +17,6 @@ SWC-TerminusCM,11.8
 CU-select,12.3
 PSI-DRAFT,12.5
 CovidActNow-SEIR_CAN,14.2
-UA-EpiCovDA,14.3
-JHU_IDD-CovidSP,16.2
+UA-EpiCovDA,14.2
+JHU_IDD-CovidSP,16.3
 Auquan-SEIR,20.1

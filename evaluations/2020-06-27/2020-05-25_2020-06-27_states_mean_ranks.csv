@@ -1,9 +1,9 @@
 ,mean_rank
-UMass-MechBayes,3.9
+UMass-MechBayes,3.8
 UCLA-SuEIR,4.1
 LANL-GrowthRate,4.6
-CovidAnalytics-DELPHI,5.2
-Covid19Sim-Simulator,5.2
+CovidAnalytics-DELPHI,5.1
+Covid19Sim-Simulator,5.3
 YYG-ParamSearch,5.4
 PSI-DRAFT,5.5
 IowaStateLW-STEM,5.5

@@ -2,11 +2,11 @@
 COVIDhub-baseline,4.8
 COVIDhub-ensemble,5.1
 UCLA-SuEIR,6.2
-LNQ-ens1,6.7
+LNQ-ens1,6.6
 IowaStateLW-STEM,6.8
 USACE-ERDC_SEIR,6.9
 JHU_IDD-CovidSP,7.2
-LANL-GrowthRate,7.3
+LANL-GrowthRate,7.4
 RobertWalraven-ESG,8.3
 Covid19Sim-Simulator,8.3
 USC-SI_kJalpha,9.6

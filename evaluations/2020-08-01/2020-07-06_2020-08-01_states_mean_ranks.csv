@@ -3,7 +3,7 @@ COVIDhub-ensemble,7.7
 OliverWyman-Navigator,8.5
 UMass-MechBayes,8.7
 Covid19Sim-Simulator,9.9
-LANL-GrowthRate,9.9
+LANL-GrowthRate,10.0
 YYG-ParamSearch,10.5
 USACE-ERDC_SEIR,10.8
 CovidAnalytics-DELPHI,11.0
@@ -19,7 +19,7 @@ COVIDhub-baseline,14.0
 NotreDame-mobility,14.4
 CU-select,14.5
 GT-DeepCOVID,15.5
-PSI-DRAFT,16.7
+PSI-DRAFT,16.6
 RobertWalraven-ESG,16.7
 CovidActNow-SEIR_CAN,17.0
 JHU_IDD-CovidSP,17.1

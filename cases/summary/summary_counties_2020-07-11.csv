@@ -1,8 +1,8 @@
 ,mean_abs_error_2020-07-06_2020-07-11,mean_sq_abs_error_2020-07-06_2020-07-11
-COVIDhub-baseline,35.1,59255.7
-OliverWyman-Navigator,36.3,26942.1
-USC-SI_kJalpha,47.7,71848.8
-IowaStateLW-STEM,54.5,53433.9
-CU-select,54.6,88239.6
-LANL-GrowthRate,55.4,115777.7
-JHU_IDD-CovidSP,76.7,186009.0
+OliverWyman-Navigator,35.2,25667.6
+COVIDhub-baseline,36.1,60597.3
+USC-SI_kJalpha,47.9,72688.7
+CU-select,53.8,87240.2
+IowaStateLW-STEM,54.6,53696.8
+LANL-GrowthRate,55.4,115626.4
+JHU_IDD-CovidSP,76.3,184254.5

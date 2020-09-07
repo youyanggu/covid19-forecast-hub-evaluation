@@ -1,7 +1,7 @@
 ,mean_rank
 COVIDhub-ensemble,5.0
-COVIDhub-baseline,5.5
 LANL-GrowthRate,5.5
+COVIDhub-baseline,5.5
 YYG-ParamSearch,5.7
 IHME-CurveFit,6.5
 UT-Mobility,6.5

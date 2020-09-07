@@ -1,8 +1,8 @@
 ,mean_rank
 YYG-ParamSearch,7.3
 UMass-MechBayes,7.6
-COVIDhub-ensemble,8.6
 UCLA-SuEIR,8.6
+COVIDhub-ensemble,8.6
 COVIDhub-baseline,9.4
 UT-Mobility,9.5
 OliverWyman-Navigator,9.5
@@ -10,8 +10,8 @@ LANL-GrowthRate,9.8
 MOBS-GLEAM_COVID,10.2
 SWC-TerminusCM,10.3
 UA-EpiCovDA,10.7
-IHME-CurveFit,11.0
 PSI-DRAFT,11.0
+IHME-CurveFit,11.0
 CovidAnalytics-DELPHI,11.8
 Covid19Sim-Simulator,11.9
 CU-select,12.2

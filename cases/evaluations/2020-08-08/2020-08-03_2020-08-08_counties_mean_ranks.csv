@@ -3,10 +3,10 @@ LNQ-ens1,5.0
 COVIDhub-ensemble,5.0
 COVIDhub-baseline,5.5
 UCLA-SuEIR,5.9
-OliverWyman-Navigator,6.0
+OliverWyman-Navigator,5.9
 USC-SI_kJalpha,6.1
-RobertWalraven-ESG,6.1
-IowaStateLW-STEM,6.5
+RobertWalraven-ESG,6.2
+IowaStateLW-STEM,6.4
 LANL-GrowthRate,6.5
-CU-select,6.6
+CU-select,6.7
 JHU_IDD-CovidSP,6.8

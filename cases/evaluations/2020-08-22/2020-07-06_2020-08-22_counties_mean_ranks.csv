@@ -1,8 +1,8 @@
 ,mean_rank
-COVIDhub-baseline,3.0
-JHU_IDD-CovidSP,3.4
+COVIDhub-baseline,2.9
+JHU_IDD-CovidSP,3.3
 IowaStateLW-STEM,3.9
-OliverWyman-Navigator,3.9
+OliverWyman-Navigator,4.0
 USC-SI_kJalpha,4.6
-LANL-GrowthRate,4.6
+LANL-GrowthRate,4.7
 CU-select,4.7
