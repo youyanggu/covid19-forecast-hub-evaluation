@@ -56,10 +56,10 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir):
     print('==============================')
     if eval_date:
         global_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/{eval_date}/projections_*_{eval_date}.csv'))
+            f'{evaluations_dir}/evaluations/{eval_date}/projections_*_{eval_date}.csv'))
     else:
         global_fnames = sorted(glob.glob(
-            f'{evaluations_dir}/*/projections_*.csv'))
+            f'{evaluations_dir}/evaluations/*/projections_*.csv'))
         global_fnames = filter_fnames_by_weeks_ahead(global_fnames, weeks_ahead)
 
     assert len(global_fnames) > 0, 'Need global evaluation files'
