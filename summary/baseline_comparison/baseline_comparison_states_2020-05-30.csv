@@ -49,7 +49,7 @@ num_states_beat_baseline-LANL-GrowthRate,18,23,23,25,29,28
 num_states_beat_baseline-MOBS-GLEAM_COVID,,,14,15,19,18
 num_states_beat_baseline-NotreDame-FRED,,,2,4,1,1
 num_states_beat_baseline-PSI-DRAFT,,,,,20,14
-num_states_beat_baseline-Quantori-Multiagents,,,,0,,
+num_states_beat_baseline-Quantori-Multiagents,,,,1,,
 num_states_beat_baseline-SWC-TerminusCM,,,,,,8
 num_states_beat_baseline-UA-EpiCovDA,,,,,,11
 num_states_beat_baseline-UCLA-SuEIR,,,23,21,28,21
@@ -80,7 +80,7 @@ perc_beat_baseline-LANL-GrowthRate,0.3529411765,0.4509803922,0.4509803922,0.4901
 perc_beat_baseline-MOBS-GLEAM_COVID,,,0.28,0.3,0.38,0.36
 perc_beat_baseline-NotreDame-FRED,,,0.2857142857,0.5714285714,0.1428571429,0.1428571429
 perc_beat_baseline-PSI-DRAFT,,,,,0.3921568627,0.2745098039
-perc_beat_baseline-Quantori-Multiagents,,,,0,,
+perc_beat_baseline-Quantori-Multiagents,,,,1,,
 perc_beat_baseline-SWC-TerminusCM,,,,,,0.2
 perc_beat_baseline-UA-EpiCovDA,,,,,,0.2156862745
 perc_beat_baseline-UCLA-SuEIR,,,0.4509803922,0.4117647059,0.5490196078,0.4117647059

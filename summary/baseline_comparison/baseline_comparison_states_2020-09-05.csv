@@ -48,7 +48,7 @@ num_states_with_projections-YYG-ParamSearch,,,,,,,51,51,51,51,51,51,51,51,51,51,
 num_states_with_projections-epiforecasts-ensemble1,,,,,,,,,,,,,,,27,45,48,46
 num_states_beat_baseline-Auquan-SEIR,,,,,,,,,,,,,,,19,17,7,
 num_states_beat_baseline-CEID-Walk,,,,,,,,,,,,,,,21,19,19,22
-num_states_beat_baseline-CMU-TimeSeries,,,,,,,,,,,,,,,1,3,11,27
+num_states_beat_baseline-CMU-TimeSeries,,,,,,,,,,,,,,,21,30,23,27
 num_states_beat_baseline-COVIDhub-ensemble,,,,,,,,,,,,,,,30,32,26,30
 num_states_beat_baseline-CU-select,,,,,,,,,,,,,,,21,12,17,20
 num_states_beat_baseline-Columbia_UNC-SurvCon,,,,,,,,,,,,,,,,,,
@@ -76,7 +76,7 @@ num_states_beat_baseline-PSI-DRAFT,,,,,,,,,,,,,12,8,9,15,18,20
 num_states_beat_baseline-QJHong-Encounter,,,,,,,,,,,,,,,,,,
 num_states_beat_baseline-RPI_UW-Mob_Collision,,,,,,,,,,,,,,,10,5,6,11
 num_states_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,,,,12,10,14,15
-num_states_beat_baseline-STH-3PU,,,,,,,0,0,0,0,0,1,0,1,1,0,1,0
+num_states_beat_baseline-STH-3PU,,,,,,,1,1,1,1,1,1,0,1,1,0,1,0
 num_states_beat_baseline-SteveMcConnell-CovidComplete,,,,,,,,,,,,,,,,,21,27
 num_states_beat_baseline-TTU-squider,,,,,,,,,,,,,,,,2,5,
 num_states_beat_baseline-UA-EpiCovDA,,,,,,,,,,,,,,,16,26,22,20
@@ -92,7 +92,7 @@ num_states_beat_baseline-YYG-ParamSearch,,,,,,,29,38,35,37,38,32,30,22,27,27,26,
 num_states_beat_baseline-epiforecasts-ensemble1,,,,,,,,,,,,,,,10,8,8,6
 perc_beat_baseline-Auquan-SEIR,,,,,,,,,,,,,,,0.3725490196,0.3333333333,0.137254902,
 perc_beat_baseline-CEID-Walk,,,,,,,,,,,,,,,0.4117647059,0.3725490196,0.3725490196,0.431372549
-perc_beat_baseline-CMU-TimeSeries,,,,,,,,,,,,,,,0.01960784314,0.05882352941,0.2156862745,0.54
+perc_beat_baseline-CMU-TimeSeries,,,,,,,,,,,,,,,0.4117647059,0.5882352941,0.4509803922,0.54
 perc_beat_baseline-COVIDhub-ensemble,,,,,,,,,,,,,,,0.5882352941,0.6274509804,0.5098039216,0.5882352941
 perc_beat_baseline-CU-select,,,,,,,,,,,,,,,0.4117647059,0.2352941176,0.3333333333,0.3921568627
 perc_beat_baseline-Columbia_UNC-SurvCon,,,,,,,,,,,,,,,,,,
@@ -120,7 +120,7 @@ perc_beat_baseline-PSI-DRAFT,,,,,,,,,,,,,0.2352941176,0.1568627451,0.1764705882,
 perc_beat_baseline-QJHong-Encounter,,,,,,,,,,,,,,,,,,
 perc_beat_baseline-RPI_UW-Mob_Collision,,,,,,,,,,,,,,,0.3125,0.15625,0.1875,0.3666666667
 perc_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,,,,0.24,0.2,0.2745098039,0.2941176471
-perc_beat_baseline-STH-3PU,,,,,,,0,0,0,0,0,1,0,1,1,0,1,0
+perc_beat_baseline-STH-3PU,,,,,,,1,1,1,1,1,1,0,1,1,0,1,0
 perc_beat_baseline-SteveMcConnell-CovidComplete,,,,,,,,,,,,,,,,,0.4117647059,0.5294117647
 perc_beat_baseline-TTU-squider,,,,,,,,,,,,,,,,0.03921568627,0.09803921569,
 perc_beat_baseline-UA-EpiCovDA,,,,,,,,,,,,,,,0.3137254902,0.5098039216,0.431372549,0.3921568627
@@ -137,7 +137,7 @@ perc_beat_baseline-epiforecasts-ensemble1,,,,,,,,,,,,,,,0.3703703704,0.177777777
 mean_abs_error-Auquan-SEIR,,,,,,,,,,,,,,,141.4705882,158.0196078,164.6078431,
 mean_abs_error-Baseline,3144.421569,2731.852941,2235.054902,1738.160784,1408.915686,1287.892157,1013.335294,837.6745098,1086.131373,673.9823529,466.8470588,335.6176471,200.4176471,177.4803922,106.954902,75.54901961,39.92745098,18.34509804
 mean_abs_error-CEID-Walk,,,,,,,,,,,,,,,106.0372549,89.0254902,51.21764706,27.1
-mean_abs_error-CMU-TimeSeries,,,,,,,,,,,,,,,364.8823529,244.0588235,112.372549,
+mean_abs_error-CMU-TimeSeries,,,,,,,,,,,,,,,124.5882353,56.35294118,46.66666667,
 mean_abs_error-COVIDhub-baseline,,,,,,,,,,,,,,,114.1019608,89.21764706,52.84901961,27.43137255
 mean_abs_error-COVIDhub-ensemble,,,,,,,,,,,,,,,70.47058824,38.35294118,31.03921569,17.33333333
 mean_abs_error-CU-select,,,,,,,,,,,,,,,110,117.9215686,56.33333333,29

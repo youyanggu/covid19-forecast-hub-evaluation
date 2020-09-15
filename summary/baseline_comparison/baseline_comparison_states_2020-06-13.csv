@@ -55,7 +55,7 @@ num_states_beat_baseline-MOBS-GLEAM_COVID,,,,,19,20,24,21
 num_states_beat_baseline-NotreDame-FRED,,,2,2,2,0,1,2
 num_states_beat_baseline-OliverWyman-Navigator,,,,,,,,23
 num_states_beat_baseline-PSI-DRAFT,,,,,18,19,22,3
-num_states_beat_baseline-Quantori-Multiagents,,,,0,,,,
+num_states_beat_baseline-Quantori-Multiagents,,,,1,,,,
 num_states_beat_baseline-SWC-TerminusCM,,,,,,13,16,11
 num_states_beat_baseline-UA-EpiCovDA,,,,,,15,14,10
 num_states_beat_baseline-UCLA-SuEIR,,,24,25,28,30,30,27
@@ -89,7 +89,7 @@ perc_beat_baseline-MOBS-GLEAM_COVID,,,,,0.38,0.4,0.48,0.42
 perc_beat_baseline-NotreDame-FRED,,,0.2857142857,0.2857142857,0.2857142857,0,0.1428571429,0.2857142857
 perc_beat_baseline-OliverWyman-Navigator,,,,,,,,0.4893617021
 perc_beat_baseline-PSI-DRAFT,,,,,0.3529411765,0.3725490196,0.431372549,0.05882352941
-perc_beat_baseline-Quantori-Multiagents,,,,0,,,,
+perc_beat_baseline-Quantori-Multiagents,,,,1,,,,
 perc_beat_baseline-SWC-TerminusCM,,,,,,0.325,0.3333333333,0.2340425532
 perc_beat_baseline-UA-EpiCovDA,,,,,,0.2941176471,0.2745098039,0.1960784314
 perc_beat_baseline-UCLA-SuEIR,,,0.4705882353,0.4901960784,0.5490196078,0.5882352941,0.5882352941,0.5294117647

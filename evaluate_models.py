@@ -10,6 +10,7 @@ import argparse
 import datetime
 import glob
 import os
+import re
 from pathlib import Path
 
 import numpy as np
@@ -89,7 +90,7 @@ def validate_projections(df_model):
     df_model['target_end_date'] = pd.to_datetime(df_model['target_end_date']).dt.date
 
 
-def add_cum_deaths(df_model, proj_date, df_truth_raw_past):
+def add_cum_deaths(df_model, df_model_raw, proj_date, df_truth_raw_past):
     """Convert incident deaths to cumulative deaths for forecasts without 'cum death' targets.
 
     We simply take the incident deaths and add it to the cumulative deaths count at the
@@ -104,9 +105,43 @@ def add_cum_deaths(df_model, proj_date, df_truth_raw_past):
     for i, row in df_model.iterrows():
         assert 'cum death' not in row['target'], row
         if 'inc death' in row['target']:
+            match = re.findall(r'(\d+) wk ahead inc death', row['target'])
+            assert match, row['target']
+            num_weeks = int(match[0])
+
             new_row = row.copy()
             new_row['target'] = row['target'].replace('inc death', 'cum death')
-            new_row['value'] = df_cum_deaths.loc[row['location']] + row['value']
+            new_row['value'] = df_cum_deaths.loc[row['location']]
+
+            # Find all inc deaths with targets less than or equal to num_weeks
+            # and add them to the new cum death target
+            if row['type'] == 'point':
+                candidate_rows = df_model_raw[
+                    (df_model_raw['forecast_date'] == row['forecast_date']) & \
+                    (df_model_raw['location'] == row['location']) & \
+                    (df_model_raw['type'] == 'point')
+                ]
+            else:
+                candidate_rows = df_model_raw[
+                    (df_model_raw['forecast_date'] == row['forecast_date']) & \
+                    (df_model_raw['location'] == row['location']) & \
+                    (df_model_raw['type'] == row['type']) & \
+                    (df_model_raw['quantile'] == row['quantile'])
+                ]
+
+            increment_counter = 0
+            for j, candidate_row in candidate_rows.iterrows():
+                if 'inc death' in candidate_row['target']:
+                    match2 = re.findall(r'(\d+) wk ahead inc death', candidate_row['target'])
+                    assert match2, candidate_row['target']
+                    candidate_num_weeks = int(match2[0])
+
+                    if candidate_num_weeks <= num_weeks:
+                        new_row['value'] += candidate_row['value']
+                        increment_counter += 1
+            assert increment_counter == num_weeks, \
+                f'increment_counter != num_weeks: {increment_counter} != {num_weeks}\n{row}'
+
             cum_death_rows.append(new_row)
     df_model_new = pd.DataFrame(cum_death_rows)
 
@@ -327,9 +362,9 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
             if df_model['target'].str.contains('wk ahead inc death').sum() == 0:
                 print('No death forecasts')
                 continue
-            # convert inc death to cum death
+            print('Converting incident death to cumulative deaths...')
             models_converted_to_cum_deaths.append(model_name)
-            df_model = add_cum_deaths(df_model, proj_date, df_truth_raw_past)
+            df_model = add_cum_deaths(df_model, df_model_raw, proj_date, df_truth_raw_past)
         target_str = 'wk ahead cum death'
 
         has_point = (df_model['type'] == 'point').sum() > 0

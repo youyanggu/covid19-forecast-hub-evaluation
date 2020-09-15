@@ -49,7 +49,7 @@ num_states_beat_baseline-NotreDame-FRED,,,,,,0,1,2,1,0
 num_states_beat_baseline-NotreDame-mobility,,,,,,,,,,18
 num_states_beat_baseline-OliverWyman-Navigator,,,,,,,,29,24,22
 num_states_beat_baseline-PSI-DRAFT,,,,,19,22,27,17,15,17
-num_states_beat_baseline-STH-3PU,,,,,,,,,1,1
+num_states_beat_baseline-STH-3PU,,,,,,,,,0,1
 num_states_beat_baseline-SWC-TerminusCM,,,,,,11,17,18,20,
 num_states_beat_baseline-UA-EpiCovDA,,,,,,,19,18,22,25
 num_states_beat_baseline-UCLA-SuEIR,,,27,30,28,34,33,27,28,23
@@ -77,7 +77,7 @@ perc_beat_baseline-NotreDame-FRED,,,,,,0,0.1428571429,0.2857142857,0.1428571429,
 perc_beat_baseline-NotreDame-mobility,,,,,,,,,,0.3529411765
 perc_beat_baseline-OliverWyman-Navigator,,,,,,,,0.6170212766,0.4705882353,0.431372549
 perc_beat_baseline-PSI-DRAFT,,,,,0.3725490196,0.431372549,0.5294117647,0.3333333333,0.2941176471,0.3333333333
-perc_beat_baseline-STH-3PU,,,,,,,,,1,1
+perc_beat_baseline-STH-3PU,,,,,,,,,0,1
 perc_beat_baseline-SWC-TerminusCM,,,,,,0.275,0.3541666667,0.3673469388,0.3921568627,
 perc_beat_baseline-UA-EpiCovDA,,,,,,,0.3725490196,0.3529411765,0.431372549,0.4901960784
 perc_beat_baseline-UCLA-SuEIR,,,0.5294117647,0.5882352941,0.5490196078,0.6666666667,0.6470588235,0.5294117647,0.5490196078,0.4509803922

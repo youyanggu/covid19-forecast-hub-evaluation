@@ -57,7 +57,7 @@ num_states_beat_baseline-OliverWyman-Navigator,,,,,,,,,,31,27,35,28
 num_states_beat_baseline-PSI-DRAFT,,,,,,,,19,20,21,16,15,13
 num_states_beat_baseline-QJHong-Encounter,,,,,,,,,,,,,
 num_states_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,18,12
-num_states_beat_baseline-STH-3PU,,,,,,,,,1,0,0,1,1
+num_states_beat_baseline-STH-3PU,,,,,,,,,1,1,1,1,1
 num_states_beat_baseline-SWC-TerminusCM,,,,,,,,19,21,,18,,
 num_states_beat_baseline-UA-EpiCovDA,,,,,,,,,,32,23,21,24
 num_states_beat_baseline-UCLA-SuEIR,,,27,33,30,29,32,28,26,27,21,26,31
@@ -90,7 +90,7 @@ perc_beat_baseline-OliverWyman-Navigator,,,,,,,,,,0.6078431373,0.5294117647,0.68
 perc_beat_baseline-PSI-DRAFT,,,,,,,,0.3725490196,0.3921568627,0.4117647059,0.3137254902,0.2941176471,0.2549019608
 perc_beat_baseline-QJHong-Encounter,,,,,,,,,,,,,
 perc_beat_baseline-RobertWalraven-ESG,,,,,,,,,,,,0.3529411765,0.2352941176
-perc_beat_baseline-STH-3PU,,,,,,,,,1,0,0,1,1
+perc_beat_baseline-STH-3PU,,,,,,,,,1,1,1,1,1
 perc_beat_baseline-SWC-TerminusCM,,,,,,,,0.3958333333,0.4117647059,,0.375,,
 perc_beat_baseline-UA-EpiCovDA,,,,,,,,,,0.6274509804,0.4509803922,0.4117647059,0.4705882353
 perc_beat_baseline-UCLA-SuEIR,,,0.5294117647,0.6470588235,0.5882352941,0.568627451,0.6274509804,0.5490196078,0.5098039216,0.5294117647,0.4117647059,0.5098039216,0.6078431373
