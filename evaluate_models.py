@@ -482,11 +482,11 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         print('Saved to:', error_states_fname)
 
     # we fill na with avg abs error for that state
+    print('------------------------')
+    print(f'State-by-state errors:')
+    print(df_errors_states)
     df_errors_states = df_errors_states.fillna(df_errors_states.abs().mean())
     assert df_errors_states.isna().values.sum() == 0, 'NaN still in errors'
-    print('------------------------')
-    print(f'State-by-state mean absolute errors:')
-    print(df_errors_states)
 
     df_sq_errs_states = df_errors_states**2
     print('----------------------\nStates - mean squared errors:')
@@ -539,7 +539,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         print('=================================================')
         model_name_to_us_projection, model_name_to_states_sum_projection = {}, {}
         for model_name, all_projections_df in model_to_all_projections.items():
-            if len(all_projections_df) > min_states_with_projections:
+            if len(all_projections_df) > min_states_with_projections and 'US' in all_projections_df:
                 model_name_to_us_projection[model_name] = all_projections_df['US']
                 model_name_to_states_sum_projection[model_name] = \
                     all_projections_df[all_projections_df.index != 'US'].sum()
@@ -558,6 +558,24 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         with pd.option_context('display.float_format', '{:.3f}'.format):
             print((df_errors_states.T.corr()**2))
 
+        print('=================================================')
+        print('Forecast Bias')
+        print('=================================================')
+        print('Mean errors by state:')
+        print(df_errors_states.mean().sort_values())
+        print('---------------')
+        print('Mean errors by model:')
+        print(df_errors_states.T.mean().sort_values())
+        with pd.option_context('display.float_format', '{:.3f}'.format):
+            print('------------------------------')
+            print('% pos error (overprojection) - % neg error (underprojection):')
+            print('------------------------------')
+            print('By state:')
+            print(((df_errors_states > 0).mean() - (df_errors_states < 0).mean()).sort_values())
+            print('---------------')
+            print('By model:')
+            print(((df_errors_states.T > 0).mean() - (df_errors_states.T < 0).mean()).sort_values())
+
         df_errs = (df_errors_states / df_errors_states.abs().mean(axis=0)).T
         df_errs['actual_deaths'] = df_truth_filt.rename(index=fips_to_us_state)
         print('=================================================')
@@ -565,10 +583,14 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
         print('=================================================')
         print(df_errs)
         print('-------------------------------------------------')
-        print('Correlation between error and total deaths:')
+        print('Correlation between total deaths and relative error:')
+        print(('The more negative the correlation, the larger the underprojection (compared to other models)'
+            ' for states with higher total deaths (ideal correlation is 0)'))
         print(df_errs.corr()['actual_deaths'].sort_values().to_string(float_format='{:.3f}'.format))
         print('-------------------------------------------------')
-        print('Correlation between abs error and total deaths:')
+        print('Correlation between total deaths and relative abs error:')
+        print(('The more negative the correlation, the better the model does (compared to other models)'
+            ' when total deaths is higher (ideal correlation is 0)'))
         print(df_errs.abs().corr()['actual_deaths'].sort_values().to_string(float_format='{:.3f}'.format))
 
     pd.reset_option('display.float_format') # reset way we print floats
