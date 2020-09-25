@@ -30,12 +30,14 @@ While a model's future projections can be useful, it is also important to take i
 
 ### Python
 
-You need Python 3 with the [NumPy](https://numpy.org/install/) and [pandas](https://pandas.pydata.org/getting_started.html) packages.
+You need [Python 3](https://www.python.org/downloads/) with the [NumPy](https://numpy.org/install/) and [pandas](https://pandas.pydata.org/getting_started.html) packages.
 
-Once you have Python 3, you can simply install the NumPy and pandas packages by running the following command:
+Once you have Python 3, you can install the NumPy and pandas packages by running the following command:
 ```
 pip install numpy pandas
 ```
+
+*Note: This was built and tested on Python 3.8.0, NumPy 1.19.2, and pandas 1.1.2. It's possible that an older/newer versions may not be compatible.*
 
 ### Data
 
