@@ -1,6 +1,6 @@
 ,mean_rank
-CEID-Walk,7.2
-COVIDhub-baseline,7.3
+COVIDhub-baseline,7.2
+CEID-Walk,7.3
 CU-select,7.9
 COVIDhub-ensemble,7.9
 UCLA-SuEIR,8.2

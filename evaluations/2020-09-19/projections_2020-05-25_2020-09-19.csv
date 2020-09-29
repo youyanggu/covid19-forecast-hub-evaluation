@@ -1,7 +1,7 @@
 ,actual_deaths,Baseline,Covid19Sim-Simulator,IowaStateLW-STEM,error-Baseline,error-Covid19Sim-Simulator,error-IowaStateLW-STEM,beat_baseline-Covid19Sim-Simulator,beat_baseline-IowaStateLW-STEM
 Alabama,2437,1613.0,1388.2,703.0,-824.0,-1048.8,-1734.0,False,False
 Alaska,45,10.0,11.3,,-35.0,-33.7,,True,
-Arizona,5451,2840.7,2179.4,1606.0,-2610.3,-3271.6,-3845.0,False,False
+Arizona,5467,2840.7,2179.4,1606.0,-2626.3,-3287.6,-3861.0,False,False
 Arkansas,1181,419.4,345.1,1539.0,-761.6,-835.9,358.0,False,True
 California,15018,12418.6,7855.4,6932.0,-2600.4,-7163.6,-8087.0,False,False
 Colorado,2013,3304.3,1942.7,1991.0,1291.3,-70.3,-22.0,True,True
@@ -36,7 +36,7 @@ North Carolina,3235,2436.0,2331.3,2130.0,-799.0,-903.7,-1105.0,False,False
 North Dakota,192,221.6,160.6,1688.0,29.6,-31.4,1496.0,False,False
 Ohio,4612,7767.9,3523.1,2569.0,3155.9,-1088.9,-2043.0,True,True
 Oklahoma,943,698.7,441.4,2038.0,-244.3,-501.6,1095.0,False,False
-Oregon,521,333.4,183.3,160.0,-187.6,-337.7,-361.0,False,False
+Oregon,525,333.4,183.3,160.0,-191.6,-341.7,-365.0,False,False
 Pennsylvania,7940,15941.4,6747.6,5826.0,8001.4,-1192.4,-2114.0,True,True
 Rhode Island,1088,2445.4,827.3,882.0,1357.4,-260.7,-206.0,True,True
 South Carolina,3188,1277.9,730.8,717.0,-1910.1,-2457.2,-2471.0,False,False
@@ -48,6 +48,6 @@ Vermont,58,54.0,56.4,55.0,-4.0,-1.6,-3.0,True,True
 Virginia,2988,3885.0,2358.6,1727.0,897.0,-629.4,-1261.0,True,False
 Washington,2037,2072.4,1442.4,1238.0,35.4,-594.6,-799.0,False,False
 West Virginia,311,156.3,99.0,75.0,-154.7,-212.0,-236.0,False,False
-Wisconsin,1238,1470.9,1096.4,1668.0,232.9,-141.6,430.0,True,False
+Wisconsin,1241,1470.9,1096.4,1668.0,229.9,-144.6,427.0,True,False
 Wyoming,49,79.4,28.8,13.0,30.4,-20.2,-36.0,True,False
-US,199259,235240.6,140484.6,154982.0,39158.6,-55597.4,-41100.0,False,False
+US,199282,235240.6,140484.6,154982.0,39135.6,-55620.4,-41123.0,False,False

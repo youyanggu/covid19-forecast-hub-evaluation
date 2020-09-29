@@ -1,7 +1,7 @@
 ,mean_rank
 LNQ-ens1,4.8
-COVIDhub-ensemble,5.3
 COVIDhub-baseline,5.3
+COVIDhub-ensemble,5.3
 IowaStateLW-STEM,5.7
 OliverWyman-Navigator,5.7
 UCLA-SuEIR,5.9

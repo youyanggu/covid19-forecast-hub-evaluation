@@ -1,9 +1,9 @@
 ,mean_rank
 COVIDhub-ensemble,5.9
-CEID-Walk,6.3
+CEID-Walk,6.2
 COVIDhub-baseline,7.0
 UCLA-SuEIR,7.3
-LNQ-ens1,7.4
+LNQ-ens1,7.5
 USC-SI_kJalpha,7.5
 USACE-ERDC_SEIR,7.8
 DDS-NBDS,7.9

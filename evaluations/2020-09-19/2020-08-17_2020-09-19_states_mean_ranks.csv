@@ -1,8 +1,8 @@
 ,mean_rank
-YYG-ParamSearch,4.9
+YYG-ParamSearch,4.8
 Karlen-pypm,6.0
 USC-SI_kJalpha,6.0
-CovidAnalytics-DELPHI,6.1
+CovidAnalytics-DELPHI,6.2
 IowaStateLW-STEM,6.6
 Auquan-SEIR,6.8
 UCLA-SuEIR,6.9
