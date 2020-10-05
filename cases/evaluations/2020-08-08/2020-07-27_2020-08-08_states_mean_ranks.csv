@@ -1,12 +1,12 @@
 ,mean_rank
 COVIDhub-ensemble,5.1
-USC-SI_kJalpha,5.2
+USC-SI_kJalpha,5.3
 LNQ-ens1,5.5
 COVIDhub-baseline,6.1
 LANL-GrowthRate,6.4
 IowaStateLW-STEM,7.2
 USACE-ERDC_SEIR,7.7
-DDS-NBDS,8.6
+DDS-NBDS,8.7
 RobertWalraven-ESG,8.9
 UCLA-SuEIR,9.4
 JHU_IDD-CovidSP,9.8

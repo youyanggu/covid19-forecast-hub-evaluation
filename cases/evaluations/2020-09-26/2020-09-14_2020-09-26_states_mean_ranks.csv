@@ -3,7 +3,7 @@ IQVIA_ACOE-STAN,7.6
 JHUAPL-Bucky,8.4
 COVIDhub-baseline,8.6
 CEID-Walk,8.9
-OliverWyman-Navigator,9.5
+OliverWyman-Navigator,9.4
 UMich-RidgeTfReg,9.5
 Covid19Sim-Simulator,9.7
 JCB-PRM,9.8
@@ -15,10 +15,10 @@ USACE-ERDC_SEIR,11.5
 Karlen-pypm,11.8
 CU-select,12.3
 LANL-GrowthRate,12.5
-USC-SI_kJalpha,12.6
+USC-SI_kJalpha,12.5
 UCLA-SuEIR,13.8
 JHU_IDD-CovidSP,14.4
 TTU-squider,16.9
 RobertWalraven-ESG,17.0
-CovidAnalytics-DELPHI,17.5
+CovidAnalytics-DELPHI,17.9
 Geneva-DetGrowth,21.1

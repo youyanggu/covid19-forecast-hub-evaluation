@@ -4,14 +4,14 @@ LNQ-ens1,5.5
 JHU_IDD-CovidSP,6.4
 OliverWyman-Navigator,6.6
 IowaStateLW-STEM,7.1
-USACE-ERDC_SEIR,7.7
+USACE-ERDC_SEIR,7.6
 COVIDhub-ensemble,7.7
 UCLA-SuEIR,7.8
 LANL-GrowthRate,8.0
 Covid19Sim-Simulator,8.4
 RobertWalraven-ESG,8.7
 USC-SI_kJalpha,9.1
+CovidAnalytics-DELPHI,11.3
 IHME-CurveFit,11.3
-CovidAnalytics-DELPHI,11.4
 Karlen-pypm,11.9
 Geneva-DetGrowth,13.7

@@ -1,12 +1,12 @@
 ,mean_rank
 LNQ-ens1,6.0
-DDS-NBDS,6.4
+DDS-NBDS,6.3
 COVIDhub-ensemble,6.4
 COVIDhub-baseline,6.8
-USC-SI_kJalpha,6.9
+USC-SI_kJalpha,6.8
 USACE-ERDC_SEIR,7.4
 IowaStateLW-STEM,7.6
-LANL-GrowthRate,7.6
+LANL-GrowthRate,7.7
 RobertWalraven-ESG,7.8
 UCLA-SuEIR,8.3
 OliverWyman-Navigator,9.7

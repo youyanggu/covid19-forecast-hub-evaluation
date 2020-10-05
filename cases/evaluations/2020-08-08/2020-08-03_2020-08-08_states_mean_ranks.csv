@@ -1,11 +1,11 @@
 ,mean_rank
 LNQ-ens1,5.9
 COVIDhub-ensemble,6.7
-COVIDhub-baseline,6.8
+COVIDhub-baseline,6.7
 DDS-NBDS,6.9
-USC-SI_kJalpha,7.3
-LANL-GrowthRate,7.5
+USC-SI_kJalpha,7.2
 USACE-ERDC_SEIR,7.5
+LANL-GrowthRate,7.5
 RobertWalraven-ESG,7.7
 Geneva-DetGrowth,8.2
 IowaStateLW-STEM,8.2

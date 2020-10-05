@@ -1,9 +1,9 @@
 ,mean_rank
 UCLA-SuEIR,6.7
-COVIDhub-baseline,6.8
+COVIDhub-baseline,6.7
 IowaStateLW-STEM,6.8
 USACE-ERDC_SEIR,7.3
-USC-SI_kJalpha,7.3
+USC-SI_kJalpha,7.4
 JHU_IDD-CovidSP,7.4
 COVIDhub-ensemble,7.8
 LNQ-ens1,8.2

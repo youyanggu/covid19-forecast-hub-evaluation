@@ -5,11 +5,11 @@ COVIDhub-baseline,6.8
 CEID-Walk,7.3
 USC-SI_kJalpha,7.5
 OliverWyman-Navigator,7.5
-USACE-ERDC_SEIR,7.8
 UCLA-SuEIR,7.8
+USACE-ERDC_SEIR,7.8
 CU-select,8.1
 DDS-NBDS,8.3
-LANL-GrowthRate,8.5
+LANL-GrowthRate,8.6
 RobertWalraven-ESG,10.5
 Karlen-pypm,11.5
 JHU_IDD-CovidSP,11.8

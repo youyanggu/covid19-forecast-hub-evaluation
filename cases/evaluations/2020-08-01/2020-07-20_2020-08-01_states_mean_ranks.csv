@@ -7,11 +7,11 @@ IowaStateLW-STEM,7.0
 USACE-ERDC_SEIR,7.1
 LANL-GrowthRate,7.7
 RobertWalraven-ESG,8.0
-JHU_IDD-CovidSP,8.3
 Covid19Sim-Simulator,8.3
+JHU_IDD-CovidSP,8.4
 OliverWyman-Navigator,8.4
 USC-SI_kJalpha,10.0
 CovidAnalytics-DELPHI,11.5
-Karlen-pypm,12.3
+Karlen-pypm,12.2
 IHME-CurveFit,12.4
 Geneva-DetGrowth,13.1

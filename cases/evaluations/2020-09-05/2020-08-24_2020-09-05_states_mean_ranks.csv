@@ -1,8 +1,8 @@
 ,mean_rank
 COVIDhub-baseline,7.2
 CEID-Walk,7.3
-CU-select,7.9
 COVIDhub-ensemble,7.9
+CU-select,7.9
 UCLA-SuEIR,8.2
 OliverWyman-Navigator,8.5
 USACE-ERDC_SEIR,8.5
@@ -16,6 +16,6 @@ Karlen-pypm,10.5
 LANL-GrowthRate,11.2
 Covid19Sim-Simulator,12.8
 RobertWalraven-ESG,13.6
-CovidAnalytics-DELPHI,14.4
+CovidAnalytics-DELPHI,14.5
 TTU-squider,15.0
 Geneva-DetGrowth,17.7

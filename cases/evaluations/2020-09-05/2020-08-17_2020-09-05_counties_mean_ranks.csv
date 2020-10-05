@@ -1,7 +1,7 @@
 ,mean_rank
 LNQ-ens1,5.9
 COVIDhub-ensemble,6.1
-COVIDhub-baseline,6.3
+COVIDhub-baseline,6.4
 CEID-Walk,6.4
 UCLA-SuEIR,6.9
 OliverWyman-Navigator,7.0
@@ -11,5 +11,5 @@ JHU_IDD-CovidSP,7.5
 RobertWalraven-ESG,7.6
 CU-select,8.5
 MITCovAlliance-SIR,8.6
-LANL-GrowthRate,8.7
-Yu_Group-CLEP,11.1
+LANL-GrowthRate,8.6
+Yu_Group-CLEP,11.0

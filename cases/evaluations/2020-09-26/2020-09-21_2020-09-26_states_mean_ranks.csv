@@ -3,12 +3,12 @@ COVIDhub-baseline,8.5
 LNQ-ens1,8.9
 CEID-Walk,9.0
 Geneva-DetGrowth,9.1
-DDS-NBDS,9.2
+DDS-NBDS,9.1
 JCB-PRM,9.3
-USACE-ERDC_SEIR,9.4
+USACE-ERDC_SEIR,9.3
 IQVIA_ACOE-STAN,9.7
 COVIDhub-ensemble,10.0
-USC-SI_kJalpha,10.4
+USC-SI_kJalpha,10.3
 JHUAPL-Bucky,10.5
 OliverWyman-Navigator,10.8
 UCLA-SuEIR,11.1
@@ -20,4 +20,4 @@ Karlen-pypm,13.0
 CU-select,14.3
 JHU_IDD-CovidSP,15.3
 RobertWalraven-ESG,17.4
-CovidAnalytics-DELPHI,18.2
+CovidAnalytics-DELPHI,18.6
