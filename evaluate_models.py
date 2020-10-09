@@ -12,6 +12,7 @@ import glob
 import os
 import re
 from pathlib import Path
+import shutil
 
 import numpy as np
 import pandas as pd
@@ -63,6 +64,15 @@ def find_last_projections(fnames, proj_date):
                 last_valid_fname = fname
                 last_valid_date = file_date
     return last_valid_fname, last_valid_date
+
+
+def get_save_truth_fname():
+    try:
+        fname = Path(os.path.abspath(__file__)).parent / 'truth' / f'truth-cumulative-deaths-latest.csv'
+    except NameError:
+        # If run on console, may need to specify own path to save truth file
+        fname = Path(os.getcwd()) / 'truth' / f'truth-cumulative-deaths-latest.csv'
+    return fname
 
 
 def find_truth_file(date):
@@ -149,9 +159,9 @@ def add_cum_deaths(df_model, df_model_raw, proj_date, df_truth_raw_past):
     return df_model
 
 
-def main(forecast_hub_dir, proj_date, eval_date, out_dir,
+def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
         use_point=True, use_cumulative_deaths=False, print_additional_stats=False,
-        merge_models=True, use_baseline2=False):
+        copy_truth=False, merge_models=True, use_baseline2=False):
     """For full description of methods, refer to:
 
     https://github.com/youyanggu/covid19-forecast-hub-evaluation
@@ -217,8 +227,21 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
             'last_valid_date' : last_valid_date,
         }
 
-    # We retrieve the latest truth data to compute actual incident deaths
-    truth_file_name = forecast_hub_dir / 'data-truth' / 'truth-Cumulative Deaths.csv'
+    print('=================================================')
+    # We retrieve the ground truth data to compute actual incident deaths (from cumulative deaths)
+    if truth_file:
+        truth_file_name = truth_file
+        print('Ground truth file (provided):', truth_file_name)
+    else:
+        # If truth file name not provided, we use the latest truth from the Forecast Hub repo
+        truth_file_name = forecast_hub_dir / 'data-truth' / 'truth-Cumulative Deaths.csv'
+        print('Ground truth file (latest from forecast_hub_dir):', truth_file_name)
+        if copy_truth:
+            # Copy and save the latest truth file from Forecast Hub repo
+            save_truth_fname = get_save_truth_fname()
+            print('Saving latest truth file to:', save_truth_fname)
+            shutil.copy2(truth_file_name, save_truth_fname)
+
     df_truth_raw = pd.read_csv(truth_file_name, dtype={'location' : str})
     df_truth_raw['date'] = pd.to_datetime(df_truth_raw['date']).dt.date
     df_truth_raw = df_truth_raw.rename(columns={'value' : 'total_deaths'})
@@ -640,6 +663,9 @@ if __name__ == '__main__':
     parser.add_argument('--forecast_hub_dir', help=('Local location of the covid19-forecast-hub repo:'
         'https://github.com/reichlab/covid19-forecast-hub. By default, check in the parent directory.'))
     parser.add_argument('--out_dir', help='Directory to save outputs (if provided)')
+    parser.add_argument('--truth_file', help=('Ground truth file.'
+        'If not provided, will use latest truth file from --forecast_hub_dir.'))
+    parser.add_argument('--copy_truth', action='store_true', help='Copy and save latest truth file.')
     parser.add_argument('--use_cumulative_deaths', action='store_true',
         help='Compute error by comparing cumulative deaths rather than incident deaths')
     parser.add_argument('--use_median', action='store_true',
@@ -655,11 +681,17 @@ if __name__ == '__main__':
         forecast_hub_dir = Path(args.forecast_hub_dir)
     else:
         forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent / 'covid19-forecast-hub'
+    if args.out_dir:
+        out_dir = Path(args.out_dir)
+    else:
+        out_dir = args.out_dir
 
-    main(forecast_hub_dir, proj_date, eval_date, args.out_dir,
+    main(forecast_hub_dir, proj_date, eval_date, out_dir, args.truth_file,
         use_point=(not args.use_median),
         use_cumulative_deaths=args.use_cumulative_deaths,
-        print_additional_stats=args.print_additional_stats)
+        print_additional_stats=args.print_additional_stats,
+        copy_truth=args.copy_truth,
+    )
 
     print('=================================================')
     print('Done:', datetime.datetime.now())

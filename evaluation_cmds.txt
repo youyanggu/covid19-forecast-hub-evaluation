@@ -296,4 +296,4 @@ python evaluate_models.py 2020-08-31 2020-10-03 --out_dir evaluations
 python evaluate_models.py 2020-09-07 2020-10-03 --out_dir evaluations
 python evaluate_models.py 2020-09-14 2020-10-03 --out_dir evaluations
 python evaluate_models.py 2020-09-21 2020-10-03 --out_dir evaluations
-python evaluate_models.py 2020-09-28 2020-10-03 --out_dir evaluations
+python evaluate_models.py 2020-09-28 2020-10-03 --out_dir evaluations --copy_truth

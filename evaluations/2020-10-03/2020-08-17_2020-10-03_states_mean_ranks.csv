@@ -1,11 +1,11 @@
 ,mean_rank
 YYG-ParamSearch,3.5
-IowaStateLW-STEM,4.8
 Auquan-SEIR,4.8
+IowaStateLW-STEM,4.8
 USC-SI_kJalpha,5.0
 CovidAnalytics-DELPHI,5.2
 UCLA-SuEIR,5.4
 USACE-ERDC_SEIR,5.8
-MITCovAlliance-SIR,6.6
+MITCovAlliance-SIR,6.7
 LANL-GrowthRate,6.7
 RobertWalraven-ESG,7.1

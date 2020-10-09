@@ -11,6 +11,7 @@ import datetime
 import glob
 import os
 from pathlib import Path
+import shutil
 
 import numpy as np
 import pandas as pd
@@ -64,6 +65,15 @@ def find_last_projections(fnames, proj_date):
     return last_valid_fname, last_valid_date
 
 
+def get_save_truth_fname():
+    try:
+        fname = Path(os.path.abspath(__file__)).parent.parent / 'truth' / f'truth-incident-cases-latest.csv'
+    except NameError:
+        # If run on console, may need to specify own path to save truth file
+        fname = Path(os.getcwd()) / 'truth' / f'truth-incident-cases-latest.csv'
+    return fname
+
+
 def validate_projections(df_model):
     """Verify all columns are in dataframe and convert dates to datetime."""
     for col in ['forecast_date', 'target', 'target_end_date', 'location', 'type', 'quantile', 'value']:
@@ -73,8 +83,8 @@ def validate_projections(df_model):
     df_model['target_end_date'] = pd.to_datetime(df_model['target_end_date']).dt.date
 
 
-def main(forecast_hub_dir, proj_date, eval_date, out_dir,
-        use_point=True, print_additional_stats=False,
+def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
+        copy_truth=False, use_point=True, print_additional_stats=False,
         merge_models=True, evaluate_counties=False):
     """For full description of methods, refer to:
 
@@ -148,8 +158,21 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir,
             'last_valid_date' : last_valid_date,
         }
 
-    # We retrieve the latest truth data to compute actual incident cases
-    truth_file_name = forecast_hub_dir / 'data-truth' / 'truth-Incident Cases.csv'
+    print('=================================================')
+    # We retrieve the ground truth data to compute actual incident cases
+    if truth_file:
+        truth_file_name = truth_file
+        print('Ground truth file (provided):', truth_file_name)
+    else:
+        # If truth file name not provided, we use the latest truth from the Forecast Hub repo
+        truth_file_name = forecast_hub_dir / 'data-truth' / 'truth-Incident Cases.csv'
+        print('Ground truth file (latest from forecast_hub_dir):', truth_file_name)
+        if copy_truth:
+            # Copy and save the latest truth file from Forecast Hub repo
+            save_truth_fname = get_save_truth_fname()
+            print('Saving latest truth file to:', save_truth_fname)
+            shutil.copy2(truth_file_name, save_truth_fname)
+
     df_truth_raw = pd.read_csv(truth_file_name, dtype={'location' : str})
     df_truth_raw['date'] = pd.to_datetime(df_truth_raw['date']).dt.date
     df_truth_raw = df_truth_raw.rename(columns={'value' : 'daily_cases'})
@@ -454,6 +477,9 @@ if __name__ == '__main__':
     parser.add_argument('--forecast_hub_dir', help=('Local location of the covid19-forecast-hub repo:'
         'https://github.com/reichlab/covid19-forecast-hub. By default, check in the parent directory.'))
     parser.add_argument('--out_dir', help='Directory to save outputs (if provided)')
+    parser.add_argument('--truth_file', help=('Ground truth file.'
+        'If not provided, will use latest truth file from --forecast_hub_dir.'))
+    parser.add_argument('--copy_truth', action='store_true', help='Copy and save latest truth file.')
     parser.add_argument('--use_median', action='store_true',
         help='Use median estimate instead of point estimate')
     parser.add_argument('--print_additional_stats', action='store_true',
@@ -467,12 +493,17 @@ if __name__ == '__main__':
         forecast_hub_dir = Path(args.forecast_hub_dir)
     else:
         forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent.parent / 'covid19-forecast-hub'
+    if args.out_dir:
+        out_dir = Path(args.out_dir)
+    else:
+        out_dir = args.out_dir
 
     for evaluate_counties in [True, False]:
-        main(forecast_hub_dir, proj_date, eval_date, args.out_dir,
+        main(forecast_hub_dir, proj_date, eval_date, out_dir, args.truth_file,
             use_point=(not args.use_median),
             print_additional_stats=args.print_additional_stats,
             evaluate_counties=evaluate_counties,
+            copy_truth=args.copy_truth,
         )
 
     print('=================================================')
