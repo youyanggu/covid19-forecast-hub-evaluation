@@ -19,6 +19,7 @@ While a model's future projections can be useful, it is also important to take i
 * [Details](#details)
   * [Overview](#overview)
   * [Models and Teams](#models-and-teams)
+  * [Truth Data](#truth-data)
   * [Methods](#methods)
   * [US Evaluation](#us-evaluation)
   * [State-by-state Evaluation](#state-by-state-evaluation)
@@ -75,6 +76,11 @@ python evaluate_models.py 2020-05-04 2020-06-13 --forecast_hub_dir /PATH/TO/covi
 #### Save evaluation results to a directory
 ```
 python evaluate_models.py 2020-05-04 2020-06-13 --out_dir evaluations/
+```
+
+#### Use custom truth file (rather than the latest truth from Forecast Hub)
+```
+python evaluate_models.py 2020-05-04 2020-06-13 --truth_file truth/truth-cumulative-deaths-latest.csv
 ```
 
 #### Use median projections rather than point projections
@@ -151,7 +157,9 @@ When doing evaluations I think it's important to consider only one model per tea
 
 As described in the [COVID-19 Forecast Hub README](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#ground-truth-data), all forecasts are compared to the [Johns Hopkins University CSSE Time Series Summary](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) as the gold standard reference data for deaths in the US. This truth data can be found in the [Forecast Hub data-truth directory](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-truth).
 
-Because the truth data can be retroactively updated, we keep copies of past truth files in the [`truth`](/truth) directory. We use those copies to compute the baseline and incident deaths to avoid look-ahead bias.
+We use the latest truth data from the Forecast Hub directory at the time the evaluation is run. This is saved in to [`truth/truth-cumulative-deaths-latest.csv`](/truth/truth-cumulative-deaths-latest.csv). To replicate our evaluations exactly, you can use the `--truth_file` flag to specify the truth file (e.g. `--truth_file truth/truth-cumulative-deaths-latest.csv`). Without the `--truth_file` flag, it will use the latest truth file from the Forecast Hub repository, which may be different.
+
+Because the truth data can be retroactively updated, we keep copies of past truth files in the [`truth`](/truth) directory. To compute the baseline and incident deaths, we use these historical truth files (available at the time the projections were made) to avoid look-ahead bias.
 
 ### Methods
 
