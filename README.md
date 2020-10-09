@@ -20,6 +20,7 @@ While a model's future projections can be useful, it is also important to take i
   * [Overview](#overview)
   * [Models and Teams](#models-and-teams)
   * [Truth Data](#truth-data)
+  * [Cumulative vs Incident Data](#cumulative-vs-incident-data)
   * [Methods](#methods)
   * [US Evaluation](#us-evaluation)
   * [State-by-state Evaluation](#state-by-state-evaluation)
@@ -157,9 +158,17 @@ When doing evaluations I think it's important to consider only one model per tea
 
 As described in the [COVID-19 Forecast Hub README](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#ground-truth-data), all forecasts are compared to the [Johns Hopkins University CSSE Time Series Summary](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series) as the gold standard reference data for deaths in the US. This truth data can be found in the [Forecast Hub data-truth directory](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-truth).
 
-We use the latest truth data from the Forecast Hub directory at the time the evaluation is run. This is saved in to [`truth/truth-cumulative-deaths-latest.csv`](/truth/truth-cumulative-deaths-latest.csv). To replicate our evaluations exactly, you can use the `--truth_file` flag to specify the truth file (e.g. `--truth_file truth/truth-cumulative-deaths-latest.csv`). Without the `--truth_file` flag, it will use the latest truth file from the Forecast Hub repository, which may be different.
+We use the latest truth data from the Forecast Hub directory at the time the evaluation is run. This is saved to [`truth/truth-cumulative-deaths-latest.csv`](/truth/truth-cumulative-deaths-latest.csv) for deaths and [`truth/truth-incident-cases-latest.csv`](truth/truth-incident-cases-latest.csv) for cases. To replicate our evaluations exactly, you can use the `--truth_file` flag to specify the truth file used to produce the evaluations (i.e. `--truth_file truth/truth-cumulative-deaths-latest.csv`). Without the `--truth_file` flag, it will use the latest truth file from the Forecast Hub repository, which may be different than the one used to generate the evaluations.
 
-Because the truth data can be retroactively updated, we keep copies of past truth files in the [`truth`](/truth) directory. To compute the baseline and incident deaths, we use these historical truth files (available at the time the projections were made) to avoid look-ahead bias.
+Because the truth data can be retroactively updated, we keep copies of past truth files in the [`truth`](/truth) directory. To compute the baseline and incident deaths, we use these historical truth files (available at the time the projections were made) to avoid look-ahead bias. This is not an issue for evaluations of cases because we use the incident cases directly. See the next section for why.
+
+### Cumulative vs Incident Data
+
+To compute all of our evaluations, we use incident deaths and cases between two dates. For case evaluations, we directly use the incident cases for both the forecasts and truth, so the computation is very simple and straightforward. This is because all case forecasts submitted by teams contain incident case targets. However, this is not the case for deaths (no pun intended).
+
+While the first case forecasts began in July, the first death forecasts began three months earlier in April. At that time, the concept of `N week ahead incident death` has not become standardized. For example, some forecasts from April only had `N day ahead cumulative death` targets. Therefore, we cannot directly compare these targets to the ground truth for weekly incident deaths. In order for us to compute the incident deaths between two dates (the projection and evaluation dates), we must take the cumulative death forecast for the *evaluation date* and subtract the true cumulative deaths as of the *projection date*. This gives us an approximation for the incident deaths between two dates, which we then compare to the incident deaths from the ground truth (between the same two dates). We explain the methodology in the next section.
+
+If models are correctly calibrated to the Johns Hopkins data source, this method of computing the incident deaths should give a very similar result to the method of directly comparing incident death targets (if the target is available). The one minor discrepancy that may happen is for `1 wk ahead` targets. This is because we compute the incident deaths between the projection and evaluation date, which is Monday-Saturday rather than Sunday-Saturday. Since Sunday reporting is often lower than average, this can skew the evaluations by a small amount (~4% difference on average). This difference becomes much more minor for targets beyond 1 week (2% for 2 weeks, 1% for 3 weeks, etc).
 
 ### Methods
 
