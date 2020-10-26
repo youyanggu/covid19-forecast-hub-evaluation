@@ -1,11 +1,11 @@
 ,mean_rank
-LANL-GrowthRate,4.1
+LANL-GrowthRate,4.0
 YYG-ParamSearch,4.5
 UCLA-SuEIR,5.1
-IHME-CurveFit,5.2
+IHME-CurveFit,5.3
 CovidAnalytics-DELPHI,5.3
-IowaStateLW-STEM,5.5
-Covid19Sim-Simulator,5.8
+IowaStateLW-STEM,5.4
+Covid19Sim-Simulator,5.7
 USACE-ERDC_SEIR,6.2
 SWC-TerminusCM,6.3
 PSI-DRAFT,7.0

@@ -85,4 +85,31 @@ python evaluate_models_cases.py 2020-08-31 2020-10-03 --out_dir evaluations
 python evaluate_models_cases.py 2020-09-07 2020-10-03 --out_dir evaluations
 python evaluate_models_cases.py 2020-09-14 2020-10-03 --out_dir evaluations
 python evaluate_models_cases.py 2020-09-21 2020-10-03 --out_dir evaluations
-python evaluate_models_cases.py 2020-09-28 2020-10-03 --out_dir evaluations --copy_truth
+python evaluate_models_cases.py 2020-09-28 2020-10-03 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-08-17 2020-10-10 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-24 2020-10-10 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-31 2020-10-10 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-07 2020-10-10 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-14 2020-10-10 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-21 2020-10-10 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-28 2020-10-10 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-05 2020-10-10 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-08-24 2020-10-17 --out_dir evaluations
+python evaluate_models_cases.py 2020-08-31 2020-10-17 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-07 2020-10-17 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-14 2020-10-17 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-21 2020-10-17 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-28 2020-10-17 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-05 2020-10-17 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-12 2020-10-17 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-08-31 2020-10-24 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-07 2020-10-24 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-14 2020-10-24 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-21 2020-10-24 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-28 2020-10-24 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-05 2020-10-24 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-12 2020-10-24 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-19 2020-10-24 --out_dir evaluations --copy_truth

@@ -1,0 +1,4 @@
+,total_deaths_2020-06-07,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline,113492,232297.9,224889,121783.9,111397,10386.9,9.3%
+IHME-CurveFit,113492,232437.3,224889,121923.3,111397,10526.3,9.4%
+Covid19Sim-Simulator,113492,155631.5,224889,45117.5,111397,-66279.5,-59.5%

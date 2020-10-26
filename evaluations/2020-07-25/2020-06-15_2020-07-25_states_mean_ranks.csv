@@ -1,8 +1,8 @@
 ,mean_rank
-LANL-GrowthRate,3.8
-Covid19Sim-Simulator,4.5
-IHME-CurveFit,4.5
+LANL-GrowthRate,3.7
 USACE-ERDC_SEIR,4.5
+IHME-CurveFit,4.5
+Covid19Sim-Simulator,4.5
 YYG-ParamSearch,4.7
 UCLA-SuEIR,5.3
 SWC-TerminusCM,5.6

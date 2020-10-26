@@ -1,0 +1,17 @@
+,mean_rank
+CEID-Walk,6.6
+COVIDhub-baseline,6.6
+LNQ-ens1,6.8
+COVIDhub-ensemble,7.0
+UVA-Ensemble,7.2
+JHU_IDD-CovidSP,7.6
+IowaStateLW-STEM,7.7
+JHUAPL-Bucky,8.0
+USC-SI_kJalpha,8.5
+OliverWyman-Navigator,8.7
+PandemicCentral-USCounty,9.5
+Yu_Group-CLEP,9.6
+MITCovAlliance-SIR,9.8
+RobertWalraven-ESG,10.6
+CU-select,10.8
+LANL-GrowthRate,11.1

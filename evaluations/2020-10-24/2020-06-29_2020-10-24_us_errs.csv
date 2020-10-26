@@ -1,0 +1,6 @@
+,total_deaths_2020-06-28,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline,126721,223979.0,224889,98176.0,98168,8.0,0.0%
+IHME-CurveFit,126721,190449.0,224889,64646.0,98168,-33522.0,-34.1%
+Covid19Sim-Simulator,126721,270632.9,224889,144829.9,98168,46661.9,47.5%
+STH-3PU,126721,152869.0,224889,27066.0,98168,-71102.0,-72.4%
+IowaStateLW-STEM,126721,144328.0,224889,18525.0,98168,-79643.0,-81.1%

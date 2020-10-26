@@ -1,0 +1,6 @@
+,total_deaths_2020-07-12,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+YYG-ParamSearch,135784,219375.8,224889,84170.8,89105,-4934.2,-5.5%
+Baseline,135784,213130.7,224889,77925.7,89105,-11179.3,-12.5%
+IowaStateLW-STEM,135784,208685.0,224889,73480.0,89105,-15625.0,-17.5%
+Covid19Sim-Simulator,135784,258760.0,224889,123555.0,89105,34450.0,38.7%
+STH-3PU,135784,159195.0,224889,23990.0,89105,-65115.0,-73.1%

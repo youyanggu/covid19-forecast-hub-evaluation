@@ -1,11 +1,11 @@
 ,mean_rank
 Covid19Sim-Simulator,4.1
-USACE-ERDC_SEIR,4.4
+USACE-ERDC_SEIR,4.3
 YYG-ParamSearch,4.7
-CovidAnalytics-DELPHI,4.8
+CovidAnalytics-DELPHI,4.9
 IowaStateLW-STEM,5.6
 USC-SI_kJalpha,5.6
 IHME-CurveFit,6.0
 UCLA-SuEIR,6.2
-Auquan-SEIR,6.8
 MITCovAlliance-SIR,6.8
+Auquan-SEIR,6.8

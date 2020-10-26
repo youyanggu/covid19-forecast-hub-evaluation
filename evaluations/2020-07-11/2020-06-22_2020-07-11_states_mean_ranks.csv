@@ -2,14 +2,14 @@
 COVIDhub-ensemble,8.1
 YYG-ParamSearch,8.9
 IHME-CurveFit,9.0
-Covid19Sim-Simulator,9.5
 NotreDame-mobility,9.5
+Covid19Sim-Simulator,9.5
 UMass-MechBayes,9.6
 UA-EpiCovDA,9.7
 LANL-GrowthRate,9.7
-Auquan-SEIR,10.0
+Auquan-SEIR,9.9
 IowaStateLW-STEM,10.1
-CovidAnalytics-DELPHI,10.4
+CovidAnalytics-DELPHI,10.3
 UCLA-SuEIR,10.6
 OliverWyman-Navigator,11.1
 UT-Mobility,11.1

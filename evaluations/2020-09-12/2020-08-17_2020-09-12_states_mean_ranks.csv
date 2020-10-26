@@ -1,7 +1,7 @@
 ,mean_rank
 COVIDhub-ensemble,8.8
 OliverWyman-Navigator,9.2
-JCB-PRM,10.7
+JCB-PRM,10.6
 UA-EpiCovDA,10.7
 YYG-ParamSearch,10.7
 CMU-TimeSeries,10.8
@@ -11,7 +11,7 @@ CovidAnalytics-DELPHI,13.1
 USC-SI_kJalpha,13.2
 Karlen-pypm,13.2
 LNQ-ens1,13.9
-CEID-Walk,14.4
+CEID-Walk,14.3
 COVIDhub-baseline,14.5
 MOBS-GLEAM_COVID,14.7
 UCLA-SuEIR,15.5
@@ -21,7 +21,7 @@ NotreDame-mobility,17.1
 UT-Mobility,17.2
 LANL-GrowthRate,17.4
 DDS-NBDS,17.9
-CU-select,17.9
+CU-select,18.0
 epiforecasts-ensemble1,18.1
 USACE-ERDC_SEIR,18.2
 PSI-DRAFT,19.5

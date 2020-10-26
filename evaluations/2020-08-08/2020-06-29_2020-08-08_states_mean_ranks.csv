@@ -1,8 +1,8 @@
 ,mean_rank
 Covid19Sim-Simulator,4.6
 YYG-ParamSearch,4.7
-USC-SI_kJalpha,5.1
 LANL-GrowthRate,5.1
+USC-SI_kJalpha,5.1
 IHME-CurveFit,5.6
 USACE-ERDC_SEIR,5.6
 IowaStateLW-STEM,6.6
