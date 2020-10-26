@@ -1,14 +1,16 @@
 # Evaluation of COVID-19 Models
 
-*August 31 Update:* We are now evaluating incident case forecasts in the [`cases`](/cases) directory.
+*October 26 Update:* We will aim to update evaluations on a monthly basis.
 
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
 While a model's future projections can be useful, it is also important to take into account the model's historical performance in a transparent, rigorous, and non-biased manner. This is the goal of this project.
 
+In this repository, we provide the evaluation results as well as the entire source code to replicate the evaluations and summaries.
+
 **Evaluations are done weekly and summarized in the [summary](/summary) directory.** You can view the outputs of the individual evaluations in the [evaluations](/evaluations) directory.
 
-*Full disclosure: This evaluation was developed by Youyang Gu, whose model 'YYG / covid19-projections.com' is one of the models in the COVID-19 Forecast Hub.*
+*Full disclosure: This evaluation was developed by [Youyang Gu](https://youyanggu.com), whose model 'YYG / [covid19-projections.com](https://covid19-projections.com)' is one of the models in the COVID-19 Forecast Hub.*
 
 **Table of Contents**
 * [Dependencies](#dependencies)
@@ -29,6 +31,8 @@ While a model's future projections can be useful, it is also important to take i
   * [Case Evaluation](#case-evaluation)
 
 ## Dependencies
+
+We provide the entire source code to replicate the evaluation results. Below are the dependencies necessary.
 
 ### Python
 
