@@ -21,8 +21,8 @@ In this repository, we provide the evaluation results as well as the entire sour
 * [Dependencies](#dependencies)
 * [Getting Started](#getting-started)
 * [Usage](#usage)
-  * [Evaluation](#evaluation)
-  * [Summary](#summary)
+  * [Evaluate](#evaluate)
+  * [Summarize](#summarize)
 * [Details](#details)
   * [Overview](#overview)
   * [Models and Teams](#models-and-teams)
@@ -70,7 +70,7 @@ git clone https://github.com/reichlab/covid19-forecast-hub.git
 
 ## Usage
 
-### Evaluation
+### Evaluate
 
 We call `evaluate_models.py` to compute an evaluation based on a projection date-evaluation date pair. Note that the projection date must be a Monday and the evaluation date must be a Saturday due to reasons [explained below](#details).
 
@@ -118,7 +118,7 @@ This is the command that generated all of the files in the `evaluations` directo
 . evaluation_cmds.txt
 ```
 
-### Summary
+### Summarize
 
 We call `summarize_evaluations.py` to summarizes the individual evaluations generated from above.
 
