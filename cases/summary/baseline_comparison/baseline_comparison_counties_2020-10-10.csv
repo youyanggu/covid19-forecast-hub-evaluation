@@ -23,7 +23,7 @@ num_counties_with_projections-LANL-GrowthRate,,2951,2951,2951,2951,2951,2951,295
 num_counties_with_projections-LNQ-ens1,,,,,3141,3141,3141,3141
 num_counties_with_projections-MITCovAlliance-SIR,2094,,2237,2292,2339,2398,2461,
 num_counties_with_projections-OliverWyman-Navigator,,,,,,2785,2769,2795
-num_counties_with_projections-PandemicCentral-USCounty,,,,,,,3080,3044
+num_counties_with_projections-PandemicCentral-USCounty,,,,,,,3049,3044
 num_counties_with_projections-QJHong-Encounter,,,,0,0,0,0,0
 num_counties_with_projections-RobertWalraven-ESG,3141,3141,3141,3141,3141,3141,3141,3141
 num_counties_with_projections-TTU-squider,,,,,0,,0,0
@@ -56,7 +56,7 @@ num_counties_beat_baseline-LANL-GrowthRate,,737,720,715,543,737,735,758
 num_counties_beat_baseline-LNQ-ens1,,,,,1236,1489,1568,1526
 num_counties_beat_baseline-MITCovAlliance-SIR,672,,741,781,746,817,748,
 num_counties_beat_baseline-OliverWyman-Navigator,,,,,,993,1125,1241
-num_counties_beat_baseline-PandemicCentral-USCounty,,,,,,,948,915
+num_counties_beat_baseline-PandemicCentral-USCounty,,,,,,,934,915
 num_counties_beat_baseline-QJHong-Encounter,,,,,,,,
 num_counties_beat_baseline-RobertWalraven-ESG,1076,1005,823,834,715,881,898,1048
 num_counties_beat_baseline-TTU-squider,,,,,,,,
@@ -89,7 +89,7 @@ perc_beat_baseline-LANL-GrowthRate,,0.2497458489,0.2439850898,0.2422907489,0.184
 perc_beat_baseline-LNQ-ens1,,,,,0.3935052531,0.4740528494,0.4992040751,0.4858325374
 perc_beat_baseline-MITCovAlliance-SIR,0.3209169054,,0.3312472061,0.3407504363,0.3189397178,0.3407005838,0.3039414872,
 perc_beat_baseline-OliverWyman-Navigator,,,,,,0.3565529623,0.406283857,0.4440071556
-perc_beat_baseline-PandemicCentral-USCounty,,,,,,,0.3077922078,0.3005913272
+perc_beat_baseline-PandemicCentral-USCounty,,,,,,,0.3063299442,0.3005913272
 perc_beat_baseline-QJHong-Encounter,,,,,,,,
 perc_beat_baseline-RobertWalraven-ESG,0.3425660618,0.3199617956,0.2620184655,0.2655205349,0.2276345113,0.2804839223,0.2858962114,0.3336517033
 perc_beat_baseline-TTU-squider,,,,,,,,

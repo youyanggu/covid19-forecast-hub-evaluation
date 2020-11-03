@@ -4,11 +4,11 @@ COVIDhub-ensemble,4.8
 IowaStateLW-STEM,6.5
 UCLA-SuEIR,6.5
 USACE-ERDC_SEIR,6.6
-JHU_IDD-CovidSP,6.9
-LNQ-ens1,6.9
+JHU_IDD-CovidSP,6.8
+LNQ-ens1,6.8
 LANL-GrowthRate,7.0
-RobertWalraven-ESG,7.5
 Covid19Sim-Simulator,7.7
+RobertWalraven-ESG,7.7
 USC-SI_kJalpha,8.4
 CovidAnalytics-DELPHI,10.0
 IHME-CurveFit,10.4

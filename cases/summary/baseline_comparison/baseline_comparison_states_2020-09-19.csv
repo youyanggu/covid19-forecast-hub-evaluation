@@ -10,7 +10,7 @@ num_states_with_projections-CovidAnalytics-DELPHI,,,51,51,51,51,51,51
 num_states_with_projections-DDS-NBDS,,,,,51,51,51,51
 num_states_with_projections-Geneva-DetGrowth,,,,,,,,51
 num_states_with_projections-IBF-TimeSeries,,,,,,,0,0
-num_states_with_projections-IHME-CurveFit,51,51,51,,,,,
+num_states_with_projections-IHME-CurveFit,49,51,51,,,,,
 num_states_with_projections-IQVIA_ACOE-STAN,,,,,,,49,49
 num_states_with_projections-IowaStateLW-STEM,49,49,,49,49,49,49,49
 num_states_with_projections-JCB-PRM,,,,,,,51,51
@@ -62,7 +62,7 @@ perc_beat_baseline-CovidAnalytics-DELPHI,,,0.2156862745,0.2352941176,0.196078431
 perc_beat_baseline-DDS-NBDS,,,,,0.3725490196,0.3725490196,0.568627451,0.2941176471
 perc_beat_baseline-Geneva-DetGrowth,,,,,,,,0.2352941176
 perc_beat_baseline-IBF-TimeSeries,,,,,,,,
-perc_beat_baseline-IHME-CurveFit,0.2352941176,0.1960784314,0.07843137255,,,,,
+perc_beat_baseline-IHME-CurveFit,0.2448979592,0.1960784314,0.07843137255,,,,,
 perc_beat_baseline-IQVIA_ACOE-STAN,,,,,,,0.3673469388,0.7142857143
 perc_beat_baseline-IowaStateLW-STEM,0.4489795918,0.4897959184,,0.4081632653,0.387755102,0.387755102,0.4489795918,0.387755102
 perc_beat_baseline-JCB-PRM,,,,,,,0.5098039216,0.5098039216
@@ -89,7 +89,7 @@ mean_abs_error-CovidAnalytics-DELPHI,,,22530.96078,14652.54902,9254.803922,6630.
 mean_abs_error-DDS-NBDS,,,,,4678.109804,3801.796078,2195.14902,1380.27451
 mean_abs_error-Geneva-DetGrowth,,,,,,,,1400.180392
 mean_abs_error-IBF-TimeSeries,,,,,,,,
-mean_abs_error-IHME-CurveFit,62561.68431,62808.09216,68119.93529,,,,,
+mean_abs_error-IHME-CurveFit,,62808.09216,68119.93529,,,,,
 mean_abs_error-IQVIA_ACOE-STAN,,,,,,,,
 mean_abs_error-IowaStateLW-STEM,,,,,,,,
 mean_abs_error-JCB-PRM,,,,,,,1760.437255,932.4686275

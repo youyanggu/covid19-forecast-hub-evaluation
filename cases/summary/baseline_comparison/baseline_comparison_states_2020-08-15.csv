@@ -18,7 +18,7 @@ num_states_with_projections-LANL-GrowthRate,51,51,51,51,51,51
 num_states_with_projections-LNQ-ens1,,,51,51,51,51
 num_states_with_projections-OliverWyman-Navigator,,,,51,51,51
 num_states_with_projections-QJHong-Encounter,,,0,0,0,0
-num_states_with_projections-RobertWalraven-ESG,,,49,49,49,50
+num_states_with_projections-RobertWalraven-ESG,,,48,49,49,50
 num_states_with_projections-UCLA-SuEIR,51,51,51,51,51,51
 num_states_with_projections-UMich-RidgeTfReg,,,31,26,28,45
 num_states_with_projections-USACE-ERDC_SEIR,51,51,51,51,51,51
@@ -40,7 +40,7 @@ num_states_beat_baseline-LANL-GrowthRate,4,7,8,23,25,27
 num_states_beat_baseline-LNQ-ens1,,,15,26,25,30
 num_states_beat_baseline-OliverWyman-Navigator,,,,10,10,29
 num_states_beat_baseline-QJHong-Encounter,,,,,,
-num_states_beat_baseline-RobertWalraven-ESG,,,13,17,24,16
+num_states_beat_baseline-RobertWalraven-ESG,,,12,17,24,16
 num_states_beat_baseline-UCLA-SuEIR,22,16,16,15,21,19
 num_states_beat_baseline-UMich-RidgeTfReg,,,5,5,4,17
 num_states_beat_baseline-USACE-ERDC_SEIR,8,6,15,19,23,30
@@ -62,7 +62,7 @@ perc_beat_baseline-LANL-GrowthRate,0.07843137255,0.137254902,0.1568627451,0.4509
 perc_beat_baseline-LNQ-ens1,,,0.2941176471,0.5098039216,0.4901960784,0.5882352941
 perc_beat_baseline-OliverWyman-Navigator,,,,0.1960784314,0.1960784314,0.568627451
 perc_beat_baseline-QJHong-Encounter,,,,,,
-perc_beat_baseline-RobertWalraven-ESG,,,0.2653061224,0.3469387755,0.4897959184,0.32
+perc_beat_baseline-RobertWalraven-ESG,,,0.25,0.3469387755,0.4897959184,0.32
 perc_beat_baseline-UCLA-SuEIR,0.431372549,0.3137254902,0.3137254902,0.2941176471,0.4117647059,0.3725490196
 perc_beat_baseline-UMich-RidgeTfReg,,,0.1612903226,0.1923076923,0.1428571429,0.3777777778
 perc_beat_baseline-USACE-ERDC_SEIR,0.1568627451,0.1176470588,0.2941176471,0.3725490196,0.4509803922,0.5882352941

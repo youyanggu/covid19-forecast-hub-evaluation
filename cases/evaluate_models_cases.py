@@ -231,12 +231,21 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
         if df_model['target'].str.contains('wk ahead inc case').sum() == 0:
             print('No inc case forecasts')
             continue
-        # Note: We assume that models are not missing "in-between" incident forecasts
-        # e.g. it has 4 wk ahead inc case but not 3 wk ahead inc case
-        if len(df_model_raw[(df_model_raw['target'].str.contains('wk ahead inc case')) & \
-                (df_model_raw['target_end_date'] == eval_date)]) == 0:
+        if len(df_model[(df_model['target'].str.contains('wk ahead inc case')) & \
+                (df_model['target_end_date'] == eval_date)]) == 0:
             print('No inc case forecasts for this target end date')
             continue
+
+        # We skip locations that are missing "in-between" incident forecasts
+        # e.g. location has 1,2,4 wk ahead inc case but not 3 wk ahead inc case
+        location_quantile_sizes = df_model[df_model['target'].str.contains(
+            'wk ahead inc case')].groupby('location').size().sort_values()
+        if len(location_quantile_sizes.unique()) > 1:
+            df_model = df_model[df_model['target'].str.contains('wk ahead inc case')].groupby(
+                'location').filter(lambda x: len(x) == location_quantile_sizes.max())
+            location_quantile_sizes = df_model[df_model['target'].str.contains(
+                'wk ahead inc case')].groupby('location').size().sort_values()
+        assert len(location_quantile_sizes.unique()) == 1, location_quantile_sizes
 
         target_str = 'wk ahead inc case'
 
@@ -286,7 +295,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
 
     df_errors_raw = df_errors_raw.rename(columns=fips_to_us_state).sort_index()
     df_errors = df_errors_raw.copy()
-    print('Number of locations with projections:')
+    print(f'Number of {eval_type} with projections:')
     print(df_errors.notna().sum(axis=1))
 
     # compute the error: predicted - actual
@@ -333,7 +342,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
         print('Saved to:', us_errs_fname)
 
     print('=================================================')
-    print('State-by-state or County-by-county Evaluation:')
+    print('County-by-county Evaluation:') if evaluate_counties else print('State-by-state Evaluation:')
     print('=================================================')
     if evaluate_counties:
         min_locations_with_projections = 2000
@@ -342,7 +351,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
     df_errors_states = df_errors.drop(columns=['US'])
     # filter out models without most state/counties projections
     df_errors_states = df_errors_states.loc[df_errors_states.notna().sum(axis=1) > min_locations_with_projections]
-    print('Number of states with valid projections:')
+    print(f'Number of {eval_type} with valid projections:')
     model_to_num_valid_projections = df_errors_states.notna().sum(axis=1)
     print(model_to_num_valid_projections)
 
@@ -385,12 +394,14 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
     df_errors_states = df_errors_states.fillna(df_errors_states.abs().mean())
     assert df_errors_states.isna().values.sum() == 0, 'NaN still in errors'
     print('------------------------')
-    print(f'State-by-state mean absolute errors:')
-    if not evaluate_counties:
+    if evaluate_counties:
+        print(f'County-by-county mean absolute errors:')
+    else:
+        print(f'State-by-state mean absolute errors:')
         print(df_errors_states)
 
     df_sq_errs_states = df_errors_states**2
-    print('----------------------\nStates - mean squared errors:')
+    print(f'----------------------\n{eval_type.capitalize()} - mean squared errors:')
     df_sq_errs_states_summary = df_sq_errs_states.T.describe().T.sort_values('mean')
     df_sq_errs_states_summary['count'] = \
         df_sq_errs_states_summary.index.map(model_to_num_valid_projections.get)
@@ -405,7 +416,7 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
         print('Saved to:', sq_errs_fname)
 
     df_abs_errs_states = df_errors_states.abs()
-    print('----------------------\nStates - mean absolute errors:')
+    print(f'----------------------\n{eval_type.capitalize()} - mean absolute errors:')
     df_abs_errs_states_summary = df_abs_errs_states.T.describe().T.sort_values('mean')
     df_abs_errs_states_summary['count'] = \
         df_abs_errs_states_summary.index.map(model_to_num_valid_projections.get)

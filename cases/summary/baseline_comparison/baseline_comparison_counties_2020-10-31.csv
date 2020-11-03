@@ -26,7 +26,7 @@ num_counties_with_projections-LNQ-ens1,,,,,3141,3141,3141,3140
 num_counties_with_projections-MITCovAlliance-SIR,2292,2339,2398,2461,,2582,2644,2700
 num_counties_with_projections-MSRA-DeepST,,,,,,,0,
 num_counties_with_projections-OliverWyman-Navigator,,,,,,2964,2994,3007
-num_counties_with_projections-PandemicCentral-USCounty,,,,,,,2997,2214
+num_counties_with_projections-PandemicCentral-USCounty,,,,,,,2965,2214
 num_counties_with_projections-QJHong-Encounter,,,,0,0,0,0,0
 num_counties_with_projections-RobertWalraven-ESG,3141,3141,3141,3141,3141,0,0,0
 num_counties_with_projections-TTU-squider,,,,,0,0,0,0
@@ -35,7 +35,7 @@ num_counties_with_projections-UMass-MechBayes,,,,,495,495,496,496
 num_counties_with_projections-UMich-RidgeTfReg,,,,,0,0,0,0
 num_counties_with_projections-USACE-ERDC_SEIR,0,0,0,0,,0,,0
 num_counties_with_projections-USC-SI_kJalpha,2789,2790,2791,2794,3107,3109,3112,3112
-num_counties_with_projections-UVA-Ensemble,,,,,2721,2779,2774,2091
+num_counties_with_projections-UVA-Ensemble,,,,,2721,2771,2773,2091
 num_counties_with_projections-Yu_Group-CLEP,,,,,,416,,
 num_counties_beat_baseline-BPagano-RtDriven,,,,,,,,
 num_counties_beat_baseline-CEID-Walk,,,,,1503,1556,1536,1438
@@ -62,7 +62,7 @@ num_counties_beat_baseline-LNQ-ens1,,,,,1269,1718,1504,1639
 num_counties_beat_baseline-MITCovAlliance-SIR,766,807,802,757,,605,531,524
 num_counties_beat_baseline-MSRA-DeepST,,,,,,,,
 num_counties_beat_baseline-OliverWyman-Navigator,,,,,,1396,1405,1518
-num_counties_beat_baseline-PandemicCentral-USCounty,,,,,,,813,481
+num_counties_beat_baseline-PandemicCentral-USCounty,,,,,,,804,481
 num_counties_beat_baseline-QJHong-Encounter,,,,,,,,
 num_counties_beat_baseline-RobertWalraven-ESG,616,559,668,582,633,,,
 num_counties_beat_baseline-TTU-squider,,,,,,,,
@@ -71,7 +71,7 @@ num_counties_beat_baseline-UMass-MechBayes,,,,,164,206,200,231
 num_counties_beat_baseline-UMich-RidgeTfReg,,,,,,,,
 num_counties_beat_baseline-USACE-ERDC_SEIR,,,,,,,,
 num_counties_beat_baseline-USC-SI_kJalpha,832,637,840,895,1081,1127,1222,1075
-num_counties_beat_baseline-UVA-Ensemble,,,,,893,735,610,718
+num_counties_beat_baseline-UVA-Ensemble,,,,,893,733,610,718
 num_counties_beat_baseline-Yu_Group-CLEP,,,,,,113,,
 perc_beat_baseline-BPagano-RtDriven,,,,,,,,
 perc_beat_baseline-CEID-Walk,,,,,0.4785100287,0.4953836358,0.4890162369,0.4578159822
@@ -98,7 +98,7 @@ perc_beat_baseline-LNQ-ens1,,,,,0.4040114613,0.546959567,0.4788283986,0.52197452
 perc_beat_baseline-MITCovAlliance-SIR,0.3342059337,0.345019239,0.3344453711,0.3075985372,,0.2343144849,0.2008320726,0.1940740741
 perc_beat_baseline-MSRA-DeepST,,,,,,,,
 perc_beat_baseline-OliverWyman-Navigator,,,,,,0.4709851552,0.4692718771,0.5048220818
-perc_beat_baseline-PandemicCentral-USCounty,,,,,,,0.2712712713,0.2172538392
+perc_beat_baseline-PandemicCentral-USCounty,,,,,,,0.271163575,0.2172538392
 perc_beat_baseline-QJHong-Encounter,,,,,,,,
 perc_beat_baseline-RobertWalraven-ESG,0.1961158867,0.1779687997,0.2126711238,0.1852913085,0.2015281757,,,
 perc_beat_baseline-TTU-squider,,,,,,,,
@@ -107,7 +107,7 @@ perc_beat_baseline-UMass-MechBayes,,,,,0.3313131313,0.4161616162,0.4032258065,0.
 perc_beat_baseline-UMich-RidgeTfReg,,,,,,,,
 perc_beat_baseline-USACE-ERDC_SEIR,,,,,,,,
 perc_beat_baseline-USC-SI_kJalpha,0.2983148082,0.2283154122,0.3009673952,0.320329277,0.3479240425,0.3624959794,0.3926735219,0.345437018
-perc_beat_baseline-UVA-Ensemble,,,,,0.3281881661,0.2644836272,0.2198990627,0.3433763749
+perc_beat_baseline-UVA-Ensemble,,,,,0.3281881661,0.2645254421,0.2199783628,0.3433763749
 perc_beat_baseline-Yu_Group-CLEP,,,,,,0.2716346154,,
 mean_abs_error-BPagano-RtDriven,,,,,,,,
 mean_abs_error-CEID-Walk,,,,,222.6908946,153.9022923,92.82330468,44.42215855
