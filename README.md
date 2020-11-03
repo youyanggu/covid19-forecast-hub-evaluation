@@ -32,10 +32,10 @@ In this repository, we provide the evaluation results as well as the entire sour
   * [US Evaluation](#us-evaluation)
   * [State-by-state Evaluation](#state-by-state-evaluation)
   * [Baseline Model](#baseline-model)
+  * [Case Evaluation](#case-evaluation)
+  * [Global Evaluation](#global-evaluation)
   * [Summary](#summary)
   * [Power Rankings](#power-rankings)
-  * [Global Evaluation](#global-evaluation)
-  * [Case Evaluation](#case-evaluation)
 
 ## Dependencies
 
@@ -237,6 +237,16 @@ In any evaluation, it is important to include a baseline as a control, similar t
 
 Note that to avoid look-ahead bias, we use the previous week's daily deaths *at the time of the projection is made*, rather than at the time of the evaluation. Because truth data can be retroactively updated, we want to avoid using future data to generate the baseline forecasts.
 
+### Case Evaluation
+
+Starting in July, the COVID-19 Forecast Hub began accepting incident case forecasts. You can find our evaluation of these forecasts for the subset of teams that contributed cases forecasts in the [`cases`](/cases) directory. Cases forecasts are available for US nationwide, state-by-state, and county-by-county.
+
+The methodology for the evaluation of cases is slightly simplier, as all models provide weekly incident case forecasts. We simply compute the incident weekly cases and compare them to the [latest truth data](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Incident%20Cases.csv).
+
+### Global Evaluation
+
+In addition to US forecast evaluations, we also include evaluations of country-by-country forecasts by [covid19-projections.com](https://covid19-projections.com) and [IHME](https://covid19.healthdata.org/). Because global forecasts are not standardized, each team's forecasts must be downloaded and processed separately. We compare both models with the baseline model (explained above). You can view the results in the [`global`](/global) directory.
+
 ### Summary
 
 We summarize the weekly evaluations in the [summary](/summary) directory. There are two types of summaries:
@@ -262,14 +272,6 @@ A byproduct of this method is that we are rewarding models for submitting foreca
 We have published our [Model Power Rankings](/summary/power_rankings.csv) that combines model performances for 1-6 week ahead US and state-by-state forecasts, based on its rankings on each of the 12 *N week ahead* summary files.
 
 The source code to compute the power rankings is available [here](/power_rankings.py).
-
-### Global Evaluation
-
-In addition to US forecast evaluations, we also include evaluations of country-by-country forecasts by [covid19-projections.com](https://covid19-projections.com) and [IHME](https://covid19.healthdata.org/). Because global forecasts are not standardized, each team's forecasts must be downloaded and processed separately. We compare the models with the baseline model (explained above). You can view the results in the [`global`](/global) directory.
-
-### Case Evaluation
-
-Starting in July, the COVID-19 Forecast Hub began accepting incident case forecasts. You can find our evaluation of these forecasts for the subset of teams that contributed cases forecasts in the [`cases`](/cases) directory. Cases forecasts are available for US nationwide, state-by-state, and county-by-county.
 
 ## Questions? Bugs? Feature Request?
 
