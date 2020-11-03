@@ -1,6 +1,6 @@
 # Evaluation of COVID-19 Models
 
-**November 2 Update:** We have published our [Model Power Rankings](/summary/power_rankings.csv) that combines model performances for 1-6 week ahead forecasts for both the US and state-by-state. The source code to compute the power rankings is available [here](/power_rankings.py).
+**November 2 Update:** We have published our [Model Power Rankings](/summary/power_rankings.csv) that combines model performances for 1-6 week ahead US and state-by-state forecasts. The source code to compute the power rankings is available [here](/power_rankings.py).
 
 **October 26 Update:** Moving forward, we will aim to update evaluations on a monthly basis.
 
@@ -32,6 +32,8 @@ In this repository, we provide the evaluation results as well as the entire sour
   * [US Evaluation](#us-evaluation)
   * [State-by-state Evaluation](#state-by-state-evaluation)
   * [Baseline Model](#baseline-model)
+  * [Summary](#summary)
+  * [Power Rankings)(#power-rankings)
   * [Global Evaluation](#global-evaluation)
   * [Case Evaluation](#case-evaluation)
 
@@ -234,6 +236,32 @@ We use mean absolute error rather than mean absolute percentage error because pe
 In any evaluation, it is important to include a baseline as a control, similar to how scientfic trials include a placebo. We define a simple baseline model that takes the mean of the previous week's daily deaths to make all future forecasts. For example, for Monday, May 25 projections, we use the average daily deaths from May 18 to May 24 to make forecasts. For US country-wide projections, this would amount to a constant 1,164 deaths per day for each forecast day.
 
 Note that to avoid look-ahead bias, we use the previous week's daily deaths *at the time of the projection is made*, rather than at the time of the evaluation. Because truth data can be retroactively updated, we want to avoid using future data to generate the baseline forecasts.
+
+### Summary
+
+We summarize the weekly evaluations in the [summary](/summary) directory. There are two types of summaries:
+
+1. *N week ahead* - these evaluate model projections for *N* weeks in the future, where *N* is between 1 and 6. We believe forecasts more than 6 weeks into the future  are more reliant on assumptions than actual signals, and hence are not included in our evaluations.
+
+2. *Evaluation date* - these evaluate model projections for a particular date. So if the evaluation date is October 31, this summary ranks models based on their past weekly projections for October 31. Hence, this metric looks at the accuracy of a model's forecasts for a particular date.
+
+For each type of summary, we create further subdivisions based on nationwide, state-by-state, and county-by-county (cases only) evaluations.
+
+#### How models are ranked
+
+For each summary, each column represents the weekly errors for each model. We then rank the models based on their mean weekly percentile.
+
+To compute percentiles for a particular week, we assign the best model that week the 0th percentile and the worst model the 100th percentile. For example, if a model has 4 weekly forecasts in a summary and ranks 11/21, 5/21, 15/25, and 7/27, then its weekly percentiles are 0.5, 0.2, 0.58, 0.23. Its mean weekly percentile is 0.378, meaning that on average this model is in the 38th percentile of all models (top half). 
+
+Models with no forecasts for a particular week is assigned the 100th percentile (lowest score). The lone exception is if a model stops making forecasts, in which case we simply ignore all subsequent missing forecasts from the calculations.
+
+A byproduct of this method is that we are rewarding models for submitting forecasts and submitting their forecasts early. A model is much more useful if it began making forecasts in April than in July. When there are very few models in the early stages of the pandemic, each model's forecasts carry much more weight and usefulness. We believe this most accurately balances the time/complexity trade-off: you can make models more complex/accurate at the expense of development time.
+
+### Power Rankings
+
+We have published our [Model Power Rankings](/summary/power_rankings.csv) that combines model performances for 1-6 week ahead US and state-by-state forecasts, based on its rankings on each of the 12 *N week ahead* summary files.
+
+The source code to compute the power rankings is available [here](/power_rankings.py).
 
 ### Global Evaluation
 
