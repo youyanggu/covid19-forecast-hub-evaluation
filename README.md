@@ -33,7 +33,7 @@ In this repository, we provide the evaluation results as well as the entire sour
   * [State-by-state Evaluation](#state-by-state-evaluation)
   * [Baseline Model](#baseline-model)
   * [Summary](#summary)
-  * [Power Rankings)(#power-rankings)
+  * [Power Rankings](#power-rankings)
   * [Global Evaluation](#global-evaluation)
   * [Case Evaluation](#case-evaluation)
 
@@ -245,13 +245,13 @@ We summarize the weekly evaluations in the [summary](/summary) directory. There 
 
 2. *Evaluation date* - these evaluate model projections for a particular date. So if the evaluation date is October 31, this summary ranks models based on their past weekly projections for October 31. Hence, this metric looks at the accuracy of a model's forecasts for a particular date.
 
-For each type of summary, we create further subdivisions based on nationwide, state-by-state, and county-by-county (cases only) evaluations.
+For each type of summary, we create further subdivisions based on US nationwide, state-by-state, and county-by-county (cases only) evaluations.
 
 #### How models are ranked
 
-For each summary, each column represents the weekly errors for each model. We then rank the models based on their mean weekly percentile.
+For each summary, each column represents the weekly errors for each model. We then rank the models based on their mean weekly percentile across all the weeks in the summary.
 
-To compute percentiles for a particular week, we assign the best model that week the 0th percentile and the worst model the 100th percentile. For example, if a model has 4 weekly forecasts in a summary and ranks 11/21, 5/21, 15/25, and 7/27, then its weekly percentiles are 0.5, 0.2, 0.58, 0.23. Its mean weekly percentile is 0.378, meaning that on average this model is in the 38th percentile of all models (top half). 
+To compute percentiles for a particular column/week, we assign the best model that week the 0th percentile and the worst model the 100th percentile. For example, if a model has four forecasts in a summary and ranks 11/21, 5/21, 15/25, and 7/27, then its weekly percentiles are 0.5, 0.2, 0.58, 0.23. Its mean weekly percentile is 0.378, meaning that on average this model is in the 38th percentile of models (top half). 
 
 Models with no forecasts for a particular week is assigned the 100th percentile (lowest score). The lone exception is if a model stops making forecasts, in which case we simply ignore all subsequent missing forecasts from the calculations.
 
