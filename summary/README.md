@@ -4,8 +4,10 @@ Here is where we summarize the outputs from the [evaluations](/evaluations) dire
 
 We present summaries for two types of evaluations:
 
-- N weeks ahead: we evaluate historical forecasts based on their forecasts N weeks ahead
-- Evaluation date: we evaluate all historical forecasts based on their forecasts for the specified evaluation date
+- *N weeks ahead* - we evaluate historical forecasts based on their forecasts N weeks ahead
+- *Evaluation date* - we evaluate all historical forecasts based on their forecasts for the specified evaluation date
+
+See a more detailed description of the summaries [here](https://github.com/youyanggu/covid19-forecast-hub-evaluation#summary).
 
 The individual column names in each file are in the format:
 
