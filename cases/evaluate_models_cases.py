@@ -231,6 +231,13 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
         if df_model['target'].str.contains('wk ahead inc case').sum() == 0:
             print('No inc case forecasts')
             continue
+        # Note: We assume that models are not missing "in-between" incident forecasts
+        # e.g. it has 4 wk ahead inc case but not 3 wk ahead inc case
+        if len(df_model_raw[(df_model_raw['target'].str.contains('wk ahead inc case')) & \
+                (df_model_raw['target_end_date'] == eval_date)]) == 0:
+            print('No inc case forecasts for this target end date')
+            continue
+
         target_str = 'wk ahead inc case'
 
         has_point = (df_model['type'] == 'point').sum() > 0

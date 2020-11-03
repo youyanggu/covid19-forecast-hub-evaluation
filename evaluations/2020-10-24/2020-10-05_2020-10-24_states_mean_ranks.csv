@@ -2,13 +2,13 @@
 YYG-ParamSearch,12.3
 UMass-MechBayes,13.2
 OliverWyman-Navigator,13.6
-USC-SI_kJalpha,14.9
+USC-SI_kJalpha,14.8
 COVIDhub-ensemble,15.1
 Karlen-pypm,15.3
 CMU-TimeSeries,16.2
 COVIDhub-baseline,16.2
+SteveMcConnell-CovidComplete,16.3
 CEID-Walk,16.3
-SteveMcConnell-CovidComplete,16.4
 LNQ-ens1,16.5
 MIT_CritData-GBCF,17.0
 JCB-PRM,17.5
@@ -36,4 +36,4 @@ PSI-DRAFT,24.3
 RobertWalraven-ESG,27.0
 epiforecasts-ensemble1,28.5
 WalmartLabsML-LogForecasting,28.5
-TTU-squider,30.4
+TTU-squider,30.5

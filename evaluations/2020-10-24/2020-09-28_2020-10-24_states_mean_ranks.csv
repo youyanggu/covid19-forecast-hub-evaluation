@@ -7,8 +7,8 @@ YYG-ParamSearch,15.2
 MIT_CritData-GBCF,15.8
 USC-SI_kJalpha,16.2
 Google_Harvard-CPF,16.3
-GT-DeepCOVID,16.4
 OliverWyman-Navigator,16.4
+GT-DeepCOVID,16.4
 LNQ-ens1,16.5
 SteveMcConnell-CovidComplete,16.6
 CMU-TimeSeries,17.8
@@ -35,6 +35,6 @@ CovidAnalytics-DELPHI,23.9
 USACE-ERDC_SEIR,25.7
 epiforecasts-ensemble1,25.9
 UT-Mobility,26.4
-WalmartLabsML-LogForecasting,28.0
+WalmartLabsML-LogForecasting,28.1
 TTU-squider,29.3
 RobertWalraven-ESG,30.9

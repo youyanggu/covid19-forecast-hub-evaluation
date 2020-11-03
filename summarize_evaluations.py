@@ -52,6 +52,27 @@ def filter_fnames_by_weeks_ahead(fnames, weeks_ahead):
     return include_fnames
 
 
+def calc_mean_weekly_percentiles(df_errs, max_ranks):
+    """
+    Rank models by mean weekly percentiles based on weekly errors
+
+    0th percentile is best, 100th percentile is worst
+    Old one-line formula: ((df_errs.abs().rank().fillna(
+        max_ranks+1) - 1) / max_ranks).mean(axis=1).sort_values()
+    """
+    model_to_mean_percentile = {}
+    for model_name, df_rank in df_errs.abs().rank().iterrows():
+        weekly_percentiles = (df_rank.fillna(max_ranks+1) - 1) / max_ranks
+
+        # If a model stops making projections, we ignore subsequent rankings
+        # to avoid penalizing the model for not having a projection
+        weekly_percentiles_trunc = weekly_percentiles[:df_rank.last_valid_index()]
+        model_to_mean_percentile[model_name] = weekly_percentiles_trunc.mean()
+
+    df_perc = pd.Series(model_to_mean_percentile).sort_values()
+    return df_perc
+
+
 def main(eval_date, weeks_ahead, evaluations_dir, out_dir, summarize_counties=False):
     """We combine various evaluations based on either evaluation date or weeks ahead.
 
@@ -97,17 +118,17 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir, summarize_counties=Fa
         df_all_us = df_all_us.dropna(how='all')
         df_all_us = df_all_us.reindex(sorted(df_all_us.columns), axis=1)
 
-        # we sort the models based on their mean rank
-        # models with a missing forecast for that week is assigned the max rank
-        max_rank_us = df_all_us.abs().rank().max()+1
+        # we sort models based on their mean weekly percentile rank (0th percentile = best)
+        # models with a missing forecast for that week is assigned the 100th percentile
+        max_rank_us = df_all_us.abs().rank().max()
         cols_for_ranking_us = [c for c in df_all_us.columns if 'perc_error' in c]
         if weeks_ahead:
             cols_for_ranking_us_ = cols_for_ranking_us[:]
         else:
             # only consider projections from past 6 weeks for ranking by eval_date
             cols_for_ranking_us_ = cols_for_ranking_us[-6:]
-        mean_rankings_us = df_all_us.abs().rank().fillna(
-            max_rank_us)[cols_for_ranking_us_].mean(axis=1).sort_values()
+        mean_rankings_us = calc_mean_weekly_percentiles(
+            df_all_us[cols_for_ranking_us_], max_rank_us)
         df_all_us = df_all_us.reindex(mean_rankings_us.index)
 
         print('------------------------')
@@ -115,7 +136,7 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir, summarize_counties=Fa
         print(df_all_us[cols_for_ranking_us])
         print('US rankings:')
         print(df_all_us[cols_for_ranking_us].abs().rank())
-        print('Mean rankings:')
+        print('Mean weekly percentiles:')
         print(mean_rankings_us)
 
         if out_dir:
@@ -167,17 +188,17 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir, summarize_counties=Fa
     df_all_states = df_all_states.dropna(how='all')
     df_all_states = df_all_states.reindex(sorted(df_all_states.columns), axis=1)
 
-    # we sort the models based on their mean rank
-    # models with a missing forecast for that week is assigned the max rank
-    max_ranks_states = df_all_states.abs().rank().max()+1
+    # we sort models based on their mean weekly percentile rank (0th percentile = best)
+    # models with a missing forecast for that week is assigned the 100th percentile
+    max_ranks_states = df_all_states.abs().rank().max()
     cols_for_ranking_states = [c for c in df_all_states.columns if 'mean_abs_error' in c]
     if weeks_ahead:
         cols_for_ranking_states_ = cols_for_ranking_states[:]
     else:
         # only consider projections from past 6 weeks for ranking by eval_date
         cols_for_ranking_states_ = cols_for_ranking_states[-6:]
-    mean_rankings_states = df_all_states.abs().rank().fillna(
-        max_ranks_states)[cols_for_ranking_states_].mean(axis=1).sort_values()
+    mean_rankings_states = calc_mean_weekly_percentiles(
+        df_all_states[cols_for_ranking_states_], max_ranks_states)
     df_all_states = df_all_states.reindex(mean_rankings_states.index)
 
     print('------------------------')
@@ -185,7 +206,7 @@ def main(eval_date, weeks_ahead, evaluations_dir, out_dir, summarize_counties=Fa
     print(df_all_states[cols_for_ranking_states])
     print(f'{state_county_str} rankings:')
     print(df_all_states[cols_for_ranking_states].abs().rank())
-    print('Mean rankings:')
+    print('Mean weekly percentiles:')
     print(mean_rankings_states)
 
     if out_dir:

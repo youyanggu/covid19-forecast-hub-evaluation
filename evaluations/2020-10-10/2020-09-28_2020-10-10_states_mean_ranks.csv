@@ -9,7 +9,7 @@ CMU-TimeSeries,16.2
 Google_Harvard-CPF,16.9
 USC-SI_kJalpha,17.2
 GT-DeepCOVID,17.3
-OliverWyman-Navigator,17.4
+OliverWyman-Navigator,17.3
 COVIDhub-baseline,17.9
 UCLA-SuEIR,18.0
 LANL-GrowthRate,18.2
@@ -19,8 +19,8 @@ IowaStateLW-STEM,18.8
 JHU_IDD-CovidSP,19.0
 MIT_CritData-GBCF,19.1
 SteveMcConnell-CovidComplete,19.4
-UA-EpiCovDA,19.7
 MITCovAlliance-SIR,19.7
+UA-EpiCovDA,19.7
 Columbia_UNC-SurvCon,20.7
 PSI-DRAFT,20.9
 NotreDame-mobility,21.2

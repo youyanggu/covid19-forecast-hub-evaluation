@@ -1,7 +1,7 @@
 ,mean_rank
-LANL-GrowthRate,7.4
-LNQ-ens1,7.4
-COVIDhub-ensemble,8.0
+LANL-GrowthRate,7.3
+LNQ-ens1,7.5
+COVIDhub-ensemble,7.9
 Covid19Sim-Simulator,8.8
 DDS-NBDS,8.9
 Geneva-DetGrowth,9.8
@@ -12,11 +12,11 @@ CEID-Walk,10.9
 USC-SI_kJalpha,11.3
 JCB-PRM,11.4
 RobertWalraven-ESG,11.7
-UMich-RidgeTfReg,12.0
-Karlen-pypm,12.0
+Karlen-pypm,12.1
+UMich-RidgeTfReg,12.1
 CU-select,12.1
 JHU_IDD-CovidSP,12.2
 IowaStateLW-STEM,12.9
-IQVIA_ACOE-STAN,13.6
-CovidAnalytics-DELPHI,14.6
+IQVIA_ACOE-STAN,13.5
+CovidAnalytics-DELPHI,14.7
 JHUAPL-Bucky,15.3

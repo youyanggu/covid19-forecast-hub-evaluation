@@ -11,13 +11,13 @@ LANL-GrowthRate,17.1
 UCLA-SuEIR,17.2
 CEID-Walk,17.6
 Geneva-DetGrowth,17.8
-OliverWyman-Navigator,17.9
-Google_Harvard-CPF,18.2
+OliverWyman-Navigator,18.0
 USC-SI_kJalpha,18.3
+Google_Harvard-CPF,18.3
 DDS-NBDS,18.7
 Columbia_UNC-SurvCon,19.0
-GT-DeepCOVID,19.0
 PSI-DRAFT,19.0
+GT-DeepCOVID,19.1
 SteveMcConnell-CovidComplete,19.1
 JHU_IDD-CovidSP,19.2
 UA-EpiCovDA,19.7
@@ -27,7 +27,7 @@ MITCovAlliance-SIR,21.4
 CovidAnalytics-DELPHI,21.4
 IowaStateLW-STEM,21.5
 NotreDame-mobility,21.8
-UCSD_NEU-DeepGLEAM,22.1
+UCSD_NEU-DeepGLEAM,22.0
 MIT_CritData-GBCF,23.1
 UMich-RidgeTfReg,23.3
 UT-Mobility,25.0

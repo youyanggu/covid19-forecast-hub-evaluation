@@ -112,4 +112,13 @@ python evaluate_models_cases.py 2020-09-21 2020-10-24 --out_dir evaluations
 python evaluate_models_cases.py 2020-09-28 2020-10-24 --out_dir evaluations
 python evaluate_models_cases.py 2020-10-05 2020-10-24 --out_dir evaluations
 python evaluate_models_cases.py 2020-10-12 2020-10-24 --out_dir evaluations
-python evaluate_models_cases.py 2020-10-19 2020-10-24 --out_dir evaluations --copy_truth
+python evaluate_models_cases.py 2020-10-19 2020-10-24 --out_dir evaluations
+
+python evaluate_models_cases.py 2020-09-07 2020-10-31 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-14 2020-10-31 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-21 2020-10-31 --out_dir evaluations
+python evaluate_models_cases.py 2020-09-28 2020-10-31 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-05 2020-10-31 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-12 2020-10-31 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-19 2020-10-31 --out_dir evaluations
+python evaluate_models_cases.py 2020-10-26 2020-10-31 --out_dir evaluations --copy_truth

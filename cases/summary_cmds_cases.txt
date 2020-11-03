@@ -21,3 +21,4 @@ python ../summarize_evaluations.py --eval_date 2020-10-03 --evaluations_dir eval
 python ../summarize_evaluations.py --eval_date 2020-10-10 --evaluations_dir evaluations --out_dir summary --summarize_counties
 python ../summarize_evaluations.py --eval_date 2020-10-17 --evaluations_dir evaluations --out_dir summary --summarize_counties
 python ../summarize_evaluations.py --eval_date 2020-10-24 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2020-10-31 --evaluations_dir evaluations --out_dir summary --summarize_counties

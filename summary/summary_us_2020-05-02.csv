@@ -2,12 +2,12 @@
 Baseline,0.021,-0.022
 YYG-ParamSearch,-0.236,-0.086
 COVIDhub-baseline,0.262,0.054
-Imperial-combined,,-0.020
 CU-select,0.244,-0.286
-LANL-GrowthRate,,0.190
-Geneva-DetGrowth,,-0.204
+Imperial-combined,,-0.020
 MOBS-GLEAM_COVID,-0.384,-0.333
 IHME-CurveFit,-0.300,-0.382
+LANL-GrowthRate,,0.190
+Geneva-DetGrowth,,-0.204
 COVIDhub-ensemble,,-0.356
 UT-Mobility,-0.534,-0.686
 JHU_IDD-CovidSP,,-0.922

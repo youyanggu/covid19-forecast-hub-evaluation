@@ -2,7 +2,7 @@
 LNQ-ens1,5.7
 COVIDhub-baseline,6.0
 CEID-Walk,6.1
-JHUAPL-Bucky,6.8
+JHUAPL-Bucky,6.7
 COVIDhub-ensemble,6.8
 OliverWyman-Navigator,6.8
 IowaStateLW-STEM,7.4
@@ -10,7 +10,7 @@ USC-SI_kJalpha,7.8
 CU-select,8.7
 Google_Harvard-CPF,9.1
 JHU_IDD-CovidSP,9.4
-PandemicCentral-USCounty,9.6
+PandemicCentral-USCounty,9.5
 UVA-Ensemble,9.6
-LANL-GrowthRate,10.1
+LANL-GrowthRate,10.0
 MITCovAlliance-SIR,10.3

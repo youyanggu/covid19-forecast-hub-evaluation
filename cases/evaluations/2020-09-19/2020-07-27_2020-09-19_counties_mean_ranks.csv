@@ -1,11 +1,5 @@
 ,mean_rank
-JHU_IDD-CovidSP,4.4
-COVIDhub-baseline,4.6
-LNQ-ens1,4.9
-IowaStateLW-STEM,5.1
-UCLA-SuEIR,5.4
-OliverWyman-Navigator,5.5
-USC-SI_kJalpha,5.8
-CU-select,6.2
-COVIDhub-ensemble,6.4
-LANL-GrowthRate,6.6
+COVIDhub-baseline,2.3
+IowaStateLW-STEM,2.5
+UCLA-SuEIR,2.6
+USC-SI_kJalpha,2.7

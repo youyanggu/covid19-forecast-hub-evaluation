@@ -2,7 +2,7 @@
 JCB-PRM,12.0
 Karlen-pypm,12.8
 COVIDhub-ensemble,13.0
-UMass-MechBayes,13.4
+UMass-MechBayes,13.3
 USC-SI_kJalpha,14.6
 SteveMcConnell-CovidComplete,14.9
 YYG-ParamSearch,15.0
@@ -24,8 +24,8 @@ MOBS-GLEAM_COVID,20.2
 UA-EpiCovDA,20.4
 UT-Mobility,20.8
 CovidAnalytics-DELPHI,21.2
-JHU_IDD-CovidSP,21.6
 IQVIA_ACOE-STAN,21.6
+JHU_IDD-CovidSP,21.6
 UCSD_NEU-DeepGLEAM,22.1
 IowaStateLW-STEM,22.9
 MITCovAlliance-SIR,23.6

@@ -1,0 +1,16 @@
+,mean_rank
+LNQ-ens1,5.9
+COVIDhub-baseline,6.2
+OliverWyman-Navigator,6.4
+CEID-Walk,6.4
+COVIDhub-ensemble,6.4
+Google_Harvard-CPF,7.3
+IowaStateLW-STEM,7.7
+JHUAPL-Bucky,7.9
+USC-SI_kJalpha,8.2
+CU-select,8.2
+UVA-Ensemble,8.9
+LANL-GrowthRate,9.3
+JHU_IDD-CovidSP,10.1
+PandemicCentral-USCounty,10.2
+MITCovAlliance-SIR,11.0
