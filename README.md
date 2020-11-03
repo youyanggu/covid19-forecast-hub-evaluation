@@ -1,6 +1,8 @@
 # Evaluation of COVID-19 Models
 
-*October 26 Update:* We will aim to update evaluations on a monthly basis.
+**November 2 Update:** We have published our [Model Power Rankings](/summary/power_rankings.csv) that combines model performances for 1-6 week ahead forecasts for both the US and state-by-state. The source code to compute the power rankings is available [here](/power_rankings.py).
+
+**October 26 Update:** Moving forward, we will aim to update evaluations on a monthly basis.
 
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
