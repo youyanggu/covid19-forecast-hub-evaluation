@@ -14,6 +14,9 @@ In this repository, we provide the evaluation results as well as the entire sour
 
 *Full disclosure: This evaluation was developed by [Youyang Gu](https://youyanggu.com), whose model 'YYG / [covid19-projections.com](https://covid19-projections.com)' is one of the models in the COVID-19 Forecast Hub.*
 
+![4 week ahead state-by-state summary](https://covid19-projections.com/assets/images/4_week_ahead_states.png)
+![4 week ahead US nationwide summary](https://covid19-projections.com/assets/images/4_week_ahead_us.png)
+
 **Table of Contents**
 * [Dependencies](#dependencies)
 * [Getting Started](#getting-started)
