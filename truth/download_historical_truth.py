@@ -5,6 +5,8 @@ https://github.com/reichlab/covid19-forecast-hub/blob/master/data-truth/truth-Cu
 This script is a reformatted version of the one originally developed by the Reich Lab:
 
 https://github.com/reichlab/covidData/blob/master/code/data-processing/download-historical-jhu.py
+
+Note: GitHub API only allows 60 calls per hour from an unauthorized IP
 """
 
 import datetime
@@ -19,6 +21,11 @@ import requests
 def str_to_date(date_str, fmt='%Y-%m-%d'):
     """Convert string date to datetime object."""
     return datetime.datetime.strptime(date_str, fmt).date()
+
+
+def first_sunday_before(date):
+    weekday = date.weekday()
+    return date - datetime.timedelta(days=(weekday + 1) % 7)
 
 
 def main():
@@ -52,7 +59,8 @@ def main():
                 break
 
             all_commits += json.loads(r.text or r.content)
-        # date of each commit
+
+        # date of each commit, in reverse chronological order
         commit_dates = [
             str_to_date(commit['commit']['author']['date'][0:10]) for commit in all_commits
         ]
@@ -64,18 +72,32 @@ def main():
             if commit_date not in commit_date_to_sha_and_fname:
                 commit_date_to_sha_and_fname[commit_date] = (all_commits[i]['sha'], result_path)
 
-        # download and save the csvs
-        for commit_date, sha_and_fname in commit_date_to_sha_and_fname.items():
+        assert list(sorted(commit_date_to_sha_and_fname.keys(), reverse=True)) == \
+            list(commit_date_to_sha_and_fname.keys()), 'dict is not sorted'
+
+        # download and save the csvs in chronological order
+        sundays_covered = {}
+        for commit_date, sha_and_fname in reversed(commit_date_to_sha_and_fname.items()):
             commit_sha, result_path = sha_and_fname
             if os.path.isfile(result_path) and not overwrite:
                 continue
-            if eval_dates_only and commit_date.weekday() != 0:
+            if commit_date <= datetime.date(2020,11,1) and eval_dates_only and commit_date.weekday() != 0:
                 continue
+            if commit_date == datetime.date(2020,10,12):
+                continue # bad file
+
             url = requests.utils.requote_uri(
                 'https://raw.githubusercontent.com/reichlab/covid19-forecast-hub/'
                 f'{commit_sha}/data-truth/{base_file}')
             df = pd.read_csv(url, dtype={'location' : str})
+            df['date'] = pd.to_datetime(df['date']).dt.date
 
+            last_date = df['date'].max()
+            sunday_before = first_sunday_before(last_date)
+            if sunday_before in sundays_covered:
+                continue
+
+            sundays_covered[sunday_before] = True
             print('Saving to:', result_path)
             df.to_csv(result_path, index=False)
 

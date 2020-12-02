@@ -1,7 +1,7 @@
 ,mean_rank
 JCB-PRM,13.8
 OliverWyman-Navigator,14.7
-COVIDhub-ensemble,14.8
+COVIDhub-ensemble,14.7
 UMass-MechBayes,15.2
 DDS-NBDS,15.5
 YYG-ParamSearch,15.7
@@ -22,7 +22,7 @@ Columbia_UNC-SurvCon,19.4
 MITCovAlliance-SIR,19.5
 LNQ-ens1,19.8
 UT-Mobility,20.0
-JHU_IDD-CovidSP,20.1
+JHU_IDD-CovidSP,20.0
 PSI-DRAFT,20.1
 CovidAnalytics-DELPHI,21.9
 MOBS-GLEAM_COVID,21.9
@@ -31,11 +31,11 @@ Google_Harvard-CPF,22.8
 UMich-RidgeTfReg,23.0
 UCSD_NEU-DeepGLEAM,23.4
 IowaStateLW-STEM,23.6
-WalmartLabsML-LogForecasting,24.7
+WalmartLabsML-LogForecasting,24.6
 CU-select,25.5
-RobertWalraven-ESG,25.7
+RobertWalraven-ESG,25.8
 USACE-ERDC_SEIR,26.1
 NotreDame-mobility,28.5
 JHUAPL-Bucky,29.6
-epiforecasts-ensemble1,33.4
+epiforecasts-ensemble1,33.3
 TTU-squider,34.1

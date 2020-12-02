@@ -1,12 +1,12 @@
 ,mean_rank
-JCB-PRM,4.7
-COVIDhub-baseline,4.7
+JCB-PRM,4.6
+COVIDhub-baseline,4.6
 Covid19Sim-Simulator,4.9
 IowaStateLW-STEM,5.5
 USACE-ERDC_SEIR,6.1
 USC-SI_kJalpha,6.4
 JHU_IDD-CovidSP,6.6
-Karlen-pypm,7.1
+Karlen-pypm,7.0
 CU-select,7.4
 UCLA-SuEIR,7.4
 LANL-GrowthRate,9.5

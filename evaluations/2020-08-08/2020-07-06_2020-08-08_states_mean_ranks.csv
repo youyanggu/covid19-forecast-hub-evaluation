@@ -4,12 +4,12 @@ USACE-ERDC_SEIR,6.0
 LANL-GrowthRate,6.3
 YYG-ParamSearch,6.6
 CovidAnalytics-DELPHI,6.6
-USC-SI_kJalpha,7.5
+USC-SI_kJalpha,7.4
 Auquan-SEIR,7.8
 UCLA-SuEIR,7.9
-IHME-CurveFit,8.2
-IowaStateLW-STEM,8.2
-NotreDame-mobility,8.9
+IHME-CurveFit,8.1
+IowaStateLW-STEM,8.3
+NotreDame-mobility,9.0
 MITCovAlliance-SIR,9.7
 PSI-DRAFT,10.1
 CovidActNow-SEIR_CAN,10.2

@@ -1,9 +1,9 @@
 ,mean_rank
 RobertWalraven-ESG,8.3
 OliverWyman-Navigator,8.6
-LNQ-ens1,8.7
 Geneva-DetGrowth,8.7
-MSRA-DeepST,9.2
+LNQ-ens1,8.7
+MSRA-DeepST,9.1
 USC-SI_kJalpha,9.4
 Karlen-pypm,9.5
 CEID-Walk,9.7
@@ -12,13 +12,13 @@ CU-select,10.2
 UMich-RidgeTfReg,10.4
 JHU_CSSE-DECOM,10.5
 COVIDhub-ensemble,11.5
-DDS-NBDS,12.8
+DDS-NBDS,12.9
 JCB-PRM,13.1
 BPagano-RtDriven,13.3
 JHUAPL-Bucky,13.8
 Covid19Sim-Simulator,14.1
 LANL-GrowthRate,14.3
-IowaStateLW-STEM,15.3
+IowaStateLW-STEM,15.2
 UCLA-SuEIR,16.6
 JHU_IDD-CovidSP,18.7
 TTU-squider,21.6

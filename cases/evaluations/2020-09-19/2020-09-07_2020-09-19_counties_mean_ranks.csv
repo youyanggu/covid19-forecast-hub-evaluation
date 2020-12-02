@@ -1,7 +1,7 @@
 ,mean_rank
-COVIDhub-ensemble,7.0
-LNQ-ens1,7.0
-COVIDhub-baseline,7.5
+COVIDhub-ensemble,6.9
+LNQ-ens1,6.9
+COVIDhub-baseline,7.4
 CEID-Walk,7.5
 UCLA-SuEIR,7.9
 JHU_IDD-CovidSP,8.3
@@ -10,9 +10,9 @@ USC-SI_kJalpha,8.7
 OliverWyman-Navigator,9.1
 PandemicCentral-USCounty,9.3
 CU-select,9.8
-RobertWalraven-ESG,9.9
+RobertWalraven-ESG,9.8
 JHUAPL-Bucky,10.0
-UVA-Ensemble,10.0
-LANL-GrowthRate,10.4
+UVA-Ensemble,10.1
+LANL-GrowthRate,10.3
 MITCovAlliance-SIR,10.5
-Yu_Group-CLEP,11.9
+Yu_Group-CLEP,12.1

@@ -1,5 +1,5 @@
 ,mean_rank
-COVIDhub-ensemble,9.0
+COVIDhub-ensemble,9.1
 CMU-TimeSeries,9.7
 YYG-ParamSearch,11.5
 UA-EpiCovDA,11.7
@@ -9,7 +9,7 @@ OliverWyman-Navigator,12.1
 CovidAnalytics-DELPHI,12.2
 COVIDhub-baseline,12.2
 LNQ-ens1,12.4
-JCB-PRM,12.9
+JCB-PRM,12.8
 USC-SI_kJalpha,13.2
 Karlen-pypm,13.3
 UCLA-SuEIR,14.0

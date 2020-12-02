@@ -2,8 +2,8 @@
 COVIDhub-baseline,3.2
 UCLA-SuEIR,3.8
 CU-select,4.0
-USC-SI_kJalpha,4.0
 USACE-ERDC_SEIR,4.0
+USC-SI_kJalpha,4.0
 LANL-GrowthRate,4.6
 CovidAnalytics-DELPHI,6.0
 IHME-CurveFit,6.4

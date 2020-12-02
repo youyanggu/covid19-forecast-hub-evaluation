@@ -15,13 +15,13 @@ UCLA-SuEIR,17.9
 Covid19Sim-Simulator,18.1
 Columbia_UNC-SurvCon,18.2
 MOBS-GLEAM_COVID,18.5
-CEID-Walk,18.5
-COVIDhub-baseline,18.6
+CEID-Walk,18.6
+COVIDhub-baseline,18.7
 GT-DeepCOVID,19.0
 UA-EpiCovDA,19.5
 MITCovAlliance-SIR,19.5
 IowaStateLW-STEM,20.0
-IQVIA_ACOE-STAN,20.5
+IQVIA_ACOE-STAN,20.6
 JHU_IDD-CovidSP,20.9
 UMich-RidgeTfReg,20.9
 NotreDame-mobility,21.1
@@ -35,5 +35,5 @@ PSI-DRAFT,24.4
 RobertWalraven-ESG,25.2
 USACE-ERDC_SEIR,25.5
 JHUAPL-Bucky,27.0
-WalmartLabsML-LogForecasting,27.1
-epiforecasts-ensemble1,27.6
+WalmartLabsML-LogForecasting,27.0
+epiforecasts-ensemble1,27.5

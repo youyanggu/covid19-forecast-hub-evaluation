@@ -1,5 +1,5 @@
 ,mean_rank
-YYG-ParamSearch,6.6
+YYG-ParamSearch,6.7
 UCLA-SuEIR,7.4
 CovidAnalytics-DELPHI,7.7
 UMass-MechBayes,7.8
@@ -9,13 +9,13 @@ COVIDhub-ensemble,8.3
 MOBS-GLEAM_COVID,8.7
 PSI-DRAFT,9.2
 COVIDhub-baseline,9.4
-IHME-CurveFit,10.6
-SWC-TerminusCM,11.1
+IHME-CurveFit,10.5
+SWC-TerminusCM,11.0
 CU-select,11.1
-IowaStateLW-STEM,11.5
+IowaStateLW-STEM,11.6
 USACE-ERDC_SEIR,12.1
-Covid19Sim-Simulator,12.3
+Covid19Sim-Simulator,12.2
 CovidActNow-SEIR_CAN,12.8
-UA-EpiCovDA,13.3
+UA-EpiCovDA,13.2
 JHU_IDD-CovidSP,15.8
 Auquan-SEIR,18.5

@@ -1,5 +1,5 @@
 ,mean_rank
-LNQ-ens1,5.4
+LNQ-ens1,5.5
 COVIDhub-ensemble,5.7
 COVIDhub-baseline,5.9
 CEID-Walk,5.9
@@ -7,7 +7,7 @@ UCLA-SuEIR,6.2
 OliverWyman-Navigator,6.3
 USC-SI_kJalpha,6.3
 RobertWalraven-ESG,6.9
-JHU_IDD-CovidSP,7.2
+JHU_IDD-CovidSP,7.1
 LANL-GrowthRate,7.3
 CU-select,7.4
-PandemicCentral-USCounty,7.5
+PandemicCentral-USCounty,7.6

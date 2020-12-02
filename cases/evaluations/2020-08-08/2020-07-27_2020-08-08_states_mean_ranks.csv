@@ -1,6 +1,6 @@
 ,mean_rank
 COVIDhub-ensemble,5.1
-USC-SI_kJalpha,5.1
+USC-SI_kJalpha,5.2
 LNQ-ens1,5.3
 COVIDhub-baseline,6.1
 LANL-GrowthRate,6.2
@@ -8,7 +8,7 @@ IowaStateLW-STEM,7.1
 USACE-ERDC_SEIR,7.5
 DDS-NBDS,8.6
 RobertWalraven-ESG,8.7
-UCLA-SuEIR,9.1
+UCLA-SuEIR,9.0
 JHU_IDD-CovidSP,9.3
 Covid19Sim-Simulator,10.2
 OliverWyman-Navigator,10.9

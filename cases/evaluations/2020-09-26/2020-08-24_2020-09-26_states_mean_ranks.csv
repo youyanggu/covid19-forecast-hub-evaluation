@@ -1,9 +1,9 @@
 ,mean_rank
 COVIDhub-baseline,4.0
-CU-select,5.1
-UCLA-SuEIR,5.6
-JHU_IDD-CovidSP,5.7
-IowaStateLW-STEM,5.9
+CU-select,5.0
+JHU_IDD-CovidSP,5.6
+UCLA-SuEIR,5.7
+IowaStateLW-STEM,5.8
 Karlen-pypm,6.2
 USACE-ERDC_SEIR,6.5
 Covid19Sim-Simulator,6.9

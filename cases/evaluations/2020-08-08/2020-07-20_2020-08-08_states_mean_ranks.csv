@@ -1,11 +1,11 @@
 ,mean_rank
 COVIDhub-baseline,4.7
-COVIDhub-ensemble,5.0
+COVIDhub-ensemble,5.1
 UCLA-SuEIR,6.2
 LNQ-ens1,6.5
 IowaStateLW-STEM,6.7
 USACE-ERDC_SEIR,6.8
-JHU_IDD-CovidSP,7.2
+JHU_IDD-CovidSP,7.1
 LANL-GrowthRate,7.4
 Covid19Sim-Simulator,8.1
 RobertWalraven-ESG,8.2

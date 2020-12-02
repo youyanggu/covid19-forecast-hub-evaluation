@@ -3,9 +3,9 @@ COVIDhub-baseline,6.3
 CEID-Walk,6.4
 LNQ-ens1,7.2
 COVIDhub-ensemble,7.3
-OliverWyman-Navigator,7.6
 IowaStateLW-STEM,7.6
-JHU_IDD-CovidSP,7.7
+OliverWyman-Navigator,7.6
+JHU_IDD-CovidSP,7.6
 USC-SI_kJalpha,7.9
 JHUAPL-Bucky,8.1
 UVA-Ensemble,9.3
@@ -14,4 +14,4 @@ RobertWalraven-ESG,9.8
 MITCovAlliance-SIR,10.1
 CU-select,10.2
 LANL-GrowthRate,10.5
-Yu_Group-CLEP,10.5
+Yu_Group-CLEP,10.7

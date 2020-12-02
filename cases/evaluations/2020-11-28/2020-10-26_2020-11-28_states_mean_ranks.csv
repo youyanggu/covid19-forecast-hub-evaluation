@@ -1,0 +1,15 @@
+,mean_rank
+Karlen-pypm,3.4
+JCB-PRM,4.0
+CU-select,4.9
+JHUAPL-Bucky,6.4
+COVIDhub-baseline,6.4
+USACE-ERDC_SEIR,6.4
+Covid19Sim-Simulator,6.5
+BPagano-RtDriven,6.6
+USC-SI_kJalpha,7.8
+IowaStateLW-STEM,8.0
+JHU_IDD-CovidSP,10.3
+LANL-GrowthRate,10.9
+CovidAnalytics-DELPHI,11.1
+UCLA-SuEIR,12.1

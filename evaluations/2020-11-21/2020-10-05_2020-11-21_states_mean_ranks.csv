@@ -1,0 +1,12 @@
+,mean_rank
+USC-SI_kJalpha,3.8
+JCB-PRM,3.8
+COVIDhub-baseline,4.0
+Covid19Sim-Simulator,4.1
+Columbia_UNC-SurvCon,5.8
+IowaStateLW-STEM,6.0
+BPagano-RtDriven,6.1
+UCLA-SuEIR,6.3
+LANL-GrowthRate,7.6
+WalmartLabsML-LogForecasting,8.7
+RobertWalraven-ESG,9.9

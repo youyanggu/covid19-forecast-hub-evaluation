@@ -1,9 +1,9 @@
 ,mean_rank
-IowaStateLW-STEM,3.4
+IowaStateLW-STEM,3.5
 COVIDhub-baseline,3.5
 UCLA-SuEIR,3.8
 USC-SI_kJalpha,4.4
 MITCovAlliance-SIR,4.8
 CU-select,5.0
-RobertWalraven-ESG,5.5
+RobertWalraven-ESG,5.4
 LANL-GrowthRate,5.5

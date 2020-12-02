@@ -1,0 +1,14 @@
+,mean_rank
+JCB-PRM,4.2
+USC-SI_kJalpha,5.0
+Covid19Sim-Simulator,5.4
+IowaStateLW-STEM,5.5
+UCLA-SuEIR,5.8
+IHME-CurveFit,6.2
+USACE-ERDC_SEIR,7.2
+CovidAnalytics-DELPHI,7.7
+MITCovAlliance-SIR,7.9
+LANL-GrowthRate,7.9
+Columbia_UNC-SurvCon,8.6
+WalmartLabsML-LogForecasting,9.3
+RobertWalraven-ESG,10.2

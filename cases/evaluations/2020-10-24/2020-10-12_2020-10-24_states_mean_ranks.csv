@@ -5,13 +5,13 @@ JCB-PRM,8.1
 COVIDhub-baseline,9.0
 DDS-NBDS,9.0
 CEID-Walk,9.1
+UMich-RidgeTfReg,9.4
 CU-select,9.5
 USC-SI_kJalpha,9.5
-UMich-RidgeTfReg,9.6
 USACE-ERDC_SEIR,9.6
 IQVIA_ACOE-STAN,9.8
 Karlen-pypm,10.4
-JHUAPL-Bucky,11.7
+JHUAPL-Bucky,11.8
 COVIDhub-ensemble,11.9
 Covid19Sim-Simulator,12.7
 RobertWalraven-ESG,13.6

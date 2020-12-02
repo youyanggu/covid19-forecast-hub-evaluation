@@ -1,5 +1,5 @@
 ,mean_rank
-COVIDhub-baseline,5.1
+COVIDhub-baseline,5.0
 JHUAPL-Bucky,5.2
 Covid19Sim-Simulator,5.4
 JCB-PRM,5.8
@@ -10,6 +10,6 @@ JHU_IDD-CovidSP,7.2
 Karlen-pypm,7.2
 UCLA-SuEIR,8.7
 USC-SI_kJalpha,8.8
-LANL-GrowthRate,9.5
-CovidAnalytics-DELPHI,10.8
+LANL-GrowthRate,9.6
+CovidAnalytics-DELPHI,10.9
 RobertWalraven-ESG,11.3

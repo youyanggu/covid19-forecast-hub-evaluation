@@ -1,9 +1,9 @@
 ,mean_rank
-LNQ-ens1,3.7
+LNQ-ens1,3.8
 COVIDhub-baseline,3.8
 UCLA-SuEIR,4.5
-IowaStateLW-STEM,5.7
 Covid19Sim-Simulator,5.7
+IowaStateLW-STEM,5.7
 JHU_IDD-CovidSP,6.0
 USC-SI_kJalpha,6.3
 LANL-GrowthRate,6.8
