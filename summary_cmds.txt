@@ -37,3 +37,4 @@ python summarize_evaluations.py --eval_date 2020-11-07 --out_dir summary
 python summarize_evaluations.py --eval_date 2020-11-14 --out_dir summary
 python summarize_evaluations.py --eval_date 2020-11-21 --out_dir summary
 python summarize_evaluations.py --eval_date 2020-11-28 --out_dir summary
+python summarize_evaluations.py --eval_date 2020-12-05 --out_dir summary

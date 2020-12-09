@@ -79,12 +79,20 @@ def main():
         sundays_covered = {}
         for commit_date, sha_and_fname in reversed(commit_date_to_sha_and_fname.items()):
             commit_sha, result_path = sha_and_fname
+
+            continue_loop = False
             if os.path.isfile(result_path) and not overwrite:
+                continue_loop = True
+            elif commit_date <= datetime.date(2020,11,1) and eval_dates_only and commit_date.weekday() != 0:
+                continue_loop = True
+            elif commit_date == datetime.date(2020,10,12):
+                continue_loop = True # bad file
+
+            if continue_loop:
+                last_date = commit_date - datetime.timedelta(days=1)
+                sunday_before = first_sunday_before(last_date)
+                sundays_covered[sunday_before] = True
                 continue
-            if commit_date <= datetime.date(2020,11,1) and eval_dates_only and commit_date.weekday() != 0:
-                continue
-            if commit_date == datetime.date(2020,10,12):
-                continue # bad file
 
             url = requests.utils.requote_uri(
                 'https://raw.githubusercontent.com/reichlab/covid19-forecast-hub/'

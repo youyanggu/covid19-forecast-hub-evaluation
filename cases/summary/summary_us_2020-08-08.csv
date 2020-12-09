@@ -15,7 +15,7 @@ Covid19Sim-Simulator,0.106,0.207,0.388,0.550,0.393
 LNQ-ens1,,0.118,0.917,0.355,0.091
 COVIDhub-ensemble,,,0.229,0.131,0.158
 DDS-NBDS,,,,-0.170,0.087
-OliverWyman-Navigator,,,0.658,0.366,0.194
+OliverWyman-Navigator,,,0.658,0.365,0.194
 Geneva-DetGrowth,,,,,0.184
 Karlen-pypm,,,,0.516,0.422
 IHME-CurveFit,,,0.860,0.944,1.176

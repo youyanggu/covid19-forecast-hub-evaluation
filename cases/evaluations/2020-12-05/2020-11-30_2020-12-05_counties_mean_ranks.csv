@@ -1,0 +1,16 @@
+,mean_rank
+OneQuietNight-ML,5.8
+COVIDhub-ensemble,6.7
+OliverWyman-Navigator,6.9
+COVIDhub-baseline,7.0
+CEID-Walk,7.1
+LNQ-ens1,7.2
+UChicagoCHATTOPADHYAY-UnIT,7.5
+IowaStateLW-STEM,7.9
+UVA-Ensemble,8.0
+CU-select,8.1
+LANL-GrowthRate,8.2
+Google_Harvard-CPF,8.6
+JHUAPL-Bucky,9.1
+JHU_IDD-CovidSP,10.8
+FAIR-NRAR,11.1

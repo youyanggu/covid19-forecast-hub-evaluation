@@ -464,4 +464,25 @@ python evaluate_models.py 2020-10-26 2020-11-28 --out_dir evaluations
 python evaluate_models.py 2020-11-02 2020-11-28 --out_dir evaluations
 python evaluate_models.py 2020-11-09 2020-11-28 --out_dir evaluations
 python evaluate_models.py 2020-11-16 2020-11-28 --out_dir evaluations
-python evaluate_models.py 2020-11-23 2020-11-28 --out_dir evaluations --copy_truth
+python evaluate_models.py 2020-11-23 2020-11-28 --out_dir evaluations
+
+python evaluate_models.py 2020-07-20 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-07-27 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-08-03 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-08-10 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-08-17 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-08-24 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-08-31 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-09-07 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-09-14 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-09-21 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-09-28 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-10-05 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-10-12 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-10-19 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-10-26 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-11-02 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-11-09 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-11-16 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-11-23 2020-12-05 --out_dir evaluations
+python evaluate_models.py 2020-11-30 2020-12-05 --out_dir evaluations --copy_truth
