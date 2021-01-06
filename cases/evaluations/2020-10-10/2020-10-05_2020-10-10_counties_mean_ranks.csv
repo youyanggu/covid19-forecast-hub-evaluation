@@ -5,8 +5,8 @@ LNQ-ens1,7.1
 COVIDhub-ensemble,7.3
 JHUAPL-Bucky,7.3
 USC-SI_kJalpha,7.4
-UCLA-SuEIR,7.8
 OliverWyman-Navigator,7.8
+UCLA-SuEIR,7.8
 IowaStateLW-STEM,8.5
 CU-select,9.2
 JHU_IDD-CovidSP,9.2
@@ -14,4 +14,4 @@ RobertWalraven-ESG,9.6
 PandemicCentral-USCounty,10.0
 UVA-Ensemble,10.1
 Google_Harvard-CPF,10.3
-LANL-GrowthRate,10.6
+LANL-GrowthRate,10.7

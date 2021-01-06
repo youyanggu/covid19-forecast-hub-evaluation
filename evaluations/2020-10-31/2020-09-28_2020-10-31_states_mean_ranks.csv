@@ -1,8 +1,8 @@
 ,mean_rank
 JCB-PRM,7.0
-YYG-ParamSearch,7.0
+YYG-ParamSearch,7.1
 Karlen-pypm,7.2
-USC-SI_kJalpha,8.0
+USC-SI_kJalpha,7.9
 JHU_IDD-CovidSP,8.2
 JHUAPL-Bucky,8.5
 MITCovAlliance-SIR,8.8
@@ -12,9 +12,9 @@ IowaStateLW-STEM,9.9
 Columbia_UNC-SurvCon,10.3
 PSI-DRAFT,10.4
 IHME-CurveFit,10.5
-NotreDame-mobility,10.7
+NotreDame-mobility,10.8
 LANL-GrowthRate,11.5
-CovidAnalytics-DELPHI,11.5
+CovidAnalytics-DELPHI,11.6
 USACE-ERDC_SEIR,11.6
 WalmartLabsML-LogForecasting,14.1
 RobertWalraven-ESG,15.7

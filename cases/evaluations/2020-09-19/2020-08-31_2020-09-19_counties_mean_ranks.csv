@@ -1,8 +1,8 @@
 ,mean_rank
 COVIDhub-ensemble,6.8
 LNQ-ens1,6.9
-COVIDhub-baseline,6.9
 CEID-Walk,6.9
+COVIDhub-baseline,6.9
 UCLA-SuEIR,7.5
 IowaStateLW-STEM,7.5
 JHU_IDD-CovidSP,7.7

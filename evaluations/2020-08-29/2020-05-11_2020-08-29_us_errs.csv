@@ -1,2 +1,2 @@
 ,total_deaths_2020-05-10,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
-Baseline,82717,267338.0,182651,187812.0,99934,87878.0,87.9%
+Baseline,82778,267338.0,182773,187812.0,99995,87817.0,87.8%

@@ -1,5 +1,5 @@
 ,mean_rank
-LNQ-ens1,6.6
+LNQ-ens1,6.7
 OliverWyman-Navigator,6.9
 USC-SI_kJalpha_RF,7.6
 DDS-NBDS,8.9
@@ -13,7 +13,7 @@ Google_Harvard-CPF,11.3
 COVIDhub-ensemble,11.9
 JHU_UNC_GAS-StatMechPool,13.2
 BPagano-RtDriven,14.8
-JHUAPL-Bucky,14.9
+JHUAPL-Bucky,15.0
 UCSB-ACTS,15.4
 JCB-PRM,15.4
 CEID-Walk,15.9

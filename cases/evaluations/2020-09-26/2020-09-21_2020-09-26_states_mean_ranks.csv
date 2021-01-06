@@ -7,9 +7,9 @@ DDS-NBDS,9.2
 JCB-PRM,9.5
 USACE-ERDC_SEIR,9.5
 IQVIA_ACOE-STAN,9.8
-COVIDhub-ensemble,9.9
-JHUAPL-Bucky,10.2
-USC-SI_kJalpha,10.3
+COVIDhub-ensemble,10.0
+JHUAPL-Bucky,10.3
+USC-SI_kJalpha,10.4
 OliverWyman-Navigator,10.8
 UCLA-SuEIR,11.0
 LANL-GrowthRate,11.5
@@ -18,6 +18,6 @@ UMich-RidgeTfReg,12.4
 IowaStateLW-STEM,12.5
 Karlen-pypm,13.1
 CU-select,14.5
-JHU_IDD-CovidSP,15.4
+JHU_IDD-CovidSP,15.3
 RobertWalraven-ESG,17.5
-CovidAnalytics-DELPHI,18.6
+CovidAnalytics-DELPHI,18.5

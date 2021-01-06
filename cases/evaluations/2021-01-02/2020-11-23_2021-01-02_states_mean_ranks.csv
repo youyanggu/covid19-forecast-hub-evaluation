@@ -1,0 +1,14 @@
+,mean_rank
+CU-select,5.0
+LANL-GrowthRate,5.6
+JHU_IDD-CovidSP,5.8
+Covid19Sim-Simulator,6.2
+COVIDhub-baseline,6.3
+USC-SI_kJalpha,6.7
+UCLA-SuEIR,6.8
+IowaStateLW-STEM,6.8
+JCB-PRM,7.3
+OneQuietNight-ML,8.1
+USACE-ERDC_SEIR,8.1
+CovidAnalytics-DELPHI,9.0
+JHUAPL-Bucky,9.2

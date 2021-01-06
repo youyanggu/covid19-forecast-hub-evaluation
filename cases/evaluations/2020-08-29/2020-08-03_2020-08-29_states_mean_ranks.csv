@@ -1,9 +1,9 @@
 ,mean_rank
-COVIDhub-ensemble,5.7
+COVIDhub-ensemble,5.8
 LNQ-ens1,5.8
-DDS-NBDS,6.0
-USACE-ERDC_SEIR,6.5
+DDS-NBDS,5.9
 USC-SI_kJalpha,6.5
+USACE-ERDC_SEIR,6.6
 IowaStateLW-STEM,6.6
 COVIDhub-baseline,6.9
 UCLA-SuEIR,7.2

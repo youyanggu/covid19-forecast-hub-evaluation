@@ -1,0 +1,4 @@
+,total_deaths_2020-08-09,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline,163175,301971.7,316159,139033.7,152984,-13950.3,-9.1%
+IHME-CurveFit,163175,331238.5,316159,168300.5,152984,15316.5,10.0%
+STH-3PU,163175,265265.0,316159,102327.0,152984,-50657.0,-33.1%

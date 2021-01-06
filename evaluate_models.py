@@ -248,7 +248,8 @@ def main(forecast_hub_dir, proj_date, eval_date, out_dir, truth_file,
     df_truth_raw = df_truth_raw[['date', 'location', 'total_deaths']]
 
     df_truth = df_truth_raw[df_truth_raw['date'] == eval_date]
-    assert len(df_truth) > 0, f'No truth data available for eval date: {eval_date}'
+    assert len(df_truth) > 0, \
+        f'No truth data available for eval date: {eval_date}. Did you pull from forecast-hub repo?'
     df_truth = df_truth.set_index('location')['total_deaths']
     df_truth_filt = df_truth[df_truth.index.isin(fips_to_evaluate)]
     assert len(df_truth_filt) == len(fips_to_evaluate), 'Missing FIPS in truth'
@@ -680,7 +681,7 @@ if __name__ == '__main__':
     if args.forecast_hub_dir:
         forecast_hub_dir = Path(args.forecast_hub_dir)
     else:
-        forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent / 'covid19-forecast-hub'
+        forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent.parent / 'covid19-forecast-hub'
     if args.out_dir:
         out_dir = Path(args.out_dir)
     else:

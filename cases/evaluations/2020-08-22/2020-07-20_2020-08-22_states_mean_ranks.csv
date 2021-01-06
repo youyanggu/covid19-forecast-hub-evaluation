@@ -6,7 +6,7 @@ USACE-ERDC_SEIR,5.2
 LANL-GrowthRate,5.4
 JHU_IDD-CovidSP,5.4
 Covid19Sim-Simulator,5.9
-USC-SI_kJalpha,6.2
+USC-SI_kJalpha,6.3
 CovidAnalytics-DELPHI,7.4
 IHME-CurveFit,7.9
 Karlen-pypm,9.2

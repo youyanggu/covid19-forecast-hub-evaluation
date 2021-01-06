@@ -510,7 +510,7 @@ if __name__ == '__main__':
     if args.forecast_hub_dir:
         forecast_hub_dir = Path(args.forecast_hub_dir)
     else:
-        forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent.parent / 'covid19-forecast-hub'
+        forecast_hub_dir = Path(os.path.abspath(__file__)).parent.parent.parent.parent / 'covid19-forecast-hub'
     if args.out_dir:
         out_dir = Path(args.out_dir)
     else:

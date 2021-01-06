@@ -1,13 +1,13 @@
 ,mean_rank
 COVIDhub-ensemble,8.1
-YYG-ParamSearch,8.9
+YYG-ParamSearch,8.8
 IHME-CurveFit,9.0
-NotreDame-mobility,9.5
+NotreDame-mobility,9.4
 Covid19Sim-Simulator,9.5
 UMass-MechBayes,9.6
 UA-EpiCovDA,9.7
-LANL-GrowthRate,9.7
-Auquan-SEIR,9.9
+LANL-GrowthRate,9.8
+Auquan-SEIR,10.0
 IowaStateLW-STEM,10.2
 CovidAnalytics-DELPHI,10.3
 UCLA-SuEIR,10.6

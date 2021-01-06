@@ -1,10 +1,10 @@
 ,mean_rank
-COVIDhub-ensemble,8.7
+COVIDhub-ensemble,8.8
 YYG-ParamSearch,9.6
 UMass-MechBayes,9.7
 CMU-TimeSeries,10.2
 OliverWyman-Navigator,10.9
-LNQ-ens1,11.0
+LNQ-ens1,11.1
 CovidAnalytics-DELPHI,11.7
 Covid19Sim-Simulator,11.8
 USC-SI_kJalpha,11.9
@@ -17,11 +17,11 @@ GT-DeepCOVID,13.7
 NotreDame-mobility,13.9
 CU-select,14.2
 LANL-GrowthRate,14.5
-Karlen-pypm,14.7
-MITCovAlliance-SIR,14.9
+Karlen-pypm,14.8
+MITCovAlliance-SIR,14.8
 PSI-DRAFT,15.0
 IHME-CurveFit,16.1
 IowaStateLW-STEM,16.3
 USACE-ERDC_SEIR,17.0
-JHU_IDD-CovidSP,17.6
+JHU_IDD-CovidSP,17.5
 RobertWalraven-ESG,22.6

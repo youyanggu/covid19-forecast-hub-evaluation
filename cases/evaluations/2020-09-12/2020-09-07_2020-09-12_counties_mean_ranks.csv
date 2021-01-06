@@ -2,13 +2,13 @@
 COVIDhub-ensemble,6.7
 LNQ-ens1,6.8
 COVIDhub-baseline,7.8
-CEID-Walk,8.0
 UCLA-SuEIR,8.0
+CEID-Walk,8.0
 USC-SI_kJalpha,8.7
 JHU_IDD-CovidSP,8.9
 RobertWalraven-ESG,9.1
-LANL-GrowthRate,9.2
 IowaStateLW-STEM,9.2
+LANL-GrowthRate,9.2
 OliverWyman-Navigator,9.3
 CU-select,9.3
 PandemicCentral-USCounty,9.6

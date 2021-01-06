@@ -2,11 +2,11 @@
 YYG-ParamSearch,4.3
 COVIDhub-ensemble,4.8
 LANL-GrowthRate,5.4
-IHME-CurveFit,5.9
-UMass-MechBayes,5.9
-UCLA-SuEIR,6.2
-COVIDhub-baseline,6.4
+IHME-CurveFit,5.8
+UMass-MechBayes,6.0
+UCLA-SuEIR,6.3
 CU-select,6.4
+COVIDhub-baseline,6.5
 UT-Mobility,6.8
 MOBS-GLEAM_COVID,6.8
-CovidAnalytics-DELPHI,7.1
+CovidAnalytics-DELPHI,7.0

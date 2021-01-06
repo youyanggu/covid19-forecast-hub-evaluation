@@ -2,13 +2,13 @@
 COVIDhub-ensemble,8.1
 YYG-ParamSearch,8.4
 UMass-MechBayes,8.5
-USC-SI_kJalpha,9.7
-COVIDhub-baseline,9.9
+USC-SI_kJalpha,9.8
+COVIDhub-baseline,9.8
 UA-EpiCovDA,10.2
 IHME-CurveFit,10.3
-OliverWyman-Navigator,10.6
+OliverWyman-Navigator,10.7
 UT-Mobility,11.0
-CovidAnalytics-DELPHI,11.1
+CovidAnalytics-DELPHI,11.2
 NotreDame-mobility,11.3
 LANL-GrowthRate,11.5
 UCLA-SuEIR,11.8

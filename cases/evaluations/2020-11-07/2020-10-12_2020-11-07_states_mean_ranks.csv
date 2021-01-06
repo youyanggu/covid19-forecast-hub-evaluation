@@ -4,13 +4,13 @@ DDS-NBDS,5.8
 CU-select,6.4
 JCB-PRM,6.5
 COVIDhub-baseline,7.9
-Karlen-pypm,8.0
+Karlen-pypm,7.9
 USACE-ERDC_SEIR,8.0
 CEID-Walk,8.2
 UMich-RidgeTfReg,8.4
 USC-SI_kJalpha,8.4
 Covid19Sim-Simulator,10.8
-JHUAPL-Bucky,10.8
+JHUAPL-Bucky,10.9
 COVIDhub-ensemble,11.3
 JHU_IDD-CovidSP,13.7
 IowaStateLW-STEM,14.8

@@ -1,3 +1,3 @@
 ,total_deaths_2020-05-31,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
-Baseline,107674,230007.3,214656,125626.3,106982,18644.3,17.4%
-Covid19Sim-Simulator,107674,147177.7,214656,42796.7,106982,-64185.3,-60.0%
+Baseline,107719,230007.3,214695,125626.3,106976,18650.3,17.4%
+Covid19Sim-Simulator,107719,147177.7,214695,42796.7,106976,-64179.3,-60.0%

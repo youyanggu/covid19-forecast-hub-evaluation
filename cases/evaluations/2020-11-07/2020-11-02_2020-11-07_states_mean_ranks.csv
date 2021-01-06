@@ -2,7 +2,7 @@
 MSRA-DeepST,8.3
 LNQ-ens1,8.4
 Geneva-DetGrowth,8.7
-DDS-NBDS,9.1
+DDS-NBDS,9.0
 OliverWyman-Navigator,9.5
 Karlen-pypm,9.5
 USC-SI_kJalpha_RF,10.1
@@ -26,5 +26,5 @@ Covid19Sim-Simulator,19.4
 UCLA-SuEIR,20.7
 BPagano-RtDriven,20.7
 TTU-squider,21.7
-JHU_IDD-CovidSP,25.4
+JHU_IDD-CovidSP,25.5
 CovidAnalytics-DELPHI,25.5

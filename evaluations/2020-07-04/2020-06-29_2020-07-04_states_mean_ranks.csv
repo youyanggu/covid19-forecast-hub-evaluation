@@ -1,11 +1,11 @@
 ,mean_rank
-UMass-MechBayes,7.3
+UMass-MechBayes,7.2
 YYG-ParamSearch,7.4
 COVIDhub-baseline,8.3
 COVIDhub-ensemble,9.5
-UT-Mobility,9.5
-UA-EpiCovDA,9.8
-USC-SI_kJalpha,10.1
+UT-Mobility,9.6
+UA-EpiCovDA,9.7
+USC-SI_kJalpha,10.2
 OliverWyman-Navigator,10.3
 UCLA-SuEIR,10.6
 NotreDame-mobility,10.9
@@ -20,5 +20,5 @@ IowaStateLW-STEM,14.2
 CU-select,14.4
 Auquan-SEIR,14.7
 JHU_IDD-CovidSP,16.4
-MITCovAlliance-SIR,18.5
+MITCovAlliance-SIR,18.6
 USACE-ERDC_SEIR,19.6

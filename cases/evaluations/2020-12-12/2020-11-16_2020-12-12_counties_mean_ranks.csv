@@ -1,0 +1,12 @@
+,mean_rank
+LNQ-ens1,4.3
+COVIDhub-ensemble,5.1
+COVIDhub-baseline,5.2
+CEID-Walk,5.3
+UVA-Ensemble,5.5
+IowaStateLW-STEM,5.5
+JHU_IDD-CovidSP,6.3
+LANL-GrowthRate,6.5
+CU-select,6.6
+JHUAPL-Bucky,7.7
+Google_Harvard-CPF,7.9

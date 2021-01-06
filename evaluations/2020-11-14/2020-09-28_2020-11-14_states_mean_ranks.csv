@@ -1,10 +1,10 @@
 ,mean_rank
 JCB-PRM,4.3
 USC-SI_kJalpha,5.2
-Covid19Sim-Simulator,5.3
+Covid19Sim-Simulator,5.2
 MITCovAlliance-SIR,5.5
-UCLA-SuEIR,6.4
 IHME-CurveFit,6.4
+UCLA-SuEIR,6.4
 IowaStateLW-STEM,6.7
 USACE-ERDC_SEIR,6.7
 Columbia_UNC-SurvCon,7.4

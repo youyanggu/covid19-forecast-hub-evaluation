@@ -2,10 +2,10 @@
 JCB-PRM,5.8
 YYG-ParamSearch,6.2
 Covid19Sim-Simulator,6.6
-UCLA-SuEIR,7.3
 USC-SI_kJalpha,7.3
-NotreDame-mobility,7.6
-IowaStateLW-STEM,8.4
+UCLA-SuEIR,7.4
+NotreDame-mobility,7.5
+IowaStateLW-STEM,8.3
 JHU_IDD-CovidSP,8.6
 Columbia_UNC-SurvCon,8.9
 MITCovAlliance-SIR,9.7
@@ -13,6 +13,6 @@ CovidAnalytics-DELPHI,9.8
 USACE-ERDC_SEIR,10.1
 LANL-GrowthRate,10.1
 PSI-DRAFT,10.8
-IHME-CurveFit,11.0
+IHME-CurveFit,11.1
 RobertWalraven-ESG,12.4
 WalmartLabsML-LogForecasting,12.4

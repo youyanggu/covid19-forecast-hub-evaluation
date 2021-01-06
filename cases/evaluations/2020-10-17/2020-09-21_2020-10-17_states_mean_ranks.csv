@@ -5,12 +5,12 @@ JHUAPL-Bucky,7.4
 LNQ-ens1,7.4
 JCB-PRM,7.9
 COVIDhub-ensemble,8.5
-USACE-ERDC_SEIR,8.6
+USACE-ERDC_SEIR,8.7
 UMich-RidgeTfReg,8.7
-Covid19Sim-Simulator,9.6
+Covid19Sim-Simulator,9.7
 CU-select,9.8
+DDS-NBDS,10.0
 Karlen-pypm,10.0
-DDS-NBDS,10.1
 USC-SI_kJalpha,10.1
 IowaStateLW-STEM,10.3
 UCLA-SuEIR,11.3

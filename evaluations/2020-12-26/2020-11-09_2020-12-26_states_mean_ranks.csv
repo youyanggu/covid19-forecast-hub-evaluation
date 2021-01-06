@@ -1,0 +1,12 @@
+,mean_rank
+Covid19Sim-Simulator,3.5
+JCB-PRM,4.2
+JHUAPL-Bucky,4.4
+USC-SI_kJalpha,4.5
+BPagano-RtDriven,5.4
+COVIDhub-baseline,5.9
+IowaStateLW-STEM,6.0
+Columbia_UNC-SurvCon,7.1
+CovidAnalytics-DELPHI,7.3
+UCLA-SuEIR,7.8
+WalmartLabsML-LogForecasting,9.8

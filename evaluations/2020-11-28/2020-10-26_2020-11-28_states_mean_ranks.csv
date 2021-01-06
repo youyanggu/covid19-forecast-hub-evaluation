@@ -2,13 +2,13 @@
 JHUAPL-Bucky,5.6
 Karlen-pypm,6.0
 USC-SI_kJalpha,6.3
-Covid19Sim-Simulator,6.3
+Covid19Sim-Simulator,6.4
 JCB-PRM,7.0
 Columbia_UNC-SurvCon,8.5
 COVIDhub-baseline,8.9
 IHME-CurveFit,9.2
-BPagano-RtDriven,9.6
-USACE-ERDC_SEIR,10.1
+BPagano-RtDriven,9.5
+USACE-ERDC_SEIR,10.0
 IowaStateLW-STEM,10.2
 NotreDame-mobility,10.5
 CovidAnalytics-DELPHI,10.6

@@ -1,8 +1,8 @@
 ,mean_rank
-UCLA-SuEIR,3.1
-LANL-GrowthRate,3.4
-IHME-CurveFit,4.0
-IowaStateLW-STEM,4.2
+UCLA-SuEIR,3.0
+LANL-GrowthRate,3.3
+IHME-CurveFit,3.9
+IowaStateLW-STEM,4.1
 YYG-ParamSearch,4.3
 USACE-ERDC_SEIR,4.4
-PSI-DRAFT,4.8
+PSI-DRAFT,4.9

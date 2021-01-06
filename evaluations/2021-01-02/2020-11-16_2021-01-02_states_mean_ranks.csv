@@ -1,0 +1,11 @@
+,mean_rank
+JCB-PRM,3.2
+BPagano-RtDriven,3.8
+IowaStateLW-STEM,4.6
+COVIDhub-baseline,4.8
+JHUAPL-Bucky,5.2
+USACE-ERDC_SEIR,5.4
+CovidAnalytics-DELPHI,5.7
+UCLA-SuEIR,6.6
+Columbia_UNC-SurvCon,7.2
+WalmartLabsML-LogForecasting,8.2

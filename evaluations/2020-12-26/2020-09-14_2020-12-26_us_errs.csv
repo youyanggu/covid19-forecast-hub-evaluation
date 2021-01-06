@@ -1,0 +1,5 @@
+,total_deaths_2020-09-13,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline,194224,270288.1,331909,76217.1,137685,-61467.9,-44.6%
+IowaStateLW-STEM,194224,269386.0,331909,75315.0,137685,-62370.0,-45.3%
+STH-3PU,194224,262866.0,331909,68795.0,137685,-68890.0,-50.0%
+Covid19Sim-Simulator,194224,234661.6,331909,40590.6,137685,-97094.4,-70.5%

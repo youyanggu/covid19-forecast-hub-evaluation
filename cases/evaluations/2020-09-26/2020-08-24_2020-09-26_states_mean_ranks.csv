@@ -1,11 +1,11 @@
 ,mean_rank
-COVIDhub-baseline,4.0
+COVIDhub-baseline,3.9
 CU-select,5.0
 JHU_IDD-CovidSP,5.6
-UCLA-SuEIR,5.7
-IowaStateLW-STEM,5.8
-Karlen-pypm,6.2
-USACE-ERDC_SEIR,6.5
+UCLA-SuEIR,5.6
+IowaStateLW-STEM,5.9
+Karlen-pypm,6.3
+USACE-ERDC_SEIR,6.6
 Covid19Sim-Simulator,6.9
 USC-SI_kJalpha,7.3
 RobertWalraven-ESG,8.1

@@ -1,12 +1,12 @@
 ,mean_rank
-Covid19Sim-Simulator,4.4
+Covid19Sim-Simulator,4.3
 YYG-ParamSearch,4.5
 USC-SI_kJalpha,4.9
-NotreDame-mobility,5.6
+NotreDame-mobility,5.5
 IowaStateLW-STEM,6.3
-UCLA-SuEIR,6.5
+UCLA-SuEIR,6.6
 CovidAnalytics-DELPHI,6.8
-LANL-GrowthRate,7.2
+LANL-GrowthRate,7.1
 PSI-DRAFT,7.3
 USACE-ERDC_SEIR,7.8
 IHME-CurveFit,8.3

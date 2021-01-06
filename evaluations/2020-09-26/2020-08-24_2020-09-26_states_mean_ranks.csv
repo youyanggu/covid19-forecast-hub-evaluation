@@ -1,5 +1,5 @@
 ,mean_rank
-YYG-ParamSearch,5.3
+YYG-ParamSearch,5.4
 Karlen-pypm,5.6
 UCLA-SuEIR,6.5
 CovidAnalytics-DELPHI,6.9
@@ -11,6 +11,6 @@ Covid19Sim-Simulator,8.8
 NotreDame-mobility,9.0
 IHME-CurveFit,9.0
 JHU_IDD-CovidSP,9.1
-USACE-ERDC_SEIR,9.2
+USACE-ERDC_SEIR,9.1
 PSI-DRAFT,9.5
 RobertWalraven-ESG,10.3
