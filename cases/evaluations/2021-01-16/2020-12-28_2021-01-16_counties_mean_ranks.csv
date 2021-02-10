@@ -1,0 +1,17 @@
+,mean_rank
+OneQuietNight-ML,5.8
+COVIDhub-baseline,6.4
+OliverWyman-Navigator,6.5
+CEID-Walk,6.6
+IowaStateLW-STEM,7.2
+COVIDhub-ensemble,7.3
+FAIR-NRAR,7.5
+Google_Harvard-CPF,8.0
+PandemicCentral-USCounty,8.0
+LANL-GrowthRate,8.4
+JHU_IDD-CovidSP,8.7
+LNQ-ens1,9.6
+UVA-Ensemble,9.7
+JHUAPL-Bucky,10.5
+CU-select,10.9
+MITCovAlliance-SIR,15.0

@@ -1,9 +1,9 @@
 ,mean_rank
 COVIDhub-baseline,2.6
 UCLA-SuEIR,3.7
-Covid19Sim-Simulator,4.3
 IowaStateLW-STEM,4.3
+Covid19Sim-Simulator,4.4
 LANL-GrowthRate,4.7
-USC-SI_kJalpha,4.8
+USC-SI_kJalpha,4.7
 USACE-ERDC_SEIR,5.7
 CovidAnalytics-DELPHI,5.9

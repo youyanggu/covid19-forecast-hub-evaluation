@@ -1,5 +1,5 @@
 ,mean_rank
-USC-SI_kJalpha,4.5
+USC-SI_kJalpha,4.4
 COVIDhub-baseline,4.5
 IowaStateLW-STEM,4.5
 USACE-ERDC_SEIR,4.6
@@ -9,4 +9,4 @@ Covid19Sim-Simulator,6.4
 JHU_IDD-CovidSP,7.3
 CovidAnalytics-DELPHI,7.7
 IHME-CurveFit,7.9
-Karlen-pypm,8.7
+Karlen-pypm,8.8

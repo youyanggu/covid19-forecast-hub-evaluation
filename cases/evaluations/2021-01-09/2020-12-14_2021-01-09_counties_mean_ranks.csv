@@ -1,0 +1,14 @@
+,mean_rank
+COVIDhub-ensemble,5.5
+LNQ-ens1,5.5
+OneQuietNight-ML,5.6
+Google_Harvard-CPF,6.7
+PandemicCentral-USCounty,6.8
+COVIDhub-baseline,7.0
+LANL-GrowthRate,7.0
+IowaStateLW-STEM,7.4
+Microsoft-DeepSTIA,7.5
+CU-select,7.6
+UVA-Ensemble,8.2
+JHU_IDD-CovidSP,8.2
+JHUAPL-Bucky,8.3

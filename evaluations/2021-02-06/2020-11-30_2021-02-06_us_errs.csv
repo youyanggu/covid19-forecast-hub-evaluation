@@ -1,0 +1,5 @@
+,total_deaths_2020-11-29,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Covid19Sim-Simulator,267270,468203.6,462169,201330.6,194899,6431.6,3.3%
+IowaStateLW-STEM,267270,385236.0,462169,118363.0,194899,-76536.0,-39.3%
+Baseline,267270,365513.4,462169,98640.4,194899,-96258.6,-49.4%
+UCLA-SuEIR,267270,355555.4,462169,88682.4,194899,-106216.6,-54.5%

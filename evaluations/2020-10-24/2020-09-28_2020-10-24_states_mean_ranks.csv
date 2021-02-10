@@ -1,5 +1,5 @@
 ,mean_rank
-UMass-MechBayes,12.9
+UMass-MechBayes,13.0
 COVIDhub-ensemble,13.8
 Karlen-pypm,14.4
 JCB-PRM,14.6
@@ -15,7 +15,7 @@ JHU_IDD-CovidSP,17.6
 CMU-TimeSeries,17.8
 CEID-Walk,17.9
 MITCovAlliance-SIR,18.1
-COVIDhub-baseline,18.1
+COVIDhub-baseline,18.2
 JHUAPL-Bucky,19.1
 UA-EpiCovDA,19.2
 IowaStateLW-STEM,19.7
@@ -27,10 +27,10 @@ PSI-DRAFT,21.2
 NotreDame-mobility,21.4
 LANL-GrowthRate,21.4
 MOBS-GLEAM_COVID,21.6
-UMich-RidgeTfReg,22.0
+UMich-RidgeTfReg,21.9
 IHME-CurveFit,22.4
 UCSD_NEU-DeepGLEAM,23.4
-CU-select,23.5
+CU-select,23.6
 CovidAnalytics-DELPHI,24.0
 USACE-ERDC_SEIR,25.1
 epiforecasts-ensemble1,25.9

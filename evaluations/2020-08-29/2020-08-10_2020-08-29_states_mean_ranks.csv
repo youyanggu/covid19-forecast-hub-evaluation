@@ -1,5 +1,5 @@
 ,mean_rank
-COVIDhub-ensemble,8.6
+COVIDhub-ensemble,8.5
 CEID-Walk,10.0
 YYG-ParamSearch,10.2
 COVIDhub-baseline,10.3
@@ -14,8 +14,8 @@ GT-DeepCOVID,13.2
 CovidAnalytics-DELPHI,13.4
 JCB-PRM,13.6
 MOBS-GLEAM_COVID,14.5
-LANL-GrowthRate,15.4
-CU-select,15.4
+LANL-GrowthRate,15.3
+CU-select,15.5
 Karlen-pypm,15.5
 UMich-RidgeTfReg,15.6
 IHME-CurveFit,15.9
@@ -23,6 +23,6 @@ Auquan-SEIR,16.2
 PSI-DRAFT,17.5
 NotreDame-mobility,17.5
 DDS-NBDS,17.7
-USACE-ERDC_SEIR,17.8
+USACE-ERDC_SEIR,17.9
 RobertWalraven-ESG,19.2
 JHU_IDD-CovidSP,20.2

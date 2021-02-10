@@ -9,7 +9,7 @@ MSRA-DeepST,18.1
 GT-DeepCOVID,18.3
 SteveMcConnell-CovidComplete,18.4
 OliverWyman-Navigator,18.5
-LNQ-ens1,18.6
+LNQ-ens1,18.5
 USC-SI_kJalpha,18.7
 MIT_CritData-GBCF,19.6
 UCSB-ACTS,19.9
@@ -34,7 +34,7 @@ UCLA-SuEIR,23.6
 UT-Mobility,23.9
 JHU_CSSE-DECOM,24.2
 JHU_UNC_GAS-StatMechPool,24.3
-DDS-NBDS,24.5
+DDS-NBDS,24.6
 CovidAnalytics-DELPHI,25.6
 IQVIA_ACOE-STAN,25.8
 PSI-DRAFT,25.9

@@ -3,13 +3,13 @@ UCLA-SuEIR,7.1
 YYG-ParamSearch,7.6
 LANL-GrowthRate,7.8
 UT-Mobility,8.1
-CovidAnalytics-DELPHI,8.1
-PSI-DRAFT,8.7
+CovidAnalytics-DELPHI,8.2
+PSI-DRAFT,8.6
 COVIDhub-ensemble,8.8
 UMass-MechBayes,8.9
 MOBS-GLEAM_COVID,9.2
-COVIDhub-baseline,10.1
-IHME-CurveFit,10.2
+COVIDhub-baseline,10.2
+IHME-CurveFit,10.3
 SWC-TerminusCM,10.5
 IowaStateLW-STEM,10.9
 Covid19Sim-Simulator,11.1

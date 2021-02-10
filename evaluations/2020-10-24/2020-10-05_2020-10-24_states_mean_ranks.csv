@@ -3,8 +3,8 @@ YYG-ParamSearch,12.1
 UMass-MechBayes,13.0
 OliverWyman-Navigator,13.4
 USC-SI_kJalpha,14.6
-Karlen-pypm,15.2
 COVIDhub-ensemble,15.2
+Karlen-pypm,15.2
 COVIDhub-baseline,16.1
 CEID-Walk,16.1
 LNQ-ens1,16.2
@@ -34,6 +34,6 @@ LANL-GrowthRate,21.9
 Google_Harvard-CPF,22.7
 PSI-DRAFT,24.4
 RobertWalraven-ESG,27.2
-WalmartLabsML-LogForecasting,28.4
+WalmartLabsML-LogForecasting,28.5
 epiforecasts-ensemble1,28.5
 TTU-squider,30.4

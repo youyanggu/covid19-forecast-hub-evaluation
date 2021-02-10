@@ -3,7 +3,7 @@ COVIDhub-ensemble,8.8
 YYG-ParamSearch,9.6
 UMass-MechBayes,9.7
 CMU-TimeSeries,10.2
-OliverWyman-Navigator,10.9
+OliverWyman-Navigator,11.0
 LNQ-ens1,11.1
 CovidAnalytics-DELPHI,11.7
 Covid19Sim-Simulator,11.8
@@ -17,7 +17,7 @@ GT-DeepCOVID,13.7
 NotreDame-mobility,13.9
 CU-select,14.2
 LANL-GrowthRate,14.5
-Karlen-pypm,14.8
+Karlen-pypm,14.7
 MITCovAlliance-SIR,14.8
 PSI-DRAFT,15.0
 IHME-CurveFit,16.1

@@ -1,13 +1,13 @@
 ,mean_rank
 YYG-ParamSearch,13.3
-LNQ-ens1,15.1
+LNQ-ens1,15.0
 UMass-MechBayes,15.7
 CMU-TimeSeries,15.8
 COVIDhub-ensemble,16.0
 OliverWyman-Navigator,16.1
 Geneva-DetGrowth,16.2
 COVIDhub-baseline,16.3
-USC-SI_kJalpha,16.5
+USC-SI_kJalpha,16.6
 CEID-Walk,17.1
 UCLA-SuEIR,17.8
 NotreDame-mobility,18.0
@@ -24,7 +24,7 @@ DDS-NBDS,20.1
 MIT_CritData-GBCF,20.5
 BPagano-RtDriven,20.7
 JHU_IDD-CovidSP,20.8
-Columbia_UNC-SurvCon,21.3
+Columbia_UNC-SurvCon,21.4
 IowaStateLW-STEM,21.4
 MOBS-GLEAM_COVID,21.6
 UT-Mobility,21.6

@@ -6,7 +6,7 @@ GT-DeepCOVID,16.6
 UCSB-ACTS,16.7
 LNQ-ens1,17.1
 UCLA-SuEIR,17.2
-CovidAnalytics-DELPHI,17.4
+CovidAnalytics-DELPHI,17.3
 CMU-TimeSeries,17.5
 RobertWalraven-ESG,17.6
 COVIDhub-baseline,17.8
@@ -25,7 +25,7 @@ BPagano-RtDriven,23.3
 UMich-RidgeTfReg,23.3
 USC-SI_kJalpha,23.3
 UT-Mobility,23.5
-JHUAPL-Bucky,24.6
+JHUAPL-Bucky,24.5
 JHU_CSSE-DECOM,25.1
 Columbia_UNC-SurvCon,25.1
 JCB-PRM,25.2

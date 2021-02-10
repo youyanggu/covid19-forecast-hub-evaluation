@@ -1,12 +1,12 @@
 ,mean_rank
-OliverWyman-Navigator,4.1
+OliverWyman-Navigator,4.0
 USC-SI_kJalpha,4.3
 UCLA-SuEIR,4.4
 COVIDhub-baseline,4.7
 CovidActNow-SEIR_CAN,4.9
 IowaStateLW-STEM,5.4
-Covid19Sim-Simulator,6.1
-LANL-GrowthRate,7.5
+Covid19Sim-Simulator,6.2
+LANL-GrowthRate,7.6
 CovidAnalytics-DELPHI,8.0
 USACE-ERDC_SEIR,8.4
 JHU_IDD-CovidSP,8.6

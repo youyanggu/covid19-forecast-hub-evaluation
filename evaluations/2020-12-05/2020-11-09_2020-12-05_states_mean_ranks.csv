@@ -1,6 +1,6 @@
 ,mean_rank
 Karlen-pypm,11.4
-UMass-MechBayes,13.1
+UMass-MechBayes,13.0
 Caltech-CS156,14.0
 SteveMcConnell-CovidComplete,14.2
 USC-SI_kJalpha,14.6
@@ -14,8 +14,8 @@ CMU-TimeSeries,16.7
 UA-EpiCovDA,17.1
 MOBS-GLEAM_COVID,17.5
 COVIDhub-ensemble,17.6
-JHUAPL-Bucky,18.3
-Covid19Sim-Simulator,18.8
+JHUAPL-Bucky,18.4
+Covid19Sim-Simulator,18.7
 JCB-PRM,19.0
 JHU_CSSE-DECOM,19.1
 GT-DeepCOVID,19.2
@@ -35,7 +35,7 @@ UMich-RidgeTfReg,26.9
 UT-Mobility,27.4
 CovidAnalytics-DELPHI,27.6
 TTU-squider,27.9
-PSI-DRAFT,28.4
+PSI-DRAFT,28.5
 JHU_UNC_GAS-StatMechPool,29.3
 NotreDame-mobility,30.0
 UCLA-SuEIR,30.7

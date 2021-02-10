@@ -4,7 +4,7 @@ COVIDhub-ensemble,5.1
 UCLA-SuEIR,6.2
 LNQ-ens1,6.5
 IowaStateLW-STEM,6.7
-USACE-ERDC_SEIR,6.8
+USACE-ERDC_SEIR,6.9
 JHU_IDD-CovidSP,7.1
 LANL-GrowthRate,7.4
 Covid19Sim-Simulator,8.1
@@ -13,4 +13,4 @@ USC-SI_kJalpha,9.2
 OliverWyman-Navigator,9.7
 CovidAnalytics-DELPHI,10.9
 IHME-CurveFit,11.4
-Karlen-pypm,11.9
+Karlen-pypm,12.0

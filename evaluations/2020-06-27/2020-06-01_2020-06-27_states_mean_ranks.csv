@@ -4,11 +4,11 @@ LANL-GrowthRate,7.8
 UT-Mobility,8.1
 YYG-ParamSearch,8.2
 CovidAnalytics-DELPHI,8.3
-PSI-DRAFT,8.6
-COVIDhub-ensemble,8.8
+PSI-DRAFT,8.7
+COVIDhub-ensemble,8.7
 MOBS-GLEAM_COVID,9.4
 UMass-MechBayes,9.6
-COVIDhub-baseline,10.3
+COVIDhub-baseline,10.4
 IHME-CurveFit,10.5
 IowaStateLW-STEM,10.6
 Covid19Sim-Simulator,10.7

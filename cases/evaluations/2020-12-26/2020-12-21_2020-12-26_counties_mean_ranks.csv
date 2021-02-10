@@ -2,7 +2,7 @@
 COVIDhub-ensemble,6.0
 LNQ-ens1,6.0
 LANL-GrowthRate,7.6
-FAIR-NRAR,7.9
+FAIR-NRAR,8.0
 COVIDhub-baseline,8.0
 JHU_IDD-CovidSP,8.1
 CEID-Walk,8.1
@@ -10,8 +10,8 @@ OneQuietNight-ML,8.2
 CU-select,8.6
 UChicagoCHATTOPADHYAY-UnIT,8.9
 PandemicCentral-USCounty,9.0
-JHUAPL-Bucky,9.1
+JHUAPL-Bucky,9.0
 Google_Harvard-CPF,9.5
-IowaStateLW-STEM,10.0
+IowaStateLW-STEM,9.9
 UVA-Ensemble,10.4
 OliverWyman-Navigator,10.6

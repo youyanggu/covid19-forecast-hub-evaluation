@@ -1,14 +1,14 @@
 ,mean_rank
 Karlen-pypm,5.6
-JCB-PRM,5.8
+JCB-PRM,5.9
 CovidAnalytics-DELPHI,6.2
 IowaStateLW-STEM,6.8
 JHUAPL-Bucky,6.9
 Covid19Sim-Simulator,7.4
-JHU_IDD-CovidSP,7.5
+JHU_IDD-CovidSP,7.6
 Columbia_UNC-SurvCon,7.7
 LANL-GrowthRate,7.9
-COVIDhub-baseline,8.3
+COVIDhub-baseline,8.2
 NotreDame-mobility,8.7
 PSI-DRAFT,9.0
 UCLA-SuEIR,9.0

@@ -1,7 +1,7 @@
 ,mean_rank
 BPagano-RtDriven,12.5
 Karlen-pypm,12.7
-IowaStateLW-STEM,13.1
+IowaStateLW-STEM,13.2
 OliverWyman-Navigator,13.3
 Google_Harvard-CPF,13.4
 MIT_CritData-GBCF,14.2
@@ -11,10 +11,10 @@ UCSD_NEU-DeepGLEAM,15.4
 GT-DeepCOVID,16.5
 MSRA-DeepST,16.8
 COVIDhub-ensemble,16.8
-JHU_CSSE-DECOM,17.1
 JCB-PRM,17.1
+JHU_CSSE-DECOM,17.1
 Caltech-CS156,17.3
-MOBS-GLEAM_COVID,17.8
+MOBS-GLEAM_COVID,17.9
 SteveMcConnell-CovidComplete,18.0
 JHUAPL-Bucky,18.5
 CovidAnalytics-DELPHI,19.3
@@ -34,11 +34,11 @@ UT-Mobility,25.9
 PSI-DRAFT,27.5
 UChicagoCHATTOPADHYAY-UnIT,27.5
 UA-EpiCovDA,27.7
-USACE-ERDC_SEIR,27.9
+USACE-ERDC_SEIR,27.8
 NotreDame-mobility,27.9
 UCLA-SuEIR,28.0
 IQVIA_ACOE-STAN,30.3
-RobertWalraven-ESG,32.2
+RobertWalraven-ESG,32.1
 TTU-squider,32.2
 WalmartLabsML-LogForecasting,38.9
 Columbia_UNC-SurvCon,39.6

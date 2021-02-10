@@ -1,5 +1,5 @@
 ,mean_rank
-YYG-ParamSearch,12.5
+YYG-ParamSearch,12.4
 OliverWyman-Navigator,12.8
 UMass-MechBayes,13.2
 USC-SI_kJalpha,13.7
@@ -8,9 +8,9 @@ CMU-TimeSeries,15.4
 COVIDhub-ensemble,15.9
 COVIDhub-baseline,16.0
 JHU_CSSE-DECOM,16.2
-MIT_CritData-GBCF,16.4
+MIT_CritData-GBCF,16.5
 CEID-Walk,16.5
-SteveMcConnell-CovidComplete,16.9
+SteveMcConnell-CovidComplete,16.8
 JCB-PRM,17.1
 JHUAPL-Bucky,17.5
 LNQ-ens1,17.6
@@ -34,6 +34,6 @@ CovidAnalytics-DELPHI,22.7
 LANL-GrowthRate,23.9
 PSI-DRAFT,24.6
 epiforecasts-ensemble1,27.9
-WalmartLabsML-LogForecasting,29.4
+WalmartLabsML-LogForecasting,29.5
 TTU-squider,29.5
 RobertWalraven-ESG,30.0

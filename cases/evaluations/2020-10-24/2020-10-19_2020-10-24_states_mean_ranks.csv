@@ -1,9 +1,9 @@
 ,mean_rank
 RobertWalraven-ESG,8.3
-OliverWyman-Navigator,8.4
+OliverWyman-Navigator,8.3
 LNQ-ens1,8.6
 Geneva-DetGrowth,8.7
-MSRA-DeepST,9.0
+MSRA-DeepST,8.9
 Karlen-pypm,9.3
 USC-SI_kJalpha,9.5
 CEID-Walk,9.8
@@ -22,4 +22,4 @@ IowaStateLW-STEM,15.2
 UCLA-SuEIR,16.7
 JHU_IDD-CovidSP,18.8
 TTU-squider,21.6
-CovidAnalytics-DELPHI,22.1
+CovidAnalytics-DELPHI,22.2

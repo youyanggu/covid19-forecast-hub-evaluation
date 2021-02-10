@@ -11,7 +11,7 @@ UCLA-SuEIR,14.1
 GT-DeepCOVID,14.2
 CEID-Walk,14.3
 CovidAnalytics-DELPHI,14.4
-LNQ-ens1,14.9
+LNQ-ens1,15.0
 SteveMcConnell-CovidComplete,15.2
 UMass-MechBayes,15.2
 COVIDhub-baseline,15.6
@@ -25,7 +25,7 @@ Auquan-SEIR,18.8
 JHU_IDD-CovidSP,18.9
 IHME-CurveFit,19.3
 USACE-ERDC_SEIR,19.4
-CU-select,19.6
+CU-select,19.5
 PSI-DRAFT,19.7
 Covid19Sim-Simulator,20.0
 epiforecasts-ensemble1,20.6

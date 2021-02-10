@@ -8,14 +8,14 @@ MSRA-DeepST,17.7
 USC-SI_kJalpha,17.8
 GT-DeepCOVID,17.8
 Columbia_UNC-SurvCon,18.3
-LNQ-ens1,18.3
+LNQ-ens1,18.4
 SteveMcConnell-CovidComplete,18.4
 UCSD_NEU-DeepGLEAM,18.5
 Google_Harvard-CPF,19.0
 MOBS-GLEAM_COVID,19.2
-USC-SI_kJalpha_RF,20.8
+USC-SI_kJalpha_RF,20.9
+LANL-GrowthRate,20.9
 JCB-PRM,21.0
-LANL-GrowthRate,21.0
 UChicagoCHATTOPADHYAY-UnIT,21.3
 COVIDhub-baseline,21.3
 JHU_CSSE-DECOM,21.4
@@ -41,6 +41,6 @@ CU-select,26.9
 NotreDame-mobility,28.0
 PSI-DRAFT,28.7
 Covid19Sim-Simulator,31.4
-JHU_IDD-CovidSP,34.0
+JHU_IDD-CovidSP,34.1
 WalmartLabsML-LogForecasting,35.4
 TTU-squider,35.7

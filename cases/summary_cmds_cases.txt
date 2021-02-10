@@ -31,3 +31,8 @@ python ../summarize_evaluations.py --eval_date 2020-12-12 --evaluations_dir eval
 python ../summarize_evaluations.py --eval_date 2020-12-19 --evaluations_dir evaluations --out_dir summary --summarize_counties
 python ../summarize_evaluations.py --eval_date 2020-12-26 --evaluations_dir evaluations --out_dir summary --summarize_counties
 python ../summarize_evaluations.py --eval_date 2021-01-02 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2021-01-09 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2021-01-16 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2021-01-23 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2021-01-30 --evaluations_dir evaluations --out_dir summary --summarize_counties
+python ../summarize_evaluations.py --eval_date 2021-02-06 --evaluations_dir evaluations --out_dir summary --summarize_counties

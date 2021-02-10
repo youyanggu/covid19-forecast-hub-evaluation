@@ -3,7 +3,7 @@ Karlen-pypm,12.0
 Google_Harvard-CPF,12.9
 MSRA-DeepST,13.1
 MIT_CritData-GBCF,13.3
-OliverWyman-Navigator,13.4
+OliverWyman-Navigator,13.5
 UCSD_NEU-DeepGLEAM,13.7
 BPagano-RtDriven,13.8
 JHU_CSSE-DECOM,13.9
@@ -18,10 +18,10 @@ SteveMcConnell-CovidComplete,17.3
 GT-DeepCOVID,17.8
 Caltech-CS156,18.1
 CovidAnalytics-DELPHI,19.0
-Covid19Sim-Simulator,19.6
 UMass-MechBayes,19.6
+Covid19Sim-Simulator,19.6
 CMU-TimeSeries,21.1
-LANL-GrowthRate,23.5
+LANL-GrowthRate,23.4
 JHU_IDD-CovidSP,23.5
 epiforecasts-ensemble1,24.1
 UA-EpiCovDA,25.1

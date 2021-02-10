@@ -1,7 +1,7 @@
 ,mean_rank
 LNQ-ens1,5.9
 COVIDhub-ensemble,6.2
-COVIDhub-baseline,6.4
+COVIDhub-baseline,6.3
 CEID-Walk,6.4
 UCLA-SuEIR,6.9
 OliverWyman-Navigator,7.0

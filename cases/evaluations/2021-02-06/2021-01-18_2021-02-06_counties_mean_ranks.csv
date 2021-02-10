@@ -1,0 +1,17 @@
+,mean_rank
+JHU_IDD-CovidSP,5.4
+LNQ-ens1,5.8
+OneQuietNight-ML,6.0
+COVIDhub-ensemble,6.7
+LANL-GrowthRate,6.8
+UpstateSU-GRU,7.9
+COVIDhub-baseline,8.6
+FAIR-NRAR,8.6
+CEID-Walk,8.6
+PandemicCentral-USCounty,8.9
+JHUAPL-Bucky,9.0
+CU-select,9.0
+IowaStateLW-STEM,10.7
+UVA-Ensemble,10.9
+OliverWyman-Navigator,11.3
+Google_Harvard-CPF,11.8

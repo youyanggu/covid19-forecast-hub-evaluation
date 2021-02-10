@@ -1,10 +1,10 @@
 ,mean_rank
 Karlen-pypm,6.1
-JHUAPL-Bucky,6.2
+JHUAPL-Bucky,6.3
 USC-SI_kJalpha,6.5
 JCB-PRM,7.1
-Covid19Sim-Simulator,7.2
-COVIDhub-baseline,8.0
+Covid19Sim-Simulator,7.1
+COVIDhub-baseline,7.9
 JHU_IDD-CovidSP,8.5
 CovidAnalytics-DELPHI,8.7
 Columbia_UNC-SurvCon,9.1

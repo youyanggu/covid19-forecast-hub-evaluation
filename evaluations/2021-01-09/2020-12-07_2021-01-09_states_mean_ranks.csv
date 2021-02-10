@@ -1,0 +1,17 @@
+,mean_rank
+JHUAPL-Bucky,5.8
+Karlen-pypm,6.0
+JCB-PRM,6.6
+Covid19Sim-Simulator,6.9
+COVIDhub-baseline,7.0
+LANL-GrowthRate,7.2
+IowaStateLW-STEM,7.7
+UCLA-SuEIR,7.8
+CovidAnalytics-DELPHI,8.1
+IHME-CurveFit,8.2
+PSI-DRAFT,9.2
+Wadhwani_AI-BayesOpt,9.2
+JHU_IDD-CovidSP,9.5
+NotreDame-mobility,10.7
+Columbia_UNC-SurvCon,11.3
+WalmartLabsML-LogForecasting,14.7

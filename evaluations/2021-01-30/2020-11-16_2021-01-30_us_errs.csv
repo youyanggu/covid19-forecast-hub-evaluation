@@ -1,0 +1,4 @@
+,total_deaths_2020-11-15,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+UCLA-SuEIR,246652,351425.8,439530,105218.8,192878,-87659.2,-45.4%
+IowaStateLW-STEM,246652,331343.0,439530,85136.0,192878,-107742.0,-55.9%
+Baseline,246652,330024.1,439530,83817.1,192878,-109060.9,-56.5%

@@ -3,10 +3,10 @@ COVIDhub-baseline,3.5
 IowaStateLW-STEM,4.8
 UCLA-SuEIR,5.2
 USACE-ERDC_SEIR,5.2
-LANL-GrowthRate,5.4
+LANL-GrowthRate,5.3
 JHU_IDD-CovidSP,5.4
 Covid19Sim-Simulator,5.9
-USC-SI_kJalpha,6.3
+USC-SI_kJalpha,6.2
 CovidAnalytics-DELPHI,7.4
 IHME-CurveFit,7.9
 Karlen-pypm,9.2

@@ -1,6 +1,6 @@
 ,mean_rank
 COVIDhub-ensemble,9.3
-YYG-ParamSearch,9.6
+YYG-ParamSearch,9.5
 COVIDhub-baseline,9.9
 CEID-Walk,10.6
 UMass-MechBayes,10.7
@@ -23,7 +23,7 @@ CU-select,16.4
 Karlen-pypm,16.5
 DDS-NBDS,16.9
 IHME-CurveFit,18.0
-USACE-ERDC_SEIR,19.0
+USACE-ERDC_SEIR,19.1
 JHU_IDD-CovidSP,20.3
 NotreDame-mobility,20.4
 Auquan-SEIR,24.0

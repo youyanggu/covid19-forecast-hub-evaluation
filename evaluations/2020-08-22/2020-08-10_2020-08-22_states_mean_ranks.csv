@@ -1,7 +1,7 @@
 ,mean_rank
 COVIDhub-ensemble,8.7
 CEID-Walk,9.7
-YYG-ParamSearch,9.7
+YYG-ParamSearch,9.8
 COVIDhub-baseline,9.9
 OliverWyman-Navigator,10.3
 UMass-MechBayes,10.6
@@ -11,7 +11,7 @@ LNQ-ens1,11.8
 CMU-TimeSeries,11.8
 UA-EpiCovDA,12.3
 GT-DeepCOVID,13.2
-CovidAnalytics-DELPHI,13.8
+CovidAnalytics-DELPHI,13.7
 MOBS-GLEAM_COVID,13.8
 JCB-PRM,14.0
 LANL-GrowthRate,14.4

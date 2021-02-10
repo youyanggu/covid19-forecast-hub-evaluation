@@ -1,9 +1,9 @@
 ,mean_rank
 UMass-MechBayes,9.7
-LNQ-ens1,10.1
+LNQ-ens1,10.2
 COVIDhub-ensemble,10.2
 OliverWyman-Navigator,10.7
-Geneva-DetGrowth,10.8
+Geneva-DetGrowth,10.9
 YYG-ParamSearch,11.5
 CMU-TimeSeries,11.8
 CovidAnalytics-DELPHI,11.9
@@ -13,7 +13,7 @@ UT-Mobility,12.5
 COVIDhub-baseline,12.8
 MOBS-GLEAM_COVID,12.8
 UCLA-SuEIR,12.9
-Karlen-pypm,13.8
+Karlen-pypm,13.7
 GT-DeepCOVID,14.0
 CU-select,14.4
 PSI-DRAFT,14.5
@@ -22,7 +22,7 @@ USACE-ERDC_SEIR,14.6
 JHU_IDD-CovidSP,15.5
 NotreDame-mobility,16.6
 Covid19Sim-Simulator,17.1
-IowaStateLW-STEM,17.1
+IowaStateLW-STEM,17.2
 MITCovAlliance-SIR,18.5
 IHME-CurveFit,19.2
 RobertWalraven-ESG,25.7

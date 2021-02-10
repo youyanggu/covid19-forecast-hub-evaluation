@@ -2,14 +2,14 @@
 CEID-Walk,7.3
 COVIDhub-baseline,7.4
 COVIDhub-ensemble,7.5
-LNQ-ens1,7.6
+LNQ-ens1,7.5
 Covid19Sim-Simulator,7.7
 JCB-PRM,8.0
 DDS-NBDS,8.5
 USACE-ERDC_SEIR,8.7
 UMich-RidgeTfReg,8.9
 IowaStateLW-STEM,9.0
-USC-SI_kJalpha,9.8
+USC-SI_kJalpha,9.9
 JHUAPL-Bucky,10.2
 JHU_IDD-CovidSP,10.6
 Karlen-pypm,10.8
