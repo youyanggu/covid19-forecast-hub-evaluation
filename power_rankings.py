@@ -9,7 +9,8 @@ import pandas as pd
 Compute a "Power Rankings" based on the mean 'N weeks ahead' percentiles,
     where N is 1-6 weeks ahead. This includes both US and state-by-state rankings.
 
-There are a total of 12 summaries, US and state-by-state for each of 1-6 weeks ahead.
+There are a total of 12 summaries: US + state-by-state for each of 1-6 weeks ahead.
+    For each model, we take its mean percentile rank across all summaries.
     If a model is the best in every summary, it will have a mean percentile of 0.
     If a model is the median rank in every summary, it will have a mean percentile of 0.5.
     The lower the mean percentile, the better the model.
@@ -24,7 +25,7 @@ print('========================================')
 print('Power Rankings')
 print('========================================')
 model_to_percentiles = defaultdict(list)
-for fname in glob.glob('summary/*weeks_ahead*.csv'):
+for fname in glob.glob('summary/summary_[1-6]_weeks_ahead*.csv'):
     df = pd.read_csv(fname, index_col=0)
     # Only count models with 3 or more entries in summary
     df_filt = df[[c for c in df.columns if 'mean_sq_abs_error' not in c]]
