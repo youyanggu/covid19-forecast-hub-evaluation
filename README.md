@@ -1,6 +1,6 @@
 # Evaluation of COVID-19 Models
 
-**November 2 Update:** We have published our [Model Power Rankings](/summary/power_rankings.csv) that combines model performances for 1-6 week ahead US and state-by-state forecasts. The source code to compute the power rankings is available [here](/power_rankings.py).
+**February 9, 2021 Update:** We have released long-term forecast evaluations (6 to 20 weeks ahead) in our [/summary](summary) directory.
 
 **October 26 Update:** Moving forward, we will aim to update evaluations on a monthly basis.
 

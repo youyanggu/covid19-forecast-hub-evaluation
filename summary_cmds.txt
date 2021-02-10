@@ -4,6 +4,20 @@ python summarize_evaluations.py --weeks_ahead 3 --out_dir summary
 python summarize_evaluations.py --weeks_ahead 4 --out_dir summary
 python summarize_evaluations.py --weeks_ahead 5 --out_dir summary
 python summarize_evaluations.py --weeks_ahead 6 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 7 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 8 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 9 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 10 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 11 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 12 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 13 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 14 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 15 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 16 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 17 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 18 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 19 --out_dir summary
+python summarize_evaluations.py --weeks_ahead 20 --out_dir summary
 
 python summarize_evaluations.py --eval_date 2020-04-25 --out_dir summary
 python summarize_evaluations.py --eval_date 2020-05-02 --out_dir summary
