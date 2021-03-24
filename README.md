@@ -284,9 +284,8 @@ We encourage open collaboration. Please open [an issue request](https://github.c
 
 ## Other Repositories
 
-- [Main data repository](https://github.com/youyanggu/covid19_projections)
+- [Main COVID-19 Repository](https://github.com/youyanggu/covid19_projections)
 - [Infections Estimates](https://github.com/youyanggu/covid19-infection-estimates-latest)
 - [Historical CDC Vaccination Data](https://github.com/youyanggu/covid19-cdc-vaccination-data)
-- [COVID-19 datasets](https://github.com/youyanggu/covid19-datasets)
+- [COVID-19 Datasets](https://github.com/youyanggu/covid19-datasets)
 - [SEIR Simulator](https://github.com/youyanggu/yyg-seir-simulator)
-
