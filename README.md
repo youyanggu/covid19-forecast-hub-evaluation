@@ -39,7 +39,7 @@ In this repository, we provide the evaluation results as well as the entire sour
   * [Global Evaluation](#global-evaluation)
   * [Summary](#summary)
   * [Power Rankings](#power-rankings)
-* [Questions](#questions) 
+* [Question?](#question-bug-feature-request)
 * [Other Repositories](#other-repositories)
 
 ## Dependencies
@@ -278,9 +278,9 @@ We have published our [Model Power Rankings](/summary/power_rankings.csv) that c
 
 The source code to compute the power rankings is available [here](/power_rankings.py).
 
-## Questions
+## Question? Bugs? Feature Request?
 
-Questions? Bugs? Feature Request? We encourage open collaboration. Please open [an issue request](https://github.com/youyanggu/covid19-forecast-hub-evaluation/issues) if you have any questions/suggestions/bug reports.
+We encourage open collaboration. Please open [an issue request](https://github.com/youyanggu/covid19-forecast-hub-evaluation/issues) if you have any questions/suggestions/bug reports.
 
 ## Other Repositories
 
