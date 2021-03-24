@@ -1,8 +1,8 @@
 # Evaluation of COVID-19 Models
 
-**February 9, 2021 Update:** We have released long-term forecast evaluations (6 to 20 weeks ahead) in our [/summary](summary) directory.
+**February 9, 2021 Update:** We have released long-term forecast evaluations (6 to 20 weeks ahead) in our [summary](/summary) directory.
 
-**October 26 Update:** Moving forward, we will aim to update evaluations on a monthly basis.
+**October 26, 2020 Update:** Moving forward, we will aim to update evaluations on a monthly basis.
 
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
@@ -39,6 +39,8 @@ In this repository, we provide the evaluation results as well as the entire sour
   * [Global Evaluation](#global-evaluation)
   * [Summary](#summary)
   * [Power Rankings](#power-rankings)
+* [Questions](#questions) 
+* [Other Repositories](#other-repositories)
 
 ## Dependencies
 
@@ -276,6 +278,15 @@ We have published our [Model Power Rankings](/summary/power_rankings.csv) that c
 
 The source code to compute the power rankings is available [here](/power_rankings.py).
 
-## Questions? Bugs? Feature Request?
+## Questions
 
-Lastly, we encourage open collaboration. Please open [an issue request](https://github.com/youyanggu/covid19-forecast-hub-evaluation/issues) if you have any questions/suggestions/bug reports.
+Questions? Bugs? Feature Request? We encourage open collaboration. Please open [an issue request](https://github.com/youyanggu/covid19-forecast-hub-evaluation/issues) if you have any questions/suggestions/bug reports.
+
+## Other Repositories
+
+- [Main data repository](https://github.com/youyanggu/covid19_projections)
+- [Infections Estimates](https://github.com/youyanggu/covid19-infection-estimates-latest)
+- [Historical CDC Vaccination Data](https://github.com/youyanggu/covid19-cdc-vaccination-data)
+- [COVID-19 datasets](https://github.com/youyanggu/covid19-datasets)
+- [SEIR Simulator](https://github.com/youyanggu/yyg-seir-simulator)
+
