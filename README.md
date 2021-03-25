@@ -1,8 +1,8 @@
 # Evaluation of COVID-19 Models
 
-**February 9, 2021 Update:** We have released long-term forecast evaluations (6 to 20 weeks ahead) in our [summary](/summary) directory.
+**March 25, 2021 Update:** We are winding down our work on COVID-19 and hence will no longer be updating the evaluations. See [Youyang's blog post](https://youyanggu.com/blog/one-year-later) for more details. Our final evaluations will go through March 6, 2021. For an alternative evaluation framework, we recommend the [COVID-19 Forecast Hub](https://covid19forecasthub.org/eval-reports/) by the Reich Lab (UMass Amherst) and Delphi Group (CMU).
 
-**October 26, 2020 Update:** Moving forward, we will aim to update evaluations on a monthly basis.
+**February 9, 2021 Update:** We have released long-term forecast evaluations (6 to 20 weeks ahead) in our [summary](/summary) directory.
 
 Here we present an evaluation of models from the [COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub). These models are submitted weekly to the [CDC COVID-19 Forecasting page](https://www.cdc.gov/coronavirus/2019-ncov/covid-data/forecasting-us.html) to help inform public health decision-making.
 
@@ -256,7 +256,7 @@ In addition to US forecast evaluations, we also include evaluations of country-b
 
 We summarize the weekly evaluations in the [summary](/summary) directory. There are two types of summaries:
 
-1. *N week ahead* - these evaluate model projections for *N* weeks in the future, where *N* is between 1 and 6. We believe forecasts more than 6 weeks into the future  are more reliant on assumptions than actual signals, and hence are not included in our evaluations.
+1. *N week ahead* - these evaluate model projections for *N* weeks in the future, where *N* is between 1 and 20. Note of caution: we believe forecasts more than 6 weeks into the future are more reliant on assumptions than actual signals, so please use those results carefully.
 
 2. *Evaluation date* - these evaluate model projections for a particular date. So if the evaluation date is October 31, this summary ranks models based on their past weekly projections for October 31. Hence, this metric looks at the accuracy of a model's forecasts for a particular date.
 
