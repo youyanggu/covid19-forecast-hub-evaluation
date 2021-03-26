@@ -1,10 +1,10 @@
 ,mean_rank
-JCB-PRM,3.9
-Covid19Sim-Simulator,4.2
-JHUAPL-Bucky,4.2
-IowaStateLW-STEM,4.4
-Columbia_UNC-SurvCon,4.9
-USACE-ERDC_SEIR,5.0
-COVIDhub-baseline,5.0
+JCB-PRM,3.8
+Covid19Sim-Simulator,4.1
+JHUAPL-Bucky,4.3
+IowaStateLW-STEM,4.5
+Columbia_UNC-SurvCon,4.8
+USACE-ERDC_SEIR,4.8
+COVIDhub-baseline,5.1
 UCLA-SuEIR,5.5
 WalmartLabsML-LogForecasting,8.0

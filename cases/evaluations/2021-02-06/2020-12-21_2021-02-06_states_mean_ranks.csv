@@ -1,8 +1,8 @@
 ,mean_rank
-COVIDhub-baseline,3.2
 Covid19Sim-Simulator,3.2
-IowaStateLW-STEM,3.6
-JHUAPL-Bucky,3.7
+COVIDhub-baseline,3.2
+IowaStateLW-STEM,3.5
 UCLA-SuEIR,3.7
+JHUAPL-Bucky,3.8
 USC-SI_kJalpha,4.1
 JCB-PRM,6.5

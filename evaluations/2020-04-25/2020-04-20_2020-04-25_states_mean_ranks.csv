@@ -1,8 +1,8 @@
 ,mean_rank
 COVIDhub-baseline,3.0
 UT-Mobility,3.3
-YYG-ParamSearch,3.5
+YYG-ParamSearch,3.4
 IHME-CurveFit,3.6
-LANL-GrowthRate,3.8
-CU-select,5.0
+LANL-GrowthRate,3.9
+CU-select,4.9
 MOBS-GLEAM_COVID,5.9

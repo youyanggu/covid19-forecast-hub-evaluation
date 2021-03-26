@@ -1,13 +1,13 @@
 ,mean_rank
 LANL-GrowthRate,4.7
-CU-select,5.3
+CU-select,5.4
 JHU_IDD-CovidSP,5.5
 COVIDhub-baseline,5.9
-IowaStateLW-STEM,6.0
+IowaStateLW-STEM,5.9
 OneQuietNight-ML,6.1
 Covid19Sim-Simulator,6.2
-JHUAPL-Bucky,6.4
-UCLA-SuEIR,6.6
+JHUAPL-Bucky,6.3
+UCLA-SuEIR,6.5
 JCB-PRM,7.4
 USC-SI_kJalpha,8.2
 USACE-ERDC_SEIR,9.8

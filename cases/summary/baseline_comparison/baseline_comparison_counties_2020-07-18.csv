@@ -59,7 +59,7 @@ perc_beat_baseline-UMich-RidgeTfReg,,
 perc_beat_baseline-USACE-ERDC_SEIR,,
 perc_beat_baseline-USC-SI_kJalpha,0.3597359736,0.3919066715
 mean_abs_error-CDDEP-SEIR_MCMC,,
-mean_abs_error-COVIDhub-baseline,83.51098376,37.18943012
+mean_abs_error-COVIDhub-baseline,83.5116205,37.18943012
 mean_abs_error-CU-select,,48.89684814
 mean_abs_error-Columbia_UNC-SurvCon,,
 mean_abs_error-Covid19Sim-Simulator,,

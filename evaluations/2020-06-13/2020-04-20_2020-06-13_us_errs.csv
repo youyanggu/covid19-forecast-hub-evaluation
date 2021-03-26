@@ -1,3 +1,3 @@
 ,total_deaths_2020-04-19,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
-Baseline,42584,157694.3,118393,116749.3,75809,40940.3,54.0%
-IHME-CurveFit,42584,65954.9,118393,25009.9,75809,-50799.1,-67.0%
+Baseline,42929,157694.3,118287,116749.3,75358,41391.3,54.9%
+IHME-CurveFit,42929,65954.9,118287,25009.9,75358,-50348.1,-66.8%

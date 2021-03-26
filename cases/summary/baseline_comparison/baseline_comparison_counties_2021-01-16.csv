@@ -128,10 +128,10 @@ perc_beat_baseline-USC-SI_kJalpha,,,,,,,,
 perc_beat_baseline-UVA-Ensemble,,,,,0.3513254551,0.2823379112,0.4033854998,0.378792718
 perc_beat_baseline-UpstateSU-GRU,,,,,,,0.2678700361,0.4997592682
 mean_abs_error-BPagano-RtDriven,,,,,,,,
-mean_abs_error-CEID-Walk,,,,,,346.7205985,184.2902579,91.36574339
+mean_abs_error-CEID-Walk,,,,,,346.7247373,184.2918497,91.36638013
 mean_abs_error-CMU-TimeSeries,,,,,,,,
-mean_abs_error-COVIDhub-baseline,1743.969436,1458.742757,1025.94333,712.5364534,405.0760904,340.1368991,180.3524355,91.87933779
-mean_abs_error-COVIDhub-ensemble,,,,,333.7812798,384.3104107,233.5205349,74.24801019
+mean_abs_error-COVIDhub-baseline,1743.95702,1458.732251,1025.934734,712.530086,405.0716332,340.1410379,180.3540274,91.87997453
+mean_abs_error-COVIDhub-ensemble,,,,,333.7768227,384.3145495,233.5221267,74.24864693
 mean_abs_error-CU-select,,,,,,,,
 mean_abs_error-Columbia_UNC-SurvCon,,,,,,,,
 mean_abs_error-Covid19Sim-Simulator,,,,,,,,
@@ -144,9 +144,9 @@ mean_abs_error-IBF-TimeSeries,,,,,,,,
 mean_abs_error-IEM_MED-CovidProject,,,,,,,,
 mean_abs_error-IowaStateLW-STEM,,,,,,,,
 mean_abs_error-JCB-PRM,,,,,,,,
-mean_abs_error-JHUAPL-Bucky,4875.628717,2051.400191,1380.453359,1533.435817,1177.185228,699.705476,245.1725883,138.1279847
+mean_abs_error-JHUAPL-Bucky,4875.616301,2051.410697,1380.461955,1533.442184,1177.189685,699.7096148,245.1741802,138.1286215
 mean_abs_error-JHU_CSSE-DECOM,,,,,,,,
-mean_abs_error-JHU_IDD-CovidSP,,,,803.5535498,497.0025788,465.9663165,402.7405285,177.4426297
+mean_abs_error-JHU_IDD-CovidSP,,,,803.5471824,496.9981216,465.9704553,402.7421203,177.4432665
 mean_abs_error-JHU_UNC_GAS-StatMechPool,,,,,,,,
 mean_abs_error-Karlen-pypm,,,,,,,,
 mean_abs_error-LANL-GrowthRate,,,,,,,,

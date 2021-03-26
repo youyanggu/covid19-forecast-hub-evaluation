@@ -1,10 +1,10 @@
 ,mean_rank
-Covid19Sim-Simulator,3.7
-JHUAPL-Bucky,4.3
-IHME-CurveFit,4.4
-IowaStateLW-STEM,4.7
-COVIDhub-baseline,4.8
+Covid19Sim-Simulator,3.6
+JHUAPL-Bucky,4.4
+IHME-CurveFit,4.5
+IowaStateLW-STEM,4.6
+COVIDhub-baseline,4.9
 JCB-PRM,4.9
 UCLA-SuEIR,5.0
-Columbia_UNC-SurvCon,5.6
+Columbia_UNC-SurvCon,5.4
 WalmartLabsML-LogForecasting,7.6

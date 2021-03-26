@@ -1,0 +1,15 @@
+,mean_rank
+USC-SI_kJalpha,5.8
+JHUAPL-Bucky,6.3
+LANL-GrowthRate,6.5
+IHME-CurveFit,7.1
+UCLA-SuEIR,7.1
+CovidAnalytics-DELPHI,7.4
+JHU_IDD-CovidSP,7.6
+COVIDhub-baseline,7.9
+WalmartLabsML-LogForecasting,8.0
+PSI-DRAFT,8.1
+AIpert-pwllnod,8.2
+IowaStateLW-STEM,8.2
+Covid19Sim-Simulator,8.4
+Columbia_UNC-SurvCon,8.5

@@ -36,7 +36,7 @@ def main():
     base_dir = Path(os.path.abspath(__file__)).parent
     base_file_to_out_fname = {
         'truth-Cumulative Deaths.csv' : 'truth-cumulative-deaths',
-        #'truth-Incident Cases.csv'  : 'truth-incident-cases',
+        #'truth-Incident Cases.csv'  : 'truth-incident-cases', # not needed since we just directly copy from reich repo
     }
 
     for base_file, out_fname in base_file_to_out_fname.items():
@@ -97,6 +97,7 @@ def main():
             url = requests.utils.requote_uri(
                 'https://raw.githubusercontent.com/reichlab/covid19-forecast-hub/'
                 f'{commit_sha}/data-truth/{base_file}')
+            print(f'Downloading for {result_path}: {url}')
             df = pd.read_csv(url, dtype={'location' : str})
             df['date'] = pd.to_datetime(df['date']).dt.date
 

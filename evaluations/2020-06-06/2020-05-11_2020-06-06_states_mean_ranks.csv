@@ -1,11 +1,11 @@
 ,mean_rank
 YYG-ParamSearch,4.6
-COVIDhub-ensemble,4.6
-LANL-GrowthRate,4.9
-UMass-MechBayes,5.1
+COVIDhub-ensemble,4.7
+LANL-GrowthRate,4.8
+UMass-MechBayes,5.0
 UCLA-SuEIR,5.3
-IHME-CurveFit,5.4
+IHME-CurveFit,5.5
 CovidAnalytics-DELPHI,5.8
 COVIDhub-baseline,6.0
-CU-select,6.5
-MOBS-GLEAM_COVID,6.9
+CU-select,6.6
+MOBS-GLEAM_COVID,6.8

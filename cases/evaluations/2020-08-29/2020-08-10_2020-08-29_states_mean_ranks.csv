@@ -4,13 +4,13 @@ COVIDhub-ensemble,6.5
 COVIDhub-baseline,7.0
 USC-SI_kJalpha,7.2
 USACE-ERDC_SEIR,7.2
-CEID-Walk,7.3
+CEID-Walk,7.4
 OliverWyman-Navigator,7.5
 LANL-GrowthRate,7.8
 CU-select,8.0
 UCLA-SuEIR,8.1
 DDS-NBDS,8.1
-RobertWalraven-ESG,10.2
+RobertWalraven-ESG,10.3
 Karlen-pypm,11.3
 JHU_IDD-CovidSP,11.7
 UMich-RidgeTfReg,12.0

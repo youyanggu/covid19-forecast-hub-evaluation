@@ -6,10 +6,10 @@ USC-SI_kJalpha,6.0
 UCLA-SuEIR,6.2
 IowaStateLW-STEM,6.4
 Columbia_UNC-SurvCon,7.6
-MITCovAlliance-SIR,8.2
-CovidAnalytics-DELPHI,8.2
+MITCovAlliance-SIR,8.1
 USACE-ERDC_SEIR,8.2
+CovidAnalytics-DELPHI,8.3
 LANL-GrowthRate,8.8
 IHME-CurveFit,9.0
-WalmartLabsML-LogForecasting,10.2
+WalmartLabsML-LogForecasting,10.3
 RobertWalraven-ESG,10.5

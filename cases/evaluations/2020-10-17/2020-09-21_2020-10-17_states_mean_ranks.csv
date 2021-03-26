@@ -1,14 +1,14 @@
 ,mean_rank
 CEID-Walk,6.6
 COVIDhub-baseline,6.7
-JHUAPL-Bucky,7.4
+JHUAPL-Bucky,7.3
 LNQ-ens1,7.4
 JCB-PRM,7.9
 COVIDhub-ensemble,8.5
 USACE-ERDC_SEIR,8.7
-UMich-RidgeTfReg,8.7
+UMich-RidgeTfReg,8.8
 Covid19Sim-Simulator,9.7
-CU-select,9.8
+CU-select,9.7
 DDS-NBDS,9.9
 Karlen-pypm,10.0
 USC-SI_kJalpha,10.1

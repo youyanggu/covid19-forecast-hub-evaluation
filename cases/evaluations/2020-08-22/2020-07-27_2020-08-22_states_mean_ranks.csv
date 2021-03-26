@@ -3,14 +3,14 @@ COVIDhub-ensemble,4.7
 USC-SI_kJalpha,4.9
 COVIDhub-baseline,5.6
 LNQ-ens1,6.4
-LANL-GrowthRate,6.5
+LANL-GrowthRate,6.6
 IowaStateLW-STEM,6.9
 DDS-NBDS,7.2
 UCLA-SuEIR,7.7
 USACE-ERDC_SEIR,7.8
 RobertWalraven-ESG,8.5
 Covid19Sim-Simulator,9.1
-JHU_IDD-CovidSP,9.9
+JHU_IDD-CovidSP,9.8
 CovidAnalytics-DELPHI,10.7
 IHME-CurveFit,11.6
 Karlen-pypm,12.3

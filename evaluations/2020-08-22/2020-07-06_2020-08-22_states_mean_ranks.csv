@@ -2,11 +2,11 @@
 Covid19Sim-Simulator,4.4
 USACE-ERDC_SEIR,4.8
 YYG-ParamSearch,5.1
-CovidAnalytics-DELPHI,5.4
+CovidAnalytics-DELPHI,5.5
 LANL-GrowthRate,5.8
 USC-SI_kJalpha,6.1
 IowaStateLW-STEM,6.2
 IHME-CurveFit,6.6
 UCLA-SuEIR,6.7
-Auquan-SEIR,7.5
-MITCovAlliance-SIR,7.6
+MITCovAlliance-SIR,7.4
+Auquan-SEIR,7.4

@@ -1,10 +1,10 @@
 ,mean_rank
 Covid19Sim-Simulator,3.7
 YYG-ParamSearch,3.7
-IowaStateLW-STEM,4.6
 USACE-ERDC_SEIR,4.6
+IowaStateLW-STEM,4.7
 CovidAnalytics-DELPHI,4.9
-LANL-GrowthRate,5.3
-UCLA-SuEIR,5.3
+LANL-GrowthRate,5.1
+UCLA-SuEIR,5.4
 USC-SI_kJalpha,6.0
-MITCovAlliance-SIR,7.0
+MITCovAlliance-SIR,6.9

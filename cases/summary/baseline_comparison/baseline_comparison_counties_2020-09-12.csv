@@ -103,7 +103,7 @@ perc_beat_baseline-Yu_Group-CLEP,,,,,,,0.2325581395,0.3187340153
 mean_abs_error-CDDEP-SEIR_MCMC,,,,,,,,
 mean_abs_error-CEID-Walk,,,,,193.1800064,110.5599809,63.24017829,29.97344795
 mean_abs_error-CMU-TimeSeries,,,,,,,,
-mean_abs_error-COVIDhub-baseline,510.8150271,433.3610315,350.0681312,231.055078,190.4473098,107.5711557,61.60872334,29.35148042
+mean_abs_error-COVIDhub-baseline,510.8147087,433.3607131,350.0678128,231.0547596,190.4473098,107.5711557,61.60872334,29.35148042
 mean_abs_error-COVIDhub-ensemble,,,,,131.7752308,86.06972302,50.47373448,21.90608087
 mean_abs_error-CU-select,,,,,,,,
 mean_abs_error-Columbia_UNC-SurvCon,,,,,,,,

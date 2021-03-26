@@ -1,12 +1,12 @@
 ,mean_rank
+USACE-ERDC_SEIR,4.3
 Covid19Sim-Simulator,4.6
-USACE-ERDC_SEIR,4.8
-JHUAPL-Bucky,4.8
-USC-SI_kJalpha,4.9
+JHUAPL-Bucky,4.9
+USC-SI_kJalpha,5.0
 JCB-PRM,5.0
 COVIDhub-baseline,5.2
 BPagano-RtDriven,5.5
 Columbia_UNC-SurvCon,6.8
 IowaStateLW-STEM,7.1
 UCLA-SuEIR,7.6
-WalmartLabsML-LogForecasting,9.8
+WalmartLabsML-LogForecasting,9.9

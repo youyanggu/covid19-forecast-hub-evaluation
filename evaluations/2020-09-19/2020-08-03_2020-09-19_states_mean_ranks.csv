@@ -1,8 +1,8 @@
 ,mean_rank
 Covid19Sim-Simulator,4.3
 YYG-ParamSearch,4.4
-UCLA-SuEIR,4.6
 USC-SI_kJalpha,4.6
+UCLA-SuEIR,4.7
 IHME-CurveFit,4.9
 IowaStateLW-STEM,5.0
 MITCovAlliance-SIR,5.5

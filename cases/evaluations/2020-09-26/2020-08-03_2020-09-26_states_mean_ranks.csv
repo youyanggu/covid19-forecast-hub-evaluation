@@ -1,8 +1,8 @@
 ,mean_rank
-COVIDhub-baseline,3.3
+COVIDhub-baseline,3.2
 UCLA-SuEIR,3.6
 IowaStateLW-STEM,3.7
-USACE-ERDC_SEIR,4.0
 USC-SI_kJalpha,4.0
+USACE-ERDC_SEIR,4.0
 Covid19Sim-Simulator,4.1
 IHME-CurveFit,5.5

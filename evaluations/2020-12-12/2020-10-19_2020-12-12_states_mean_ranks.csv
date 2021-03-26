@@ -3,11 +3,11 @@ JHUAPL-Bucky,4.4
 IHME-CurveFit,4.7
 USC-SI_kJalpha,4.9
 JCB-PRM,5.0
-BPagano-RtDriven,5.2
+BPagano-RtDriven,5.0
 Covid19Sim-Simulator,5.8
-COVIDhub-baseline,5.8
-Columbia_UNC-SurvCon,6.8
-MITCovAlliance-SIR,7.6
+COVIDhub-baseline,5.9
+Columbia_UNC-SurvCon,6.7
+MITCovAlliance-SIR,7.7
 IowaStateLW-STEM,8.4
-UCLA-SuEIR,8.7
+UCLA-SuEIR,8.8
 WalmartLabsML-LogForecasting,10.6

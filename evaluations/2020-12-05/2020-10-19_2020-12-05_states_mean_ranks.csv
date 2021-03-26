@@ -6,10 +6,10 @@ IHME-CurveFit,5.5
 Covid19Sim-Simulator,5.7
 COVIDhub-baseline,6.0
 BPagano-RtDriven,6.1
-Columbia_UNC-SurvCon,7.7
+Columbia_UNC-SurvCon,7.6
 MITCovAlliance-SIR,7.9
 IowaStateLW-STEM,8.9
-UCLA-SuEIR,9.2
+UCLA-SuEIR,9.3
 LANL-GrowthRate,10.4
 CovidAnalytics-DELPHI,11.0
 WalmartLabsML-LogForecasting,12.0

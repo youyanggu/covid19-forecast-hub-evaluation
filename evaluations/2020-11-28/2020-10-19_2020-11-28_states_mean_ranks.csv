@@ -4,10 +4,10 @@ USC-SI_kJalpha,5.4
 JCB-PRM,6.3
 Covid19Sim-Simulator,6.8
 COVIDhub-baseline,7.0
-IHME-CurveFit,7.0
+IHME-CurveFit,7.1
 JHU_IDD-CovidSP,7.6
-BPagano-RtDriven,8.0
-Columbia_UNC-SurvCon,8.8
+BPagano-RtDriven,7.9
+Columbia_UNC-SurvCon,8.6
 MITCovAlliance-SIR,8.9
 NotreDame-mobility,10.1
 IowaStateLW-STEM,10.4

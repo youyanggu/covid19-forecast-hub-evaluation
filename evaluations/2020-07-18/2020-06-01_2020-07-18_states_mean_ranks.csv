@@ -1,8 +1,8 @@
 ,mean_rank
 LANL-GrowthRate,3.1
 UCLA-SuEIR,3.5
-YYG-ParamSearch,4.1
 IowaStateLW-STEM,4.1
+YYG-ParamSearch,4.1
 Covid19Sim-Simulator,4.2
 IHME-CurveFit,4.5
 USACE-ERDC_SEIR,4.5

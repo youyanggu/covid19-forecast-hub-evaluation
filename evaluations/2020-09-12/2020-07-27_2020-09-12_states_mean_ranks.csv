@@ -1,11 +1,11 @@
 ,mean_rank
-YYG-ParamSearch,4.5
+YYG-ParamSearch,4.4
 Covid19Sim-Simulator,4.5
-USC-SI_kJalpha,5.1
+USC-SI_kJalpha,5.0
 CovidAnalytics-DELPHI,5.2
 UCLA-SuEIR,5.2
 IowaStateLW-STEM,5.4
-IHME-CurveFit,5.7
+IHME-CurveFit,5.8
 LANL-GrowthRate,6.1
 MITCovAlliance-SIR,6.2
 USACE-ERDC_SEIR,7.1

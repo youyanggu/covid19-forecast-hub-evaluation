@@ -1,4 +1,4 @@
 ,total_deaths_2020-04-26,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
-IHME-CurveFit,57418,72859.8,135531,17978.8,78113,-60134.2,-77.0%
-Baseline,57418,206186.1,135531,151305.1,78113,73192.1,93.7%
-IowaStateLW-STEM,57418,,135531,,78113,,
+IHME-CurveFit,57885,72859.8,135236,17978.8,77351,-59372.2,-76.8%
+Baseline,57885,206186.1,135236,151305.1,77351,73954.1,95.6%
+IowaStateLW-STEM,57885,,135236,,77351,,

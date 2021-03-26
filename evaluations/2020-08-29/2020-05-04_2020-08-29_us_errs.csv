@@ -1,3 +1,3 @@
 ,total_deaths_2020-05-03,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
-IowaStateLW-STEM,70739,115860.0,183021,48178.0,112282,-64104.0,-57.1%
-Baseline,70739,283470.3,183021,215788.3,112282,103506.3,92.2%
+IowaStateLW-STEM,71056,115860.0,182739,48178.0,111683,-63505.0,-56.9%
+Baseline,71056,283470.3,182739,215788.3,111683,104105.3,93.2%

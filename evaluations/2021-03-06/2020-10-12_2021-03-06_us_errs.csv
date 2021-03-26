@@ -1,0 +1,2 @@
+,total_deaths_2020-10-11,predicted_deaths,actual_deaths,predicted_addl_deaths,actual_addl_deaths,error,perc_error
+Baseline,215081,320034.0,525162,105266.0,310081,-204815.0,-66.1%

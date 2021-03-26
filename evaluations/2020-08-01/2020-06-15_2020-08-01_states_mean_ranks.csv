@@ -1,8 +1,8 @@
 ,mean_rank
 IHME-CurveFit,3.4
+USACE-ERDC_SEIR,3.5
 Covid19Sim-Simulator,3.6
-USACE-ERDC_SEIR,3.6
-YYG-ParamSearch,3.8
-UCLA-SuEIR,4.3
-SWC-TerminusCM,4.6
-IowaStateLW-STEM,4.8
+YYG-ParamSearch,3.9
+UCLA-SuEIR,4.2
+SWC-TerminusCM,4.7
+IowaStateLW-STEM,4.7

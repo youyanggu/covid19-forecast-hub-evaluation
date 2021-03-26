@@ -1,7 +1,7 @@
 ,perc_error_2020-07-06_2020-07-18,perc_error_2020-07-13_2020-07-18
 Covid19Sim-Simulator,-0.044,0.034
 IowaStateLW-STEM,-0.058,0.030
-USC-SI_kJalpha,-0.023,-0.081
+USC-SI_kJalpha,-0.023,-0.082
 Columbia_UNC-SurvCon,0.163,-0.028
 UCLA-SuEIR,-0.188,-0.067
 OliverWyman-Navigator,0.097,0.112
@@ -9,8 +9,8 @@ QJHong-Encounter,,0.003
 Geneva-DetGrowth,,-0.007
 COVIDhub-baseline,-0.243,-0.128
 LNQ-ens1,,-0.011
-USACE-ERDC_SEIR,-0.270,-0.200
-RobertWalraven-ESG,-0.923,-0.105
+USACE-ERDC_SEIR,-0.271,-0.200
+RobertWalraven-ESG,-0.923,-0.106
 CovidAnalytics-DELPHI,-0.287,-0.272
 UMich-RidgeTfReg,-0.311,-0.182
 JHU_IDD-CovidSP,-0.288,-0.393

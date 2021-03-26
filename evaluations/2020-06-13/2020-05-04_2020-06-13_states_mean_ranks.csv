@@ -1,9 +1,9 @@
 ,mean_rank
 YYG-ParamSearch,3.3
-LANL-GrowthRate,3.9
+LANL-GrowthRate,3.8
 IHME-CurveFit,4.1
-CovidAnalytics-DELPHI,4.3
 UCLA-SuEIR,4.3
-CU-select,5.2
+CovidAnalytics-DELPHI,4.3
+CU-select,5.3
 IowaStateLW-STEM,5.3
 UT-Mobility,5.6

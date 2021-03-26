@@ -1,9 +1,9 @@
 ,mean_rank
-UCLA-SuEIR,3.5
-LANL-GrowthRate,3.6
-CovidAnalytics-DELPHI,4.7
-IHME-CurveFit,4.7
+UCLA-SuEIR,3.4
+LANL-GrowthRate,3.4
+CovidAnalytics-DELPHI,4.6
 IowaStateLW-STEM,4.7
-YYG-ParamSearch,4.7
-USACE-ERDC_SEIR,4.8
-PSI-DRAFT,5.3
+IHME-CurveFit,4.7
+YYG-ParamSearch,4.8
+USACE-ERDC_SEIR,4.9
+PSI-DRAFT,5.4

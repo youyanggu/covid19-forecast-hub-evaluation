@@ -106,7 +106,7 @@ perc_beat_baseline-Yu_Group-CLEP,,,,,,,0.3028846154,
 mean_abs_error-BPagano-RtDriven,,,,,,,,
 mean_abs_error-CEID-Walk,,,,,200.2091691,139.8663165,85.15218083,41.50821394
 mean_abs_error-CMU-TimeSeries,,,,,,,,
-mean_abs_error-COVIDhub-baseline,367.8363578,318.3291945,287.913085,236.527539,199.1260745,136.3763133,84.67112385,40.79592486
+mean_abs_error-COVIDhub-baseline,367.8366762,318.3295129,287.9134034,236.5278574,199.1260745,136.3763133,84.67112385,40.79592486
 mean_abs_error-COVIDhub-ensemble,,,,,205.7860554,155.2225406,96.01846546,44.27570837
 mean_abs_error-CU-select,,,,,,,,
 mean_abs_error-Columbia_UNC-SurvCon,,,,,,,,
@@ -119,7 +119,7 @@ mean_abs_error-IBF-TimeSeries,,,,,,,,
 mean_abs_error-IQVIA_ACOE-STAN,,,,,,,,
 mean_abs_error-IowaStateLW-STEM,,,,,,,,
 mean_abs_error-JCB-PRM,,,,,,,,
-mean_abs_error-JHUAPL-Bucky,,,,299.9453677,240.0796243,155.8408787,101.2176377,56.70655842
+mean_abs_error-JHUAPL-Bucky,,,,299.9456861,240.0796243,155.8408787,101.2176377,56.70655842
 mean_abs_error-JHU_IDD-CovidSP,,,,,,,,
 mean_abs_error-Karlen-pypm,,,,,,,,
 mean_abs_error-LANL-GrowthRate,,,,,,,,
@@ -129,7 +129,7 @@ mean_abs_error-MSRA-DeepST,,,,,,,,
 mean_abs_error-OliverWyman-Navigator,,,,,,,,
 mean_abs_error-PandemicCentral-USCounty,,,,,,,,
 mean_abs_error-QJHong-Encounter,,,,,,,,
-mean_abs_error-RobertWalraven-ESG,616.5723337,526.9157593,480.3937599,393.8896848,304.184177,239.4443171,,
+mean_abs_error-RobertWalraven-ESG,616.572652,526.9160777,480.3940783,393.8900032,304.184177,239.4443171,,
 mean_abs_error-TTU-squider,,,,,,,,
 mean_abs_error-UCLA-SuEIR,,,,,,,,
 mean_abs_error-UMass-MechBayes,,,,,,,,

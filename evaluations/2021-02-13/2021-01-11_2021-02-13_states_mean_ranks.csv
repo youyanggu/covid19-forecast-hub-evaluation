@@ -1,0 +1,14 @@
+,mean_rank
+Karlen-pypm,5.2
+Covid19Sim-Simulator,6.2
+UCLA-SuEIR,6.3
+COVIDhub-baseline,6.4
+LANL-GrowthRate,6.4
+IowaStateLW-STEM,6.5
+JHUAPL-Bucky,6.7
+JHU_IDD-CovidSP,7.2
+CovidAnalytics-DELPHI,7.2
+PSI-DRAFT,7.4
+AIpert-pwllnod,7.4
+MITCovAlliance-SIR,7.8
+WalmartLabsML-LogForecasting,10.4

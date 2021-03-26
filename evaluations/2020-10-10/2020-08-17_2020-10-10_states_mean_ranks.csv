@@ -1,9 +1,9 @@
 ,mean_rank
-YYG-ParamSearch,2.7
+YYG-ParamSearch,2.6
 IowaStateLW-STEM,4.1
 Auquan-SEIR,4.3
-USC-SI_kJalpha,4.4
-UCLA-SuEIR,4.5
+USC-SI_kJalpha,4.3
+UCLA-SuEIR,4.6
 USACE-ERDC_SEIR,4.6
 MITCovAlliance-SIR,5.5
 RobertWalraven-ESG,5.9
